@@ -1,0 +1,49 @@
+## 1. Vault skeleton, Prettier, and schema
+
+**Testable outcome:** `wiki/` opens in Obsidian with navigation files; `scripts/formatting/` Prettier package works; `.prettierrc` / `.prettierignore` present; `sources/README.md` explains immutability.
+
+- [ ] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 1` + unchecked below); **User inputs** under `## apply` ### Stage 1 in `grill-summaries.md`
+- [ ] 1.1 Create `wiki/index.md`, `wiki/log.md`, `wiki/SCHEMA.md`, `wiki/assets/` per **Requirement: Vault root and navigation files** and **Decision 4**
+- [ ] 1.2 Create `sources/README.md` describing immutable capture policy per **Requirement: Sources immutability**
+- [ ] 1.3 Add `scripts/formatting/package.json` (pinned prettier + compact-markdown-table), root `.prettierrc`, `.prettierignore` per **Requirement: Prettier markdown formatting** and **Decision 6**
+- [ ] 1.4 Update `.gitignore` for `.obsidian/`, `.qmd/`, `node_modules/` per **Requirement: qmd artifacts gitignored**
+- [ ] 1.5 Add wiki context summary to `openspec/config.yaml` `context` block
+- [ ] Verify Decision 1: `wiki/` and `sources/` exist; `sources/README.md` states immutability; Obsidian can open `wiki/` as vault root
+- [ ] Verify Decision 4: `wiki/SCHEMA.md` exists; repo-root `AGENTS.md` has no wiki ingest rules duplicated in full
+- [ ] Verify Decision 6: `npm ci --prefix scripts/formatting` succeeds; Prettier `--check "wiki/**/*.md"` runs
+- [ ] Tests: N/A — markdown scaffold and formatter package only
+- [ ] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-1.md`
+- [ ] Human review: Pause for human sign-off before stage 2
+
+## 2. TypeScript kb scripts and kb-add skill
+
+**Testable outcome:** `scripts/kb/` provides slug and wiki-lint CLIs; `.agents/skills/kb/SKILL.md` documents ingest, slug invocation, token-light reads, and git publish.
+
+- [ ] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 2` + unchecked below); **User inputs** under `## apply` ### Stage 2 in `grill-summaries.md`
+- [ ] 2.1 Create `scripts/kb/` TypeScript package with `slug` and `wiki-lint` CLIs per **Decision 6**, **Decision 7**, and **Requirement: Semantic wiki lint CLI**
+- [ ] 2.2 Implement slug: kebab-case, collision suffix per **Requirement: Deterministic slug filenames**
+- [ ] 2.3 Implement wiki-lint: orphans, broken wikilinks, index gaps per **Requirement: Semantic wiki lint CLI**
+- [ ] 2.4 Create `.agents/skills/kb/SKILL.md` as user-invocable `/kb` per **Requirement: Single ingest entry point**
+- [ ] 2.5 Document light vs deep integrate, slug CLI usage, token-light reads, and git flags per **Decision 3**, **Decision 8**, and **Requirement: Slug CLI for filenames**
+- [ ] Verify Decision 2: skill text states folders are created on first need with no fixed bucket list
+- [ ] Verify Decision 3: skill text distinguishes default light ingest from `--integrate` / explicit integrate language
+- [ ] Verify Decision 7: `/kb` skill documents slug CLI invocation; `scripts/kb slug` produces kebab-case output
+- [ ] Tests: N/A — TypeScript CLIs verified via manual invocation in apply
+- [ ] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-2.md`
+- [ ] Human review: Pause for human sign-off before stage 3
+
+## 3. Search, query, gates, and lint wiring
+
+**Testable outcome:** AGENTS.md documents Prettier + wiki-lint gates; `kb` skill documents qmd bootstrap/search/reindex, `/kb query` cited synthesis, and `/kb lint` via CLIs.
+
+- [ ] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 3` + unchecked below); **User inputs** under `## apply` ### Stage 3 in `grill-summaries.md`
+- [ ] 3.1 Add AGENTS.md implementation gates for Prettier check and wiki-lint CLI per **Requirement: Documented gate commands**
+- [ ] 3.2 Wire `/kb lint` in skill to run wiki-lint CLI + Prettier check per **Requirement: Lint via CLI not LLM checklist**
+- [ ] 3.3 Add qmd bootstrap, search, post-add reindex, and `/kb query` workflow to `kb` skill per **Requirement: Wiki query workflow** and **Decision 9**
+- [ ] 3.4 Document Obsidian Android + Obsidian Git mobile workflow in `wiki/SCHEMA.md` per grill mobile decision
+- [ ] Verify Decision 5: skill or SCHEMA documents qmd collection scoped to `wiki/` and `.qmd/` gitignored
+- [ ] Verify Decision 6: semantic lint runs via `scripts/kb` CLI; Prettier runs via `scripts/formatting` — not LLM checklist
+- [ ] Verify Decision 9: skill documents qmd top-N retrieval, cited synthesis, no commit by default, optional file-back
+- [ ] Tests: N/A — documentation and gate wiring only
+- [ ] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-3.md`
+- [ ] Human review: Pause for human sign-off before apply handoff
