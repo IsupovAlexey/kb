@@ -1,0 +1,131 @@
+# Scheduled dedrift host overlay
+
+<!-- Rename to dedrift-job.md to activate. Read by scheduled-job-prompt.md after the base reference. -->
+
+## PR identification
+
+| Setting     | Value                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------------------------------ |
+| `pr_branch` | `dedrift/scheduled` _(unset in overlay to use runtime-assigned branch when present)_                               |
+| `pr_title`  | _(unset — discover per host; example when host uses Conventional Commits: `chore(dedrift): reconcile main specs`)_ |
+| `pr_label`  | `tacos-dedrift` _(optional — apply only when label exists; never create labels on scheduled runs)_                 |
+
+**Branch resolution:** host overlay `pr_branch` when set; else runtime-assigned development branch from automation/cloud instructions; else `dedrift/scheduled`. Some hosts assign a branch per run — scheduled dedrift MUST push and open the pull request on that branch when the overlay does not override.
+
+## Git delta
+
+| Setting            | Value                                 |
+| ------------------ | ------------------------------------- |
+| `default_branch`   | _(unset — detect from `origin/HEAD`)_ |
+| `delta_window`     | `3 days ago`                          |
+| `persist_baseline` | `true`                                |
+| `scheduled_depth`  | `standard` _(set `deep` for iterative scheduled detect)_ |
+
+Baseline for the next scheduled run is stored in the **latest commit message** on `origin/<pr_branch>` (git only — do not read from GitHub PR APIs):
+
+```text
+Dedrift-Baseline: <default-branch-sha>
+Dedrift-Baseline-At: <iso-8601-timestamp>
+```
+
+Read via `git log -1 --format=%B origin/<pr_branch>`. When the branch or trailer is missing, use `delta_window`.
+
+The PR description MAY include a matching `<!-- tacos-dedrift-baseline -->` block for human review. Scheduled runs update the pull request description after each push when a pull request exists for the branch; baseline for automation is always read from commit trailers, not the PR description. Do not list `artifacts/` paths in the PR body — review artifacts are local-only (gitignored).
+
+### Subsequent runs (open PR, unmerged)
+
+When `origin/<pr_branch>` already exists at run start:
+
+- Scope from `Dedrift-Baseline:` on the branch tip and default-branch commits since that SHA — not from the PR description.
+- Reconcile drift, commit on `<pr_branch>`, push, update baseline trailers, then view and update the pull request description for this branch with this run's findings.
+- Baseline and scoping stay git-only. Repo-wide pull request search/list is unnecessary for branch-local view/update and invites poll loops — use one branch lookup and one description replace per run. Cumulative spec diffs remain on the branch; the PR description reflects the **latest** run's summary sections.
+
+### Format commit patterns
+
+Commits whose subject matches any pattern below (case-insensitive substring), **or** whose diff is whitespace-only (`git diff <sha>^..<sha> -w --quiet` with a parent), are **format-only**. Drop **all** paths from those commits — they do not scope capabilities.
+
+Host overlay `format_commit_patterns` extends or replaces this list:
+
+```yaml
+format_commit_patterns:
+  - prettier
+  - csharpier
+  - format markdown
+  - format check
+  - formatting
+  - line ending
+  - prettierignore
+```
+
+### Dedrift commit patterns
+
+Commits whose subject matches any pattern below (case-insensitive substring) are **dedrift output**. Drop **all** paths from those commits — they do not scope capabilities.
+
+Host overlay `reconcile_commit_patterns` extends or replaces this list:
+
+```yaml
+reconcile_commit_patterns:
+  - "[dedrift]"
+  - "chore(dedrift):"
+  - "Reconcile spec drift"
+  - "Reconcile spec"
+```
+
+## Path map extensions
+
+Add repo-specific path prefixes → capability names (overrides default rows in scheduled-job-prompt):
+
+```yaml
+path_map:
+  # dev/: tacos-doctor-install-update
+  # src/billing/: billing-api
+```
+
+## Skill map extensions
+
+When skill folder names do not align with spec capability ids:
+
+```yaml
+skill_map:
+  # tacos-split-diff: slice-pr
+```
+
+## Unmapped path triage
+
+When scheduled dedrift still has **unmapped** implementation paths after `path_map` / `skill_map` (and they are not stripped by host exclude rules), the agent MUST follow `scheduled-job-prompt.md` § 4a:
+
+1. Cluster and analyze new prefixes against the codebase and existing overlay.
+2. **Clear fit** — update this file (`path_map`, `skill_map`, governed capability list, or `exclude_path_prefixes`) and reconcile the mapped capability in the same run.
+3. **Ambiguous** — **Needs human decision** with proposed overlay edit; no write.
+4. **Out of scope** — **Unmapped paths (skipped)** only.
+
+Record changes under **Host overlay updated** in the PR body. Parent agent applies overlay writes when host automation forbids subagent file edits.
+
+## Project overview (optional)
+
+When `project_overview.enabled` is true in `openspec/tacos.yaml`, scheduled dedrift runs overview reconcile after spec writes (see `scheduled-job-prompt.md` § 6a–6b). Customize section scope and rules below.
+
+### Section map
+
+List sections at `{project_overview.path}` that scheduled overview reconcile may touch:
+
+```yaml
+overview_sections:
+  # - name: Features
+  #   heading: "## Features"
+  # - name: Configuration
+  #   heading: "## Configuration"
+```
+
+### Reconcile rules
+
+- In scope: user-visible surface from this run's **implementation paths** — slash commands, install or config documented for hosts, workflow diagrams, feature bullets readers need without reading specs.
+- Detect: **missing** onboarding content and **stale/wrong** prose (not absent lines only).
+- Write: soft edits in mapped sections only; preserve prose outside scope.
+- Skip: changelog, release notes, maintainer-only sections, agent meta, task lists.
+- Ambiguous drift: list under **Overview needs human decision** in the PR; no write.
+- Missing `{path}` on disk: **Overview needs human decision**; do not create the file on the scheduled path.
+
+### Spec vs overview split
+
+Paths listed as **intentionally unmapped** for main-spec § 4 (e.g. `README.md` for spec path mapping) stay unmapped for **spec** reconcile. Overview reconcile still reads `project_overview.path` when enabled — separate lane, same scheduled PR.

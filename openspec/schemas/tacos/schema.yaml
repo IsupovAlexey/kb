@@ -1,0 +1,318 @@
+name: tacos
+version: 1
+description: Enhances default OpenSpec workflow (proposal → specs → design → tasks)
+artifacts:
+  - id: grill-summaries
+    generates: grill-summaries.md
+    description: Cumulative grilling session summaries and user decisions
+    template: grill-summaries.md
+    instruction: |
+      Cumulative log of **tacos-grill** sessions. Command-level flow: tacos-orchestration
+      `references/grill-gates.md` and `planning-artifact-loop.md`.
+
+      **Frontmatter:** `grill.planning` plus `grill.proposal`, `grill.specs`, `grill.design`,
+      `grill.tasks`, `grill.update` — phase keys each `pending` | `complete` | `skipped`.
+      Planning grill sets `grill.planning` and the four planning phase keys together.
+      `grill.update` is distinct — one session before **update** reconcile on a fresh revision turn.
+
+      **Body:** `## proposal`, `## specs`, `## design`, `## tasks`, plus `## update` when
+      **update** runs, `## apply`, `## explore` when triggered. Each section: **Summary**,
+      **Decisions**, **Open questions**, **User inputs**. Do not backfill from **explore**
+      without a real interview.
+
+      Prose quality: **Decisions** and **User inputs** use plain in/out-of-scope prose —
+      no `v1`/`v2` labels on APIs, endpoints, or delivery scope unless quoting an external
+      version. See tacos-orchestration/references/artifact-prose.md § Scope naming.
+
+      On **propose** or **ff**, planning artifacts MUST NOT be written while `grill.planning`
+      is `pending` when `orchestration.grill_enabled` is true.
+    requires: []
+
+  - id: tdd
+    generates: tdd.md
+    description: Opt-in marker that this change uses test-driven development during apply
+    template: tdd.md
+    instruction: |
+      Optional planning artifact: marks the change as TDD-opted-in. Presence of
+      `tdd.md` in `openspec/changes/<name>/` selects the Red → Green → Refactor apply
+      contract. Behavioral obligations live in the `tacos-tdd` capability spec — this
+      file is a short marker plus optional host test-command hints.
+
+      **When to create:** User invokes `/tacos-tdd <change-name>` (see `tacos-tdd/SKILL.md`),
+      or explicitly requests TDD during planning. On the TDD path, create this artifact
+      after `grill-summaries.md` and before `proposal.md` when possible.
+
+      **When to omit:** Standard `propose` / `ff` / `continue` without `/tacos-tdd` and
+      without explicit TDD request — do **not** create `tdd.md`.
+
+      **When updating an existing change:** Add `tdd.md` and stamp **Development Approach**
+      in `proposal.md` without deleting or regenerating other planning artifacts unless
+      the user requests replan.
+
+      Template: `openspec/schemas/tacos/templates/tdd.md`. Skill pointer:
+      `tacos-tdd/references/tdd-marker-template.md`.
+
+      Not listed in `apply.requires`. When present, orchestration loads `tacos-tdd` on
+      **apply** and schema `apply.instruction` / `tasks` instruction use the TDD branch.
+    requires:
+      - grill-summaries
+
+  - id: proposal
+    generates: proposal.md
+    description: Initial proposal document outlining the change
+    template: proposal.md
+    instruction: |
+      Create the proposal document that establishes WHY this change is needed.
+
+      **Owns:** problem/why, delivery outcomes, capability inventory — cross-layer map:
+      tacos-orchestration/references/planning-artifact-loop.md ## Content ownership.
+
+      **Sections:** **Why** (1–2 sentences); **What Changes** (delivery outcomes; **BREAKING** when applicable);
+      **Capabilities** (new + modified spec folders; research `openspec/specs/`); **Impact** (coarse subsystems only).
+
+      **Capability research:** For each capability this change touches, read
+      `openspec/specs/<capability>/spec.md` when it exists. List under **Modified Capabilities**
+      when this change alters, extends, or contradicts existing main-spec obligations for that
+      capability — including when the primary delta lives under a sibling capability folder.
+      New capabilities → **New Capabilities** only.
+
+      **MUST NOT:** file paths, routes, behavioral SHALL/MUST, exclusion walls — scope limits → design **Boundaries**.
+
+      **Structure-is-content:** Do not compress tables, lists, or decision blocks from grill/discovery into thinner prose.
+
+      Prose quality: tacos-orchestration/references/artifact-prose.md (read before writing).
+
+      **GRILL GATE:** On **propose** or **ff**, require `grill.planning` `complete` or `skipped`.
+      On continue, require `grill.proposal` `complete` or `skipped` if still `pending`.
+
+      Incorporate `grill-summaries.md`; do not contradict resolved grill decisions.
+    requires:
+      - grill-summaries
+
+  - id: jira
+    generates: jira.md
+    description: Bound Jira issue snapshot for planning context
+    template: jira.md
+    instruction: |
+      Snapshot of the **bound** Jira issue for this change. Do not duplicate the
+      full ticket body in `proposal.md` — only the canonical URL or key (and optional
+      one-line status) belong there.
+
+      **When to create or update:** tacos-jira-sync during planning commands
+      (`propose`, `continue`, `ff`, `apply`) after resolving a bound issue, on
+      explicit user refresh/fetch, after approved create, or on **regenerate**
+      (rebuild from `proposal.md`, specs, design, `tasks.md`, `grill-summaries.md`
+      — do not use existing `jira.md` body as input). Do not auto-refresh on every
+      planning phase if `jira.md` already exists unless the user requests refresh.
+
+      **Frontmatter (core, always on successful fetch):** `issue_key`, `url`,
+      `title`, `fetched_at`. Also persist `description` in the markdown body below
+      the title heading. Additional keys from `jira.fetch_fields` in
+      `openspec/tacos.yaml` (default `status`, `issue_type`).
+
+      **Binding:** At most one bound issue per change. Replacing a different key
+      requires explicit user confirmation before overwrite.
+
+      Not listed in `apply.requires`. When present, planning artifacts MUST treat
+      this file as authoritative ticket context.
+    requires: []
+
+  - id: specs
+    generates: "specs/**/*.md"
+    description: Detailed specifications for the change
+    template: spec.md
+    instruction: |
+      Create specification files that define WHAT the system should do.
+
+      One spec per capability from proposal **Capabilities** (new: `specs/<name>/spec.md`; modified: delta at
+      `specs/<capability>/spec.md` matching `openspec/specs/<capability>/`).
+
+      **Delta headers:** ADDED / MODIFIED (full updated block) / REMOVED (Reason + Migration) / RENAMED (FROM:/TO:).
+
+      **Behavioral model:** durable obligations + invariant WHEN/THEN scenarios — not agent runbooks, inventories,
+      or negative-only scope. Merge related obligations; positive framing. Change-scoped acceptance → tasks.md.
+
+      **Format:** `### Requirement:` + SHALL/MUST; `#### Scenario:` (exactly 4 hashtags) per requirement.
+      MODIFIED: copy full existing block from `openspec/specs/` then edit.
+
+      **Main-spec cross-check (before write):** For each delta capability, read matching
+      `openspec/specs/<capability>/spec.md` when present. **STOP** and update `proposal.md`
+      **Modified Capabilities** first when the delta alters or contradicts main-spec obligations for a
+      capability not listed there — including sibling capabilities whose main obligations conflict
+      with the new delta. Do not write the contradicting delta until proposal lists every affected
+      capability. Then write or update the matching delta under `specs/<capability>/spec.md` (MODIFIED
+      full block from main) or add an explicit cross-capability MODIFIED requirement in the primary
+      delta when one folder covers multiple affected capabilities.
+
+      **Implicit branches:** For multi-step flows (validate → obtain → process), add failure,
+      unavailable-dependency, or partial-completion scenarios — not happy-path-only.
+
+      **Structure-is-content:** Do not compress scenario blocks or requirement lists into thinner prose.
+
+      Before spec-review or next artifact: session context fidelity per
+      tacos-orchestration/references/artifact-prose.md ## Session context fidelity.
+
+      Spec grounding when needed: launch **tacos-spec-grounding** per
+      tacos-orchestration/references/spec-grounding-explore.md.
+      Prose quality: tacos-orchestration/references/artifact-prose.md (read before writing).
+
+      **GRILL GATE:** On **propose** or **ff**, require `grill.planning` `complete` or `skipped`.
+      On continue, require `grill.specs` `complete` or `skipped` if still `pending`.
+
+      Incorporate `grill-summaries.md`; do not contradict resolved grill decisions.
+    requires:
+      - proposal
+
+  - id: design
+    generates: design.md
+    description: Technical design document with implementation details
+    template: design.md
+    instruction: |
+      Create the design document that explains HOW to implement the change.
+
+      **Owns:** technical decisions, APIs/modules/procedure — cite specs by `### Requirement:` title only.
+      Cross-layer map: tacos-orchestration/references/planning-artifact-loop.md ## Content ownership.
+
+      **Sections:** **Context**; **Goals** (positive outcomes); optional **Boundaries** (≤3 brief lines);
+      **Decisions** (alternatives + extend-before-invent); optional Mermaid for multi-system flows;
+      **Risks / Trade-offs**; **Migration Plan**; **Open Questions**.
+
+      Create when cross-cutting, new dependencies, security/performance/migration complexity, or ambiguity
+      benefits from decisions before coding.
+
+      **Structure-is-content:** Do not compress tables, decision lists, or diagrams into thinner prose.
+
+      Before spec-review or next artifact: session context fidelity per
+      tacos-orchestration/references/artifact-prose.md ## Session context fidelity.
+
+      Prose quality: tacos-orchestration/references/artifact-prose.md (read before writing).
+
+      **GRILL GATE:** On **propose** or **ff**, require `grill.planning` `complete` or `skipped`.
+      On continue, require `grill.design` `complete` or `skipped` if still `pending`.
+
+      Incorporate `grill-summaries.md`; do not contradict resolved grill decisions.
+    requires:
+      - proposal
+
+  - id: tasks
+    generates: tasks.md
+    description: Implementation checklist with trackable tasks
+    template: tasks.md
+    instruction: |
+      Create the task list that breaks down the implementation work.
+
+      **Owns:** change-scoped done-when (paths, commands, verification). Trace via Requirement title
+      or design **Decision N** — cross-layer map:
+      tacos-orchestration/references/planning-artifact-loop.md ## Content ownership.
+
+      **Format:** `- [ ]` checkboxes; `## N.` stages; numbered `- [ ] X.Y` implementation rows.
+      Implementation rows on non-trivial stages SHOULD cite `specs/...` ### Requirement and/or design **Decision N**
+      (traceability only; does not override stock `contextFiles` reads).
+      Stage contract lines (`Stage grill:`, `Verify Decision N`, `Tests:`, `Apply review:`, `Human review:`)
+      per tacos-orchestration/references/task-stage-contract.md.
+
+      For **Stage grill:** emit the short template from ## Stage grill line.
+
+      **Decision verification:** When design **Decision N** or grill **User inputs** cover pipeline
+      ordering, gate-before-I/O, negative/error paths, or scope boundaries, emit a separate
+      `- [ ] Verify Decision N: <done-when>` row after implementation work (before Tests) per
+      task-stage-contract.md ## Per-stage checklist order. Done-when MUST name a test, trace step,
+      or command. **FORBIDDEN:** embedding `Verify Decision N` / `— **Verify Decision N**` inside
+      implementation checkbox text — cite Decision N for traceability only; verification is its own row.
+      Omit Verify rows only when no material decisions require verification.
+
+      For **Apply review:** emit the **medium** checklist line from task-stage-contract.md ## Apply review line
+      (first fenced block) verbatim — substitute `<N>` with the stage number in the output path.
+      **FORBIDDEN:** the one-line pointer (`parallel Task per task-stage-contract.md ## Apply review line` only);
+      **FORBIDDEN:** `Invoke tacos-apply-review` alone or core-only wording; omitting `tacos-additional-apply-review`,
+      `parent merge`, or `**MUST NOT** core-only`.
+
+      Each `## N.` stage: **Testable outcome:** line per templates/tasks.md — one primary outcome;
+      **Testable outcome:** MUST appear immediately after each `## N.` heading before gate lines.
+      ~8 implementation checkboxes max (excluding gate/review lines).
+
+      **Structure-is-content:** Do not compress stage groupings or verification rows into thinner prose.
+
+      Prose quality: tacos-orchestration/references/artifact-prose.md (read before writing).
+
+      Staged apply runtime order: read-graphs/apply.md MUST read + task-stage-contract.md — schema
+      `apply.instruction` is gate header only; not this instruction.
+      TDD-marked changes (`tdd.md` present): tacos-tdd/references/task-slice-template.md and
+      tacos-orchestration/references/tdd-apply-contract.md.
+
+      **GRILL GATE:** On **propose** or **ff**, require `grill.planning` `complete` or `skipped`.
+      On continue, require `grill.tasks` `complete` or `skipped` if still `pending`.
+
+      Incorporate `grill-summaries.md`; do not contradict resolved grill decisions.
+    requires:
+      - specs
+      - design
+
+  - id: e2e-scenarios
+    generates: e2e-scenarios.md
+    description: High-level end-to-end user journeys for QA and test planning
+    template: e2e-scenarios.md
+    instruction: |
+      Optional planning artifact: journey-level e2e scenarios (2–8 per change). Prefer
+      **Verify that …** for simple flows; Setup / Steps / Outcome for multi-step
+      journeys — not spec `#### Scenario:` granularity. Automation: Automated | Manual.
+
+      **When to create:** `openspec/tacos.yaml` has `orchestration.e2e_enabled: true`
+      and the change is reasonably e2e-testable (user-facing flows, integrations, or
+      outcomes verifiable end-to-end). Follow `tacos-e2e-scenarios/SKILL.md`
+      and `references/format-and-workflow.md`. Prefer creating after `tasks.md` exists
+      (POST-ARTIFACT or `/opsx-continue` when this artifact is `ready`).
+
+      **When to omit:** Not e2e-testable — do **not** create the file; record a one-line
+      omit reason in the agent summary for the turn. When `orchestration.e2e_enabled` is false, skip
+      unless the user explicitly requests `/tacos-e2e-scenarios` or e2e closure.
+
+      **Never overwrite** an existing `e2e-scenarios.md` for this change.
+
+      Inputs: `proposal.md`, `specs/**/*.md`, `design.md`. Traceability table uses
+      verbatim `### Requirement:` titles from delta specs.
+
+      Not listed in `apply.requires`. When present, `tacos-spec-review` may review this
+      file; incorporate `grill-summaries.md` if grill decisions affect test scope.
+    requires:
+      - tasks
+
+apply:
+  requires: [tasks]
+  tracks: tasks.md
+  instruction: |
+    **Overrides stock opsx-apply implement-first.** Canonical id **apply** (openspec-commands.md).
+
+    **FIRST ACTION:** Inspect this command's `tasks` list (or `tasks.md`). If the first pending
+    item is **`Stage grill:`**, your **first action** MUST be the grill mode offer per
+    interview-prompt.md (**AskQuestion** / **AskUserQuestion** when available; plain-text
+    fallback per ## Structured prompt unavailable when not). Do **not** explore implementation
+    code, edit `.cs` / host scripts, or check off implementation tasks until **`Stage grill:`**
+    is `[x]` or the user waives skip in chat.
+
+    **FORBIDDEN:** Grill mode offer alone (`full` / `short` / `defaults`) without topic interview
+    per interview-prompt.md ## Interview minimum — that does **not** complete **`Stage grill:`**.
+    "Documenting" or copying grill decisions from `design.md`, `proposal.md`, `specs/`, or
+    `tasks.md` instead of user replies to structured topic prompts; that does **not** complete
+    **`Stage grill:`**. Do not treat user section titles (e.g. "Discovery and generation") as
+    permission to skip the **`Stage grill:`** checkbox.
+
+    Read `contextFiles`, then `tasks.md`. When `orchestration.enabled`: tacos-orchestration
+    SKILL.md Entry + read-graphs/apply.md; when `orchestration.grill_enabled`: tacos-grill apply refs.
+    This block is the apply **gate header** only; canonical staged runtime is read-graphs/apply.md
+    MUST read + tacos-orchestration/references/task-stage-contract.md (not re-listed here).
+
+    **Per `## N.` stage when `orchestration.staged_apply_enabled`** — complete pending checklist
+    lines in order per task-stage-contract.md ## Per-stage checklist order; do not treat gate lines
+    as optional.
+
+    **Apply review:** STOP unless merged artifact Summary is **APPROVE** + **Ready** (no open
+    BLOCKER/CRITICAL/MAJOR); **MUST NOT** core-only parallel launch when applicable additional
+    skills remain — detail: post-artifact-signoff.md ## Apply review — parallel launch.
+
+    **TDD-marked changes (`tdd.md` present):** Read tacos-tdd SKILL.md and
+    tacos-orchestration/references/tdd-apply-contract.md — Red → Green → Refactor per stage before
+    Apply review (not implement-first + Tests tail).
+
+    Mark `- [x]` only when done. Pause on blockers; do not guess.
+

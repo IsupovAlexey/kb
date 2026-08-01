@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "skills": {
+    "tacos-apply-review": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-apply-review/SKILL.md",
+      "computedHash": "8ca9c6ed15d7ae6074cf260cc702114ab5cb450d154d2eb21d37a91e667a7171"
+    },
+    "tacos-ask": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-ask/SKILL.md",
+      "computedHash": "0fd2f146226763d9477f630e26f214f17dbfa544b6d92ff09ecd867f9b70aef4"
+    },
+    "tacos-assisted-review": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-assisted-review/SKILL.md",
+      "computedHash": "6f45a3f803c09cfa392d6b3561c748ffca70acf7b9d0e6564b001e2d5b20b27d"
+    },
+    "tacos-audit": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-audit/SKILL.md",
+      "computedHash": "057403a43202221e20d353ad8bd075e046e73fc1e020916612e61802c58c6cb4"
+    },
+    "tacos-dedrift": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-dedrift/SKILL.md",
+      "computedHash": "4819ce0f746250b01f518a3643219ab569af2e04826260782513b3f3ba524ed4"
+    },
+    "tacos-direct-output": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-direct-output/SKILL.md",
+      "computedHash": "5aefdf2ac09b19490f51311e451b3dcad7487b2fc8081caa436541d30fcacc43"
+    },
+    "tacos-doctor": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-doctor/SKILL.md",
+      "computedHash": "cc242d5d643e4b3fe40155091af2306a9b599ba4af136d29ada066f653751a51"
+    },
+    "tacos-e2e-scenarios": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-e2e-scenarios/SKILL.md",
+      "computedHash": "b45bcb4e48bdfee41eede9914247145156ebaf2c6bfb6c0200fec2ecb7015729"
+    },
+    "tacos-grill": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-grill/SKILL.md",
+      "computedHash": "41ee84188b2557733132a97bbf7b29338935103a5c3147e2c958ac53b163ce98"
+    },
+    "tacos-handoff": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-handoff/SKILL.md",
+      "computedHash": "5d14d03e568913badcc6d676395cd30fa63f145e2876064dd12324a6363bd13e"
+    },
+    "tacos-host-skill": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-host-skill/SKILL.md",
+      "computedHash": "820b1ce141b67b333b876ec729531199559a18097fe1fb4c5fc365ef92a5a5ec"
+    },
+    "tacos-implementation-conventions": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-implementation-conventions/SKILL.md",
+      "computedHash": "72918eac725651408d88901bc7492732fd64ca297bf7e6baef873fd3020188e2"
+    },
+    "tacos-jira-sync": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-jira-sync/SKILL.md",
+      "computedHash": "560bc10aac632623683fd755fef3ebf33474dc7c5e5d1843c7bdc75322d010ed"
+    },
+    "tacos-lens": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-lens/SKILL.md",
+      "computedHash": "008d980dc197706cafbfd5fe8f48403a742a5de7305eef35e987d009d33b8dae"
+    },
+    "tacos-orchestration": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-orchestration/SKILL.md",
+      "computedHash": "ad3ae11fe12dfcf87b609d7f4a88a596cbba6c590c7df0bf7020e3b98ec6177d"
+    },
+    "tacos-pr": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-pr/SKILL.md",
+      "computedHash": "b4414807e9566ef71d703756c7d901c7f905c1476f2061aa544fe101aa5337a6"
+    },
+    "tacos-pr-triage": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-pr-triage/SKILL.md",
+      "computedHash": "2ef624c2fc9c5c02154e05ce9fb8acb730a471f3ebec29c13239b8fa19906a8f"
+    },
+    "tacos-project-overview": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-project-overview/SKILL.md",
+      "computedHash": "1e325c9ca9349564c19fd999c2a720de3bb31e7ac5239cebf5174618124df9b0"
+    },
+    "tacos-slice-pr": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-slice-pr/SKILL.md",
+      "computedHash": "dc9cbe6eef6bb39084991b21d520c705a472351c538ff99beaeff4c1e858907b"
+    },
+    "tacos-spec-review": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-spec-review/SKILL.md",
+      "computedHash": "b48543475520a097aa06b40477b8f57ea788964fbd2253871a7fd73afcabe0d6"
+    },
+    "tacos-split-diff": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-split-diff/SKILL.md",
+      "computedHash": "fa5aa37a6001f47ec3b86ef6060bdf36e3cac53baac05c0d83fc21746f72603d"
+    },
+    "tacos-tdd": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-tdd/SKILL.md",
+      "computedHash": "5b1059d0af1dfa027c009763f2d24ba13cbfd2da85dd9a3fd24cad5ecc9dd49e"
+    },
+    "tacos-test-plans": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-test-plans/SKILL.md",
+      "computedHash": "7de58d23579b5891fb4cb11213f2a7294a0a4e9ee9982ffe6ce42f470ac0b1f5"
+    },
+    "tacos-work": {
+      "source": "servicetitan/tacos",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/tacos-work/SKILL.md",
+      "computedHash": "e2ea90463218ab0a31a3bee3e8e285a3ee9e38a143bcf3d5231f643c8924c5e9"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# {{change_name}}
+
+<!-- Rename to jira-description.md (or set jira.description_template) for tacos-jira-sync description generation. -->
+
+## Summary
+
+{{one_paragraph_why}}
+
+## What changed
+
+{{outcome_bullets}}
+
+## Design highlights
+
+{{key_decisions}}
+
+## Requirements covered
+
+{{capability_summary}}
+
+## Tasks / status
+
+{{brief_status}}
+
+## Open questions
+
+{{open_questions_or_none}}
+
+---
+
+_Generated from OpenSpec change artifacts. Edit before approving Jira sync._

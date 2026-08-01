@@ -1,0 +1,21 @@
+# SonarQube host notes
+
+<!-- Rename to sonarqube.md (or set pr.sonar_host_instructions_path) when using tacos-pr-triage Sonar API enrichment. -->
+
+Repo-specific hints for Sonar-sourced check triage. Generic API and triage rubrics stay in the tacos-pr-triage skill references.
+
+## Bot login and dashboard
+
+<!-- e.g. SonarCloud bot comment pattern, dashboard URL shape, where project key appears in CI -->
+
+## Coverage and duplication exclusions
+
+<!-- Paths or patterns the team typically excludes from coverage or CPD chase during triage -->
+
+## Paths not worth chasing
+
+<!-- Known noisy rules, generated code, or third-party paths to deprioritize -->
+
+## Post-fix verification
+
+<!-- Commands or checks to run after fixing Sonar issues (may reference host implementation gates) -->

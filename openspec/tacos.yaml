@@ -1,0 +1,111 @@
+version: 1.17.0
+orchestration:
+  enabled: true
+  grill_enabled: true
+  planning_review_enabled: true
+  staged_apply_enabled: true
+  e2e_enabled: false
+  e2e_models:
+    cursor: inherit
+    claude: sonnet
+  test_plans_models:
+    cursor: inherit
+    claude: sonnet
+  spec_grounding_models:
+    cursor: inherit
+    claude: sonnet
+  audit_explore_models:
+    cursor: inherit
+    claude: haiku
+  audit_executor_models:
+    cursor: inherit
+    claude: sonnet
+  apply_implement_models:
+    cursor: inherit
+    claude: sonnet
+  orchestrator_fixes_models:
+    cursor: inherit
+    claude: sonnet
+  gate_runner_models:
+    cursor: inherit
+    claude: haiku
+  dedrift_detect_models:
+    cursor: inherit
+    claude: haiku
+grill:
+  per_task_stage: true
+  gather_models:
+    cursor: inherit
+    claude: haiku
+  summarize_models:
+    cursor: inherit
+    claude: sonnet
+  default_max_questions: 8
+  triggers:
+    apply_on_ambiguous_task: true
+    apply_on_spec_drift: true
+    sync_on_ambiguous_delta: true
+    explore_on_decision: true
+  prompts: {}
+dedrift:
+  deep_max_iterations: 5
+  scheduled_depth: standard
+review:
+  spec_review_models:
+    cursor: inherit
+    claude: sonnet
+  apply_review_models:
+    cursor: inherit
+    claude: sonnet
+  additional_spec_review_models:
+    cursor: inherit
+    claude: sonnet
+  additional_apply_review_models:
+    cursor: inherit
+    claude: sonnet
+  spec_review_additional_skills: []
+  apply_review_additional_skills: []
+  deep_max_iterations: 5
+jira:
+  enabled: false
+  generate_desc_models:
+    cursor: inherit
+    claude: sonnet
+  default_project_key: null
+  default_issue_type: Story
+  description_template: null
+  fetch_fields:
+    - status
+    - issue_type
+slice_pr:
+  enabled: true
+  default_draft_prs: true
+  default_base_branch: null
+  regenerate_descriptions: true
+pr:
+  enabled: true
+  default_base_branch: null
+  descriptions_root: artifacts/openspec-artifacts
+  warn_dirty_checkout: true
+  require_clean_checkout: false
+  regenerate_on_sync: true
+  preserve_why: true
+  default_draft_prs: true
+  sonar_enabled: false
+  sonar_host: null
+  sonar_project: null
+  sonar_host_instructions_path: null
+  loop_quiet_period: 12m
+  loop_comment_poll_interval: 2m
+  loop_bot_wait_min: 10m
+  loop_stuck_ci_timeout: 45m
+project_overview:
+  enabled: false
+  path: README.md
+  prompt_after_sync: false
+  prompt_after_archive: false
+
+workspace:
+  folders:
+    - name: repository
+      path: .

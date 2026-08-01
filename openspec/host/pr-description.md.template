@@ -1,0 +1,23 @@
+# PR description host template (reserved)
+
+<!-- Rename to pr-description.md when tacos-pr wires conventional host PR templates. Until then, tacos-pr uses its bundled description-template.md. -->
+
+## Summary
+
+{{tldr}}
+
+## In this PR
+
+{{bullets}}
+
+## Why
+
+{{why}}
+
+## How to review
+
+{{review_bullets}}
+
+## Test plan
+
+{{test_checkboxes}}
