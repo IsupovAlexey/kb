@@ -19,18 +19,18 @@
 
 **Testable outcome:** `scripts/kb/` provides slug and wiki-lint CLIs; `.agents/skills/kb/SKILL.md` documents ingest, slug invocation, token-light reads, and git publish.
 
-- [ ] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 2` + unchecked below); **User inputs** under `## apply` ### Stage 2 in `grill-summaries.md`
-- [ ] 2.1 Create `scripts/kb/` TypeScript package with `slug` and `wiki-lint` CLIs per **Decision 6**, **Decision 7**, and **Requirement: Semantic wiki lint CLI**
-- [ ] 2.2 Implement slug: kebab-case, collision suffix per **Requirement: Deterministic slug filenames**
-- [ ] 2.3 Implement wiki-lint: orphans, broken wikilinks, index gaps per **Requirement: Semantic wiki lint CLI**
-- [ ] 2.4 Create `.agents/skills/kb/SKILL.md` as user-invocable `/kb` per **Requirement: Single ingest entry point**
-- [ ] 2.5 Document light vs deep integrate, slug CLI usage, token-light reads, and git flags per **Decision 3**, **Decision 8**, and **Requirement: Slug CLI for filenames**
-- [ ] Verify Decision 2: skill text states folders are created on first need with no fixed bucket list
-- [ ] Verify Decision 3: skill text distinguishes default light ingest from `--integrate` / explicit integrate language
-- [ ] Verify Decision 7: `/kb` skill documents slug CLI invocation; `scripts/kb slug` produces kebab-case output
-- [ ] Tests: N/A — TypeScript CLIs verified via manual invocation in apply
-- [ ] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-2.md`
-- [ ] Human review: Pause for human sign-off before stage 3
+- [x] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 2` + unchecked below); **User inputs** under `## apply` ### Stage 2 in `grill-summaries.md`
+- [x] 2.1 Create `scripts/kb/` TypeScript package with `slug` and `wiki-lint` CLIs per **Decision 6**, **Decision 7**, and **Requirement: Semantic wiki lint CLI**
+- [x] 2.2 Implement slug: kebab-case, collision suffix per **Requirement: Deterministic slug filenames**
+- [x] 2.3 Implement wiki-lint: orphans, broken wikilinks, index gaps per **Requirement: Semantic wiki lint CLI**
+- [x] 2.4 Create `.agents/skills/kb/SKILL.md` as user-invocable `/kb` per **Requirement: Single ingest entry point**
+- [x] 2.5 Document light vs deep integrate, slug CLI usage, token-light reads, and git flags per **Decision 3**, **Decision 8**, and **Requirement: Slug CLI for filenames**
+- [x] Verify Decision 2: skill text states folders are created on first need with no fixed bucket list
+- [x] Verify Decision 3: skill text distinguishes default light ingest from `--integrate` / explicit integrate language
+- [x] Verify Decision 7: `/kb` skill documents slug CLI invocation; `scripts/kb slug` produces kebab-case output
+- [x] Tests: N/A — TypeScript CLIs verified via manual invocation in apply
+- [x] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-2.md`
+- [x] Human review: Pause for human sign-off before stage 3
 
 ## 3. Search, query, gates, and lint wiring
 

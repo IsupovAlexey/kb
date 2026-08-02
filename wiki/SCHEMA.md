@@ -29,6 +29,22 @@ Every wiki page MUST include YAML frontmatter with at least:
 
 Content adds use the `kb:` prefix (e.g. `kb: add bookmark karpathy-llm-wiki`).
 
+## Slug CLI
+
+Generate filenames with the TypeScript slug CLI — do not invent paths in prose:
+
+```bash
+npm run kb:slug -- "<title>" --dir wiki/bookmarks
+npm run kb:slug -- "<title>" --dir sources
+```
+
+Rules: kebab-case (`[a-z0-9-]`), lowercase, drop filler words, max 64 chars. On collision, numeric suffix (`-2`, `-3`, …).
+
+## Ingest modes
+
+- **Light (default):** Primary page + index/log update + wikilinks to existing high-confidence matches only.
+- **Deep integrate:** User passes `--integrate` or explicitly asks — agent MAY create/update multiple topic pages.
+
 ## Navigation files
 
 - `wiki/index.md` — content catalog; updated on every add.

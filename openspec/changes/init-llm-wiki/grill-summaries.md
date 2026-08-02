@@ -164,11 +164,26 @@ Short apply grill (mode: short). Minimal SCHEMA skeleton; empty vault; Prettier 
 
 #### Summary
 
+Short apply grill (mode: short). TypeScript CLIs via tsx at repo root; numeric slug collision suffix; Stage 2 skill covers ingest + slug only.
+
 #### Decisions
+
+- Slug collision: numeric suffix (`-2`, `-3`, …) per tacos-work pattern
+- CLI runtime: `tsx` via root `package.json` scripts (no separate `scripts/kb/package.json`)
+- Stage 2 skill scope: ingest + slug only; `/kb query`, `/kb lint` wiring, and qmd docs deferred to Stage 3
+- Wiki-lint: human-readable stdout report; exit code 1 when any issue found
 
 #### Open questions
 
+- None blocking Stage 2
+
 #### User inputs
+
+- Grill mode: short
+- Slug collision: numeric suffix (Recommended)
+- CLI runtime: tsx at root package.json (user requested root-level deps, not nested package)
+- Skill scope: ingest-only — defer query/lint/qmd to Stage 3 (Recommended)
+- Wiki-lint output: human-readable + exit 1 on issues (Recommended)
 
 ### Stage 3
 
