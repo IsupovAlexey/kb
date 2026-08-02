@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "железки"]
+tags: ["bookmark", "import", "firefox", "hardware"]
 url: "https://www.displayninja.com/new-monitors/"
-source_folder: "Железки"
 ---
 
 # New Monitors In 2022: What To Expect [Professional, Gaming]

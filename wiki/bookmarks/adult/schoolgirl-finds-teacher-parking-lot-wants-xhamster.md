@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно"]
+tags: ["bookmark", "import", "firefox", "adult"]
 url: "https://xhamster.com/videos/schoolgirl-finds-teacher-in-parking-lot-and-wants-to-pass-xhMHFvk"
-source_folder: "Порно"
 ---
 
 # Schoolgirl Finds Teacher in Parking Lot and Wants to... | xHamster

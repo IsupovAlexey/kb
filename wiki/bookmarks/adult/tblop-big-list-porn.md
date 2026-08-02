@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно"]
+tags: ["bookmark", "import", "firefox", "adult"]
 url: "http://www.tblop.com/"
-source_folder: "Порно"
 ---
 
 # TBLOP - The Big List of Porn

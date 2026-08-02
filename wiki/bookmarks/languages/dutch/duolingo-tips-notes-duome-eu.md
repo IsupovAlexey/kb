@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://duome.eu/tips/en/dn"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Duolingo · Tips and Notes @ duome.eu

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://interviewing.io/guides/system-design-interview"
-source_folder: "поиск"
 ---
 
 # System Design Interview Guide for Senior Engineers

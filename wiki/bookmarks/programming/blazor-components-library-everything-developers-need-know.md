@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://gleexa.com/web/blazor-components-library/"
-source_folder: "Программирование"
 ---
 
 # Blazor Components Library: Everything Developers Need To Know

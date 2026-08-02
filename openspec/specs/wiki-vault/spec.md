@@ -1,6 +1,6 @@
 ## Purpose
 
-Obsidian vault layout, organic folder policy, and capture immutability for the personal LLM wiki.
+Obsidian vault layout, organic folder policy, and wiki-only content conventions for the personal LLM wiki.
 
 ## Requirements
 
@@ -29,7 +29,7 @@ The system SHALL NOT require a fixed taxonomy of content folders at init. The `/
 
 ### Requirement: Deterministic slug filenames
 
-Wiki and capture filenames SHALL be generated via the TypeScript slug CLI in `scripts/kb/` (kebab-case, `[a-z0-9-]`, collision suffix when needed). The `/kb` skill SHALL invoke this CLI rather than inventing filenames in prose.
+Wiki filenames SHALL be generated via the TypeScript slug CLI in `scripts/kb/` (kebab-case, `[a-z0-9-]`, collision suffix when needed). The `/kb` skill SHALL invoke this CLI rather than inventing filenames in prose.
 
 #### Scenario: Bookmark title produces slug
 
@@ -52,31 +52,31 @@ Images and file attachments referenced from wiki pages SHALL be stored under `wi
 
 ### Requirement: Wiki schema document
 
-Wiki conventions SHALL be documented in `wiki/SCHEMA.md` including: page frontmatter fields, capture vs derived rules, folder policy, slug CLI usage, commit message pattern, and light vs deep ingest behavior.
+Wiki conventions SHALL be documented in `wiki/SCHEMA.md` including: page frontmatter fields, wiki-only content rules, folder policy, slug CLI usage, commit message pattern, and light vs deep ingest behavior.
 
 #### Scenario: Agent reads conventions before ingest
 
 - **WHEN** the `/kb` skill runs
 - **THEN** it reads `wiki/SCHEMA.md` for formatting and policy rules
 
-### Requirement: Sources immutability
+### Requirement: Wiki-only content store
 
-Long-form and URL captures SHALL be written under `sources/` at the repository root. After initial commit, the `/kb` skill SHALL NOT modify the body of an existing capture file except on explicit user request to fix a capture error.
+All ingested content SHALL be written under `wiki/`. The repository SHALL NOT maintain a separate `sources/` capture layer. URL bookmarks and long pastes are stored as derived wiki pages with frontmatter and a `## Summary` section.
 
 #### Scenario: URL bookmark ingest
 
-- **WHEN** `/kb` ingests a URL or long paste warranting a capture
-- **THEN** an immutable capture file is written under `sources/` and a derived summary page is written under `wiki/`
+- **WHEN** `/kb` ingests a URL or long paste
+- **THEN** a wiki page is written under `wiki/` with URL, title, and `## Summary` from fetched or pasted content
 
 #### Scenario: Short note ingest
 
-- **WHEN** `/kb` ingests a short note that does not warrant a capture
-- **THEN** content is written only under `wiki/` with no `sources/` file
+- **WHEN** `/kb` ingests a short note
+- **THEN** content is written only under `wiki/` as a note or bookmark page
 
-#### Scenario: User-requested capture correction
+#### Scenario: Bookmark folder indexes
 
-- **WHEN** the user explicitly asks to fix an error in an existing capture file
-- **THEN** the skill MAY edit that capture's body and notes the correction in `wiki/log.md`
+- **WHEN** a folder under `wiki/bookmarks/` contains child pages
+- **THEN** the folder MAY include an `index.md` listing child pages with wikilinks
 
 ### Requirement: Index and log maintenance on add
 

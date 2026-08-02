@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нипср"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "nipsr"]
 url: "https://server174.hosting.reg.ru:1500/"
-source_folder: "Bladwijzerwerkbalk/Надпо/НИПСР"
 ---
 
 # Authorization --- OLD

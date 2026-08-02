@@ -1,0 +1,43 @@
+# Programming
+
+- [[ai/index|AI]]
+- [[devops/index|DevOps]]
+- [[6over3-hako-embeddable-lightweight-secure-high-performance-javas]] — 6over3/hako: An embeddable, lightweight, secure, high-performance JavaScript engine.
+- [[airbnb-ts-migrate-tool-help-migrate-javascript-code-quickly-conv]] — airbnb/ts-migrate: A tool to help migrate JavaScript code quickly and conveniently to TypeScript
+- [[alternative-hangfire-didact]] — Alternative To Hangfire | Didact
+- [[azure-sql-database-free-offer-azure-sql-database-microsoft-learn]] — Azure SQL Database free offer - Azure SQL Database | Microsoft Learn
+- [[bflat-c-as-you-know-it-but-go-inspired-tooling-small-selfcontain]] — bflat - C# as you know it but with Go-inspired tooling (small, selfcontained, and native executables)
+- [[blazor-components-library-everything-developers-need-know]] — Blazor Components Library: Everything Developers Need To Know
+- [[bootstrap-world-s-most-popular-mobile-first-responsive-front-end]] — Bootstrap · The world's most popular mobile-first and responsive front-end framework.
+- [[bootswatch-spacelab]] — Bootswatch: Spacelab
+- [[change-default-code-page-windows-console-utf-8-super-user]] — Change default code page of Windows console to UTF-8 - Super User
+- [[database-normal-forms-habr]] — Нормализация отношений. Шесть нормальных форм / Хабр
+- [[davidfowl-aspirepipelines-sample-pipeline-using-new-deployment-a]] — davidfowl/AspirePipelines: An sample pipeline using new deployment APIs in aspire
+- [[design-principles-teplyakov]] — Programming stuff: О принципах проектирования
+- [[dhall-configuration-language]] — The Dhall configuration language
+- [[element-desktop-ui-toolkit-web]] — Element - A Desktop UI Toolkit for Web
+- [[fabiospampinato-cash-absurdly-small-jquery-alternative-modern-br]] — fabiospampinato/cash: An absurdly small jQuery alternative for modern browsers.
+- [[factory-patterns-abstract-factory-pattern-codeproject]] — Factory Patterns - Abstract Factory Pattern - CodeProject
+- [[htmx-documentation]] — </> htmx ~ Documentation
+- [[htmx-high-power-tools-html]] — </> htmx - high power tools for html
+- [[khalidabuhakmeh-htmx-net-adds-extensions-methods-httpresponse-ht]] — khalidabuhakmeh/Htmx.Net: Adds extensions methods to HttpResponse and HttpRequest to make working with Htmx easier.
+- [[less-preview]] — less-preview
+- [[login-madelineprotodocs]] — Login | MadelineProtoDocs
+- [[mbucari-injectdotnet-inject-dotnet-net-core-dlls-into-win32-win6]] — Mbucari/InjectDotnet: Inject dotnet .NET Core dlls into Win32 or Win64 native processes and hook native functions
+- [[metanit-com]] — METANIT.COM - Сайт о программировании
+- [[net-programming-dev]] — .NET - programming.dev
+- [[ode-unit-tests-blog-luminousmen]] — Ode to Unit Tests - Blog | luminousmen
+- [[overview-photino-docs]] — Overview - Photino Docs
+- [[owasp-cheat-sheet-series-owasp]] — OWASP Cheat Sheet Series - OWASP
+- [[pgoutput2json-library-net-pgoutput2json-net]] — PgOutput2Json library for .NET | PgOutput2Json.NET
+- [[php-visual-studio-visual-studio-blog]] — PHP in Visual Studio - Visual Studio Blog
+- [[programming-stuff-di-property-injection]] — Programming stuff: DI Паттерны. Property Injection
+- [[solid-principles-cheatsheet-teplyakov]] — Programming stuff: Шпаргалка по SOLID принципам
+- [[tanstack-high-quality-open-source-software-web-developers]] — TanStack | High Quality Open-Source Software for Web Developers
+- [[twelve-factor-app]] — The Twelve-Factor App
+- [[use-jquery-firebug-chrome-inspector-peter-coles]] — Use jQuery in Firebug or Chrome Inspector - Peter Coles
+- [[using-unix-domain-sockets-asp-net-core-httpclient]] — Using Unix domain sockets with ASP.NET Core and HttpClient
+- [[wesley-aptekar-cassels-reasons-avoid-javascript-cdns]] — Wesley Aptekar-Cassels | Reasons to avoid Javascript CDNs
+- [[working-with-legacy-code-byndyu]] — Блог Александра Бындю: Работа с унаследованным кодом: Риски, анализ проекта и стратегии работы
+- [[xoofx-ultra-advanced-profiler-net-applications-windows]] — xoofx/ultra: An advanced profiler for .NET Applications on Windows
+- [[you-might-not-need-jquery]] — You Might Not Need jQuery

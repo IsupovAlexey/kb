@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "hardware"]
 url: "https://www.rtings.com/monitor/reviews/lg/43ud79-b#page-test-results"
-source_folder: "Полезности"
 ---
 
 # LG 43UD79-B Review - RTINGS.com

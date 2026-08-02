@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "languages", "armenian"]
 url: "https://course.emova.language-ua.online/register?next=%2F"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Sign in or Register | Є-мова

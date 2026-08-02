@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://www.welklidwoord.nl/woord"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # De of het woord? Welk lidwoord

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.reddit.com/r/cscareerquestions/comments/4ce2s3/resource_interview_questions_my_massive/"
-source_folder: "поиск"
 ---
 
 # [Resource] Interview Questions - My massive cheat-sheet of questions I ask in Software Engineering interviews. : cscareerquestions

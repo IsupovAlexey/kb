@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series"
-source_folder: "Программирование"
 ---
 
 # OWASP Cheat Sheet Series - OWASP

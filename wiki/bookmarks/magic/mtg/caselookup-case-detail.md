@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "mtg"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "https://caselookup.nmcourts.gov/caselookup/app?component=cnLink&page=SearchResults&service=direct&session=T&sp=SD-101-CR-202000095"
-source_folder: "Bladwijzerwerkbalk/MTG"
 ---
 
 # Caselookup - Case Detail

@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://dictionary.cambridge.org/dictionary/dutch-english/voorbereiden"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # voorbereiden in English - Cambridge Dictionary

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "tools"]
 url: "https://sankeymatic.com/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # SankeyMATIC: Make Beautiful Flow Diagrams

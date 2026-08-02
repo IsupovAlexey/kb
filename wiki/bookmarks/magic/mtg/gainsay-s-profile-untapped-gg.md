@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "mtg"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "https://mtga.untapped.gg/profile/bee6f10e-eab9-4973-a76a-5e8cb54f0cad/62D6DE43F73882D5"
-source_folder: "Bladwijzerwerkbalk/MTG"
 ---
 
 # Gainsay's Profile - Untapped.gg

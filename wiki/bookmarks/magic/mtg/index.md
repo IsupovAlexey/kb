@@ -1,0 +1,35 @@
+# Magic / MTG
+
+- [[ari-s-core-set-2019-limited-review]] — Ari's Core Set 2019 Limited Review
+- [[caselookup-case-detail]] — Caselookup - Case Detail
+- [[coolstuffinc-com-online-retailer-board-games-mtg-many-other-coll]] — CoolStuffInc.com online retailer of board games, mtg and many other collectible card games
+- [[crokodil-s-profile-untapped-gg]] — crokodil's Profile - Untapped.gg
+- [[deathsie-s-limited-tierlists-master-collection]] — Deathsie's Limited Tierlists: The Master Collection
+- [[dmios-s-profile-untapped-gg]] — Dmios's Profile - Untapped.gg
+- [[draftaholics-anonymous]] — Draftaholics Anonymous
+- [[frank-analysis-how-many-colored-mana-sources-do-you-need-consist]] — » Frank Analysis – How Many Colored Mana Sources Do You Need to Consistently Cast Your Spells?
+- [[gainsay-s-profile-untapped-gg]] — Gainsay's Profile - Untapped.gg
+- [[galopin-s-profile-untapped-gg]] — Galopin's Profile - Untapped.gg
+- [[gfcards-ru-topdeck-ru]] — Gfcards.ru - Новое в мире магии - TOPDeck.ru
+- [[goldfish]] — Goldfish
+- [[half-s-profile-untapped-gg]] — HalF's Profile - Untapped.gg
+- [[how-many-colored-mana-sources-do-you-need-consistently-cast-your]] — How Many Colored Mana Sources Do You Need to Consistently Cast Your Spells? A Guilds of Ravnica Update
+- [[ivilis-s-profile-untapped-gg]] — Ivilis's Profile - Untapped.gg
+- [[kci-deck-guide]] — KCI Deck Guide | 記事
+- [[less-practical-magic-rna-draft-meeting-part-1-archetypes]] — Less Practical Magic: The RNA Draft Meeting Part #1: Archetypes
+- [[littlebeep-s-profile-untapped-gg]] — littlebeep's Profile - Untapped.gg
+- [[lsv-s-profile-untapped-gg]] — LSV's Profile - Untapped.gg
+- [[lucky-dragon-s-profile-untapped-gg]] — lucky_dragon's Profile - Untapped.gg
+- [[magic-deck-building-statistics-eternal-central]] — Magic Deck Building Statistics | Eternal Central
+- [[magic-gathering-hobby-am]] — Magic: The Gathering – Hobby.am
+- [[mtg-arena-status]] — MTG Arena Status
+- [[mtg-duelist]] — MTG Duelist
+- [[sealeddeck-tech]] — SealedDeck.Tech
+- [[starcitygames-com-what-do-when-you-don-t-know-what-do]] — StarCityGames.com - What To Do When You Don't Know What To Do
+- [[starcitygames-com-you-can-play-modern-s-best-decks-here-s-how]] — StarCityGames.com - You Can Play Modern's Best Decks. Here's How.
+- [[stream-decker]] — Stream Decker
+- [[top-8-predictor-swiss-rounds-tournament-tool-limitedinformation]] — Top 8 Predictor - A Swiss Rounds Tournament Tool. | limitedinformation
+- [[untapped-gg]] — Untapped.gg
+- [[vlados-s-profile-untapped-gg]] — Vlados's Profile - Untapped.gg
+- [[welcome-r-magicalchemy-deck-lists-ideas-r-magicalchemy]] — 👋 Welcome to r/MagicAlchemy - Deck Lists and Ideas : r/MagicAlchemy
+- [[zenith777-s-profile-untapped-gg]] — Zenith777's Profile - Untapped.gg

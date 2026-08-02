@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "http://tourney.ru/forum/viewtopic.php?id=27696"
-source_folder: "Игры"
 ---
 
 # tourney.ru форумЪ / Инператору

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://plati.market/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Plati.Market. Digital goods marketplace.

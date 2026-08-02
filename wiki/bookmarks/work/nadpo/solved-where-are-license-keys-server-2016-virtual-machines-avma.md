@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo"]
 url: "https://www.urtech.ca/2018/03/solved-where-are-the-license-keys-for-server-2016-virtual-machines-avma/"
-source_folder: "Bladwijzerwerkbalk/Надпо"
 ---
 
 # SOLVED: Where Are The License Keys For Server 2016 Virtual Machines AVMA? – Up & Running Technologies, Tech How To's

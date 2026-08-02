@@ -1,0 +1,36 @@
+# Languages / Armenian
+
+- [[1-aryunot-khaghadruyq-youtube]] — Արյունոտ Խաղադրույք, Սերիա 1 / Aryunot Khaghadruyq - YouTube
+- [[alexander-shirvanzade-chaos]] — Александр Ширванзаде - Хаос
+- [[armenia-citizenship-language-exam-procedure]]
+- [[armenia-citizenship-test]] — Тест на гражданство | Армянский юрист
+- [[armenia-constitution-2015-armenian]] — Հայաստանի Հանրապետության Սահմանադրություն - Գրադարան - Հայաստանի Հանրապետության Նախագահ
+- [[armenia-constitution-2015-russian]] — Конституция Республики Армения - Библиотека - Президент Республики Армения
+- [[armenian-case-declension-grade-7]] — Տեսություն. ուղղական, սեռական, տրական և հայցական հոլովներ — դաս։ Հայոց լեզու, 7-րդ դասարան.
+- [[armenian-cases-declension-lesson]]
+- [[armenian-conjugation]] — Armenian conjugation
+- [[armenian-language-grammar-2007-pdf]] — Armenian Language Grammar (2007 PDF)
+- [[armenian-language-online-youtube]] — армянский язык онлайн - YouTube
+- [[armenian-public-tv-youtube]] — Armenian Public TV - YouTube
+- [[armtv]] — Новые армянские сериалы на ARMTV
+- [[browse-armflix-largest-armenian-movies-streaming-portal]] — Browse - Armflix | Largest Armenian Movies Streaming Portal
+- [[chaos-first-part-wikisource]] — Քաոս/Առաջին մաս — Վիքիդարան
+- [[eastern-armenian-textbook]] — Eastern Armenian Textbook
+- [[facebook-video-armenian]] — Video | Facebook
+- [[free-armenian-text-speech-ai-voice-generator-elevenlabs]] — Free Armenian Text to Speech & AI Voice Generator | ElevenLabs
+- [[gampric-adventures-episode-5]] — Приключения Гамприка 5 серия | Գամփռիկի արկածները 5 սերիյա | հայկական մուլտեր | | մանկական հեքիաթ - YouTube
+- [[gyutarar-gort-youtube]] — Գյուտարար գորտը / Лягушонок-изобретатель / Gyutarar gort@ - YouTube
+- [[hd-arena-1-youtube]] — Ճաք - Զազոռ (HD Arena) - մաս 1 - YouTube
+- [[hd-production-youtube]] — HD Production - YouTube
+- [[heqia-chari-verj-mankakan-youtube]] — Հեքիաթ/Heqia/Չարի վերջը. Chari verj. Чари верч. Հեքիաթներ մանկական /ՀԱՅԵՐԵՆ ՄՈՒԼՏՖԻԼՄ.Mankakan - YouTube
+- [[impersonator-episode-1-2-youtube]] — Նմանակներ | Impersonator - Episode 1 & 2 - YouTube
+- [[irishman-2019-film]] — Իռլանդացին / Ирландец (2019) - դիտել ֆիլմը օնլայն՝ բարձր որակով
+- [[national-library-armenia-mcp-server-r-armenia]] — National Library of Armenia MCP Server : r/armenia
+- [[obsessive-dictionary-entry]]
+- [[panarmenian-tv-youtube]] — PanArmenian TV - YouTube
+- [[paruyr-sevak-poetry-vk]] — Паруйр Севак стихи на русском
+- [[petutyun-dictionary-entry]]
+- [[sevazgest-mardik-2-2002]] — Севазгест мардик 2 (2002)
+- [[sign-register]] — Sign in or Register | Є-мова
+- [[xosum-am]] — Xosum.am - Հայերեն խոսքը տեքստի վերածող գործիք
+- [[yerevan-dangerous-air]] — Թեմա համար 1. Երևանի վտանգավոր օդը - YouTube

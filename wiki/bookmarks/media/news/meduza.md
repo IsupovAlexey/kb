@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "media", "news"]
 url: "https://meduza.io/cards/mne-zvonyat-v-dver-govoryat-otkroyte-politsiya-chto-delat"
-source_folder: "Полезности"
 ---
 
 # Мне звонят в дверь, говорят: «Откройте, полиция!» Что делать? — Meduza

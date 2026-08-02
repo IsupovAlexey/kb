@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "магия"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "http://www.eternalcentral.com/magic-deck-building-statistics/"
-source_folder: "Магия"
 ---
 
 # Magic Deck Building Statistics | Eternal Central

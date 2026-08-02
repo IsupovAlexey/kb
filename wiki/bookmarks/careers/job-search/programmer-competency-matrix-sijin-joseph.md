@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://sijinjoseph.com/programmer-competency-matrix/"
-source_folder: "поиск"
 ---
 
 # Programmer Competency Matrix | Sijin Joseph

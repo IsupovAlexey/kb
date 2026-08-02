@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://docs.google.com/spreadsheets/d/1eoTKYSiQYO5jfJSeHGrZTsf3ptOOjB-8topacI5eQ_k/edit#gid=1300978637"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Free VR scripts list - Google Таблицы

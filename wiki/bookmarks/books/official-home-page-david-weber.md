@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "книги"]
+tags: ["bookmark", "import", "firefox", "books", "authors"]
 url: "http://www.davidweber.net/"
-source_folder: "Книги"
 ---
 
 # Official Home Page || David Weber

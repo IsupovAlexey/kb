@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "http://sergeyteplyakov.blogspot.com/2013/01/di-property-injection.html"
-source_folder: "поиск"
 ---
 
 # Programming stuff: DI Паттерны. Property Injection

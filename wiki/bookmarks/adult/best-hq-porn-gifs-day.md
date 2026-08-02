@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно", "[mapnaam]"]
+tags: ["bookmark", "import", "firefox", "adult"]
 url: "https://gifhq.com/#"
-source_folder: "Порно/[Mapnaam]"
 ---
 
 # BEST HQ PORN GIFS OF THE DAY

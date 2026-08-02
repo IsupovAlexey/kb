@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://ind.nl/en/public-register-recognised-sponsors"
-source_folder: "поиск"
 ---
 
 # Public Register Recognised Sponsors | IND

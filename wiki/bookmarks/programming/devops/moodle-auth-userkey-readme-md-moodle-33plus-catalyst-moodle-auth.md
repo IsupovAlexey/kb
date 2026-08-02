@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "programming", "devops"]
 url: "https://github.com/catalyst/moodle-auth_userkey/blob/MOODLE_33PLUS/README.md"
-source_folder: "Полезности"
 ---
 
 # moodle-auth_userkey/README.md at MOODLE_33PLUS · catalyst/moodle-auth_userkey

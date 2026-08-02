@@ -59,8 +59,6 @@ npm run kb:lint
 npm run format:check
 ```
 
-After editing markdown under `sources/`, run `npm run format:write` on changed files if needed (Prettier check is scoped to `wiki/**/*.md` at init).
-
 Optional auto-fix for formatting only:
 
 ```bash

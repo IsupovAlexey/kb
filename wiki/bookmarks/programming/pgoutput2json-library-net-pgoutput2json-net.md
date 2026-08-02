@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://pgoutput2json.net/"
-source_folder: "Программирование"
 ---
 
 # PgOutput2Json library for .NET | PgOutput2Json.NET

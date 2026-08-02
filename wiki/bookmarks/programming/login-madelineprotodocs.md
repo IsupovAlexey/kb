@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://docs.madelineproto.xyz/docs/LOGIN.html"
-source_folder: "Программирование"
 ---
 
 # Login | MadelineProtoDocs

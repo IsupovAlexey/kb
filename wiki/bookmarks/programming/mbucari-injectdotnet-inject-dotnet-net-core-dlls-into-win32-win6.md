@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://github.com/Mbucari/InjectDotnet"
-source_folder: "Программирование"
 ---
 
 # Mbucari/InjectDotnet: Inject dotnet .NET Core dlls into Win32 or Win64 native processes and hook native functions

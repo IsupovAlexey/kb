@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "музыка"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://www.youtube.com/watch?v=Tos3o_GWED4"
-source_folder: "Музыка"
 ---
 
 # Most Epic Classical Music Pieces Collection | 6-Hour Playlist [HD] - YouTube

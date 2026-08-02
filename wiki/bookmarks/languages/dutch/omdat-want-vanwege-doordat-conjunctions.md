@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://hinative.com/questions/16382535"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # What is the difference between "omdat" and "want" and "vanwege" and "doordat" ? "omdat" vs "want" vs "vanwege" vs "doordat" ? | HiNative

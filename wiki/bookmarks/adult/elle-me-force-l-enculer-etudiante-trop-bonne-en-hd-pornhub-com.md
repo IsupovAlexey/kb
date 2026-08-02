@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно"]
+tags: ["bookmark", "import", "firefox", "adult"]
 url: "https://fr.pornhub.com/view_video.php?viewkey=ph5a64f21f188b0"
-source_folder: "Порно"
 ---
 
 # Elle me Force à L'enculer (étudiante Trop Bonne En HD) - Pornhub.com

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "programming", "devops"]
 url: "https://github.com/catalyst/moodle-auth_userkey"
-source_folder: "Полезности"
 ---
 
 # catalyst/moodle-auth_userkey: Log in to Moodle using one time user key based login URL. Auth plugin for organising simple SSO (single sign on) between moodle and your external web application.

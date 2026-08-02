@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "hardware"]
 url: "https://docs.google.com/spreadsheets/d/1d9_E3h8bLp-TXr-0zTJFqqVxdCR9daIVNyMatydkpFA/edit#gid=639584818"
-source_folder: "Полезности"
 ---
 
 # AM4 Vcore VRM Ratings v1.2 (2019-07-10) - Google Таблицы

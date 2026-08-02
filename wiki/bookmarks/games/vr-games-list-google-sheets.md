@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://docs.google.com/spreadsheets/d/1Ld7c_8pHYd-1tENTOMSiW-kRyw5NJJLGdIGsONHuWtY/edit#gid=0"
-source_folder: "Игры"
 ---
 
 # Vr Games List - Google Sheets

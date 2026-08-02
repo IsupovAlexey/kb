@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "books", "gutenberg"]
 url: "https://www.gutenberg.org/ebooks/author/42"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Books by Baum, L. Frank (Lyman Frank) (sorted by popularity) - Project Gutenberg

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "аппкк"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "appkk"]
 url: "https://cv996049.vps.regruhosting.ru/phpmyadmin/index.php"
-source_folder: "Bladwijzerwerkbalk/Надпо/АППКК"
 ---
 
 # cv996049.vps.regruhosting.ru:443 / MySQL | phpMyAdmin 4.9.5deb2

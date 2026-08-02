@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "железки"]
+tags: ["bookmark", "import", "firefox", "hardware"]
 url: "https://www.youtube.com/watch?v=84LBVtBMLrU"
-source_folder: "Железки"
 ---
 
 # Best Gaming Monitors For Your Budget 2022: $100 to $1000+ - YouTube

@@ -1,14 +1,17 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно"]
-url: "https://www.pornhub.com/view_video.php?viewkey=ph594baa2f3b07f"
-source_folder: "Порно"
+tags:
+  - bookmark
+  - import
+  - firefox
+  - adult
+url: https://hotntubes.com/to/2889651-dirty_talking_pawg_begs_for_cum_in_her_ass.html
 ---
 
 # Dirty Talking PAWG Begs for Cum in her Ass - Pornhub.com
 
-https://www.pornhub.com/view_video.php?viewkey=ph594baa2f3b07f
+https://hotntubes.com/to/2889651-dirty_talking_pawg_begs_for_cum_in_her_ass.html
 
 ## Summary
 

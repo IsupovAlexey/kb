@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", ".net"]
+tags: ["bookmark", "import", "firefox", "dotnet"]
 url: "https://maximgorbatyuk.notion.site/maximgorbatyuk/M-Gorbatyuk-s-knowledge-base-f87dcc7b0e98498499cfd606d06bd0c7"
-source_folder: ".net"
 ---
 
 # M.Gorbatyuk’s knowledge base

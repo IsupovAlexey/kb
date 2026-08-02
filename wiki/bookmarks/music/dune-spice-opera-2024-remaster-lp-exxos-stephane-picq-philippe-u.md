@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://stphanepicq.bandcamp.com/album/dune-spice-opera-2024-remaster-lp"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Dune Spice Opera 2024 remaster (LP) | EXXOS (Stéphane Picq with Philippe Ulrich) | Stéphane Picq

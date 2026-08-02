@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://hinative.com/questions/43203"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # What is the difference between "niks" and "niets" ? "niks" vs "niets" ? | HiNative

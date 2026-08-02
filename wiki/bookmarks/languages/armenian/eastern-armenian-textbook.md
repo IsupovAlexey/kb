@@ -1,10 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное", "հայերեն"]
+tags: ["bookmark", "import", "firefox", "languages", "armenian"]
 url: "https://easternarmeniantextbook.com/about/expected-results"
-source_folder: "Bladwijzerwerkbalk/Разное/Հայերեն"
 ---
 
 # Eastern Armenian Textbook

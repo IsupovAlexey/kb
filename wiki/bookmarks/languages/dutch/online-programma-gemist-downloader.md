@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://www.downloadgemist.nl/"
-source_folder: "Полезности"
 also_in: ["Bladwijzerwerkbalk/Разное"]
 ---
 

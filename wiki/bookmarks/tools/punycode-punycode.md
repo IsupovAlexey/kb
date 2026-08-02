@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "tools"]
 url: "https://www.reg.ru/web-tools/punycode?utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.com"
-source_folder: "Полезности"
 ---
 
 # Punycode конвертер: перевод домена .рф в punycode | Рег.ру

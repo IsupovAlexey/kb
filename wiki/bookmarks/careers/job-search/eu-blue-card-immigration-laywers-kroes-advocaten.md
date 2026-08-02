@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "jobs"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.kroesadvocaten.nl/en/companies/eu-blue-card/"
-source_folder: "Bladwijzerwerkbalk/Jobs"
 ---
 
 # EU Blue Card - Immigration Laywers | Kroes Advocaten

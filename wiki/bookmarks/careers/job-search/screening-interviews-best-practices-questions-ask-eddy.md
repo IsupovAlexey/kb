@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://eddy.com/hr-encyclopedia/screening-interview/"
-source_folder: "поиск"
 ---
 
 # Screening Interviews: Best Practices & Questions to Ask | Eddy

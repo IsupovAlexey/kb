@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://fearlesssalarynegotiation.com/salary-negotiation-email-sample/"
-source_folder: "поиск"
 ---
 
 # Salary negotiation email samples and a counter offer letter template | Fearless Salary Negotiation

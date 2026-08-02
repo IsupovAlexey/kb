@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", ".net"]
+tags: ["bookmark", "import", "firefox", "dotnet"]
 url: "https://maximgorbatyuk.notion.site/AppDomain-736d9696024f44089d5affbb3564e50d"
-source_folder: ".net"
 ---
 
 # Что такое AppDomain

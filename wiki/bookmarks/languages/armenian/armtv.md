@@ -1,10 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное", "հայերեն"]
+tags: ["bookmark", "import", "firefox", "languages", "armenian"]
 url: "https://armtv.org/ru/"
-source_folder: "Bladwijzerwerkbalk/Разное/Հայերեն"
 ---
 
 # Новые армянские сериалы на ARMTV

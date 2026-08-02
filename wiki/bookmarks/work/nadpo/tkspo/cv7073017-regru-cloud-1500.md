@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "ткспо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "tkspo"]
 url: "https://cv7073017.regru.cloud:1500/ispmgr#/dashboard?func=dashboard&tab_id=0"
-source_folder: "Bladwijzerwerkbalk/Надпо/ТКСПО"
 ---
 
 # cv7073017.regru.cloud:1500

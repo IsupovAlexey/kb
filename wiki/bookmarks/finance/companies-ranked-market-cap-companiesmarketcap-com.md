@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "finance"]
 url: "https://companiesmarketcap.com/"
-source_folder: "Полезности"
 ---
 
 # Companies ranked by Market Cap - CompaniesMarketCap.com

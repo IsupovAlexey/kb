@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", ".net"]
+tags: ["bookmark", "import", "firefox", "dotnet"]
 url: "https://www.telerik.com/"
-source_folder: ".net"
 ---
 
 # Telerik & Kendo UI - .NET Components Suites & JavaScript UI Libraries

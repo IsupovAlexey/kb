@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://mrcoles.com/blog/use-jquery-firebug/"
-source_folder: "Программирование"
 ---
 
 # Use jQuery in Firebug or Chrome Inspector - Peter Coles

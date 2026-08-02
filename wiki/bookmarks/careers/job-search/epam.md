@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://maximgorbatyuk.notion.site/EPAM-1d9e7522bee5469893bb0e25a7f48f86"
-source_folder: "поиск"
 ---
 
 # [EPAM] Вопросы для собеседования

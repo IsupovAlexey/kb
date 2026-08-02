@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "надпо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "nadpo"]
 url: "https://85.198.116.9:1500/ispmgr#/dashboard?func=dashboard&tab_id=0"
-source_folder: "Bladwijzerwerkbalk/Надпо/НАДПО"
 ---
 
 # NADPO 5.0

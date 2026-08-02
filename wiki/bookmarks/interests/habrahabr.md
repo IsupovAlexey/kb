@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "интересности"]
+tags: ["bookmark", "import", "firefox", "interests"]
 url: "http://joyreactor.cc/post/3844574"
-source_folder: "Интересности"
 ---
 
 # "Светодиодное враньё невиданных масштабов" / habrahabr :: факты :: обман :: лампы :: технологии / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.

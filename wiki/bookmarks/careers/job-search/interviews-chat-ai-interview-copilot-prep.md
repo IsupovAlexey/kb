@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.interviews.chat/"
-source_folder: "поиск"
 ---
 
 # Interviews Chat: AI Interview Copilot & Prep

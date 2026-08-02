@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://blog.pragmaticengineer.com/software-engineering-salaries-in-the-netherlands-and-europe/"
-source_folder: "поиск"
 ---
 
 # The Trimodal Nature of Software Engineering Salaries in the Netherlands and Europe - The Pragmatic Engineer

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://www.didact.dev/compare/didact-vs-hangfire"
-source_folder: "Программирование"
 ---
 
 # Alternative To Hangfire | Didact

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk"]
+tags: ["bookmark", "import", "firefox", "social"]
 url: "https://www.twitch.tv/"
-source_folder: "Bladwijzerwerkbalk"
 ---
 
 # Twitch

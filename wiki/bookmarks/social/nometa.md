@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "social"]
 url: "https://nometa.xyz/"
-source_folder: "Полезности"
 ---
 
 # nometa

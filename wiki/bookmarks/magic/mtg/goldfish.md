@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "mtg"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "http://www.mtggoldfish.com/"
-source_folder: "Bladwijzerwerkbalk/MTG"
 ---
 
 # Goldfish

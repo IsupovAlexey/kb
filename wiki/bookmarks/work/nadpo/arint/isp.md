@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "аринт"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "arint"]
 url: "https://server12.hosting.reg.ru:1500/ispmgr#/dashboard/dashboard/0"
-source_folder: "Bladwijzerwerkbalk/Надпо/АРИНТ"
 ---
 
 # АРИНТ ISP

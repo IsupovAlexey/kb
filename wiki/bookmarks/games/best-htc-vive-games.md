@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "http://vrsource.com/best-htc-vive-games-552/"
-source_folder: "Игры"
 ---
 
 # Best HTC Vive games

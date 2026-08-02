@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "jobs"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://app.otta.com/"
-source_folder: "Bladwijzerwerkbalk/Jobs"
 ---
 
 # Otta - The better way to find a job in tech

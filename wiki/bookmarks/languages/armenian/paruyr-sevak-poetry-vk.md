@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "languages", "armenian"]
 url: "https://vk.com/topic-31128109_29228801"
-source_folder: "Полезности"
 ---
 
 # Паруйр Севак стихи на русском

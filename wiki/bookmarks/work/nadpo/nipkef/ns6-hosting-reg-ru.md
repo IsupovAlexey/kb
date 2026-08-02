@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нипкэф"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "nipkef"]
 url: "https://ns6.hosting.reg.ru/manager/dnsmgr"
-source_folder: "Bladwijzerwerkbalk/Надпо/НИПКЭФ"
 ---
 
 # ns6.hosting.reg.ru

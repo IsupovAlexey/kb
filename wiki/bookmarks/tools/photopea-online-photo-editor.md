@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "tools"]
 url: "https://www.photopea.com/"
-source_folder: "Полезности"
 ---
 
 # Photopea | Online Photo Editor

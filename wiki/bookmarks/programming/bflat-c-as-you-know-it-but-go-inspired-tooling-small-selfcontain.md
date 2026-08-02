@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://flattened.net/"
-source_folder: "Программирование"
 ---
 
 # bflat - C# as you know it but with Go-inspired tooling (small, selfcontained, and native executables)

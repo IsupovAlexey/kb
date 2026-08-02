@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://nt2taalmenu.nl/learn-dutch-a1-dutch-for-beginners-menu-module-1/"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Learn Dutch - A1 - Dutch for beginners - Menu module 1 - NT2 TaalMenu

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "interests"]
 url: "http://encyclopatia.ru/wiki/Welcome"
-source_folder: "Полезности"
 ---
 
 # Encyclopedia Pathologica

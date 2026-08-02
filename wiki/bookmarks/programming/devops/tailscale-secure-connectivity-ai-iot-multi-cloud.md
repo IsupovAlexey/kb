@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "programming", "devops"]
 url: "https://tailscale.com/"
-source_folder: "Полезности"
 ---
 
 # Tailscale | Secure Connectivity for AI, IoT & Multi-Cloud

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "аппкк"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "appkk"]
 url: "https://server250.hosting.reg.ru:1500/"
-source_folder: "Bladwijzerwerkbalk/Надпо/АППКК"
 ---
 
 # APPKK old

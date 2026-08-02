@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "http://www.pcadvisor.co.uk/buying-advice/game/19-best-htc-vive-games-of-2017-dinosaurs-star-wars-puzzlers-more-3636022/"
-source_folder: "Игры"
 ---
 
 # Best HTC Vive games & experiences of 2017: 19 best HTC Vive games - Buying Advice - PC Advisor

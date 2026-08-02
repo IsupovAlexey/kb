@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://zichtbaarnederlands.nl/en/adverb/er"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # How does ‘er’ work? | Zichtbaar Nederlands

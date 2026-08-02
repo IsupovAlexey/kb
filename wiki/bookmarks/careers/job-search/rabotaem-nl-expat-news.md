@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://rabotaem.nl/"
-source_folder: "поиск"
 ---
 
 # Работаем в NL - Новости и информация для приезжающих и живущих в Голландии

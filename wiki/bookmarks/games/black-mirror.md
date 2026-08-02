@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://questtime.net/prohozhdenie/422-black-mirror-prohogdenie.html"
-source_folder: "Игры"
 ---
 
 # Парад прохождений - Черное зеркало / Black Mirror, The - Автор: Алина

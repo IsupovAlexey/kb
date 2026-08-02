@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "programming", "ai"]
 url: "https://blog.logrocket.com/using-codegeex-github-copilot-alternative/"
-source_folder: "Полезности"
 ---
 
 # Using CodeGeeX as a GitHub Copilot alternative - LogRocket Blog

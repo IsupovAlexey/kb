@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "jobs"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://interviewing.io/guides/system-design-interview/part-three"
-source_folder: "Bladwijzerwerkbalk/Jobs"
 ---
 
 # A 3-Step Framework to Nail Your System Design Interview

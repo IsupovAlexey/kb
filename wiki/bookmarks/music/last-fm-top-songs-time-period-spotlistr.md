@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://www.spotlistr.com/search/lastfm-top-for-time-period"
-source_folder: "Полезности"
 ---
 
 # Last.fm Top Songs for Time Period - Spotlistr

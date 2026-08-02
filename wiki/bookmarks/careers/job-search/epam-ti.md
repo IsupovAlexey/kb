@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://maximgorbatyuk.notion.site/EPAM-TI-43338a54104b47e98032827e8b4c87dd"
-source_folder: "поиск"
 ---
 
 # [EPAM] Проведение TI, шпаргалка.

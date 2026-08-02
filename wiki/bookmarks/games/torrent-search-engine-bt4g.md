@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://bt4gprx.com/"
-source_folder: "Полезности"
 ---
 
 # Torrent Search Engine - BT4G

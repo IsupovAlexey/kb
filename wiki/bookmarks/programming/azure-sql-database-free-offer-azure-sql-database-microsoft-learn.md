@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://learn.microsoft.com/en-us/azure/azure-sql/database/free-offer?view=azuresql"
-source_folder: "Программирование"
 ---
 
 # Azure SQL Database free offer - Azure SQL Database | Microsoft Learn

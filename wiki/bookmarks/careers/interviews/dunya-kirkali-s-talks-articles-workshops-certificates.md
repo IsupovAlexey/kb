@@ -3,7 +3,6 @@ date: 2026-08-02
 type: tab
 tags: ["tab-import", "firefox", "import", "2026-08-02", "careers", "interviews"]
 url: "https://gitnation.com/person/dunya_kirkali"
-source_folder: "careers/interviews"
 ---
 
 # Dünya Kirkali's talks, articles, workshops, certificates

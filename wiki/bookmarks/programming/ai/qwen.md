@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "programming", "ai"]
 url: "https://chat.qwen.ai/?inputFeature=web_dev"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Qwen

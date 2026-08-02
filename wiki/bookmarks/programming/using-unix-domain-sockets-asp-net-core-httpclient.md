@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://andrewlock.net/using-unix-domain-sockets-with-aspnetcore-and-httpclient/"
-source_folder: "Программирование"
 ---
 
 # Using Unix domain sockets with ASP.NET Core and HttpClient

@@ -52,7 +52,7 @@ Unless the user passes `--no-commit` or `--no-push`, `/kb` SHALL commit and push
 
 ### Requirement: Partial and fetch failure handling
 
-If URL fetch or summarization fails, the skill SHALL still write a capture or wiki stub with available metadata (URL, title if known) and report the fetch failure. If file writes fail, the skill SHALL not commit. If writes succeed but git commit or push fails, the skill SHALL report the failure without claiming full success.
+If URL fetch or summarization fails, the skill SHALL still write a wiki stub with available metadata (URL, title if known) and report the fetch failure. If file writes fail, the skill SHALL not commit. If writes succeed but git commit or push fails, the skill SHALL report the failure without claiming full success.
 
 #### Scenario: URL fetch fails
 
@@ -80,11 +80,11 @@ For bookmarks, videos, and external links, the derived wiki page SHALL include a
 
 ### Requirement: Slug CLI for filenames
 
-The `/kb` skill SHALL call the TypeScript slug CLI in `scripts/kb/` to generate wiki and capture filenames.
+The `/kb` skill SHALL call the TypeScript slug CLI in `scripts/kb/` to generate wiki filenames.
 
 #### Scenario: Filename on ingest
 
-- **WHEN** `/kb` writes a new wiki or capture page
+- **WHEN** `/kb` writes a new wiki page
 - **THEN** the slug CLI determines the filename before write
 
 ### Requirement: Token-light read discipline
@@ -112,7 +112,7 @@ The repository SHALL provide a TypeScript CLI to import Firefox Netscape bookmar
 #### Scenario: Firefox HTML import
 
 - **WHEN** the user runs the Firefox import CLI against a bookmarks HTML file
-- **THEN** the tool copies the export to `sources/`, writes a manifest, creates wiki bookmark pages under `wiki/bookmarks/` mirroring folder structure, and appends batch summary lines to `wiki/index.md` and `wiki/log.md`
+- **THEN** the tool creates wiki bookmark pages under `wiki/bookmarks/` mirroring folder structure, and appends batch summary lines to `wiki/index.md` and `wiki/log.md`
 
 #### Scenario: Dead link exclusion
 

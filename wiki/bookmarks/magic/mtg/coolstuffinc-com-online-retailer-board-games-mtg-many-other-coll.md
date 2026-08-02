@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "магия"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "https://www.coolstuffinc.com/a/"
-source_folder: "Магия"
 ---
 
 # CoolStuffInc.com online retailer of board games, mtg and many other collectible card games

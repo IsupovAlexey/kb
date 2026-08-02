@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://ind.nl/en/living-in-the-netherlands-with-a-residence-permit/living-in-the-netherlands#registration-with-municipality"
-source_folder: "поиск"
 ---
 
 # Living in the Netherlands | IND

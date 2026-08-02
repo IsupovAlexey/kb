@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "музыка"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://sonicelements.bandcamp.com/track/acoustic-medley-feat-jon-davison"
-source_folder: "Музыка"
 ---
 
 # Acoustic Medley (feat. Jon Davison) | Dave Kerzner & Sonic Elements

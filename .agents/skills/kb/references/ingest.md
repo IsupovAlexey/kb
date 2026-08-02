@@ -6,7 +6,7 @@ Read `wiki/SCHEMA.md` before every ingest.
 
 ### 1. Read conventions
 
-Read `wiki/SCHEMA.md` for frontmatter, folder policy, capture rules, and commit prefix.
+Read `wiki/SCHEMA.md` for frontmatter, folder policy, and commit prefix.
 
 ### 2. Classify input
 
@@ -20,11 +20,10 @@ Determine `type` and `tags` when the user does not supply them. Suggested types:
 
 ### 4. Generate filenames (slug CLI)
 
-Never invent filenames in prose. Run the slug CLI for every new wiki or capture file:
+Never invent filenames in prose. Run the slug CLI for every new wiki file:
 
 ```bash
 npm run kb:slug -- "<title>" --dir wiki/bookmarks
-npm run kb:slug -- "<title>" --dir sources
 ```
 
 The CLI returns kebab-case names (`[a-z0-9-]`) and appends `-2`, `-3`, … on collision.
@@ -35,14 +34,12 @@ Create subfolders under `wiki/` on first need (e.g. `wiki/bookmarks/`, `wiki/not
 
 ### 6. Write content
 
-|Input|Capture (`sources/`)|Wiki page (`wiki/`)|
-|-|-|-|
-|URL or long paste|Immutable capture file|Derived summary page|
-|Short note|Skip|Wiki page only|
+|Input|Wiki page (`wiki/`)|
+|-|-|
+|URL or long paste|Bookmark page with `## Summary`|
+|Short note|Wiki page only|
 
 Every wiki page needs frontmatter: `date`, `type`, `tags`; add `url` for bookmarks. Bookmarks and media pages include a `## Summary` section.
-
-Derived pages MAY link back to their capture path in frontmatter or a footer.
 
 ### 7. Token-light reads
 
@@ -57,7 +54,7 @@ Truncate fetched URL text to a bounded length before LLM summarization. Append i
 
 Unless `--no-commit`, `--no-push`, or `--dry-run`:
 
-1. `git add` changed paths under `wiki/` and `sources/`
+1. `git add` changed paths under `wiki/`
 2. Commit with prefix `kb:` (e.g. `kb: add bookmark karpathy-llm-wiki`)
 3. Push to remote (unless `--no-push`)
 
@@ -78,8 +75,6 @@ When `qmd` is not installed, note that search reindex was skipped — ingest sti
 |URL fetch fails|Write stub with URL + fetch-failure note; do not claim summary success|
 |File write fails|Do not commit; report error|
 |Commit succeeds, push fails|Report explicit error with retry-push instructions|
-
-Capture bodies are immutable after initial commit unless the user explicitly requests a correction.
 
 ## Flags
 
@@ -103,15 +98,13 @@ npm run kb:import-firefox -- "path/to/bookmarks.html" --dry-run
 
 Behavior:
 
-1. Copy HTML export to `sources/firefox-bookmarks-<date>.html` (immutable capture)
-2. Parse folders and URLs; skip Firefox default folders and `place:` pseudo-URLs
-3. Dedupe by URL; fetch live pages; exclude dead links (logged in manifest)
-4. Write captures to `sources/` and wiki pages to `wiki/bookmarks/<folder-path>/` with `## Summary` from meta/excerpt
-5. Write manifest to `sources/firefox-bookmarks-<date>.manifest.json`
-6. Write reclassification proposal to `artifacts/tacos-work/firefox-bookmark-import/reclassify-proposal.json` for user review before bulk folder moves
-7. Append one summary line to `wiki/index.md` and `wiki/log.md`
-8. Re-run on same date skips already-imported URLs (idempotent)
-9. Optional LLM reclassify: edit `artifacts/tacos-work/firefox-bookmark-import/llm-reclassify-plan.json` (or regenerate via `npx tsx scripts/kb/generate-llm-reclassify-plan.ts`), then `npm run kb:reclassify` and `npx tsx scripts/kb/sync-firefox-manifest-paths.ts`. Legacy keyword script: `npm run kb:reclassify:legacy`.
+1. Parse folders and URLs; skip Firefox default folders and `place:` pseudo-URLs
+2. Dedupe by URL; fetch live pages; exclude dead links (logged in manifest)
+3. Write wiki pages to `wiki/bookmarks/<folder-path>/` with `## Summary` from meta/excerpt
+4. Write manifest to `artifacts/kb-import/firefox-bookmarks-<date>.manifest.json`
+5. Write reclassification proposal to `artifacts/tacos-work/firefox-bookmark-import/reclassify-proposal.json` for user review before bulk folder moves
+6. Append one summary line to `wiki/index.md` and `wiki/log.md`
+7. Re-run on same date skips already-imported URLs (idempotent)
 
 Folder paths use English aliases (not Dutch `bladwijzerwerkbalk` or Russian transliterations). See `mapFolderSegment` in `scripts/kb/lib/import-firefox.ts`.
 
@@ -130,14 +123,13 @@ npm run kb:import-firefox-tabs -- "path/to/tab-session.json" --dry-run
 Behavior:
 
 1. Read thematic folder assignments from `artifacts/tacos-work/firefox-tab-import/tab-classify-plan.json` (generate/refresh via `kb:generate-tab-classify-plan` before first import)
-2. Copy JSON export to `sources/firefox-tabs-<date>.json` (immutable capture)
-3. Dedupe by URL; skip pinned work-service tabs (Slack, Gmail, Calendar, ChatGPT, Gemini, Google Docs/Sheets, Messages, Translate when pinned)
-4. Skip URLs already in `wiki/bookmarks/**` (manifest links to existing `wikiPath`)
-5. Classify each tab into existing thematic folders (`programming/`, `games/`, `personal/`, etc.) — not a flat `tabs/` dump
-6. Health-check and fetch live pages; exclude dead links; write wiki pages with `type: tab` and `## Summary`
-7. Write manifest to `sources/firefox-tabs-<date>.manifest.json`
-8. Append one summary line to `wiki/index.md` and `wiki/log.md`
-9. Re-run on same date skips already-imported URLs (idempotent)
+2. Dedupe by URL; skip pinned work-service tabs (Slack, Gmail, Calendar, ChatGPT, Gemini, Google Docs/Sheets, Messages, Translate when pinned)
+3. Skip URLs already in `wiki/bookmarks/**` (manifest links to existing `wikiPath`)
+4. Classify each tab into existing thematic folders (`programming/`, `games/`, `personal/`, etc.) — not a flat `tabs/` dump
+5. Health-check and fetch live pages; exclude dead links; write wiki pages with `type: tab` and `## Summary`
+6. Write manifest to `artifacts/kb-import/firefox-tabs-<date>.manifest.json`
+7. Append one summary line to `wiki/index.md` and `wiki/log.md`
+8. Re-run on same date skips already-imported URLs (idempotent)
 
 After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
 

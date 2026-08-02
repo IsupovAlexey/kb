@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "http://tourney.ru/forum/viewtopic.php?pid=1243962#p1243962"
-source_folder: "Игры"
 ---
 
 # tourney.ru форумЪ / серьезная тема

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "mtg"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "https://sealeddeck.tech/"
-source_folder: "Bladwijzerwerkbalk/MTG"
 ---
 
 # SealedDeck.Tech

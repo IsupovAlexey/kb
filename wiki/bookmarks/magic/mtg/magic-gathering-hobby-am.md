@@ -3,7 +3,6 @@ date: 2026-08-02
 type: tab
 tags: ["tab-import", "firefox", "import", "2026-08-02", "magic", "mtg"]
 url: "https://hobby.am/product-category/ccg/mtg/?orderby=price-desc"
-source_folder: "magic/mtg"
 ---
 
 # Magic: The Gathering – Hobby.am

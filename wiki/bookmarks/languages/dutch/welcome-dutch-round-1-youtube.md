@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://www.youtube.com/watch?v=gbFIplJhpPk"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Welcome to Dutch Round 1 - YouTube

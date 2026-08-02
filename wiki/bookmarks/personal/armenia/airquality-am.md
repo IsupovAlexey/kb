@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "personal", "armenia"]
 url: "https://airquality.am/ru/air-quality/yerevan"
-source_folder: "Полезности"
 ---
 
 # Качество воздуха в Ереване - AirQuality.am

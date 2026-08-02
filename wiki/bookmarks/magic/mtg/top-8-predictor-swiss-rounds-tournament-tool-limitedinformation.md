@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "магия"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "http://www.limitedinformation.net/top8.aspx"
-source_folder: "Магия"
 ---
 
 # Top 8 Predictor - A Swiss Rounds Tournament Tool. | limitedinformation

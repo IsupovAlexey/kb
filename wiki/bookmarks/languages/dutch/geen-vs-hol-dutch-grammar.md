@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://www.ensie.nl/woordenboek-van-populair-taalgebruik/geen-hol"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # geen hol - de betekenis volgens Woordenboek van Populair Taalgebruik

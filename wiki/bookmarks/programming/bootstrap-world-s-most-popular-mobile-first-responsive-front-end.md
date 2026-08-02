@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://getbootstrap.com/docs/3.3/"
-source_folder: "Программирование"
 ---
 
 # Bootstrap · The world's most popular mobile-first and responsive front-end framework.

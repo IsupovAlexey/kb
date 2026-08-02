@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://www.fluentin3months.com/fluent-in-3-years/"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Fluent in 3 years?! What I Learned From a 1,033 Day Duolingo Streak -- Plus How to Actually Learn a Language Fast

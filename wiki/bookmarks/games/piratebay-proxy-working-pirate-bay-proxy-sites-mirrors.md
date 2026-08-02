@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://piratebay-proxylist.com/"
-source_folder: "Полезности"
 ---
 
 # PirateBay Proxy - Working The Pirate Bay Proxy sites and mirrors

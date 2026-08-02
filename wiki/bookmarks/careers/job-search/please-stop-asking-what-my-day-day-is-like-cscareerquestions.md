@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.reddit.com/r/cscareerquestions/comments/18xgvcb/please_stop_asking_what_my_day_to_day_is_like/"
-source_folder: "поиск"
 ---
 
 # Please stop asking what my day to day is like : cscareerquestions

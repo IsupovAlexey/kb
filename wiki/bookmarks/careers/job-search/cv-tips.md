@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://gratis-lemur-2d3.notion.site/CV-tips-17580096f6544435b4d35fee62dc69c7"
-source_folder: "поиск"
 ---
 
 # CV tips

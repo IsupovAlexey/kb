@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "pets"]
 url: "https://vetexpert.am/ru/%d1%8d%d0%ba%d0%b7%d0%be%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%b6%d0%b8%d0%b2%d0%be%d1%82%d0%bd%d1%8b%d0%b5/"
-source_folder: "Полезности"
 ---
 
 # Экзотические животные - VetExpert

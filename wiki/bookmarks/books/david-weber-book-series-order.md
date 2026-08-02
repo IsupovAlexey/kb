@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно", "[mapnaam]"]
+tags: ["bookmark", "import", "firefox", "books", "authors"]
 url: "https://www.bookseriesinorder.com/david-weber/"
-source_folder: "Порно/[Mapnaam]"
 ---
 
 # David Weber - Book Series In Order

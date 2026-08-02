@@ -3,7 +3,6 @@ date: 2026-08-02
 type: tab
 tags: ["tab-import", "firefox", "import", "2026-08-02", "interests"]
 url: "https://en.wikipedia.org/wiki/List_of_Beavis_and_Butt-Head_episodes#Season_9_(2022)"
-source_folder: "interests"
 ---
 
 # List of Beavis and Butt-Head episodes - Wikipedia

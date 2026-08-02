@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://app.memrise.com/course/1179858/dutch-1/1/"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Level 1 - Launchpad! - Dutch 1 - Memrise

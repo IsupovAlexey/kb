@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://bartgroot.nl/tips-trucs/typing-symbols-in-windows/"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Typing special characters in Windows | BartGroot.nl

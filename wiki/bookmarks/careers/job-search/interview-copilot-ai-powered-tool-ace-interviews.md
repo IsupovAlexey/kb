@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://interviewcopilot.io/"
-source_folder: "поиск"
 ---
 
 # Interview Copilot: AI-Powered Tool to Ace Interviews

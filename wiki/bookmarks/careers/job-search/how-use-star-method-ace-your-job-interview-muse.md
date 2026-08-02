@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.themuse.com/advice/star-interview-method"
-source_folder: "поиск"
 ---
 
 # How to Use the STAR Method to Ace Your Job Interview | The Muse

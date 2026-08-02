@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "careers"]
 url: "https://molochinations.substack.com/p/insta-sell-all-rsus-always?r=168s7"
-source_folder: "Полезности"
 ---
 
 # Insta-Sell All RSUs, Always - by Philip Su - Molochinations

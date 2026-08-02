@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "кино-и-сериалы"]
+tags: ["bookmark", "import", "firefox", "film-and-tv"]
 url: "https://www.justwatch.com/us/tv-show/ed-edd-n-eddy"
-source_folder: "Кино и Сериалы"
 ---
 
 # Ed, Edd n Eddy - streaming tv show online

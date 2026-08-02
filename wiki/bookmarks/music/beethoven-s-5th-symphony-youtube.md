@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "музыка"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://www.youtube.com/watch?v=_4IRMYuE1hI&list=RDiCEDfZgDPS8&index=13"
-source_folder: "Музыка"
 ---
 
 # Beethoven's 5th Symphony - YouTube

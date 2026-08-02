@@ -1,0 +1,21 @@
+# Work / NADPO
+
+- [[appkk/index|APPKK]]
+- [[arint/index|ARINT]]
+- [[bitrix-yookassa-docs/index|Bitrix YooKassa Docs]]
+- [[careers-center/index|Careers Center]]
+- [[nadpo/index|NADPO]]
+- [[ncrdo/index|NCRDO]]
+- [[nfek/index|NFEK]]
+- [[nipkef/index|NIPKEF]]
+- [[nipsr/index|NIPSR]]
+- [[nkpep/index|NKPEP]]
+- [[tkspo/index|TKSPO]]
+- [[alyona-griniv-tasks-crm]] — (99+) Алёна Гринив: Задачи
+- [[dnsadmin-hosting-reg-ru]] — dnsadmin.hosting.reg.ru
+- [[my-tasks-crm-nadpo]] — (99+) Мои задачи
+- [[nadpo-external-web-service-functions]] — АНО ДПО «НАДПО»: Управление: Плагины: Веб-службы: Функции внешних служб
+- [[nadpo-moodle-debugging-settings]] — NADPO Moodle debugging settings
+- [[nadpo-phpmyadmin-sdo-database]] — 85.198.116.9:1501 / mysql-8.4 / sdo | phpMyAdmin 5.2.1deb3
+- [[psychologist-consultant-course-editing-1360-hours]]
+- [[solved-where-are-license-keys-server-2016-virtual-machines-avma]] — SOLVED: Where Are The License Keys For Server 2016 Virtual Machines AVMA? – Up & Running Technologies, Tech How To's

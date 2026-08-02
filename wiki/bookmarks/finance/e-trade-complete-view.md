@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "finance"]
 url: "https://us.etrade.com/etx/hw/v2/accountshome"
-source_folder: "Полезности"
 ---
 
 # E*TRADE - Complete View

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk"]
+tags: ["tab-import", "firefox", "import", "2026-08-02", "interests", "sports"]
 url: "http://football.kulichki.net/"
-source_folder: "Bladwijzerwerkbalk"
 ---
 
 # ФНК

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", ".net"]
+tags: ["bookmark", "import", "firefox", "dotnet"]
 url: "https://blog.ndepend.com/5x-lessons-learned-from-migrating-a-large-legacy-to-net-5-6/"
-source_folder: ".net"
 ---
 
 # 5x Lessons Learned from Migrating a Large Legacy to .NET 5/6 - NDepend

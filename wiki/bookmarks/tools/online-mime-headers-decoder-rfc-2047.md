@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "tools"]
 url: "https://dogmamix.com/MimeHeadersDecoder/"
-source_folder: "Полезности"
 ---
 
 # Online MIME Headers Decoder (RFC 2047)

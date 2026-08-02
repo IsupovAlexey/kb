@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "магия"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "http://www.channelfireball.com/articles/frank-analysis-how-many-colored-mana-sources-do-you-need-to-consistently-cast-your-spells/"
-source_folder: "Магия"
 ---
 
 # » Frank Analysis – How Many Colored Mana Sources Do You Need to Consistently Cast Your Spells?

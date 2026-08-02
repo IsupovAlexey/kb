@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "книги"]
+tags: ["bookmark", "import", "firefox", "books"]
 url: "https://en.wikipedia.org/wiki/Consider_Phlebas"
-source_folder: "Книги"
 ---
 
 # Consider Phlebas - Wikipedia

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://www.lorenzostanco.com/lab/steam/u/tinefol"
-source_folder: "Полезности"
 ---
 
 # Steam library filters

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "personal", "home"]
 url: "https://floorplanner.com/projects/72189288/editor"
-source_folder: "Полезности"
 ---
 
 # Floorplanner - i155mk 2

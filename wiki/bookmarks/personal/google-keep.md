@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk"]
+tags: ["bookmark", "import", "firefox", "personal"]
 url: "https://keep.google.com/u/0/#home"
-source_folder: "Bladwijzerwerkbalk"
 ---
 
 # Google Keep

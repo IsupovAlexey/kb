@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", ".net"]
+tags: ["bookmark", "import", "firefox", "dotnet"]
 url: "https://tyrrrz.me/blog/fakes-over-mocks"
-source_folder: ".net"
 ---
 
 # Prefer Fakes Over Mocks • Oleksii Holub

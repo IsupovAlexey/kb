@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "магия"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "http://www.draftaholicsanonymous.com/"
-source_folder: "Магия"
 ---
 
 # Draftaholics Anonymous

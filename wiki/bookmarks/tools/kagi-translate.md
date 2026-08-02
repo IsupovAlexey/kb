@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "tools"]
 url: "https://translate.kagi.com/?from=en&to=linkedin&text=I+am+starting+a+new+job+at+Google+next+Monday.+I+will+work+as+a+contractor+cleaning+toilets"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Kagi Translate

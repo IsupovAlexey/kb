@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://fearlesssalarynegotiation.com/salary-negotiation-guide/"
-source_folder: "поиск"
 ---
 
 # How to negotiate salary in 2021 - Complete salary negotiation guide | Fearless Salary Negotiation

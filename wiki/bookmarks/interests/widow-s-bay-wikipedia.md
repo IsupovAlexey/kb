@@ -3,7 +3,6 @@ date: 2026-08-02
 type: tab
 tags: ["tab-import", "firefox", "import", "2026-08-02", "interests"]
 url: "https://en.wikipedia.org/wiki/Widow%27s_Bay"
-source_folder: "interests"
 ---
 
 # Widow's Bay - Wikipedia

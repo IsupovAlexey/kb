@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нипср"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "nipsr"]
 url: "https://logs.sdo.nipsr.ru/?orgId=1"
-source_folder: "Bladwijzerwerkbalk/Надпо/НИПСР"
 ---
 
 # Grafana

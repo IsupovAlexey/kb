@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "надпо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "nadpo"]
 url: "https://crm.nadpo.ru/stream/"
-source_folder: "Bladwijzerwerkbalk/Надпо/НАДПО"
 ---
 
 # (260) nadpo

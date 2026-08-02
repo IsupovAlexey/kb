@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://zaka-zaka.com/"
-source_folder: "Полезности"
 ---
 
 # Zaka-Zaka.com - Магазин компьютерных игр | Магазин steam игр | Купить дешево steam и origin ключи

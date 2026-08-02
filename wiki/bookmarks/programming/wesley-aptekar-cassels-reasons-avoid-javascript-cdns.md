@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://blog.wesleyac.com/posts/why-not-javascript-cdn"
-source_folder: "Программирование"
 ---
 
 # Wesley Aptekar-Cassels | Reasons to avoid Javascript CDNs

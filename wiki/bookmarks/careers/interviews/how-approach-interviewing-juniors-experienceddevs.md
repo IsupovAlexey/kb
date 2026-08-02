@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "careers"]
 url: "https://www.reddit.com/r/ExperiencedDevs/comments/14ulw9h/how_to_approach_interviewing_juniors/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # How to approach interviewing juniors? : ExperiencedDevs

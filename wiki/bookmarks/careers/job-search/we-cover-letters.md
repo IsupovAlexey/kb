@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "careers"]
 url: "https://wecoverletters.com/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # We ❤️ Cover Letters

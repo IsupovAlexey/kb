@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://topdeck.ru/apps/donate/kolobki/lift-daily-limit"
-source_folder: "Полезности"
 ---
 
 # TOPDeck — Обнулить суточный лимит колобков

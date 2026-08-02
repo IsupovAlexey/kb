@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://superuser.com/questions/269818/change-default-code-page-of-windows-console-to-utf-8"
-source_folder: "Программирование"
 ---
 
 # Change default code page of Windows console to UTF-8 - Super User

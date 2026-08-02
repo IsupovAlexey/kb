@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "кино-и-сериалы"]
+tags: ["bookmark", "import", "firefox", "film-and-tv"]
 url: "http://www.imdb.com/title/tt6103962/"
-source_folder: "Кино и Сериалы"
 ---
 
 # It's All Good (2016) - IMDb

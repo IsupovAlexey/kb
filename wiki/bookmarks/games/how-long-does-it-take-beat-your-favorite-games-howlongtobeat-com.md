@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://howlongtobeat.com/"
-source_folder: "Игры"
 ---
 
 # How long does it take to beat your favorite games? - HowLongToBeat.com

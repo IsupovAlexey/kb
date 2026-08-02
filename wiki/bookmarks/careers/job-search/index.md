@@ -1,0 +1,48 @@
+# Careers / Job Search
+
+- [[3-step-framework-nail-your-system-design-interview]] — A 3-Step Framework to Nail Your System Design Interview
+- [[ai-interview-copilot-streamline-your-interview-process-intellige]] — AI Interview Copilot: Streamline Your Interview Process with Intelligent Interview Assistance | Final Round AI
+- [[airtable-900-job-boards-ww-hello-new-job]] — Airtable - 900 Job Boards WW by Hello New Job!
+- [[andrewstetsenko-tech-jobs-with-relocation-all-in-one-guide-getti]] — AndrewStetsenko/tech-jobs-with-relocation: All-in-one guide to getting a tech job abroad 🌎
+- [[backend-dev-duties-notes]] — Обязанности, заметки - Google Документы
+- [[classroom-speedrun-promotion]] — Classroom · Speedrun To Promotion
+- [[coding-interview-advice-interview-cake]] — Coding Interview Advice | Interview Cake
+- [[coding-interviews-blog-archive-posts-main-vitkarpov-coding-inter]] — coding-interviews-blog-archive/posts at main · vitkarpov/coding-interviews-blog-archive · GitHub
+- [[cv-tips]] — CV tips
+- [[developer-job-search-abroad-relocate-me]] — Developer Job Search Abroad | Relocate.me
+- [[epam-ti]] — [EPAM] Проведение TI, шпаргалка.
+- [[epam]] — [EPAM] Вопросы для собеседования
+- [[eu-blue-card-immigration-laywers-kroes-advocaten]] — EU Blue Card - Immigration Laywers | Kroes Advocaten
+- [[finding-staff-level-scope-ryan-peterman]] — Finding Staff-Level Scope - by Ryan Peterman
+- [[good-questions-ask-hr-screening-interview-thea-kelley-career-ser]] — Good Questions to Ask in the HR Screening Interview | Thea Kelley Career Services
+- [[google-s-five-key-success-factors-effective-teams]] — Google’s five key success factors for effective teams
+- [[how-i-landed-job-foreign-country-how-you-can-too-linkedin]] — How I Landed a Job in a Foreign Country (and How You Can Too) | LinkedIn
+- [[how-negotiate-salary-2021-complete-salary-negotiation-guide-fear]] — How to negotiate salary in 2021 - Complete salary negotiation guide | Fearless Salary Negotiation
+- [[how-use-star-method-ace-your-job-interview-muse]] — How to Use the STAR Method to Ace Your Job Interview | The Muse
+- [[i-feel-embarrassed-that-i-didn-t-get-any-interviews-until-i-redi]] — I feel embarrassed that I didn’t get any interviews until I redid my CV to shamelessly sell myself : jobs
+- [[if-you-re-rejected-have-fun-asking-your-detailed-data-it-s-burea]] — If you’re rejected, have fun asking for your detailed data. It’s bureaucracy hell for them. : recruitinghell
+- [[interview-copilot-ai-powered-tool-ace-interviews]] — Interview Copilot: AI-Powered Tool to Ace Interviews
+- [[interviews-chat-ai-interview-copilot-prep]] — Interviews Chat: AI Interview Copilot & Prep
+- [[jobs-imc]] — Jobs at IMC
+- [[make-impact-optiver-careers]] — Make an Impact with Optiver Careers
+- [[neetcode-io]] — NeetCode.io
+- [[otta-better-way-find-job-tech]] — Otta - The better way to find a job in tech
+- [[please-stop-asking-what-my-day-day-is-like-cscareerquestions]] — Please stop asking what my day to day is like : cscareerquestions
+- [[poteto-hiring-without-whiteboards-companies-that-don-t-have-brok]] — poteto/hiring-without-whiteboards: ⭐️ Companies that don't have a broken hiring process
+- [[programmer-competency-matrix-sijin-joseph]] — Programmer Competency Matrix | Sijin Joseph
+- [[rabotaem-nl-expat-news]] — Работаем в NL - Новости и информация для приезжающих и живущих в Голландии
+- [[resource-interview-questions-my-massive-cheat-sheet-questions-i]]
+- [[resources-find-great-tech-jobs-pragmatic-engineer-google]] — Resources to Find Great Tech Jobs [The Pragmatic Engineer] - Google Документы
+- [[salary-negotiation-email-samples-counter-offer-letter-template-f]] — Salary negotiation email samples and a counter offer letter template | Fearless Salary Negotiation
+- [[salary-negotiation-make-more-money-be-more-valued-kalzumeus-soft]] — Salary Negotiation: Make More Money, Be More Valued | Kalzumeus Software
+- [[schema-json-resume]] — Schema — JSON Resume
+- [[screening-interviews-best-practices-questions-ask-eddy]] — Screening Interviews: Best Practices & Questions to Ask | Eddy
+- [[speedrun-promotion]] — Speedrun To Promotion
+- [[speedrunning-guide-senior-l5-staff-l6]] — Speedrunning Guide: Senior (L5) -> Staff (L6)
+- [[system-design-interview-guide-senior-engineers]] — System Design Interview Guide for Senior Engineers
+- [[top-mock-interview-tools-my-honest-review-after-3-months-job-sea]] — Top Mock Interview Tools: My Honest Review After 3 Months of Job Searching as a Senior Data Scientist : r/jobs
+- [[trimodal-nature-software-engineering-salaries-netherlands-europe]] — The Trimodal Nature of Software Engineering Salaries in the Netherlands and Europe - The Pragmatic Engineer
+- [[use-boolean-search-linkedin-linkedin-help]] — Use Boolean search on LinkedIn | LinkedIn Help
+- [[we-cover-letters]] — We ❤️ Cover Letters
+- [[what-are-your-biggest-onboarding-pain-points-new-developers-join]] — What are your biggest onboarding pain points for new developers joining the team? : ExperiencedDevs
+- [[xing]] — XING

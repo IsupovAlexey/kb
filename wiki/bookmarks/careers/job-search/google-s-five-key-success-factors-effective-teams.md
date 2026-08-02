@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.searchenginewatch.com/2015/11/20/googles-five-key-success-factors-for-effective-teams/"
-source_folder: "поиск"
 ---
 
 # Google’s five key success factors for effective teams

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "http://element.eleme.io/#/en-US"
-source_folder: "Программирование"
 ---
 
 # Element - A Desktop UI Toolkit for Web

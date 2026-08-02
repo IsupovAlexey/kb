@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://github.com/poteto/hiring-without-whiteboards"
-source_folder: "поиск"
 ---
 
 # poteto/hiring-without-whiteboards: ⭐️ Companies that don't have a broken hiring process

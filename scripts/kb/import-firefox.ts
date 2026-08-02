@@ -30,7 +30,6 @@ interface ManifestEntry {
 }
 
 interface ImportManifest {
-  sourceCapture: string;
   importDate: string;
   totals: {
     parsed: number;
@@ -92,7 +91,7 @@ function readExistingUrls(repoRoot: string, captureDate: string): Set<string> {
     urls.add(url);
   }
 
-  const manifestPath = path.join(repoRoot, "sources", `firefox-bookmarks-${captureDate}.manifest.json`);
+  const manifestPath = path.join(repoRoot, "artifacts", "kb-import", `firefox-bookmarks-${captureDate}.manifest.json`);
 
   if (fs.existsSync(manifestPath)) {
     try {
@@ -153,7 +152,6 @@ function buildWikiFrontmatter(
     "type: bookmark",
     `tags: [${tags.map((t) => JSON.stringify(t.replace(/"/g, ""))).join(", ")}]`,
     `url: ${JSON.stringify(entry.url)}`,
-    `source_folder: ${JSON.stringify(entry.folderPath.join("/"))}`,
   ];
 
   if (alsoIn.length > 0) {
@@ -208,11 +206,10 @@ async function main(): Promise<void> {
     alsoInByUrl.set(dup.canonical.url, dup.alsoIn);
   }
 
-  const sourceCaptureName = `firefox-bookmarks-${options.captureDate}.html`;
-  const sourceCapturePath = path.join(options.repoRoot, "sources", sourceCaptureName);
   const manifestPath = path.join(
     options.repoRoot,
-    "sources",
+    "artifacts",
+    "kb-import",
     `firefox-bookmarks-${options.captureDate}.manifest.json`,
   );
   const proposalPath = path.join(
@@ -223,10 +220,6 @@ async function main(): Promise<void> {
     "reclassify-proposal.json",
   );
 
-  if (!options.dryRun) {
-    ensureDir(path.dirname(sourceCapturePath), options.dryRun);
-    fs.copyFileSync(options.inputPath, sourceCapturePath);
-  }
 
   const existingUrls = readExistingUrls(options.repoRoot, options.captureDate);
   const existingWikiByUrl = scanExistingWikiUrls(options.repoRoot);
@@ -234,7 +227,8 @@ async function main(): Promise<void> {
 
   const manifestPathOnDisk = path.join(
     options.repoRoot,
-    "sources",
+    "artifacts",
+    "kb-import",
     `firefox-bookmarks-${options.captureDate}.manifest.json`,
   );
   if (fs.existsSync(manifestPathOnDisk)) {
@@ -303,31 +297,21 @@ async function main(): Promise<void> {
     const summary = extractSummaryFromHtml(fetchResult.html);
     const wikiRelDir = wikiDirFromFolder(entry.folderPath);
     const wikiAbsDir = path.join(options.repoRoot, wikiRelDir);
-    const captureRelDir = "sources";
-    const captureAbsDir = path.join(options.repoRoot, captureRelDir);
 
     if (!options.dryRun) {
       ensureDir(wikiAbsDir, options.dryRun);
-      ensureDir(captureAbsDir, options.dryRun);
     }
 
     const wikiFilename = resolveSlugFilename(entry.title || entry.url, wikiAbsDir);
     const wikiRelPath = path.posix.join(wikiRelDir.replace(/\\/g, "/"), wikiFilename);
     const wikiAbsPath = path.join(wikiAbsDir, wikiFilename);
 
-    const captureFilename = resolveSlugFilename(entry.title || entry.url, captureAbsDir, ".html");
-    const captureRelPath = path.posix.join(captureRelDir, captureFilename);
-    const captureAbsPath = path.join(captureAbsDir, captureFilename);
-
     const alsoIn = alsoInByUrl.get(entry.url) ?? [];
     const frontmatter = buildWikiFrontmatter(entry, options.captureDate, alsoIn);
     const wikiContent = `${frontmatter}\n\n${buildWikiBody(entry.title, entry.url, summary)}`;
 
-    const truncatedHtml = fetchResult.html.slice(0, 200_000);
-
     if (!options.dryRun) {
       fs.writeFileSync(wikiAbsPath, wikiContent, "utf8");
-      fs.writeFileSync(captureAbsPath, truncatedHtml, "utf8");
     }
 
     imported += 1;
@@ -336,7 +320,6 @@ async function main(): Promise<void> {
       title: entry.title,
       folderPath: entry.folderPath,
       wikiPath: wikiRelPath.replace(/\\/g, "/"),
-      capturePath: captureRelPath,
       status: "imported",
     });
 
@@ -344,7 +327,6 @@ async function main(): Promise<void> {
   });
 
   const manifest: ImportManifest = {
-    sourceCapture: `sources/${sourceCaptureName}`,
     importDate: options.captureDate,
     totals: {
       parsed: parsed.bookmarks.length,
@@ -364,6 +346,7 @@ async function main(): Promise<void> {
 
   if (!options.dryRun) {
     ensureDir(path.dirname(proposalPath), options.dryRun);
+    ensureDir(path.dirname(manifestPath), options.dryRun);
     fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf8");
     fs.writeFileSync(proposalPath, JSON.stringify(proposal, null, 2), "utf8");
 

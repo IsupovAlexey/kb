@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нцрдо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "ncrdo"]
 url: "https://cv6100685.regru.cloud:1500/ispmgr#/list?clickstat=yes&p_num=1&func=webdomain&tab_id=1"
-source_folder: "Bladwijzerwerkbalk/Надпо/НЦРДО"
 ---
 
 # NCRDO intermediate

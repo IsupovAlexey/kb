@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "jobs"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://boards.eu.greenhouse.io/imc?gh_src=5a208672teu"
-source_folder: "Bladwijzerwerkbalk/Jobs"
 ---
 
 # Jobs at IMC

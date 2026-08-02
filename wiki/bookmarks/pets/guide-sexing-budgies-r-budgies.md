@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "pets"]
 url: "https://www.reddit.com/r/budgies/comments/1lfenqq/a_guide_to_sexing_budgies/"
-source_folder: "Полезности"
 ---
 
 # A guide to sexing budgies : r/budgies

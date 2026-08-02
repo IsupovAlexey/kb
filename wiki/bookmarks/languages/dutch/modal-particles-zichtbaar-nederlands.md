@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно", "[mapnaam]"]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://zichtbaarnederlands.nl/nl/adverbium/modale_partikels#toch"
-source_folder: "Порно/[Mapnaam]"
 ---
 
 # Modale partikels: even, eens, nou, maar, misschien, ... | Zichtbaar Nederlands

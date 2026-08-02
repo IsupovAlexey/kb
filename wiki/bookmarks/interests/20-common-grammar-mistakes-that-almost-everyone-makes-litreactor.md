@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "интересности"]
+tags: ["bookmark", "import", "firefox", "interests"]
 url: "http://litreactor.com/columns/20-common-grammar-mistakes-that-almost-everyone-gets-wrong"
-source_folder: "Интересности"
 ---
 
 # 20 Common Grammar Mistakes That (Almost) Everyone Makes | LitReactor

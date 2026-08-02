@@ -35,7 +35,6 @@ interface ManifestEntry {
 }
 
 interface ImportManifest {
-  sourceCapture: string;
   importDate: string;
   totals: {
     parsed: number;
@@ -147,7 +146,7 @@ function loadClassifyPlan(repoRoot: string): TabClassifyPlan | undefined {
 
 function readPriorManifestEntries(repoRoot: string, captureDate: string): Map<string, ManifestEntry> {
   const byUrl = new Map<string, ManifestEntry>();
-  const manifestPath = path.join(repoRoot, "sources", `firefox-tabs-${captureDate}.manifest.json`);
+  const manifestPath = path.join(repoRoot, "artifacts", "kb-import", `firefox-tabs-${captureDate}.manifest.json`);
   if (!fs.existsSync(manifestPath)) {
     return byUrl;
   }
@@ -189,7 +188,6 @@ function buildWikiFrontmatter(
     "type: tab",
     `tags: [${tags.map((t) => JSON.stringify(t)).join(", ")}]`,
     `url: ${JSON.stringify(url)}`,
-    `source_folder: ${JSON.stringify(folderPath.join("/"))}`,
     "---",
   ].join("\n");
 }
@@ -400,11 +398,10 @@ async function main(): Promise<void> {
   const parsed = parseTabSessionJson(rawJson);
   const { unique, duplicateCount } = dedupeTabs(parsed.tabs);
 
-  const sourceCaptureName = `firefox-tabs-${options.captureDate}.json`;
-  const sourceCapturePath = path.join(options.repoRoot, "sources", sourceCaptureName);
   const manifestPath = path.join(
     options.repoRoot,
-    "sources",
+    "artifacts",
+    "kb-import",
     `firefox-tabs-${options.captureDate}.manifest.json`,
   );
 
@@ -420,8 +417,6 @@ async function main(): Promise<void> {
     return;
   }
 
-  ensureDir(path.dirname(sourceCapturePath));
-  fs.copyFileSync(options.inputPath, sourceCapturePath);
 
   const manifestEntries: ManifestEntry[] = [
     ...[...priorEntries.values()].filter(
@@ -474,24 +469,16 @@ async function main(): Promise<void> {
 
     const summary = extractSummaryFromHtml(fetchResult.html);
     const wikiAbsDir = path.join(options.repoRoot, wikiRelDir);
-    const captureAbsDir = path.join(options.repoRoot, "sources");
     ensureDir(wikiAbsDir);
-    ensureDir(captureAbsDir);
 
     const wikiFilename = resolveSlugFilename(tab.title || tab.url, wikiAbsDir);
     const wikiRelPath = path.posix.join(wikiRelDir.replace(/\\/g, "/"), wikiFilename);
     const wikiAbsPath = path.join(wikiAbsDir, wikiFilename);
 
-    const captureFilename = resolveSlugFilename(tab.title || tab.url, captureAbsDir, ".html");
-    const captureRelPath = path.posix.join("sources", captureFilename);
-    const captureAbsPath = path.join(captureAbsDir, captureFilename);
-
     const frontmatter = buildWikiFrontmatter(tab.url, tab.title, folderPath, options.captureDate);
     const wikiContent = `${frontmatter}\n\n${buildWikiBody(tab.title, tab.url, summary)}`;
-    const truncatedHtml = fetchResult.html.slice(0, 200_000);
 
     fs.writeFileSync(wikiAbsPath, wikiContent, "utf8");
-    fs.writeFileSync(captureAbsPath, truncatedHtml, "utf8");
 
     imported += 1;
     manifestEntries.push({
@@ -499,7 +486,6 @@ async function main(): Promise<void> {
       title: tab.title,
       folderPath,
       wikiPath: wikiRelPath.replace(/\\/g, "/"),
-      capturePath: captureRelPath,
       status: "imported",
     });
 
@@ -516,13 +502,13 @@ async function main(): Promise<void> {
   );
 
   const manifest: ImportManifest = {
-    sourceCapture: `sources/${sourceCaptureName}`,
     importDate: options.captureDate,
     totals,
     entries: finalEntries,
     skipped,
   };
 
+  fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf8");
   appendNavigation(options.repoRoot, options.captureDate, totals);
 

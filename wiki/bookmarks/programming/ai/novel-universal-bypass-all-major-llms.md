@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "programming", "ai"]
 url: "https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Novel Universal Bypass for All Major LLMs

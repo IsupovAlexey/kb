@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "музыка"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://soundcloud.com/retro21-band"
-source_folder: "Музыка"
 ---
 
 # Retro21 Band | Free Listening on SoundCloud

@@ -6,7 +6,7 @@ Markdown formatting and semantic wiki lint tooling for the personal LLM wiki.
 
 ### Requirement: Prettier markdown formatting
 
-Markdown under `wiki/` and `sources/` SHALL be formattable via Prettier using an isolated package at `scripts/formatting/` (personalization-hub pattern: pinned `prettier` + `prettier-plugin-compact-markdown-table`, root `.prettierrc`, `.prettierignore`).
+Markdown under `wiki/` SHALL be formattable via Prettier using an isolated package at `scripts/formatting/` (personalization-hub pattern: pinned `prettier` + `prettier-plugin-compact-markdown-table`, root `.prettierrc`, `.prettierignore`).
 
 #### Scenario: Format check on wiki markdown
 
@@ -49,9 +49,9 @@ The repository SHALL provide a TypeScript CLI under `scripts/kb/` that reports s
 
 ### Requirement: Documented gate commands
 
-`AGENTS.md` implementation gates SHALL document Prettier check/write commands and the semantic wiki-lint CLI invocation for markdown changes under `wiki/` and `sources/`.
+`AGENTS.md` implementation gates SHALL document Prettier check/write commands and the semantic wiki-lint CLI invocation for markdown changes under `wiki/`.
 
 #### Scenario: Agent edits wiki markdown
 
-- **WHEN** an agent completes wiki or sources markdown edits
+- **WHEN** an agent completes wiki markdown edits
 - **THEN** `AGENTS.md` lists the commands to run for format check and optional semantic lint

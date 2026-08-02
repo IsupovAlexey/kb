@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нфэк"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "nfek"]
 url: "https://cv7075199.regru.cloud:1500/ispmgr?sfrom=loginform"
-source_folder: "Bladwijzerwerkbalk/Надпо/НФЭК"
 ---
 
 # NFEK 5.0

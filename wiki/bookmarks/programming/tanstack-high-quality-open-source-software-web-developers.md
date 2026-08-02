@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://tanstack.com/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # TanStack | High Quality Open-Source Software for Web Developers

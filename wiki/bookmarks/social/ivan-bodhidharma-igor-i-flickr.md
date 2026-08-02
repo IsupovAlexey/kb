@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+tags: ["bookmark", "import", "firefox", "social"]
 url: "https://www.flickr.com/photos/ivan_bodhidharma/"
-source_folder: "Bladwijzerwerkbalk/Разное"
 ---
 
 # Ivan Bodhidharma [Igor I] | Flickr

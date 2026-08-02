@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "порно", "[mapnaam]"]
+tags: ["bookmark", "import", "firefox", "adult"]
 url: "https://joyreactor.cc/tag/%D0%A1%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D1%8B%D0%B5+%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8"
-source_folder: "Порно/[Mapnaam]"
 ---
 
 # Секретные Истории :: Секретные разделы JoyReactor - строго 18+! / картинки, гифки, прикольные комиксы, интересные статьи по теме.

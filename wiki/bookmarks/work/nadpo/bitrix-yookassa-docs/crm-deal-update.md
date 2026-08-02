@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "надпо",
-    "документация-по-сдо-и-б24",
-  ]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "bitrix"]
 url: "https://dev.1c-bitrix.ru/rest_help/crm/cdeals/crm_deal_update.php"
-source_folder: "Bladwijzerwerkbalk/Надпо/Документация по СДО и Б24"
 ---
 
 # crm.deal.update

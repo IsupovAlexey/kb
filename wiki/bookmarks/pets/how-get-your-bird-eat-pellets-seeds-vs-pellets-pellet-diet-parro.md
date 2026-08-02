@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "pets"]
 url: "https://www.youtube.com/watch?v=ZOcY4BdCkg8"
-source_folder: "Полезности"
 ---
 
 # HOW TO GET YOUR BIRD TO EAT PELLETS | Seeds VS Pellets, Pellet Diet For Parrots, Tips and Tricks - YouTube

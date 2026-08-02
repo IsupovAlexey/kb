@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "кино-и-сериалы"]
+tags: ["bookmark", "import", "firefox", "film-and-tv"]
 url: "https://www.purewow.com/entertainment/best-time-travel-movies"
-source_folder: "Кино и Сериалы"
 ---
 
 # 20 Best Time Travel Movies to Stream Right Now - PureWow

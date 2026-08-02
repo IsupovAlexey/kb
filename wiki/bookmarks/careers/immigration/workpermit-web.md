@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "careers"]
 url: "https://workpermit.am/ru/ssn/current-applications"
-source_folder: "Полезности"
 ---
 
 # Workpermit web

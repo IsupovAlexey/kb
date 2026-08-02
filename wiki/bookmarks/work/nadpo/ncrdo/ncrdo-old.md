@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нцрдо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "ncrdo"]
 url: "https://server109.hosting.reg.ru:1500/ispmgr?sfrom=loginform"
-source_folder: "Bladwijzerwerkbalk/Надпо/НЦРДО"
 ---
 
 # NCRDO_old

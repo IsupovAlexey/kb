@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "https://www.cheapshark.com/browse?storeID=6"
-source_folder: "Полезности"
 ---
 
 # Browse | CheapShark

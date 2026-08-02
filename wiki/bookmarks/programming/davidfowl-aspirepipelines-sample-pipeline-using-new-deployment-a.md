@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://github.com/davidfowl/AspirePipelines"
-source_folder: "Программирование"
 ---
 
 # davidfowl/AspirePipelines: An sample pipeline using new deployment APIs in aspire

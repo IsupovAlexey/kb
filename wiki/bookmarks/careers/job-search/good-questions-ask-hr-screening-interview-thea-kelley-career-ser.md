@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://jobsearchandinterviewcoach.com/good-questions-to-ask-in-hr-screening-interview/"
-source_folder: "поиск"
 ---
 
 # Good Questions to Ask in the HR Screening Interview | Thea Kelley Career Services

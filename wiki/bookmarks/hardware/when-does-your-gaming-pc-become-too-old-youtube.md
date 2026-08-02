@@ -3,7 +3,6 @@ date: 2026-08-02
 type: tab
 tags: ["tab-import", "firefox", "import", "2026-08-02", "hardware"]
 url: "https://www.youtube.com/watch?v=fhdPItYw8vM&list=WL&index=5"
-source_folder: "hardware"
 ---
 
 # When Does Your Gaming PC Become Too Old? - YouTube

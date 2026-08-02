@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "программирование"]
+tags: ["bookmark", "import", "firefox", "programming"]
 url: "https://github.com/fabiospampinato/cash"
-source_folder: "Программирование"
 ---
 
 # fabiospampinato/cash: An absurdly small jQuery alternative for modern browsers.

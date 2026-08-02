@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "музыка"]
+tags: ["bookmark", "import", "firefox", "music"]
 url: "https://bencraven.bandcamp.com/track/spy-in-the-sky-part-3-featuring-william-shatner"
-source_folder: "Музыка"
 ---
 
 # Spy In The Sky Part 3 (featuring William Shatner) | Ben Craven

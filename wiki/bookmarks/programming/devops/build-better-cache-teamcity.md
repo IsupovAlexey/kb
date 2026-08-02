@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "полезности"]
+tags: ["bookmark", "import", "firefox", "programming", "devops"]
 url: "https://teamcity.st.dev/buildConfiguration/Services_ServiceTitan_Playground_BuildWithBetterCache?branch=75.1saturn&buildTypeTab=overview&mode=builds&focusLine=NaN"
-source_folder: "Полезности"
 ---
 
 # Build With Better Cache — TeamCity

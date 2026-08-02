@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://dutchreview.com/expat/learn-dutch/free-ways-to-learn-dutch/"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # The top 16 free ways to learn Dutch – DutchReview

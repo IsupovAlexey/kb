@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.linkedin.com/pulse/how-i-landed-job-foreign-country-you-can-too-sho-dewan/"
-source_folder: "поиск"
 ---
 
 # How I Landed a Job in a Foreign Country (and How You Can Too) | LinkedIn

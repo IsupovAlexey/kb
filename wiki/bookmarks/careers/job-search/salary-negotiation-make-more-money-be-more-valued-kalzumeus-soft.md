@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://www.kalzumeus.com/2012/01/23/salary-negotiation/"
-source_folder: "поиск"
 ---
 
 # Salary Negotiation: Make More Money, Be More Valued | Kalzumeus Software

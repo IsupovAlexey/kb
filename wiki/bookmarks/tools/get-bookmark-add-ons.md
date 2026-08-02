@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox"]
+tags: ["bookmark", "import", "firefox", "tools"]
 url: "https://addons.mozilla.org/en-US/firefox/bookmarks/"
-source_folder: ""
 ---
 
 # Get Bookmark Add-ons

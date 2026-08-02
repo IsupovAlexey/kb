@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "железки"]
+tags: ["bookmark", "import", "firefox", "hardware"]
 url: "https://vr-compare.com/"
-source_folder: "Железки"
 ---
 
 # VRcompare - The Internet's Largest VR & AR Headset Database

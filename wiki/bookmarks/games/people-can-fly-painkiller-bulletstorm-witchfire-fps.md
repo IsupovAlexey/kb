@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "игры"]
+tags: ["bookmark", "import", "firefox", "games"]
 url: "http://joyreactor.cc/post/3332516"
-source_folder: "Игры"
 ---
 
 # Новая игра от People Can Fly (Painkiller, Bulletstorm) / Witchfire :: гифка :: нечисть :: fps :: Игры / красивые картинки и арты, гифки, прикольные комиксы, интересные статьи по теме.

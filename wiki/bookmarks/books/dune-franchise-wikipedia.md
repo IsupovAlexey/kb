@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "книги"]
+tags: ["bookmark", "import", "firefox", "books", "sci-fi"]
 url: "https://en.wikipedia.org/wiki/Dune_(franchise)"
-source_folder: "Книги"
 ---
 
 # Dune (franchise) - Wikipedia

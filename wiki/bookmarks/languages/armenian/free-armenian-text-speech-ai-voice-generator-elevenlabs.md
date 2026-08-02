@@ -1,10 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное", "հայերեն"]
+tags: ["bookmark", "import", "firefox", "languages", "armenian"]
 url: "https://elevenlabs.io/text-to-speech/armenian"
-source_folder: "Bladwijzerwerkbalk/Разное/Հայերեն"
 ---
 
 # Free Armenian Text to Speech & AI Voice Generator | ElevenLabs

@@ -1,17 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags:
-  [
-    "bookmark",
-    "import",
-    "firefox",
-    "bladwijzerwerkbalk",
-    "разное",
-    "nederlands",
-  ]
+tags: ["bookmark", "import", "firefox", "languages", "dutch"]
 url: "https://lingua.com/dutch/reading/#exercises"
-source_folder: "Bladwijzerwerkbalk/Разное/Nederlands"
 ---
 
 # Dutch Reading: Dutch Texts for Beginners

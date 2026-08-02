@@ -3,7 +3,6 @@ date: 2026-08-02
 type: tab
 tags: ["tab-import", "firefox", "import", "2026-08-02", "film-and-tv"]
 url: "https://tv.apple.com/am"
-source_folder: "film-and-tv"
 ---
 
 # ‎Apple TV

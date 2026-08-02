@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "магия"]
+tags: ["bookmark", "import", "firefox", "magic", "mtg"]
 url: "https://topdeck.ru/forums/topic/289043-gfcardsru/?tab=comments#comment-1486591"
-source_folder: "Магия"
 ---
 
 # Gfcards.ru - Новое в мире магии - TOPDeck.ru

@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "поиск"]
+tags: ["bookmark", "import", "firefox", "careers", "job-search"]
 url: "https://github.com/vitkarpov/coding-interviews-blog-archive/tree/main/posts"
-source_folder: "поиск"
 ---
 
 # coding-interviews-blog-archive/posts at main · vitkarpov/coding-interviews-blog-archive · GitHub

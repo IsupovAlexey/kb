@@ -1,9 +1,8 @@
 ---
 date: 2026-08-02
 type: bookmark
-tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "надпо", "нцрдо"]
+tags: ["bookmark", "import", "firefox", "work", "nadpo", "ncrdo"]
 url: "https://crm.ncrdo.ru/"
-source_folder: "Bladwijzerwerkbalk/Надпо/НЦРДО"
 ---
 
 # CRM NCRDO
