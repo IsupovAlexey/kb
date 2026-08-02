@@ -1,1 +1,4 @@
 artifacts/
+.obsidian/
+.qmd/
+node_modules/

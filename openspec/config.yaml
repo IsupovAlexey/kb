@@ -16,6 +16,8 @@ context: |
   Workspace scope (apply-review): repository (.) — resolve from layout-root openspec/tacos.yaml workspace.folders.
   <!-- tacos-config-end -->
 
+  Wiki (init-llm-wiki): Personal LLM wiki at `wiki/` (Obsidian vault); immutable captures at `sources/`. Single `/kb` skill for ingest, query, lint. Organic folders with frontmatter (`date`, `type`, `tags`). Schema split: tacos rules in repo `AGENTS.md`; wiki conventions in `wiki/SCHEMA.md`. Prettier via root `package.json`; TypeScript tooling under `scripts/kb/`; qmd indexes `wiki/` only; `.qmd/` gitignored.
+
 # Project context (optional)
 # This is shown to AI when creating artifacts.
 # Add your tech stack, conventions, style guides, domain knowledge, etc.

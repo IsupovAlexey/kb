@@ -1,0 +1,7 @@
+node_modules/
+artifacts/
+.git/
+openspec/
+.agents/
+.cursor/
+wiki/assets/**

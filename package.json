@@ -1,0 +1,13 @@
+{
+  "name": "kb",
+  "private": true,
+  "description": "Personal LLM wiki — formatting and TypeScript tooling",
+  "scripts": {
+    "format:check": "prettier --check \"wiki/**/*.md\"",
+    "format:write": "prettier --write \"wiki/**/*.md\""
+  },
+  "devDependencies": {
+    "prettier": "3.9.6",
+    "prettier-plugin-compact-markdown-table": "0.1.0"
+  }
+}

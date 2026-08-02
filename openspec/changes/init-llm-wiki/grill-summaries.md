@@ -139,11 +139,26 @@ Refinement: add TypeScript scripts for slug/filename generation and semantic wik
 
 #### Summary
 
+Short apply grill (mode: short). Minimal SCHEMA skeleton; empty vault; Prettier scoped to `wiki/**/*.md` at init.
+
 #### Decisions
+
+- SCHEMA.md at init: frontmatter fields, folder policy, capture rules, commit prefix only — defer slug CLI and ingest modes to Stage 2
+- No sample bookmark page in skeleton
+- `index.md` / `log.md`: headers and brief usage notes only (no example rows)
+- Prettier check scoped to `wiki/**/*.md` only at init (not openspec or AGENTS.md)
 
 #### Open questions
 
+- None blocking Stage 1
+
 #### User inputs
+
+- Grill mode: short
+- SCHEMA depth: minimal skeleton (Recommended)
+- Sample page: skip (Recommended)
+- index/log starter: headers + empty sections with usage notes (Recommended)
+- Prettier scope: wiki/**/*.md only at init (Recommended)
 
 ### Stage 2
 
