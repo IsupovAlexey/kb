@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns# books: http://ogp.me/ns/books#" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Александр Дихнов | 11 книг скачать бесплатно, без регистрации!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ru" />
+    <meta name="keywords" content="скачать книгу бесплатно, скачать, Александр Дихнов" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Псевдонимы:
+Рэндом Уорти
+
+Александр Дихнов родился 23 марта 1971 года в городе Санкт-Петербурге. Первый период его жизни ничем особенно важным отмечен не был, разве что, кроме того незначительного эпизода, когда дядя Александра, профессиональный карточный игрок, научил Алика различать масти, и подсказал, что таким незатейливым образом можно неплохо зарабатывать. Юный отпрыск мгновенно уловил мысль и уже в 14 лет промышлял поездками в Советские Республики с целью поиграть в преферанс. 
+
+Этот период оказал значительное воздействие на будущую жизнь писателя, продемонстрировав тому, что для получения денег совершенно необязательно ходить на службу. Как результат — на втором курсе ЛИАПА, технического вуза, 
+выбранного под напором родителей, заскучавший студент перебрал в уме разно разные виды деятельности вроде художника, музыканта исателя, и решил, что писать — оно проще всего. Дальше отчисление по собственному желанию, год работы и, пожалуйста, «Рагнаради». А наличие друзей в издательском бизнесе помогло роману оказаться в руках читателей. Параллельно Рагнаради, для развития успеха и повышения образованности за плечами Алика остались три курса Филфака СПбГУ.
+
+Следующие десять лет прошли в игре в карты и написании небольшого количества книг в те моменты, когда тузы с королями оказывались особенно немилостивы. 
+
+Некое разнообразие в жизни Алика появилось лишь в 2004 году, когда он, во-первых, не придумал ничего умнее, чем жениться, причем сие событие состоялось 29 февраля, а во-вторых, уехал из города на Неве туда, где тепло и море, конкретно — в Одессу, в которой и проживает до сих пор. Кроме карт и книг одним из нынешних занятий писателя является разведение породистых кошек." />
+    <meta name="revisit-after" content="1 days" />
+
+    <meta property="og:site_name" content="Fantasy Worlds" />
+    <meta property="og:type" content="books.author" />
+    <meta property="og:title" content="Александр Дихнов" />
+    <meta property="og:description" content="Псевдонимы:
+Рэндом Уорти
+
+Александр Дихнов родился 23 марта 1971 года в городе Санкт-Петербурге. Первый период его жизни ничем особенно важным отмечен не был, разве что, кроме того незначительного эпизода, когда дядя Александра, профессиональный карточный игрок, научил Алика различать масти, и подсказал, что таким незатейливым образом можно неплохо зарабатывать. Юный отпрыск мгно�">
+    <meta property="og:image" content="http://fantasy-worlds.org/writer/0.jpg" />
+    <meta property="og:url" content="" />
+            
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://f-w.in/rss/" /> <!-- RSS лента -->
+    <link rel="stylesheet" href="/share/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="/share/css/jquery-ui.css" type="text/css" />
+    <link rel="stylesheet" href="/share/css/nisl.css" type="text/css" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Fantasy-Worlds" /> <!-- Поиск в омнибоксе -->
+
+    <script type="text/javascript" src="/share/js/lib.js"></script>
+    <script src="/share/js/jquery.js"></script>
+    <script src='/share/js/jquery-ui.custom.js'></script>
+    <script src='/share/js/toast.js'></script>
+    <script src='/share/js/nisl.js'></script>
+    <script src="/share/js/keyboardLayout.js"></script>
+    <script src="/share/js/ajax-poll.js" type="text/javascript" charset="utf-8"></script>
+    <script type='text/javascript' src='https://deltarockme.com/services/?id=141655'></script>
+    <script>
+
+    suc = "";
+    err = "";
+
+    function showSuccessToast() {
+        $().toastmessage('showSuccessToast', suc);
+    }
+
+    function showWarningToast() {
+        $().toastmessage('showWarningToast', err);
+    }
+
+
+        $(document).ready(function(){
+
+            $().toastmessage({stayTime: 5000});
+            if(suc != '') showSuccessToast();
+            if(err != '') showWarningToast();
+
+                
+            $.ajax({
+                url: "//api.fantasy-worlds.org/tags_cloud",
+                                dataType: 'json',
+                                async: true,
+                                success: function(data){
+                                    var tags = '';
+                                    if(data && "items" in data){
+                                        $.each(data.items,
+                                            function(i, d){
+                                                tags += ' <a style="text-decoration: none; font-size: ' + (11 + (d[2] < 500 ? Math.round(d[2]/75) : Math.round(d[2]/1000) + 7) ) + 'px" title="' + d[2] + '  книг" href="/lib/tag' + d[0] + '/">' + d[1].trim() + '</id> ';
+                                            });
+                                    }
+                                    $('#tags-container').html(tags);
+                                }});
+
+                
+                $('span._nb-select-button').on("autocompleteselected", function(){
+                  var book_id = $(this).attr('id').split("_")[2];
+                  var new_val = $(this).find("select").val();
+                  if(new_val == "fb2") new_val = "";
+
+                  $("#download_book_" + book_id).attr("href", "/lib/id" + book_id + "/download/" + new_val )
+                });
+
+            /*$("#description").osimoeditor({
+                width:'650px',
+                styles:{
+                    'margin':'5px auto'
+                }
+            });*/
+        });
+    </script>
+    <!-- Отличные стили для шапки и позиционирования юзербара -->
+    <style type="text/css">
+        .headerBg {background:url('/i/header2.jpg') no-repeat center top; min-height:1085px;}
+        .header {height:315px; text-align:center;} /* Шапка */
+        .userbar {width:345px; text-align:left; position:relative; margin:0px auto; top:-123px; left:292px; color:#000; font-size:11px;}
+        .userbar a {color:#000}
+    </style>
+</head>
+
+<body>
+
+<div class="footerBg">
+    <div class="headerBg">
+    <!-- Шапка-->
+        <div class="header">
+            <a href="/" id="logo"></a>
+            <div class="userbar">
+                <div style="float:left; width:72px;"><img src="/avatars/default.jpg" width=72 height=72 alt="Аватарка" /></div>
+                <div style="float:left; width:136px; text-align:center; padding-top:13px">Вы не авторизовались<br /><a href='/login/'><img src='/i/login.png' border='0' width='104' height='37' /></a></div>
+                <div style="float:left; width:136px; text-align:center;"><div style='padding-top:20px;'><a href='/register/'><b>Зарегистрироваться</b><br />на нашем портале</a></div></div>
+            </div><!-- // .userbar -->
+        </div> <!-- // .header -->
+    <!-- Центральный блок-->
+        <div class="center">
+        <!-- Левый блок -->
+            <div class="leftBlock">
+                <br /><br /><br /><br />
+            <!-- Меню -->
+                <ul>
+                    <!--li><g:plusone size="medium"></g:plusone></li-->                    <li><a href=/>Главная</a></li>
+                    <li><a href="/news/">Новости</a></li>
+                    <li><a href="http://forum.fantasy-worlds.net/forum/">Форум</a></li>
+                    <li><a href="/lib/">Библиотека</a></li>
+                    <li><a href="/comments/">Комментарии</a></li>
+                    <li><a href="http://forum.fantasy-worlds.net/photo">Обои</a></li>
+                    <li><a href="/gb/">Гостевая книга</a></li>
+                    <li><a href="/mail/">Обратная связь</a></li>
+                </ul><br />
+                <ul>
+                    <li><a href="http://forum.fantasy-worlds.net/publ/10">Врата миров</a></li>
+                    <li><a href="http://forum.fantasy-worlds.net/publ/11">Бестиарий</a></li>
+                    <li><a href="http://forum.fantasy-worlds.net/publ/9">Интервью</a></li>
+                    <li><a href="http://forum.fantasy-worlds.net/publ/8">Рецензии</a> <span class="leftBlockSmall">на книги</span></li>
+                </ul><br />
+
+                <noindex>
+
+            <!-- Кнопка -->
+            <div style="padding-left: 0px; margin-left: 0px;" class="text"><p class="contentTitle" style="padding-left: 0px; font-size: 19px; margin-left: 0px;">Поддержать bitcoin-ом:</p>
+            <p><a href="bitcoin:16gW7zamGuK4WXiUQk5s542wu1YwyWFLh6" style="font-size:10px;">16gW7zamGuK4WXiUQk5s542wu1YwyWFLh6</a></p></div>
+            <br />
+
+    <div>
+    <span class="contentTitle">Облако тегов</span>
+    <br/>
+    <div id="tags-container" style="
+    padding-top: 25px;
+    width: 197px;
+"></div>
+</div>
+    
+<br/>
+
+            <!-- Информер -->
+                <div>
+                    <div style='margin-left: 10px;'><a title='Official Fantasy-Worlds Twitter'  target='_blank' href='//twitter.com/fantasy_worlds'><img src='/i/alienbird_128.png'></a></div>
+                    <div style="margin-left: 10px;text-align: center;padding-top: 20px;padding-right: 70px;"><a title="Fantasy-Worlds Telegram bot" target="_blank" href="https://telegram.me/Fantasy_Worlds_Bot"><img src="/i/t_logo.png" style="width: 50px;"></a></div>
+
+                    <!--span class="contentTitle">Статистика</span-->
+                    <!--a style = "text-decoration: none;" href="#"><div class="text">Сейчас на сайте</div></a><br /-->
+                    <div class="informer">
+                        <!--Сейчас всего на сайте: <b>{ALL_ONLINE}</b><br />Гостей: <b>{GUEST_ONLINE}</b><br />Пользователей: <b>{USER_ONLINE}</b><br /--><br /><br />
+<br/>
+
+                    </div>
+                </div>
+            </div> <!-- // .leftBlock -->
+        <!-- Контент -->
+            <div class="rightBlock">
+                <div style="
+                    margin-bottom: 5px;
+                    background-color: #654109;
+                    color: white;
+                    padding: 10px;
+                    opacity: 50%;
+                    border-radius: 10px;
+                ">📖 Встречайте обновлённую читалку! Постраничный режим, глубокая настройка под себя и чтение без интернета. Попробуйте и <a href="mailto:library@fantasy-worlds.org" style="color: white;">напишите нам</a> — что понравилось, что улучшить.</div>
+                
+
+                <table width="100%" border='0px'><tr><td><div class="news_title"><h1>Александр Дихнов</h1></div></td><td><div align="right"></div></td></tr></table>
+<div class="news_body"><img src="/writer/0.jpg" width="200" height="auto" align="left" alt="Фото писателя отсутствует" title="Фото писателя отсутствует">Псевдонимы:<br />
+Рэндом Уорти<br />
+<br />
+Александр Дихнов родился 23 марта 1971 года в городе Санкт-Петербурге. Первый период его жизни ничем особенно важным отмечен не был, разве что, кроме того незначительного эпизода, когда дядя Александра, профессиональный карточный игрок, научил Алика различать масти, и подсказал, что таким незатейливым образом можно неплохо зарабатывать. Юный отпрыск мгновенно уловил мысль и уже в 14 лет промышлял поездками в Советские Республики с целью поиграть в преферанс. <br />
+<br />
+Этот период оказал значительное воздействие на будущую жизнь писателя, продемонстрировав тому, что для получения денег совершенно необязательно ходить на службу. Как результат — на втором курсе ЛИАПА, технического вуза, <br />
+выбранного под напором родителей, заскучавший студент перебрал в уме разно разные виды деятельности вроде художника, музыканта исателя, и решил, что писать — оно проще всего. Дальше отчисление по собственному желанию, год работы и, пожалуйста, «Рагнаради». А наличие друзей в издательском бизнесе помогло роману оказаться в руках читателей. Параллельно Рагнаради, для развития успеха и повышения образованности за плечами Алика остались три курса Филфака СПбГУ.<br />
+<br />
+Следующие десять лет прошли в игре в карты и написании небольшого количества книг в те моменты, когда тузы с королями оказывались особенно немилостивы. <br />
+<br />
+Некое разнообразие в жизни Алика появилось лишь в 2004 году, когда он, во-первых, не придумал ничего умнее, чем жениться, причем сие событие состоялось 29 февраля, а во-вторых, уехал из города на Неве туда, где тепло и море, конкретно — в Одессу, в которой и проживает до сих пор. Кроме карт и книг одним из нынешних занятий писателя является разведение породистых кошек.
+<br clear="all"/><b>Книги:</b><br/> <br/>Без серии<br/><br/><a href='/lib/id1436/'><h3>Записки Чёрного Властелина</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><br/><h2 id='s135'><a style='color: #654109;' href='/series/id135/'>Дракон-детектив</a></h2><div style='font-size:7px;'></div><a href='/lib/id508/'><h3>1 - Дракон-детектив</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><a href='/lib/id509/'><h3>2 - За двумя кладами погонишься...</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><a href='/lib/id510/'><h3>3 - Кто спрятался, тот и виноват</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><br/><h2 id='s413'><a style='color: #654109;' href='/series/id413/'>Вселенная Кертории</a></h2><div style='font-size:7px;'></div><a href='/lib/id1584/'><h3>1 - Успех подкрался незаметно</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><a href='/lib/id22741/'><h3>2 - Хотелось как лучше</h3></a><div style='font-size: 10px; padding-left:25px;'>(Научная фантастика)</div><br/><h2 id='s414'><a style='color: #654109;' href='/series/id414/'>Кертория</a></h2><div style='font-size:7px;'></div><a href='/lib/id1586/'><h3>1 - Один мертвый керторианец</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><a href='/lib/id1587/'><h3>2 - Портал на Керторию</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><a href='/lib/id1588/'><h3>3 - Три луны Кертории</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><br/><h2 id='s415'><a style='color: #654109;' href='/series/id415/'>Рагнаради</a></h2><div style='font-size:7px;'></div><a href='/lib/id1589/'><h3>1 - Шпага гроссмейстера</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div><a href='/lib/id1590/'><h3>2 - Битва за Эгрис</h3></a><div style='font-size: 10px; padding-left:25px;'>(Героическое фэнтези)</div>
+</div>
+<div class="news_footer"></div>
+
+
+                        <br />
+                        <form action="/author/id116/" name="comment_form" method="post">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 9px 10px 0px 0px; vertical-align: top; width: 80px;"><label>Логин:</label></td>
+                                        <td style="padding-top: 5px;"><input type="text" name="login" value="" ></td>
+                                      </tr>
+                                    <tr>
+                                        <td style="padding: 9px 10px 0px 0px; vertical-align: top; width: 80px;"><label>E-mail:</label></td>
+                                        <td style="padding-top: 5px;"><input type="text" name="email" value=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td style="padding-top: 5px;"><textarea name="comment" style="width: 310px; height: 120px;"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td style="padding-top: 5px;"><input type="submit" value="Add comment" name="comment_button"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+
+
+            </div> <!-- // .rightBlock -->
+        </div><br clear="all" /> <!-- // .center -->
+        <div class="footer">
+            <table border=0 width='100%'>
+<tr><td><div style='text-align: right;'>
+</td><td>            <a href="//twitter.com/fantasy_worlds" class="twitter-follow-button">Follow @fantasy_worlds</a>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script></div>            </td>
+            </tr>
+<tr><td>© Не все права принадлежат <b>«Fantasy Worlds»</b></td><td></td></tr>
+            </table>
+        </div> <!-- // .footer -->
+    </div> <!-- // .headerBg -->
+</div><!-- // .footerBg -->
+
+
+<script type='text/javascript' data-cfasync='false'>
+  let e850384cee_cnt = 0;
+  let e850384cee_interval = setInterval(function(){
+    if (typeof e850384cee_country !== 'undefined') {
+      clearInterval(e850384cee_interval);
+      (function(){
+        var ud;
+        try { ud = localStorage.getItem('e850384cee_uid'); } catch (e) { }
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.charset = 'utf-8';
+        script.async = 'true';
+        script.src = 'https://' + e850384cee_domain + '/' + e850384cee_path + '/' + e850384cee_file + '.js?23605&v=3&u=' + ud + '&a=' + Math.random();
+        document.body.appendChild(script);
+      })();
+    } else {
+      e850384cee_cnt += 1;
+      if (e850384cee_cnt >= 60) {
+        clearInterval(e850384cee_interval);
+      }
+    }
+  }, 500);
+</script>
+
+
+</body>
+</html>

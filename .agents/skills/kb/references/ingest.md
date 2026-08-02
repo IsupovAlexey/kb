@@ -117,6 +117,30 @@ Folder paths use English aliases (not Dutch `bladwijzerwerkbalk` or Russian tran
 
 After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
 
+## Bulk Firefox tab import (Tab Session Manager)
+
+For open-tab snapshots exported from [Tab Session Manager](https://addons.mozilla.org/firefox/addon/tab-session-manager/):
+
+```bash
+npm run kb:generate-tab-classify-plan -- "path/to/tab-session.json"   # optional: refresh LLM classify plan
+npm run kb:import-firefox-tabs -- "path/to/tab-session.json"
+npm run kb:import-firefox-tabs -- "path/to/tab-session.json" --dry-run
+```
+
+Behavior:
+
+1. Read thematic folder assignments from `artifacts/tacos-work/firefox-tab-import/tab-classify-plan.json` (generate/refresh via `kb:generate-tab-classify-plan` before first import)
+2. Copy JSON export to `sources/firefox-tabs-<date>.json` (immutable capture)
+3. Dedupe by URL; skip pinned work-service tabs (Slack, Gmail, Calendar, ChatGPT, Gemini, Google Docs/Sheets, Messages, Translate when pinned)
+4. Skip URLs already in `wiki/bookmarks/**` (manifest links to existing `wikiPath`)
+5. Classify each tab into existing thematic folders (`programming/`, `games/`, `personal/`, etc.) — not a flat `tabs/` dump
+6. Health-check and fetch live pages; exclude dead links; write wiki pages with `type: tab` and `## Summary`
+7. Write manifest to `sources/firefox-tabs-<date>.manifest.json`
+8. Append one summary line to `wiki/index.md` and `wiki/log.md`
+9. Re-run on same date skips already-imported URLs (idempotent)
+
+After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
+
 ## Done when
 
 - Primary page(s) written with correct frontmatter

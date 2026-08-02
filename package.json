@@ -8,6 +8,8 @@
     "kb:slug": "tsx scripts/kb/slug.ts",
     "kb:lint": "tsx scripts/kb/wiki-lint.ts",
     "kb:import-firefox": "tsx scripts/kb/import-firefox.ts",
+    "kb:import-firefox-tabs": "tsx scripts/kb/import-firefox-tabs.ts",
+    "kb:generate-tab-classify-plan": "tsx scripts/kb/generate-tab-classify-plan.ts",
     "kb:reclassify": "tsx scripts/kb/apply-llm-reclassify.ts",
     "kb:reclassify:legacy": "tsx scripts/kb/apply-reclassify.ts",
     "test": "tsx --test scripts/kb/**/*.test.ts"

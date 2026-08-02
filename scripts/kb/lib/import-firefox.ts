@@ -431,7 +431,7 @@ function transliterateToLatin(text: string): string {
     .join("");
 }
 
-function normalizeUrl(url: string): string {
+export function normalizeUrl(url: string): string {
   try {
     const u = new URL(url);
     u.hash = "";
