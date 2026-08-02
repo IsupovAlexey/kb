@@ -128,3 +128,46 @@ The repository SHALL provide a TypeScript CLI to import Firefox Netscape bookmar
 
 - **WHEN** the Firefox import CLI is run again for the same export date and URLs were already imported
 - **THEN** existing imported URLs are skipped without creating duplicate wiki pages
+
+### Requirement: Bulk Google Keep import
+
+The repository SHALL provide a TypeScript CLI to import Google Keep Takeout zip exports into the wiki with standard-split classification, label-to-theme mapping, dead-link exclusion, image attachments, and idempotent re-run.
+
+#### Scenario: Keep Takeout import
+
+- **WHEN** the user runs the Keep import CLI against a Takeout zip containing `Takeout/Google Keep/*.json`
+- **THEN** the tool creates wiki pages under `wiki/bookmarks/` and `wiki/notes/` per classification rules, copies image attachments to `wiki/assets/`, and appends batch summary lines to `wiki/index.md` and `wiki/log.md`
+
+#### Scenario: Keep classification standard-split
+
+- **WHEN** a Keep note has WEBLINK annotations or URL-only text content
+- **THEN** it is imported as a bookmark page with fetch and `## Summary`
+- **WHEN** a Keep note has freeform text only
+- **THEN** it is imported as a note page under `wiki/notes/<theme>/`
+- **WHEN** a Keep note has both non-URL text and embedded URLs
+- **THEN** it is imported as a single note page (not split)
+
+#### Scenario: Keep label mapping
+
+- **WHEN** a Keep note has labels such as IT, TOPDeck, or ServiceTitan
+- **THEN** labels become frontmatter tags and map to wiki themes (`programming`, `games`, `work`); unmapped labels use `wiki/notes/personal` or `wiki/bookmarks/unsorted`
+
+#### Scenario: Keep dead link exclusion
+
+- **WHEN** a bookmark-bound Keep URL fails health check or fetch during import
+- **THEN** no wiki page is created for that URL and the manifest records it as dead with reason
+
+#### Scenario: Keep image attachments
+
+- **WHEN** a Keep note has image attachments
+- **THEN** images are copied to `wiki/assets/` and the wiki note links to the asset path
+
+#### Scenario: Keep idempotent re-import
+
+- **WHEN** the Keep import CLI is run again for the same export date
+- **THEN** notes already recorded in the manifest and bookmark URLs already in the wiki are skipped without duplicate pages
+
+#### Scenario: Keep dry-run
+
+- **WHEN** the user passes `--dry-run` to the Keep import CLI
+- **THEN** a manifest is written under `artifacts/kb-import/` and no wiki files are created

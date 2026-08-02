@@ -1,0 +1,11 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "textContent": "Remember to buy milk and call the dentist.",
+  "title": "Errands",
+  "userEditedTimestampUsec": 1708108721444000,
+  "createdTimestampUsec": 1708108716723000,
+  "labels": [{ "name": "Personal reminders" }]
+}

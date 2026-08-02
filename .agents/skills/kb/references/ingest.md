@@ -110,6 +110,30 @@ Folder paths use English aliases (not Dutch `bladwijzerwerkbalk` or Russian tran
 
 After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
 
+## Bulk Google Keep import
+
+For Google Takeout Keep exports (JSON + HTML + images in a zip):
+
+```bash
+npm run kb:import-keep -- "path/to/takeout.zip"
+npm run kb:import-keep -- "path/to/takeout.zip" --dry-run
+```
+
+Behavior:
+
+1. Extract Takeout zip; parse `Takeout/Google Keep/*.json` (skip trashed and empty notes)
+2. **Standard-split classification:** WEBLINK annotations and URL-only notes → `wiki/bookmarks/<theme>/` with fetch + `## Summary`; freeform text → `wiki/notes/<theme>/`; mixed text+URLs → single note page
+3. **Label mapping:** Keep labels → frontmatter `tags`; IT → `programming`, TOPDeck → `games`, ServiceTitan → `work`; unmapped → `wiki/notes/personal` or `wiki/bookmarks/unsorted`
+4. Health-check and fetch live URLs for bookmark-bound items; exclude dead links (logged in manifest)
+5. Copy image attachments to `wiki/assets/` with linking note in body
+6. Write manifest to `artifacts/kb-import/keep-<date>.manifest.json`
+7. Append one summary line to `wiki/index.md` and `wiki/log.md`
+8. Re-run on same date skips already-imported keepIds and duplicate URLs (idempotent)
+
+`--dry-run` writes the manifest only — no wiki files and no network fetch.
+
+After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
+
 ## Bulk Firefox tab import (Tab Session Manager)
 
 For open-tab snapshots exported from [Tab Session Manager](https://addons.mozilla.org/firefox/addon/tab-session-manager/):

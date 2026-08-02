@@ -1,0 +1,11 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "title": "Dead Link Example",
+  "textContent": "https://example.invalid/dead-resource",
+  "labels": [{ "name": "IT" }],
+  "createdTimestampUsec": 1700000000000000,
+  "userEditedTimestampUsec": 1700000000000000
+}

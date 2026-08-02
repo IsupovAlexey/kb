@@ -1,0 +1,11 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "textContent": "Sideboard ideas for the next tournament.",
+  "title": "Deck notes",
+  "userEditedTimestampUsec": 1739034300000000,
+  "createdTimestampUsec": 1739034290000000,
+  "labels": [{ "name": "TOPDeck" }]
+}

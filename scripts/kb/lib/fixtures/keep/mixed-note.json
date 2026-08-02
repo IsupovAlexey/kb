@@ -1,0 +1,11 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "textContent": "Read this guide before the meeting: https://docs.example.com/guide\nAlso prepare slides.",
+  "title": "Meeting prep",
+  "userEditedTimestampUsec": 1739033900000000,
+  "createdTimestampUsec": 1739033890000000,
+  "labels": [{ "name": "Work notes" }]
+}

@@ -1,0 +1,17 @@
+{
+  "attachments": [
+    {
+      "filePath": "1708108800000.sample.png",
+      "mimetype": "image/png"
+    }
+  ],
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "textContent": "Photo from the trip",
+  "title": "Trip photo",
+  "userEditedTimestampUsec": 1739034200000000,
+  "createdTimestampUsec": 1739034190000000,
+  "labels": [{ "name": "Personal reminders" }]
+}

@@ -1,0 +1,11 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "textContent": "https://docs.example.com/guide",
+  "title": "",
+  "userEditedTimestampUsec": 1739033800000000,
+  "createdTimestampUsec": 1739033790000000,
+  "labels": [{ "name": "IT" }]
+}

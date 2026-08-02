@@ -1,0 +1,19 @@
+{
+  "color": "DEFAULT",
+  "isTrashed": false,
+  "isPinned": false,
+  "isArchived": false,
+  "annotations": [
+    {
+      "description": "Example articles about a technical topic.",
+      "source": "WEBLINK",
+      "title": "Example Tech Articles",
+      "url": "https://example.com/articles/"
+    }
+  ],
+  "textContent": "https://example.com/articles/",
+  "title": "",
+  "userEditedTimestampUsec": 1739033762727000,
+  "createdTimestampUsec": 1739033760657000,
+  "labels": [{ "name": "IT" }]
+}
