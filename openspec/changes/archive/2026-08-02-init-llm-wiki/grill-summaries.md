@@ -189,11 +189,26 @@ Short apply grill (mode: short). TypeScript CLIs via tsx at repo root; numeric s
 
 #### Summary
 
+Short apply grill (mode: short). Standard qmd bootstrap docs; concise mobile section; semantic lint before Prettier; query file-back via `--file` or natural language.
+
 #### Decisions
+
+- qmd bootstrap: document `qmd init`, `qmd collection add wiki --name wiki`, collection name `wiki`
+- Mobile: concise Obsidian Android + Obsidian Git + private-repo credential caveat + upstream links
+- `/kb lint` and AGENTS.md gates: semantic wiki-lint first (`npm run kb:lint`), then Prettier (`npm run format:check`)
+- Query file-back: `--file` flag and natural language ("file this", "save to wiki") both trigger file-back
 
 #### Open questions
 
+- None blocking Stage 3
+
 #### User inputs
+
+- Grill mode: short
+- qmd bootstrap: standard init + collection add (Recommended)
+- Mobile doc: concise (Recommended)
+- Lint order: semantic first (Recommended)
+- Query file-back: `--file` flag + natural language (Recommended)
 
 ## explore
 

@@ -36,14 +36,14 @@
 
 **Testable outcome:** AGENTS.md documents Prettier + wiki-lint gates; `kb` skill documents qmd bootstrap/search/reindex, `/kb query` cited synthesis, and `/kb lint` via CLIs.
 
-- [ ] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 3` + unchecked below); **User inputs** under `## apply` ### Stage 3 in `grill-summaries.md`
-- [ ] 3.1 Add AGENTS.md implementation gates for Prettier check and wiki-lint CLI per **Requirement: Documented gate commands**
-- [ ] 3.2 Wire `/kb lint` in skill to run wiki-lint CLI + Prettier check per **Requirement: Lint via CLI not LLM checklist**
-- [ ] 3.3 Add qmd bootstrap, search, post-add reindex, and `/kb query` workflow to `kb` skill per **Requirement: Wiki query workflow** and **Decision 9**
-- [ ] 3.4 Document Obsidian Android + Obsidian Git mobile workflow in `wiki/SCHEMA.md` per grill mobile decision
-- [ ] Verify Decision 5: skill or SCHEMA documents qmd collection scoped to `wiki/` and `.qmd/` gitignored
-- [ ] Verify Decision 6: semantic lint runs via `scripts/kb` CLI; Prettier runs via root `npm run format:check` — not LLM checklist
-- [ ] Verify Decision 9: skill documents qmd top-N retrieval, cited synthesis, no commit by default, optional file-back
-- [ ] Tests: N/A — documentation and gate wiring only
-- [ ] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-3.md`
-- [ ] Human review: Pause for human sign-off before apply handoff
+- [x] Stage grill: per [task-stage-contract.md](task-stage-contract.md) ## Stage grill line — **this stage only** (`## 3` + unchecked below); **User inputs** under `## apply` ### Stage 3 in `grill-summaries.md`
+- [x] 3.1 Add AGENTS.md implementation gates for Prettier check and wiki-lint CLI per **Requirement: Documented gate commands**
+- [x] 3.2 Wire `/kb lint` in skill to run wiki-lint CLI + Prettier check per **Requirement: Lint via CLI not LLM checklist**
+- [x] 3.3 Add qmd bootstrap, search, post-add reindex, and `/kb query` workflow to `kb` skill per **Requirement: Wiki query workflow** and **Decision 9**
+- [x] 3.4 Document Obsidian Android + Obsidian Git mobile workflow in `wiki/SCHEMA.md` per grill mobile decision
+- [x] Verify Decision 5: skill or SCHEMA documents qmd collection scoped to `wiki/` and `.qmd/` gitignored
+- [x] Verify Decision 6: semantic lint runs via `scripts/kb` CLI; Prettier runs via root `npm run format:check` — not LLM checklist
+- [x] Verify Decision 9: skill documents qmd top-N retrieval, cited synthesis, no commit by default, optional file-back
+- [x] Tests: N/A — documentation and gate wiring only
+- [x] Apply review: parallel Task — `tacos-apply-review` + `tacos-additional-apply-review` when applicable (parent merge; **MUST NOT** core-only); write `artifacts/openspec-reviews/init-llm-wiki/apply-review-3.md`
+- [x] Human review: Pause for human sign-off before apply handoff

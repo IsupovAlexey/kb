@@ -51,9 +51,23 @@ When **Commands** lists local dev checks, **apply** and **apply-review** treat t
 
 ## Commands
 
-No local dev gates — prose/planning only.
+After editing markdown under `wiki/`:
 
-<!-- tacos-doctor-discovery: empty -->
+```bash
+npm ci
+npm run kb:lint
+npm run format:check
+```
+
+After editing markdown under `sources/`, run `npm run format:write` on changed files if needed (Prettier check is scoped to `wiki/**/*.md` at init).
+
+Optional auto-fix for formatting only:
+
+```bash
+npm run format:write
+```
+
+<!-- tacos-doctor-discovery: npm run kb:lint; npm run format:check -->
 
 <!-- tacos-implementation-gates-end -->
 # AGENTS

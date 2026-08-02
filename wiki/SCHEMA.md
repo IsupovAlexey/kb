@@ -49,3 +49,36 @@ Rules: kebab-case (`[a-z0-9-]`), lowercase, drop filler words, max 64 chars. On 
 
 - `wiki/index.md` — content catalog; updated on every add.
 - `wiki/log.md` — append-only activity log; one line per add.
+
+## Search (qmd)
+
+Local search indexes `wiki/` only — not `sources/`, `openspec/`, or `.agents/`. Index artifacts live in `.qmd/` (gitignored).
+
+**First-time bootstrap** (from repo root):
+
+```bash
+qmd init
+qmd collection add wiki --name wiki
+```
+
+**Reindex after content changes:**
+
+```bash
+qmd update
+```
+
+**Search:**
+
+```bash
+qmd search "<term>" -c wiki -n 5
+```
+
+The `/kb` skill runs reindex after each successful ingest when `qmd` is on PATH. Use `/kb query` for cited synthesis over search results.
+
+## Mobile sync
+
+Read and capture on Android via [Obsidian mobile](https://obsidian.md/mobile). Sync with the [Obsidian Git](https://github.com/Vinzent03/obsidian-git) community plugin — configure vault path to `wiki/` inside this repo.
+
+**Private repo caveat:** mobile git credentials differ from desktop; set up SSH keys or a personal access token in Obsidian Git settings. See upstream [Obsidian Git docs](https://github.com/Vinzent03/obsidian-git#readme) for setup.
+
+No plugin config is stored in this repository.

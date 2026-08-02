@@ -61,7 +61,17 @@ Unless `--no-commit`, `--no-push`, or `--dry-run`:
 2. Commit with prefix `kb:` (e.g. `kb: add bookmark karpathy-llm-wiki`)
 3. Push to remote (unless `--no-push`)
 
-### 9. Failure handling
+### 9. qmd reindex
+
+After successful ingest (when `qmd` is on PATH):
+
+```bash
+qmd update
+```
+
+When `qmd` is not installed, note that search reindex was skipped — ingest still succeeds. See [query.md](query.md) for first-time qmd bootstrap.
+
+### 10. Failure handling
 
 |Failure|Behavior|
 |-|-|
@@ -88,4 +98,5 @@ Default: commit and push after successful ingest.
 - `wiki/index.md` and `wiki/log.md` updated
 - Filenames produced by `npm run kb:slug`
 - Git commit with `kb:` prefix (unless no-publish flags)
+- `qmd update` run when qmd is available (or user noted reindex skipped)
 - User informed of any fetch/write/push failures
