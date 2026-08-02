@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1"><title>
+	Top 8 Predictor - A Swiss Rounds Tournament Tool. | limitedinformation
+</title><link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <meta name="description" content="Top 8 Predictor, gives an estimate for the top eight of a tournament with modified swiss style rounds, including draws, such as MTG (Magic: The Gathering)." />
+    <meta name="keywords" content="Top 8 Predictor, limited information, Top 8 formula, magic the gathering, magic the gathering programs, swiss tournament software, swiss tournament, Top 8 math , swiss rounds calculator, MTG top 8" />
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23763829-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+    <!-- Bootstrap -->
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="Styles/BSOverride.css" rel="stylesheet" type="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><style type="text/css">
+	/* <![CDATA[ */
+	#FooterMenu { border-style:None; }
+	#FooterMenu img.icon { border-style:none;vertical-align:middle; }
+	#FooterMenu img.separator { border-style:none;display:block; }
+	#FooterMenu img.horizontal-separator { border-style:none;vertical-align:middle; }
+	#FooterMenu ul { list-style:none;margin:0;padding:0;width:auto; }
+	#FooterMenu ul.dynamic { z-index:1; }
+	#FooterMenu a { text-decoration:none;white-space:nowrap;display:block; }
+	#FooterMenu a.static { padding-left:0.15em;padding-right:0.15em; }
+	#FooterMenu a.popout { background-image:url("/WebResource.axd?d=_Q2ig0o8wQVg9Fg4UEeaXL_Y2_uRrS2dguTVOPeeNwjr32vWgqylGImkuZb3YCkueU4NHqWCUNTBG-7ollvMXSzGDr625L90uYaWAvyrAXk1&t=637100542300000000");background-repeat:no-repeat;background-position:right center;padding-right:14px; }
+	/* ]]> */
+</style></head>
+<body>
+    <div id="wrapper">
+        </div>
+        <form method="post" action="./top8.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3NzMyMTY3MTFkGAMFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBQxjdGwwMCRCYW5uZXIFGWN0bDAwJE1haW5Db250ZW50JE5vdE1UR08FEGN0bDAwJEZvb3Rlck1lbnUPD2QFCkhvbWVcVG9wIDhkBRRjdGwwMCROYXZpZ2F0aW9uTWVudQ8PZAUKSG9tZVxUb3AgOGQVZ4n4hJOpMGi9eT4bqfMsDQZ9DYdhNBSXArVBo5hgvQ==" />
+
+
+<script src="/WebResource.axd?d=mrW7LZlL87trReQM-RLDT8UIk9HBF-wsjQ7pa9yK8i0T9qrwy-Yl70l7_JexPzOwq-UsBAyY3ACnzR32AkMlCAdHOxlZKAesSmuX9hgAHLY1&amp;t=637100542300000000" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9721CD68" />
+<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="M6038JeHVa1V_tm0ReC552ydDcTwUkjElTpJo_7GCRn3gaPHUHI5WWaN8R5zbPTyWNb-Lz9uGzfufwUOJHWuwU41U8nIRguCAg59LOG1VMk1" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAY3hOu0MHlHZjrOgT0UBmcE5goCudh6APUTyx8igu4SFP1iB4QnV//FTbAuyFp4xfX3HV175ka/WTswX9OjkJQp+d3fBy3LDDz0lsNt4u+CuLCcDCFffsuIRZYGE0RYqoErkQNkz4+008+qPJPaO0axwjMmpTTQRMM480tLGrHT7g==" />
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <input type="image" name="ctl00$Banner" id="Banner" src="images/Banner.jpg" alt="Limited Information" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Banner&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Default.aspx&quot;, false, false))" />
+                </div>
+                <div class="clear menuarea">
+                    <div class="menu" id="NavigationMenu">
+	<ul class="level1">
+		<li><a title="Home page" class="level1" href="/Default.aspx">Home</a></li><li><a title="Top 8 Predictor" class="level2 selected" href="/top8.aspx">Top 8</a></li><li><a title="About page" class="level2" href="/About.aspx">About</a></li>
+	</ul>
+</div>
+                    
+                    <div class="loginDisplay">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <div class="main">
+                
+    <div class="container container-overrides">
+        <div class="infoboxEx">
+            <div class="infoboxExHeader">
+                <h2>
+                    Calculation Inputs</h2>
+            </div>
+            <div class="infoboxExBody">
+                <input name="ctl00$MainContent$Players" type="text" id="MainContent_Players" />
+                <span id="MainContent_Label1"> Players</span>
+                <br />
+                <input name="ctl00$MainContent$Rounds" type="text" id="MainContent_Rounds" />
+                <span id="MainContent_Label2"> Rounds</span>
+                <br />
+                <input type="submit" name="ctl00$MainContent$Button1" value="Submit" id="MainContent_Button1" />
+                <input id="MainContent_NotMTGO" type="checkbox" name="ctl00$MainContent$NotMTGO" checked="checked" /><label for="MainContent_NotMTGO">Include intentional draws</label>
+            </div>
+        </div>
+        <div class="infoboxEx">
+            <div class="infoboxExHeader">
+                <h2>
+                    Welcome to the Top 8 predictor!</h2>
+            </div>
+            <div id="MainContent_resultsbox" class="infoboxExBody">
+                <p>
+                    Enter the number of players and rounds in the "Calculation Inputs" box, and click
+                    submit.<br />
+                    Running it with include draws (default) checked, it will try to figure out which
+                    players can draw into the top 8.<br />
+                    Running it without intentional draws is for scenarios like MTGO where there are
+                    no intentional draws.<br />
+                    In both ways if a player gets paired down, the player with the highest score wins.<br />
+                    Similarly, a "bye" is always given to the player with the lowest score, if there
+                    is an odd number of players.
+                </p>
+                <p>
+                    If you think the results are incorrect for some reason, please send me a message<br />
+                    at <b>playordraw (at) gmail (dot) com</b> with as much information as possible.<br />
+                </p>
+            </div>
+        </div>
+    </div>
+
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="footer">
+            <div id="FooterMenu">
+	<ul class="level1">
+		<li><a title="Home page" class="level1" href="/Default.aspx">Home</a></li><li><a title="Top 8 Predictor" class="level2 selected" href="/top8.aspx">Top 8</a></li><li><a title="About page" class="level2" href="/About.aspx">About</a></li>
+	</ul>
+</div>
+            
+            <div class="Copyright">
+                © 2011 Jeffrey Reynolds<br />
+                Magic: The Gathering © Wizards of the Coast</div>
+            
+    <div class="Copyright">
+        Last Modified on Friday, May 27, 2016</div>
+
+        </div>
+        
+<script type='text/javascript'>new Sys.WebForms.Menu({ element: 'NavigationMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script><script type='text/javascript'>new Sys.WebForms.Menu({ element: 'FooterMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="ImageToolbar" content="No" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link REL="shorcut icon" HREF="/skins/shared/images/favicon.ico" >
+        <link REL="icon" HREF="/skins/shared/images/favicon.ico" >
+        <link REL="apple-touch-icon" HREF="/skins/shared/images/favicon.png" >
+
+        
+
+
+
+<script TYPE="text/javascript" >
+(function () {
+	const timestamp = Date.now();
+	const TIMEOUT = 3000; // 3 seconds timeout for script loading
+
+	const PROJECT_ID = '01953914-53cc-7833-b8d6-c9c9d7301ff9';
+
+	// Set global ETRADE origin
+	window.ETRADE = window.location.origin;
+
+	// Adobe alloy prehiding
+	!function(e,a,n,t){var i=e.head;if(i){
+	if (a) return;
+	var o=e.createElement("style");
+	o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
+	(document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, ".personalization-container { opacity: 0 !important }", 3000);
+
+	if (typeof(page) === 'undefined') {
+	    var page = {};
+	}
+
+
+	// Adobe Launch URL
+	var sHostName = window.location.hostname;
+	var adobeLaunchSrc;
+	if ( (sHostName.indexOf('lxdm') != -1) || (sHostName.indexOf('sit') != -1) ){
+	   adobeLaunchSrc = 'https://assets.adobedtm.com/b124caa02ab9/2411c51b9b5a/launch-0dd5ca316fd0-development.min.js';
+	} else if ( (sHostName.indexOf('uat') != -1) || (sHostName.indexOf('plt') != -1) ){
+	   adobeLaunchSrc = 'https://assets.adobedtm.com/b124caa02ab9/2411c51b9b5a/launch-d1872d06c365-staging.min.js';
+	} else {
+	   adobeLaunchSrc = 'https://assets.adobedtm.com/b124caa02ab9/2411c51b9b5a/launch-a75e7aa5c10d.min.js';
+	}
+
+	// OneTrust Geolocation and SDK stub
+	const ONETRUST_GEO = 'https://us.etrade.com/content/dam/onetrust/etpros/geoLocation.js';
+
+	// OneTrust SDK stub URL
+	const ONETRUST_SDK_STUB = 'https://cdn2.etrade.net/1/1d/aempros/content/dam/onetrust/etpros/scripttemplates/otSDKStub.js';
+
+	// Strategy:
+	// - All three scripts are preloaded in parallel using <link REL="preload" > for speed
+	// - Only geoLocation is injected upfront as a blocking script
+	// - onComplete always fires after geo has executed (onload hook, even on defer fallback)
+	// - After geo executes, the kill switch is checked:
+	//     - If explicitly 'off': SDK stub is skipped
+	//     - Otherwise: SDK stub is loaded
+	// - This guarantees execution order: geoLocation → [SDK stub] → Adobe Launch
+	// - A single timer covers the entire chain. If it fires while a script is still
+	//   blocking, that script is removed and re-inserted as defer (non-blocking), and the
+	//   chain continues. Any subsequent scripts also inject as defer immediately.
+
+	// Preload scripts in parallel so they are ready in the browser cache.
+	// Preload does not execute — SDK stub will only be injected if the kill switch allows it.
+	[ONETRUST_GEO, ONETRUST_SDK_STUB, adobeLaunchSrc].forEach(function (src) {
+		const link = document.createElement('link');
+		link.rel = 'preload';
+		link.as = 'script';
+		link.href = src + '?v=' + timestamp;
+		document.head.appendChild(link);
+	});
+
+	// Shared state for the single timer.
+	// blockingScripts tracks ALL scripts currently injected as async=false so the timer
+	// can convert every one of them to defer if the budget expires.
+	let timedOut = false;
+	/** @type {{ script: HTMLScriptElement, settled: boolean, onComplete: Function|null }[]} */
+	const blockingScripts = [];
+
+	// Single timeout covering the entire chain.
+	// When it fires, every script still in blockingScripts that hasn't settled is removed
+	// and re-inserted as defer so nothing keeps blocking the page.
+	setTimeout(function () {
+		timedOut = true;
+
+		blockingScripts.forEach(function (entry) {
+			if (!entry.settled) {
+				entry.settled = true;
+				console.warn('Script load timeout, converting to deferred:', entry.script.src);
+
+				if (entry.script.parentNode) {
+					const src = entry.script.src;
+					entry.script.parentNode.removeChild(entry.script);
+					const deferred = document.createElement('script');
+					deferred.type = 'text/javascript';
+					deferred.defer = true;
+					deferred.src = src; // already includes cache-bust from injection
+
+					// Copy any custom attributes (e.g. data-domain-script) from the original
+					Array.from(entry.script.attributes).forEach(function (attr) {
+						if (attr.name !== 'src' && attr.name !== 'type' && attr.name !== 'async') {
+							deferred.setAttribute(attr.name, attr.value);
+						}
+					});
+
+					deferred.onerror = function () {
+						console.error('Script load error (deferred fallback):', src);
+						if (entry.onComplete) entry.onComplete();
+					};
+					deferred.onload = function () {
+						if (entry.onComplete) entry.onComplete();
+					};
+					document.head.appendChild(deferred);
+				} else if (entry.onComplete) {
+					// Script wasn't in DOM — call onComplete immediately so chain doesn't stall
+					entry.onComplete();
+				}
+			}
+		});
+	}, TIMEOUT);
+
+	/**
+	 * Injects an inline OptanonWrapper no-op script after the SDK stub.
+	 * OptanonWrapper is a required callback invoked by OneTrust after consent initialises.
+	 * It must exist in the global scope or OneTrust will throw. Override it in app code
+	 * to fire analytics or other post-consent logic.
+	 */
+	function injectOptanonWrapper() {
+		const script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.async = false;
+		script.textContent = 'function OptanonWrapper() {}';
+		document.head.appendChild(script);
+	}
+
+	/**
+	 * Injects a script into the chain.
+	 * - If the timer has not yet fired: injects as blocking (async=false), registers itself
+	 *   as the current pending script so the timer can abort it if needed.
+	 * - If the timer has already fired: injects immediately as defer (non-blocking).
+	 * onComplete is always called (load, error, or timeout) so the chain never stalls.
+	 *
+	 * @param {string}   src        - Script URL (without cache-bust param)
+	 * @param {Function} onComplete - Called when the script loads, errors or times out
+	 * @param {Object}   [attrs]    - Optional extra attributes to set on the script element
+	 */
+	function injectScript(src, onComplete, attrs) {
+		const script = document.createElement('script');
+		script.type = 'text/javascript';
+		script.src = src + '?v=' + timestamp;
+
+		if (attrs) {
+			Object.keys(attrs).forEach(function (key) {
+				script.setAttribute(key, attrs[key]);
+			});
+		}
+
+		if (timedOut) {
+			// Timer already fired — inject as defer immediately to avoid blocking
+			script.defer = true;
+			script.onerror = function () {
+				console.error('Script load error (deferred):', src);
+			};
+			document.head.appendChild(script);
+			if (onComplete) onComplete();
+			return script;
+		}
+
+		// Register in blockingScripts so the timer can find and convert it if needed
+		script.async = false;
+		const entry = { script: script, settled: false, onComplete: onComplete };
+		blockingScripts.push(entry);
+
+		script.onload = function () {
+			if (!entry.settled) {
+				entry.settled = true;
+				if (onComplete) onComplete();
+			}
+		};
+
+		script.onerror = function () {
+			if (!entry.settled) {
+				entry.settled = true;
+				console.error('Script load error:', src);
+				if (script.parentNode) {
+					script.parentNode.removeChild(script);
+				}
+				if (onComplete) onComplete();
+			}
+		};
+
+		document.head.appendChild(script);
+		return script;
+	}
+
+	// Kick off the chain: geoLocation loads first, then SDK stub if kill switch allows, then Adobe Launch.
+	injectScript(ONETRUST_GEO, function () {
+		const loadSdk = window.OneTrust && window.OneTrust.ONETRUST_KILLSWITCH_FLAG === 'off';
+
+		if (loadSdk) {
+			injectScript(ONETRUST_SDK_STUB, null, { 'data-domain-script': PROJECT_ID });
+			injectOptanonWrapper();
+		} else {
+			console.warn('OneTrust kill switch is active, skipping SDK stub');
+		}
+		injectScript(adobeLaunchSrc, null);
+
+	// Web Platform Analytics Script
+	const analyticsScript = document.createElement('script');
+	analyticsScript.type = 'text/javascript';
+	analyticsScript.async = false;
+	analyticsScript.src = 'https://cdn2.etrade.net/1/1d/common/react/web-platform-analytics/webPlatformAnalytics.js?ts=20260802';
+	document.head.appendChild(analyticsScript);
+
+	// UDP Messaging Library Script
+	const udpScript = document.createElement('script');
+	udpScript.type = 'text/javascript';
+	udpScript.async = false;
+	udpScript.src = 'https://cdn2.etrade.net/1/1d/common/react/unified-messaging-library/udpmessaginglibrary.js?ts=20260802';
+	document.head.appendChild(udpScript);
+	});
+})();
+</script>
+            <script SRC="https://us.etrade.com/javascript/etrade_common.js" TYPE="text/javascript" ></script>
+
+                <link REL="stylesheet" HREF="https://cdn2.etrade.net/1/1d/aempros/etc/designs/responsive-etrade/styles/styles.css" TYPE="text/css" />
+
+
+            <script SRC="https://cdn2.etrade.net/1/common/20260714/0.0/skins/shared/js/jQuery/3.1.1/jquery.min.js" TYPE="text/javascript" ></script>
+	 
+            <script SRC="https://js-cdn.dynatrace.com/jstag/16898c892dc/bf27964sah/b4e443ac2cbd8026_complete.js" CROSSORIGIN="anonymous" TYPE="text/javascript" ></script>
+         
+ <link as="style" href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/ds.css" rel="preload"> 
+ <link as="style" href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/main.css" rel="preload" id="preload-styles-main"> 
+ <link as="script" href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/manifest.js" rel="preload"> 
+ <link as="script" href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/vendor.js" rel="preload"> 
+ <link as="script" href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/ds.js" rel="preload"> 
+ <link as="script" href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/common.js" rel="preload"> 
+  
+ <link rel="canonical" href="https://us.etrade.com/home/welcome-back">
+ <meta build-version="81b75672">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/ds.css" rel="stylesheet">
+ <link href="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/main.css" rel="stylesheet">
+
+    </head>
+
+    <body class="prospect">
+
+                <script SRC="https://cdn2.etrade.net/1/1d/aempros/etc/designs/responsive-etrade/globalNav/js/header/login/login.js" TYPE="text/javascript" ></script>
+
+        
+
+<script TYPE="text/javascript" >
+    var pageConfig= {
+    url : {
+        ACTIVATE : "https://express.etrade.com:443",
+        BANKUS : "https://bankus.etrade.com",
+        BOND : "https://www.bonddesk.com",
+        BORROW : "https://us.etrade.com",
+        EDOCS : "https://edoc.etrade.com:443",
+        CS_EDOCS : "${CS_EDOCS}",
+        ETCA : "${ETCA}",
+        ETRADE : "https://us.etrade.com",
+        TRADINGTOOL: "https://trading.etrade.com",
+        PAPERTRADING: "https://patrd.etrade.com",
+        ETS_FILESVR : "${ETS_FILESVR}",
+        EXPRESS : "https://express.etrade.com:443",
+        FILESVR : "${FILESVR}",
+        OLINK : "https://us.etrade.com",
+        SEARCH : "${SEARCH}",
+        OPTCHART : "${OPTCHART}",
+        LENDINGPROXY : "${LENDINGPROXY}",
+        PINGFEDERATE : "https://federation.etrade.com:443",
+        HOMEDEPOSITPROXY : "${HOMEDEPOSITPROXY}",
+        GLOBAL : "${GLOBAL}",
+	    COMMUNITIESPROXY : "${COMMUNITIESPROXY}",
+	    COMMUNITY_BASE : "${COMMUNITY_BASE}",
+	    AKAMAIURL : "https://cdn2.etrade.net/1"
+    },
+    api: {
+     HOST: "https://us.etrade.com",
+     KEY: "d88ff05465b916d2817baf9c00b55c9e",
+     DATATOKEN: "${DATATOKEN}",
+     PHXJWTHOST: "https://mobiletrade.etrade.com"
+    },
+    CONSUMER_KEY_VALUE: "${CONSUMER_KEY_VALUE}",
+    ET_ENV : "prd",
+    ET_APPLICATION : "rb",
+    HOSTJVM : "web494w301m5",
+    omniture : "true",
+    cometd_retry 	: "${COMETD_RETRY_LIMIT}",
+	cometdInitDelay : "${COMETD_INIT_DELAY}" ,
+    widgetAggregation: "${WIDGET_AGGREGATION}",
+    SPA_PLATFORM: "${SPA_PLATFORM}",
+    SPA_CLOUD_MOBILE_HOST: "ext-mobile.etrade.com",
+    SPA_CLOUD_V2_HOST: "ext-web.etrade.com",
+    logPerformance: "true",
+    rootContext: "/etx/pxy/"
+}
+;
+    
+
+    
+
+
+        pageConfig.api.PHXJWTHOST = pageConfig.api.HOST;
+        pageConfig.CloudApi=pageConfig.SPA_CLOUD_V2_HOST;  
+
+    var userStatus = "non-login";
+    window.sessionHostET = pageConfig.url.ETRADE;
+</script>
+
+<div id="application"></div> 
+<script src="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/manifest.js"></script>
+<script src="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/vendor.js"></script>
+<script src="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/ds.js"></script>
+<script src="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/common.js"></script>
+<script src="https://cdn2.etrade.net/1/content/rb/auth_security_login/20260619.147/js/main.js"></script>
+
+
+
+                <script SRC="https://cdn2.etrade.net/1/1d/aempros/etc/designs/responsive-etrade/globalNav/js/footer/login/login.js" TYPE="text/javascript" ></script>
+                <script SRC="https://cdn2.etrade.net/1/1d/aempros/etc/designs/responsive-etrade/scripts/psr.js" TYPE="text/javascript" ></script>
+
+        <script>
+            $(window).load(function(){
+                var performanceDataPageName = window.location.pathname;
+                if (typeof page !== 'undefined' && page.config !== 'undefined' && page.config.logPerformance !== 'false' &&
+                    typeof performanceData !== 'undefined' &&
+                    typeof browserDetect !== 'undefined' && $.isFunction(browserDetect) &&
+                    typeof neo.profiler !== 'undefined'
+                ) {
+                    performanceData.stop = (new Date()).getTime();
+                    performanceData.label = 'PageLoad:'+performanceDataPageName+':'+browserDetect().browser;
+                    neo.profiler.log(performanceData.start, performanceData.stop, performanceData.label);
+                }
+
+            });
+        </script>
+
+            <script SRC="https://cdn2.etrade.net/1/common/20260714/0.0/skins/shared/js/sec-arch-password.js" TYPE="text/javascript" ></script>
+
+<script SRC="https://cdn2.etrade.net/1/common/20260714/0.0/skins/shared/js/flashembed.min.js" TYPE="text/javascript" ></script>
+<script SRC="https://cdn2.etrade.net/1/common/20260714/0.0/skins/shared/js/watch.min.js" TYPE="text/javascript" ></script>
+<script SRC="https://cdn2.etrade.net/1/common/20260714/0.0/skins/shared/js/cyotaLoginDevicePrint.min.js" TYPE="text/javascript" ></script> 
+<input ID="DeviceTokenFSO" VALUE="" TYPE="hidden" NAME="DeviceTokenFSO" />
+<input ID="RSADevicePrint" VALUE="" TYPE="hidden" NAME="RSADevicePrint" />
+<div id="flash-object-div" name="flash-object-div" style="height:1px; width: 1px"></div>
+ 
+<script TYPE="text/javascript" >
+	if (jQuery) {
+		jQuery.extend(true, jQuery, {
+			page: {
+				cyotaData: {
+					sOutputId   : "RSADevicePrint",
+					sFlashDivId : "flash-object-div",
+					sFlashId    : "flash-object",
+					sSwfPath    : "/skins/shared/flash/rsa_fso.swf",
+					sDeviceId   : "DeviceTokenFSO",
+					sIpAddress  : ''
+				}
+			}
+		});
+	}
+</script>
+
+		<div class="container">
+			<div id="hostname" style="text-align:center;color:#CCC;font-size:12px;display:none;">494w301m5.etrade.com.1</div>
+		</div>
+		
+    <script type="text/javascript"  src="/BYF5P_nm/fCw/Mog/BlZF4WjrSg/ipJ1tbkt9tNpGV/OG9TAxl8eA/Mgcb/c1hsW2MB"></script></body>
+</html> 
+

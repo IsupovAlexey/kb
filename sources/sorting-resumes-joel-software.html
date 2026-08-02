@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.joelonsoftware.com/xmlrpc.php">
+
+<title>Sorting Resumes &#8211; Joel on Software</title>
+<meta name='robots' content='max-image-preview:large' />
+<!-- Jetpack Site Verification Tags -->
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='preconnect' href='//i0.wp.com' />
+<link rel='preconnect' href='//c0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Joel on Software &raquo; Feed" href="https://www.joelonsoftware.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Joel on Software &raquo; Comments Feed" href="https://www.joelonsoftware.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.joelonsoftware.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.joelonsoftware.com%2F2006%2F09%2F08%2Fsorting-resumes-2%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.joelonsoftware.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.joelonsoftware.com%2F2006%2F09%2F08%2Fsorting-resumes-2%2F&#038;format=xml" />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='cloudflare-stream-block-style-css-css' href='https://www.joelonsoftware.com/wp-content/plugins/cloudflare-stream/dist/blocks.style.build.css?ver=1671234854' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='editor-style-css' href='https://www.joelonsoftware.com/wp-content/themes/editor-redux/style.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='editor-font-awesome-css-css' href='https://www.joelonsoftware.com/wp-content/themes/editor-redux/inc/fontawesome/font-awesome.css?ver=4.1.0' media='screen' />
+<link rel='stylesheet' id='editor-fonts-css' href='//fonts.googleapis.com/css?family=Source%20Sans%20Pro%3A400%2C600%2C700%2C400italic%2C600italic%2C700italic%7CRoboto%20Condensed%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' media='all' />
+<script id="jquery-core-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/jquery/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<link rel="https://api.w.org/" href="https://www.joelonsoftware.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.joelonsoftware.com/wp-json/wp/v2/posts/916" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.joelonsoftware.com/xmlrpc.php?rsd" />
+
+<link rel="canonical" href="https://www.joelonsoftware.com/2006/09/08/sorting-resumes-2/" />
+<link rel='shortlink' href='https://wp.me/p83KNI-eM' />
+	<style>img#wpstats{display:none}</style>
+			<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-225715-5', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<meta name="description" content="The standard job application of cover letter plus resume is a phenomenally weak way to introduce a candidate. They give you only the faintest clues as to the quality of an applicant. Sometimes, though, a resume gives pretty strong negative clues which allow you to screen out applicants without going much further. Once I got&hellip;" />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Sorting Resumes" />
+<meta property="og:url" content="https://www.joelonsoftware.com/2006/09/08/sorting-resumes-2/" />
+<meta property="og:description" content="The standard job application of cover letter plus resume is a phenomenally weak way to introduce a candidate. They give you only the faintest clues as to the quality of an applicant. Sometimes, tho…" />
+<meta property="article:published_time" content="2006-09-08T00:15:17+00:00" />
+<meta property="article:modified_time" content="2016-12-12T00:05:32+00:00" />
+<meta property="og:site_name" content="Joel on Software" />
+<meta property="og:image" content="https://www.joelonsoftware.com/wp-content/uploads/2006/09/ggth17.jpg" />
+<meta property="og:image:width" content="282" />
+<meta property="og:image:height" content="195" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Sorting Resumes" />
+<meta name="twitter:image" content="https://www.joelonsoftware.com/wp-content/uploads/2006/09/ggth17.jpg?w=144" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=270%2C270&#038;ssl=1" />
+<style id="wp-custom-css">
+/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+/* Joel Test Div */
+.joel-test {
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	font-size: 16px;
+	margin: 2.5em auto;
+	max-width: 400px;
+	padding: 10px;
+}
+
+.joel-test-title {
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+}
+</style>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-916 single-format-standard wp-theme-editor-redux">
+
+
+<div id="page" class="hfeed site container">
+
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
+		<header id="masthead" class="site-header light" role="banner">
+		<!-- Tab navigation -->
+		<ul class="toggle-bar" role="tablist">
+			<!-- Main navigation -->
+			<li id="panel-1" class="current" role="presentation">
+				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text">View menu</span></a>
+			</li>
+
+			<!-- Featured Posts navigation -->
+			
+			<!-- Sidebar widgets navigation -->
+			<li id="panel-3" role="presentation">
+				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text">View sidebar</span></a>
+			</li>
+		</ul>
+
+		<div id="tabs" class="toggle-tabs">
+			<div class="site-header-inside">
+				<!-- Logo, description and main navigation -->
+				<div id="tab-1" class="tab-content current fadeIn">
+					<div class="site-branding">
+						<!-- Get the site branding -->
+													<h1 class="site-title"><a href="https://www.joelonsoftware.com/" rel="home">Joel on Software</a></h1>
+							<h2 class="site-description"></h2>
+											</div>
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+											</nav><!-- #site-navigation -->
+
+					
+					<div id="front-widgets" class="widget-area" role="complementary">
+
+	<aside id="text-3" class="widget widget_text"><h2 class="widget-title">Your host</h2>			<div class="textwidget"><a href="https://www.joelonsoftware.com/about-me/"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/Pong.png?w=730&#038;ssl=1" notsrc="https://www.joelonsoftware.com/wp-content/uploads/2016/12/11969842-1.jpg" /></a><p>I’m Joel Spolsky, a software developer in New York City. <a href="https://www.joelonsoftware.com/about-me/">More about me</a>.</p>
+</div>
+		</aside>
+</div><!-- #front-widgets -->
+
+				</div><!-- #tab-1 -->
+
+				<!-- Featured Posts template (template-featured-posts.php) -->
+				
+				<!-- Sidebar widgets -->
+				<div id="tab-3" class="tab-content animated fadeIn" role="tabpanel" aria-labelledby="panel-3" aria-hidden="true">
+					<div id="secondary" class="widget-area" role="complementary">
+
+	<aside id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://www.joelonsoftware.com/search-results/" id="cse-search-box">
+	<div>
+		<input type="hidden" name="cx" value="004631902266951669168:g9jvyociwrg" />
+		<input type="hidden" name="ie" value="UTF-8" />
+	</div>
+	<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="q" title="Search for:" />
+	</label>
+	<input type="submit" class="search-submit" name="sa"><span class="screen-reader-text">Search</span></button>
+</form>
+</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/newdesign-books.png?w=730&#038;ssl=1" style="float: left; margin-right: 15px;" />Read the archives in dead-tree format! Many of these articles have been collected into <a href="https://www.joelonsoftware.com/buy-the-books/">four books</a>, available at your favorite bookstore. It’s an excellent way to read the site in the bath, or throw it at your boss.</div>
+		</aside><aside id="text-4" class="widget widget_text"><h2 class="widget-title">Careers</h2>			<div class="textwidget"><p><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/jobs.jpg?w=730&#038;ssl=1" /></p>
+<p>Ready to level up? <a href="http://stackoverflow.com/jobs">Stack Overflow Jobs</a> is the job site that puts the needs of developers first. Whether you want to take control of your search or <a href="http://stackoverflow.com/jobs/why-jobs">let employers discover you</a>, we’re on a mission to help every developer find a job they love.</p>
+<p>Looking to hire smart programmers who get things done? <a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a> is a fully-customized sourcing solution that helps you understand, reach, and attract developers on the platform they trust most. Find the right candidates for your jobs. <a href="https://www.stackoverflowbusiness.com/talent/request-a-demo?utm_source=joelonsoftware&utm_medium=referral&utm_term=learn-more">Learn more.</a></p>
+</div>
+		</aside><aside id="text-6" class="widget widget_text">			<div class="textwidget"><p><a href="http://stackoverflow.com"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/so-logo.png?w=730&#038;ssl=1" /></a></p>
+<p>For my day job, I'm the co-founder and CEO of <a href="http://stackoverflow.com">Stack Overflow</a>, the largest online community for programmers to learn, share their knowledge, and level up. Each month, more than 40 million professional and aspiring programmers visit Stack Overflow to ask and answer questions and find better jobs. Stack Overflow is also the flagship site of the <a href="http://stackexchange.com">Stack Exchange network</a>, 160+ question and answer sites dedicated to all kinds of topics from cooking to gaming. According to Quantcast, Stack Overflow is the 30th largest web property in the United States and in the top 100 in the world.<br />
+<a href="https://stackoverflow.com/users/story/4"><br />
+<img data-recalc-dims="1" src="https://i0.wp.com/stackexchange.com/users/flair/4.png?resize=208%2C58&#038;ssl=1" width="208" height="58" alt="profile for Joel Spolsky on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Joel Spolsky on Stack Exchange, a network of free, community-driven Q&amp;A sites"><br />
+</a></p>
+</div>
+		</aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><p><a href="http://fogcreek.com/"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/fc-logo.png?w=730&#038;ssl=1" /></a><br />
+I also founded <a href="http://fogcreek.com/">Fog Creek Software</a>, one of the most influential small tech companies in the world. As an independent, privately-owned company, we’ve been making customers happy since the turn of the century. We share what we've learned about how to make great software, both by writing about our ideas and by creating products, like <a href="http://www.fogcreek.com/fogbugz">FogBugz</a>, <a href="http://trello.com">Trello</a> and <a href="https://gomix.com/">Gomix</a>, that help others make great technology. As a result, Fog Creek's impact on the world of developers rivals companies a thousand times our size.</p>
+</div>
+		</aside><aside id="twitter_timeline-4" class="widget widget_twitter_timeline"><h2 class="widget-title">Twitter! Twitter!</h2><a class="twitter-timeline" data-height="400" data-theme="light" data-border-color="#e8e8e8" data-tweet-limit="1" data-lang="EN" data-partner="jetpack" data-chrome="noheader nofooter noborders" href="https://twitter.com/spolsky" href="https://twitter.com/spolsky">My Tweets</a></aside>
+</div><!-- #secondary -->
+				</div><!-- #tab-3 -->
+			</div><!-- .site-header-inside -->
+		</div><!-- #tabs -->
+	</header><!-- #masthead -->
+	<div id="content" class="site-content fadeInFast">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-916" class="post post-916 type-post status-publish format-standard hentry category-recruiter category-articles">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="https://www.joelonsoftware.com/2006/09/08/sorting-resumes-2/" rel="bookmark"><time class="entry-date published" datetime="2006-09-08T00:15:17+00:00">September 8, 2006</time><time class="updated" datetime="2016-12-12T00:05:32+00:00">December 12, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="https://www.joelonsoftware.com/author/joelonsoftware/">Joel Spolsky</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title">Sorting Resumes</h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="https://www.joelonsoftware.com/category/reading-lists/recruiter/" rel="category tag">Recruiter</a>, <a href="https://www.joelonsoftware.com/category/articles/" rel="category tag">Articles</a></li>
+									</ul>
+</div>
+
+	<div class="entry-content">
+		<p>The standard job application of cover letter plus resume is a phenomenally weak way to introduce a candidate. They give you only the faintest clues as to the quality of an applicant.</p>
+<p><img data-recalc-dims="1" fetchpriority="high" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/09/ggth17.jpg?resize=282%2C195&#038;ssl=1" width="282" height="195" />Sometimes, though, a resume gives pretty strong <em>negative</em> clues which allow you to screen out applicants without going much further. Once I got a resume from someone who claimed to be an expert in Microsoft Window [sic] programming. Another time the only experience listed on the application was a job at Dunkin’ Donuts. That resume did a pretty good job of following all the suggestions that high school career-guidance advisors love to give out (this guy “managed trays of donuts”) but there was not a smidgen of evidence that the applicant had ever seen a computer.</p>
+<p>Other than that, though, it can be extremely hard to tell much about a candidate from a resume. Our policy at Fog Creek, then, has three parts:</p>
+<ol>
+<li>We try to be selective about how we advertise our jobs, so as to limit the amount of noise in the resume pile.</li>
+<li>We certainly don’t hire based on resumes; we only screen <em>out</em> based on resumes to reduce the number of people whom we have to interview.</li>
+<li>In order to sort the remaining resumes to decide what order to interview people, we use a strictly objective system of reviewing and scoring them, so at least we are being fair and consistent in our interpretation of that very weak signal that comes from resumes.</li>
+</ol>
+<p>There are several fairly objective measures that we look at, again, <em>solely for the purpose of sorting resumes</em> so that the first people we call are the ones that are most likely to work out.</p>
+<p><strong>Passion.</strong> We look for evidence that the applicant is passionate about computers and really loves programming. Typical evidence of this:</p>
+<ul>
+<li>
+<p>Jobs with computers or experience programming going back to a very early age. Great programmers are more likely to have spent a summer at computer camp, or building an online appointment scheduler for their uncle the dentist, rather than working at Banana Republic folding clothes. </p>
+</li>
+<li>
+<p>Extra-curricular activities. People who love programming often work on their own programming projects (or contribute to an open-source project) in their spare time.</p>
+</li>
+<li>
+<p>Waxing rhapsodic in their cover letter about how they were moved to tears by <a href="http://www.amazon.com/o/asin/0262011530">The Structure and Interpretation of Computer Programs</a>.</p>
+</li>
+<li>
+<p>Sometimes certain programming languages or technologies on a resume indicate evidence of someone who loves programming enough to explore new technologies. At the time I’m writing this, seeing Ruby on a resume is a good sign of the kind of programmer who loves to check out the latest thing and try to improve their skills because they’re passionate about programming, because not so many employers are really demanding Ruby yet. You have to be careful here; in 1996 Java on a resume was a sign of the same passion, but today it adds almost no information.</p>
+</li>
+</ul>
+<p><strong><img data-recalc-dims="1" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/09/ggth18.jpg?resize=282%2C195&#038;ssl=1" width="282" height="195" />Pickiness.</strong> We look closely at the cover letter for evidence that the applicant really wants to work for <em>us.</em> We don’t want to see a generic cover letter talking about me, me, me: we want to see a coherent argument as to why they’ve thought about this seriously and concluded that Fog Creek is the place they want to work. There are two reasons for using this as a clue. First, it’s a sign that the candidate is not applying to hundreds of jobs at the same time. The fact that they took the time to learn about Fog Creek and wrote a custom cover letter just for us means that they have a lot of confidence in their abilities, so they’re applying to a select few employers, not bulk mailing a thousand. A bulk-mailed resume can be a symptom of desperation. More importantly, a custom cover letter is a sign that if we <em>do</em> make this candidate an offer, they’re likely to accept it. That improves our yield. If I only have time to interview six people, all else being equal, I’d rather interview six people who really want to work for Fog Creek, not generic smart people that are also applying to a hundred other jobs. All else being equal.</p>
+<p><strong>English.</strong> Scoring resumes by English skills was a hard decision for us to make, because computer programming is one of those fields where an immigrant who doesn’t speak English can still be a brilliant programmer. That said, years of experience working with programmers have taught me that programmers who can communicate their ideas clearly are going to be far, far more effective than programmers who can only really communicate well with the compiler. It is crucial for documenting code, it is crucial for writing specifications and technical design documents that other people can review, and it’s crucial even for those meetings where you sit around discussing how to do something best: brilliant programmers who have trouble explaining their ideas just can’t make as much of a contribution. In this particular category, we also consider the neatness and orderliness of their resume. A disorganized resume rife with grammatical errors where nothing lines up is a pretty big red flag for a disorganized thinker or just general sloppiness; for many jobs this can be fine but not for software development. In particular we usually completely disqualify resumes that are full of English mistakes. It’s not that hard, even for a non-native speaker, to find someone to check your resume, and failure to do that usually reflects a profound lack of concern over the quality of the things that you do. That said, we try to be considerate of  non-native speakers who are nonetheless excellent communicators: leaving out articles in that charming Eastern European way, or starting every paragraph with “So” in charming Pacific Northwestian way, is not a showstopper.</p>
+<p><strong>Brains.</strong> In this category we’re looking for evidence that a candidate is, well, smart, or at least, the kind of nerdy brainiac that went to math camp. Signs of this include high GPAs, high standardized test scores, honors societies like Phi Beta Kappa, people who participate in Top Coder competitions, play competitive chess, or go to ACM Programming contests.</p>
+<p><strong>Selectivity.</strong> Another thing we look for on resumes is evidence that someone has gone through some highly selective process in the past. Not everyone at Ivy League schools is worth hiring, and not everyone at community college is worth avoiding, but getting into a very selective school does at least mean that <em>someone, somewhere</em> judged you using some kind of selection process and decided that you were pretty smart. Our company criterion for selectivity is usually getting into a school or program that accepts less than 30% of its applicants (there are about 60 schools in the US that meet this standard), or working for a company which is known to have a difficult application process, like a whole day of interviews. Highly selective branches of the military like officer’s training or pilot’s courses, or even just getting into the Marines indicates someone that has made it through some kind of difficult application/selection procedure and all in all this is a positive sign.</p>
+<p><strong><img data-recalc-dims="1" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/09/ggth19.jpg?resize=282%2C195&#038;ssl=1" width="282" height="195" />Hard-core.</strong> For experienced programmers, there are certain technologies that are considered somewhat more hard-core than others, simply because they are, well, harder to do well. Again, this is a pretty weak indicator, but all else being equal, I’m more impressed by someone who has done work in OCaml than someone who has worked in Java. Assembler or device-driver or kernel work is somewhat more impressive than Visual Basic or PHP. C++ with ATL is harder than Perl. People who have worked on operating systems or compilers are more hard core than people who have worked on simple database front-ends. </p>
+<p>I’m sure that this will be seen as incendiary; after all, most of my personal programming experience in the past five years is with VBScript, which is sort of like a version of Visual Basic dumbed down for people with severe brain trauma. Remember again that I said that resumes are a very weak way of judging programmers and you only get the faintest signals from them; that said, some technologies are just <em>harder</em> than other technologies and if you happened to have worked with them successfully, there’s a smidgen more evidence that you might be the right person to hire, so for the purpose of sorting resumes, difficult technologies tend to float you to the top, while claiming competence in, say, Microsoft Word tends to float you toward the bottom.</p>
+<p><strong>Diversity.</strong> Before I start a massive flame war of international scope by using the loaded term “diversity,” let me carefully define what I mean by this. Specifically, I’m looking for people who come from enough of a different background than the existing team that they are likely to bring new ideas and new ways of thinking to the team and challenge any incipient groupthink that is likely to keep us boxed into our own echo-chamber way of thinking about things. When I say different background, I mean culturally, socially, and professionally. Someone who has a lot of experience with enterprise software may bring useful diversity to a team of internet programmers. Someone who grew up poor is going to bring useful diversity to a startup full of Andover preppies. A stay-at-home mom rejoining the workplace may bring useful diversity to a team of recent graduates. An electrical engineer with Assembler experience may bring useful diversity to a team of Lisp hackers. A recent college graduate from Estonia may bring useful diversity to a team of experienced management consultants from the midwest. The only theory here is that the more diverse your team is, the more likely that someone on the team will have some experience in their background that allows them to come up with a different solution.</p>
+<p>It is <em>really really important</em> to remember that these categories—Passion, Pickiness, English, Brains, Selectivity, Hard-Core, and Diversity—are <em>not</em> hiring criteria. They are just too weak for that. There are way too many excellent people who would score low on this test or poor programmers who would score high. Before you go off ranting about how Joel only thinks you should hire from the Ivy League, or that I have some kind of GPA fetish, or whatnot, it’s important to understand that this list is just not a list of reasons to hire someone or reject someone. All it is is an objective and fair way to sort a big pile of resumes to find the candidates who are most likely to work out so that you can interview them first, and <em>then</em> decide if they’re worth hiring.</p>
+<p><strong>If resumes are so weak, can’t we add some other hoops?</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/09/ggth20.jpg?resize=282%2C195&#038;ssl=1" width="282" height="195" />This is certainly not, by any stretch of the imagination, the ideal set of rules for sorting resumes. I’d much rather be able to sort resumes by the candidate’s ability to implement a recursive algorithm, how long it takes them to find a bug in code, or whether or not they can keep nine items in short term memory, all of which are better indicators of success as programmers than things like whether you got past an elite college’s admissions committee. Unfortunately, those things aren’t on resumes.</p>
+<p>One temptation of recruiters is to try and add a few extra hoops to the application process. I’ve frequently heard the suggestion of including a programming quiz of some sort in the application procedure. This does work, in the sense that it reduces the number of applications you get, but it doesn’t work, in the sense that it doesn’t really improve the quality. Great developers have enough choices of places to work that only require the usual cover letter/resume application to get started; by inventing artificial hoops and programming tests and whatnot simply to apply, you’re just as likely to scare away good programmers as weak programmers. Indeed, you may be more likely to scare away the best programmers, who have the most alternatives, and get left with a pool of fairly desperate candidates who are willing to do extra work to apply simply because they don’t have any alternatives.</p>
+<p><strong>Don’t look for experience with particular technologies</strong></p>
+<p>Once I was on a panel at NYU giving students advice on careers in I.T. My advice, excerpted from <a href="https://www.joelonsoftware.com/articles/CollegeAdvice.html">this article</a>, was that before graduating you should make sure to learn how to write well, maybe by taking a creative writing course, and take a class in Econ so that the business side of the business isn’t a mystery. I also recommended at least one low-level programming course in C or Assembler just to help you understand how computers work at a lower level.</p>
+<p>On the panel with me was a nice chap from a local headhunter, in fact, one of the better tech recruiters in the city. His speech consisted of 15 minutes of tedious alphabet soup. “We’re seeing a lot of XML, some C++, SOAP and WSDL are getting hot but you’re not seeing as much COM or even ATL.” And on, and on, until my eyes were spinning. This was a fellow who entirely thought of the world in terms of keywords on resumes.</p>
+<p>To top programmers, the most maddening thing about recruiters is their almost morbid fascination with keywords and buzzwords. The entire industry of professional headhunters and recruiters is bizarrely fixated on the simple algorithm of matching candidates to positions by looking for candidates that have the complete list of technology acronyms that the employer happens to be looking for. It becomes especially infuriating to realize that most of these recruiters have no idea what any of these technologies <em>are</em>. “Oh, you don’t have MSMQ experience? Never mind.” At least when real estate agents prattle on about Subzero refrigerators and Viking stoves, they at least know what these things <em>are</em> (although any stainless steel refrigerator counts as “Subzero” these days). The easiest way to catch-out a technical recruiter is when they inevitably insist on 5 years of experience with Ruby on Rails, or refuse to consider someone for a “Windows API” job when they only have “Win32” on their resume.</p>
+<p>The reason recruiters do this is because it’s easy, it can be computerized, and it’s the only way they know how to judge developers.</p>
+<p><strong>For almost all software development positions, though, it is the worst possible way to hire.</strong></p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/09/ggth21.jpg?resize=282%2C195&#038;ssl=1" width="282" height="195" />Our philosophy is that we’re hiring for the long term, and any technology you happen to know right now may well be obsolete next year. Furthermore, some of these technologies are very easy to learn. If I needed to hire someone to do Ruby development, someone with extensive Smalltalk and Python experience who had never even <em>heard</em> of Ruby would be a lot more likely to be successful than someone who read a book about Ruby once. For someone who is basically a good software developer, learning another programming language is just not going to be a big deal. In two weeks they’ll be pretty productive. In two years, you may need them to do something completely different in a programming language which hasn’t even been invented.</p>
+<p>The keywords section of a resume can’t be trusted much, anyway: every working programmer knows about these computer programs that filter resumes based on keywords, so they usually have a section of their resume containing every technology they have ever touched, solely to get through the filters.</p>
+<p>There is, I think, one exception to this rule. If you’re hiring an architect or head developer—that is, the chief software engineer who is going to have to lay out the initial code and figure out how things work together, you probably want to hire someone with a lot of experience in the technology that you’re using. A team developing GUIs for Windows using C++ and MFC is going to need at least one Windows/MFC guru somewhere on the team who can make sure that the code is organized correctly in the first place and who has enough experience to know how to solve the really hard problems that might come up.</p>
+<p>Don’t start a new project without at least one architect with several years of solid experience in the language, classes, APIs, and platforms you’re building on. If you have a choice of platforms, use the one your team has the most skills with, even if it’s not the trendiest or nominally the most productive. Occasionally, this may mean you interview to find a candidate with really extensive experience in a particular set of technologies (not keywords, mind you: the whole stack, such as LAMP or .NET or J2EE). But most of your software developers should not be hired by keyword matching.</p>
+<p>Sorting resumes is only one aspect of the hiring process, which includes <a href="https://www.joelonsoftware.com/articles/FieldGuidetoDevelopers.html">making an environment that is attractive to programmers</a>, <a href="https://www.joelonsoftware.com/articles/FindingGreatDevelopers.html">attracting good resumes in the first place</a>, and using a <a href="https://www.joelonsoftware.com/articles/fog0000000073.html">rigorous interview process</a> that helps you hire the programmers who can <a href="https://www.joelonsoftware.com/articles/HighNotes.html">hit the high notes</a>.</p></p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+
+
+	<div id="post-footer-widgets" class="widget-area" role="complementary">
+
+	<aside id="text-8" class="widget widget_text"><h2 class="widget-title">Subscribe!</h2>			<div class="textwidget"><p>You&#8217;re reading <a href="https://www.joelonsoftware.com/">Joel on Software</a>, stuffed with years and years of completely raving mad articles about software development, managing software teams, designing user interfaces, running successful software companies, and rubber duckies.</p>
+<p>If you want to know when I publish something new, I recommend getting an RSS reader like <a href="https://newsblur.com/">NewsBlur</a> and subscribing to my <a href="https://www.joelonsoftware.com/feed/">RSS feed</a>.</p>
+</div>
+		</aside>
+</div><!-- #post-footer-widgets -->
+
+<div class="author-info">
+	<div class="author-avatar">
+		<img alt='' src='https://secure.gravatar.com/avatar/4f742758d6ff8a422a0d154b351751a90a10542fda27afe910c1e16cb3779bf4?s=64&#038;d=mm&#038;r=pg' srcset='https://secure.gravatar.com/avatar/4f742758d6ff8a422a0d154b351751a90a10542fda27afe910c1e16cb3779bf4?s=128&#038;d=mm&#038;r=pg 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>	</div><!-- .author-avatar -->
+
+	<div class="author-description">
+		<h2 class="author-title"><span class="author-heading">About the author.</span></h2>
+
+		<p class="author-bio">
+			In 2000 I co-founded Fog Creek Software, where we created lots of cool things like the FogBugz bug tracker, Trello, and Glitch. I also worked with Jeff Atwood to create Stack Overflow and served as CEO of Stack Overflow from 2010-2019.
+
+Today I serve as the chairman of the board for <a href="https://stackoverflow.com/">Stack Overflow</a>, <a href="https://glitch.com/">Glitch</a>, and <a href="https://hash.ai/">HASH</a>.		</p><!-- .author-bio -->
+	</div><!-- .author-description -->
+</div><!-- .author-info -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://www.joelonsoftware.com/2006/09/08/now-accepting-summer-internship-applications/" rel="prev"><span class="meta-nav">&larr; Previous Post</span> Now accepting summer internship applications</a></div><div class="nav-next"><a href="https://www.joelonsoftware.com/2006/09/11/composing-in-textmate-with-markdown/" rel="next"><span class="meta-nav">Next Post &rarr;</span> Composing in TextMate with MarkDown</a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+		
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a class="powered-by" href="https://wordpress.org/">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/editor-redux/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+				<meta
+					id="bilmur"
+					property="bilmur:data"
+					content=""
+					data-provider="wp.cloud"
+					data-service="pressable.com"
+					data-custom-props="{&quot;wpcomsp&quot;:&quot;1&quot;,&quot;woo_active&quot;:&quot;0&quot;}"
+					data-site-tz="Etc/GMT-0"
+				>
+					<div style="display:none">
+			<div class="grofile-hash-map-e215aff4c20f1e1759f0b74a2703f04d">
+		</div>
+		</div>
+		<script data-wp-strategy="defer" defer id="bilmur-js" src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202631&#038;ver=1"></script>
+<script id="fitvids-js" src="https://www.joelonsoftware.com/wp-content/themes/editor-redux/js/jquery.fitvids.js?ver=20140820"></script>
+<script id="editor-js-js" src="https://www.joelonsoftware.com/wp-content/themes/editor-redux/js/editor.js?ver=20161202"></script>
+<script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"119105578","post":"916","tz":"0","srv":"www.joelonsoftware.com","hp":"atomic","ac":"3","amp":"0","j":"1:16.1-a.5"} ]);
+_stq.push([ "clickTrackerInit", "119105578", "916" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script data-wp-strategy="defer" defer fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202631.js"></script>
+<script id="jetpack-twitter-timeline-js" src="https://www.joelonsoftware.com/wp-content/plugins/jetpack/_inc/build/twitter-timeline.min.js?ver=4.0.0"></script>
+<script id="react-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/react.min.js"></script>
+<script id="react-dom-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/react-dom.min.js"></script>
+<script id="wp-hooks-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/hooks.min.js"></script>
+<script id="wp-i18n-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/i18n.min.js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-url-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/url.min.js"></script>
+<script id="wp-api-fetch-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/api-fetch.min.js"></script>
+<script id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://www.joelonsoftware.com/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "4a4f894822" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://www.joelonsoftware.com/wp-admin/admin-ajax.php?action=rest-nonce";
+//# sourceURL=wp-api-fetch-js-after
+</script>
+<script id="react-jsx-runtime-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/react-jsx-runtime.min.js"></script>
+<script id="wp-dom-ready-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/dom-ready.min.js"></script>
+<script id="wp-a11y-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/a11y.min.js"></script>
+<script id="wp-blob-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/blob.min.js"></script>
+<script id="wp-block-serialization-default-parser-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/block-serialization-default-parser.min.js"></script>
+<script id="wp-autop-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/autop.min.js"></script>
+<script id="wp-deprecated-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/deprecated.min.js"></script>
+<script id="wp-dom-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/dom.min.js"></script>
+<script id="wp-escape-html-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/escape-html.min.js"></script>
+<script id="wp-element-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/element.min.js"></script>
+<script id="wp-is-shallow-equal-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/is-shallow-equal.min.js"></script>
+<script id="wp-keycodes-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/keycodes.min.js"></script>
+<script id="wp-priority-queue-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/priority-queue.min.js"></script>
+<script id="wp-undo-manager-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/undo-manager.min.js"></script>
+<script id="wp-compose-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/compose.min.js"></script>
+<script id="wp-private-apis-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/private-apis.min.js"></script>
+<script id="wp-redux-routine-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/redux-routine.min.js"></script>
+<script id="wp-data-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/data.min.js"></script>
+<script id="wp-data-js-after">
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+//# sourceURL=wp-data-js-after
+</script>
+<script id="wp-html-entities-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/html-entities.min.js"></script>
+<script id="wp-rich-text-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/rich-text.min.js"></script>
+<script id="wp-shortcode-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/shortcode.min.js"></script>
+<script id="wp-warning-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/warning.min.js"></script>
+<script id="wp-blocks-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/blocks.min.js"></script>
+<script id="moment-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/moment.min.js"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+//# sourceURL=moment-js-after
+</script>
+<script id="wp-date-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/date.min.js"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":1},"formats":{"time":"g:i a","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":0,"offsetFormatted":"0","string":"","abbr":""}} );
+//# sourceURL=wp-date-js-after
+</script>
+<script id="wp-primitives-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/primitives.min.js"></script>
+<script id="wp-components-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/components.min.js"></script>
+<script id="wp-keyboard-shortcuts-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/keyboard-shortcuts.min.js"></script>
+<script id="wp-commands-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/commands.min.js"></script>
+<script id="wp-notices-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/notices.min.js"></script>
+<script id="wp-preferences-persistence-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/preferences-persistence.min.js"></script>
+<script id="wp-preferences-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/preferences.min.js"></script>
+<script id="wp-preferences-js-after">
+( function() {
+				var serverData = false;
+				var userId = "0";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+//# sourceURL=wp-preferences-js-after
+</script>
+<script id="wp-style-engine-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/style-engine.min.js"></script>
+<script id="wp-theme-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/theme.min.js"></script>
+<script id="wp-token-list-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/token-list.min.js"></script>
+<script id="wp-upload-media-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/upload-media.min.js"></script>
+<script id="wp-block-editor-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/block-editor.min.js"></script>
+<script id="blockprotocol-render-script-js" src="https://www.joelonsoftware.com/wp-content/plugins/blockprotocol/build/render.js?ver=d02daa73f930ea4bd873"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.joelonsoftware.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.joelonsoftware.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+		<script type="text/javascript">
+			(function() {
+			var t   = document.createElement( 'script' );
+			t.type  = 'text/javascript';
+			t.async = true;
+			t.id    = 'gauges-tracker';
+			t.setAttribute( 'data-site-id', '57a9715ec88d90063f018386' );
+			t.src = '//secure.gaug.es/track.js';
+			var s = document.getElementsByTagName( 'script' )[0];
+			s.parentNode.insertBefore( t, s );
+			})();
+		</script>
+		
+</body>
+</html>

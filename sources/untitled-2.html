@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<link href='https://www.blogger.com/static/v1/widgets/2872013778-css_bundle_v2.css' rel='stylesheet' type='text/css'/>
+<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+<meta content='h9ge3UBxect-8ANCzzfrCPKuna5jRG6KoycugGp5ebY' name='google-site-verification'/>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'/>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet'/>
+<meta content='width=device-width, initial-scale=1.0, user-scalable=0' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<meta content='blogger' name='generator'/>
+<link href='https://blog.byndyu.ru/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='https://blog.byndyu.ru/2014/01/blog-post_8.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Блог Александра Бындю - Atom" href="https://blog.byndyu.ru/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Блог Александра Бындю - RSS" href="https://blog.byndyu.ru/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Блог Александра Бындю - Atom" href="https://www.blogger.com/feeds/458002489272917533/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="Блог Александра Бындю - Atom" href="https://blog.byndyu.ru/feeds/3507816127684024042/comments/default" />
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/s1600/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png' rel='image_src'/>
+<meta content='https://blog.byndyu.ru/2014/01/blog-post_8.html' property='og:url'/>
+<meta content='Работа с унаследованным кодом: Риски, анализ проекта и стратегии работы' property='og:title'/>
+<meta content='В предыдущей статье я описал один из вариантов, как IT-проект может катиться к провалу  из-за слабых технических специалистов и неподготовле...' property='og:description'/>
+<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/w1200-h630-p-k-no-nu/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png' property='og:image'/>
+<title>Блог Александра Бындю: Работа с унаследованным кодом: Риски, анализ проекта и стратегии работы</title>
+<style id='page-skin-1' type='text/css'><!--
+/*-----------------------------------------------
+Blogger Template Style
+Name:     Picture Window
+Designer: Josh Peterson
+URL:      www.noaesthetic.com
+----------------------------------------------- */
+/* Variable definitions
+====================
+<Variable name="keycolor" description="Main Color" type="color" default="#1a222a"/>
+<Variable name="body.background" description="Body Background" type="background"
+color="#ffffff" default="#111111 url(https://themes.googleusercontent.com/image?id=1OACCYOE0-eoTRTfsBuX1NMN9nz599ufI1Jh0CggPFA_sK80AGkIr8pLtYRpNUKPmwtEa) repeat-x fixed top center"/>
+<Group description="Page Text" selector=".content-inner">
+<Variable name="body.font" description="Font" type="font"
+default="normal normal 16px 'Source Sans Pro', sans-serif"/>
+<Variable name="body.text.color" description="Text Color" type="color" default="#333333"/>
+</Group>
+<Group description="Backgrounds" selector=".body-fauxcolumns-outer">
+<Variable name="body.background.color" description="Outer Background" type="color" default="#296695"/>
+<Variable name="header.background.color" description="Header Background" type="color" default="transparent"/>
+<Variable name="post.background.color" description="Post Background" type="color" default="#ffffff"/>
+</Group>
+<Group description="Links" selector=".main-outer">
+<Variable name="link.color" description="Link Color" type="color" default="#336699"/>
+<Variable name="link.visited.color" description="Visited Color" type="color" default="#6699cc"/>
+<Variable name="link.hover.color" description="Hover Color" type="color" default="#33aaff"/>
+</Group>
+<Group description="Blog Title" selector=".header">
+<Variable name="header.font" description="Title Font" type="font"
+default="normal normal 36px 'Source Sans Pro', sans-serif"/>
+<Variable name="header.text.color" description="Text Color" type="color" default="#111111" />
+</Group>
+<Group description="Tabs Text" selector=".tabs-outer .PageList">
+<Variable name="tabs.font" description="Font" type="font"
+default="normal normal 15px 'Source Sans Pro', sans-serif"/>
+<Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff"/>
+<Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="#992211"/>
+</Group>
+<Group description="Tabs Background" selector=".tabs-outer .PageList">
+<Variable name="tabs.background.color" description="Background Color" type="color" default="transparent"/>
+<Variable name="tabs.selected.background.color" description="Selected Color" type="color" default="transparent"/>
+<Variable name="tabs.separator.color" description="Separator Color" type="color" default="transparent"/>
+</Group>
+<Group description="Post" selector=".post">
+<Variable name="post.title.font" description="Title Font" type="font"
+default="normal normal 18px 'Source Sans Pro', sans-serif"/>
+<Variable name="post.footer.text.color" description="Footer Text Color" type="color" default="#999999"/>
+<Variable name="post.border.color" description="Border Color" type="color" default="#dddddd"/>
+</Group>
+<Group description="Gadgets" selector=".sidebar .widget">
+<Variable name="widget.title.font" description="Title Font" type="font"
+default="bold normal 13px 'Source Sans Pro', sans-serif"/>
+<Variable name="widget.title.text.color" description="Title Color" type="color" default="#888888"/>
+</Group>
+<Group description="Footer" selector=".footer-outer">
+<Variable name="footer.text.color" description="Text Color" type="color" default="#cccccc"/>
+<Variable name="footer.widget.title.text.color" description="Gadget Title Color" type="color" default="#aaaaaa"/>
+</Group>
+<Group description="Footer Links" selector=".footer-outer">
+<Variable name="footer.link.color" description="Link Color" type="color" default="#99ccee"/>
+<Variable name="footer.link.visited.color" description="Visited Color" type="color" default="#77aaee"/>
+<Variable name="footer.link.hover.color" description="Hover Color" type="color" default="#33aaff"/>
+</Group>
+<Variable name="content.margin" description="Content Margin Top" type="length" default="20px"/>
+<Variable name="content.padding" description="Content Padding" type="length" default="0"/>
+<Variable name="content.background" description="Content Background" type="background"
+default="transparent none repeat scroll top left"/>
+<Variable name="content.border.radius" description="Content Border Radius" type="length" default="0"/>
+<Variable name="content.shadow.spread" description="Content Shadow Spread" type="length" default="0"/>
+<Variable name="header.padding" description="Header Padding" type="length" default="0"/>
+<Variable name="header.background.gradient" description="Header Gradient" type="url"
+default="none"/>
+<Variable name="header.border.radius" description="Header Border Radius" type="length" default="0"/>
+<Variable name="main.border.radius.top" description="Main Border Radius" type="length" default="20px"/>
+<Variable name="footer.border.radius.top" description="Footer Border Radius Top" type="length" default="0"/>
+<Variable name="footer.border.radius.bottom" description="Footer Border Radius Bottom" type="length" default="20px"/>
+<Variable name="region.shadow.spread" description="Main and Footer Shadow Spread" type="length" default="3px"/>
+<Variable name="region.shadow.offset" description="Main and Footer Shadow Offset" type="length" default="1px"/>
+<Variable name="tabs.background.gradient" description="Tab Background Gradient" type="url" default="none"/>
+<Variable name="tab.selected.background.gradient" description="Selected Tab Background" type="url"
+default="url(https://www.blogblog.com/1kt/transparent/white80.png)"/>
+<Variable name="tab.background" description="Tab Background" type="background"
+default="transparent url(https://www.blogblog.com/1kt/transparent/black50.png) repeat scroll top left"/>
+<Variable name="tab.border.radius" description="Tab Border Radius" type="length" default="0px" />
+<Variable name="tab.first.border.radius" description="First Tab Border Radius" type="length" default="0px" />
+<Variable name="tabs.border.radius" description="Tabs Border Radius" type="length" default="0px" />
+<Variable name="tabs.spacing" description="Tab Spacing" type="length" default=".25em"/>
+<Variable name="tabs.margin.bottom" description="Tab Margin Bottom" type="length" default="0"/>
+<Variable name="tabs.margin.sides" description="Tab Margin Sides" type="length" default="20px"/>
+<Variable name="main.background" description="Main Background" type="background"
+default="transparent url(https://www.blogblog.com/1kt/transparent/white80.png) repeat scroll top left"/>
+<Variable name="main.padding.sides" description="Main Padding Sides" type="length" default="20px"/>
+<Variable name="footer.background" description="Footer Background" type="background"
+default="transparent url(https://www.blogblog.com/1kt/transparent/black50.png) repeat scroll top left"/>
+<Variable name="post.margin.sides" description="Post Margin Sides" type="length" default="-20px"/>
+<Variable name="post.border.radius" description="Post Border Radius" type="length" default="5px"/>
+<Variable name="widget.title.text.transform" description="Widget Title Text Transform" type="string" default="uppercase"/>
+<Variable name="startSide" description="Side where text starts in blog language" type="automatic" default="left"/>
+<Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right"/>
+*/
+/* Content
+----------------------------------------------- */
+body {
+font: normal normal 18px Source Sans Pro;
+color: #000000;
+background: #ffffff none no-repeat scroll center center;
+overflow-x: hidden;
+}
+.sidebar {
+overflow-y: auto;
+overflow-x: hidden;
+}
+html body .region-inner {
+min-width: 0;
+max-width: 100%;
+width: auto;
+}
+body .navbar {
+position: fixed;
+top: 0px;
+width: 100%;
+z-index: 1000;
+background-color: #ddd;
+}
+body .content {
+margin-top: 30px;
+}
+.content-outer {
+_font-size: 90%;
+}
+a:link {
+text-decoration:none;
+color: #992211;
+}
+a:visited {
+text-decoration:none;
+color: #771100;
+}
+a:hover {
+_text-decoration:underline;
+_color: #b83d25;
+}
+.content-outer {
+background: transparent url(https://www.blogblog.com/1kt/transparent/white80.png) repeat scroll top left;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+-goog-ms-border-radius: 15px;
+border-radius: 15px;
+-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+_margin: 30px auto;
+margin: 0 auto;
+}
+.content-inner {
+_padding: 15px;
+padding: 0 60px
+}
+.p {
+text-indent: 1.2em;
+}
+.reaction-buttons {
+font-size: 14px;
+}
+.reaction-buttons a {
+color: #999696 !important;
+}
+.is-hidden {
+display: none !important;
+}
+/* Header
+----------------------------------------------- */
+.header-outer {
+display:none;
+background: #b36901 url(https://www.blogblog.com/1kt/transparent/header_gradient_shade.png) repeat-x scroll top left;
+_background-image: none;
+color: #111111;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-goog-ms-border-radius: 10px;
+border-radius: 10px;
+}
+.Header img, .Header #header-inner {
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-goog-ms-border-radius: 10px;
+border-radius: 10px;
+}
+.header-inner .Header .titlewrapper,
+.header-inner .Header .descriptionwrapper {
+padding-left: 30px;
+padding-right: 30px;
+}
+.Header h1 {
+font: normal normal 36px 'Source Sans Pro', sans-serif;
+}
+.Header h1 a {
+_color: #111111;
+}
+.Header .description {
+font-size: 130%;
+color: #666464;
+}
+#header {
+border-bottom: solid 1px #cccccc;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-inner {
+margin: .5em 0 0;
+padding: 0;
+}
+.tabs-inner .section {
+margin: 0;
+}
+.tabs-inner .widget ul {
+padding: 0;
+_background: rgba(74, 74, 74, 0) url(https://www.blogblog.com/1kt/transparent/tabs_gradient_shade.png) repeat scroll bottom;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+-goog-ms-border-radius: 0px;
+border-radius: 0px;
+}
+.tabs-inner .widget li {
+border: none;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+_padding: .5em 1em;
+_margin-right: 0;
+margin-right: 15px;
+color: #000000;
+font-size: 16px;
+-moz-border-radius: 0 0 0 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-goog-ms-border-radius: 0 0 0 0;
+border-radius: 0 0 0 0;
+_background: transparent none no-repeat scroll top left;
+border-right: 1px solid rgba(74, 74, 74, 0);
+}
+.tabs-inner .widget li:first-child a {
+_padding-left: 1.25em;
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-top-left-radius: 0px;
+-webkit-border-bottom-left-radius: 0px;
+-goog-ms-border-top-left-radius: 0px;
+-goog-ms-border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+}
+.PageList LI.selected a {
+font-weight: normal;
+}
+.PopularPosts LI.selected a {
+font-weight: normal;
+}
+.tabs-inner .widget li.selected a,
+.tabs-inner .widget li a:hover {
+position: relative;
+z-index: 1;
+background: rgba(74, 74, 74, 0) url(https://www.blogblog.com/1kt/transparent/tabs_gradient_shade.png) repeat scroll bottom;
+color: #cc4411;
+color: #b83d25;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+_box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+}
+.tabs-inner .widget li.selected a {
+padding-bottom: 2px;
+border-bottom: solid 2px #b83d25;
+border-right: none;
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+font: bold normal 13px 'Source Sans Pro
+', sans-serif
+;
+text-transform: uppercase;
+color: #666666;
+margin: .5em 0;
+}
+/*
+* Images floats
+*/
+.separator img {
+max-width: 100%;
+}
+.image-left {
+float: left;
+margin: 0 1rem 1rem 0;
+}
+.image-right {
+float: right;
+margin: 0 0 1rem 1rem;
+}
+@media only screen and (max-width: 1200px) {
+.image-left.clear1200,
+.image-right.clear1200 {
+display: block;
+float: none;
+margin-left: 0;
+margin-right: 0;
+}
+}
+@media only screen and (max-width: 1240px) {
+.tabs-inner .section {
+_width: 1100px;
+}
+.tabs-inner .widget li a {
+margin-right: 8px;
+}
+}
+@media only screen and (max-width: 1000px) {
+.image-left.clear1000,
+.image-right.clear1000 {
+display: block;
+float: none;
+margin-left: 0;
+margin-right: 0;
+}
+.content-inner {
+padding: 0px 25px !important;
+}
+.tabs .widget li, .tabs .widget li {
+float:none
+}
+}
+@media only screen and (max-width: 960px) {
+#PageList1, #PopularPosts1, #HTML8 {
+display: none;
+}
+#sidebar-left-1 {
+width: 100% !important;
+height: 80px !important;
+min-width: 550px;
+}
+#HTML2, #Header1 {
+float: left;
+}
+#HTML2 .photo {
+width: 135px !important;
+}
+#Header1  {
+margin-left: -10px !important;
+}
+.content-inner {
+padding: 60px 0px !important;
+}
+.tabs-inner .section {
+padding-left: inherit !important;
+padding-bottom: 5px;
+padding-top: 5px;
+}
+.main-inner .columns {
+padding-left: inherit !important;
+padding-right: 0px;
+}
+.titlewrapper .title {
+font-size: 16px !important;
+}
+.post-outer {
+margin-top: 0 !important;
+}
+.blog-posts {
+margin-top: inherit !important;
+max-width: inherit !important;
+width: 95%;
+}
+.date-outer {
+margin-bottom: 60px;
+}
+}
+/* Main
+----------------------------------------------- */
+.main-outer {
+background: transparent none repeat scroll top center;
+-moz-border-radius: 0 0 0 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-webkit-border-bottom-right-radius: 0;
+-goog-ms-border-radius: 0 0 0 0;
+border-radius: 0 0 0 0;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+}
+.main-inner {
+padding: 15px 5px 20px;
+margin-top: 70px;
+}
+.main-inner .column-center-inner {
+padding: 0 0;
+}
+.main-inner .column-left-inner {
+padding-left: 0;
+}
+.main-inner .column-right-inner {
+padding-right: 0;
+}
+/* Posts
+----------------------------------------------- */
+blockquote {
+border-left: 5px solid #4466c5;
+background: #F7F7F7;
+padding: 15px 20px 35px 20px;
+margin-top: 10px;
+margin-bottom: 25px;
+}
+}
+h3.post-title {
+margin: 0;
+font-size: 34px;
+font-weight: bold;
+}
+h2.post-inner-title {
+margin: 0;
+font: normal normal 18px 'Source Sans Pro', sans-serif;
+font-size: 150%;
+padding-top: 20px;
+color: black;
+margin-top: 45px !important;
+margin-bottom: 20px !important;
+}
+h3.post-inner-title {
+color: black;
+margin-top: 38px !important;
+margin-bottom: 15px !important;}
+h4.post-inner-title {
+color: black;
+padding-top: 20px;
+}
+.comments h4 {
+margin: 1em 0 0;
+font: normal normal 18px 'Source Sans Pro', sans-serif;
+}
+.post-outer-ads {
+background-color: #ffffff;
+border: #dddddd solid 1px;
+color: #333333;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-goog-ms-border-radius: 10px;
+padding: 15px 20px;
+margin: 0 -20px 20px;
+font-size:110%;
+}
+/********************************
+* Clearfix
+********************************/
+.clearfix:before,
+.clearfix:after {
+content: '';
+display: table;
+}
+.clearfix:after {
+clear: both;
+}
+.post-outer {
+background-color: #ffffff;
+_border: solid 1px #dddddd;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+-goog-ms-border-radius: 10px;
+padding: 15px 140px 15px 40px;
+margin: 0 -20px 20px;
+}
+.post-body {
+position: relative;
+}
+.widget .post-body li {
+margin-bottom: 13px !important;
+}
+.post-body a {
+border-bottom:1px solid rgba(0, 0, 0, 0.2);
+}
+.post-body a:hover {
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.post-header {
+margin: 0 0 1.5em;
+color: #999999;
+line-height: 1.6;
+}
+.post-body h3 {
+font-weight: normal !important;
+}
+.post-footer {
+margin: .5em 0 0;
+_color: #999999;
+line-height: 1.6;
+}
+#blog-pager {
+font-size: 140%;
+margin-top: 80px;
+padding-top: 10px;
+border-top: solid 1px rgba(0,0,0,0.1);
+text-align: left;
+}
+#blog-pager a {
+font-size: 20px;
+color: #999696;
+border-bottom: none;
+}
+#blog-pager .home-link {
+float: none;
+margin-right: 80px;
+}
+#blog-pager #blog-pager-older-link {
+float: none;
+margin-right: 80px;
+}
+#blog-pager #blog-pager-newer-link {
+float: none;
+}
+#comments {
+margin-top: 70px !important;
+}
+#comments .comment-author {
+padding-top: 1.5em;
+border-top: dashed 1px #ccc;
+border-top: dashed 1px rgba(128, 128, 128, .5);
+background-position: 0 1.5em;
+}
+#comments .comment-author:first-child {
+padding-top: 0;
+border-top: none;
+}
+.avatar-image-container {
+margin: .2em 0 0;
+}
+/* Widgets
+----------------------------------------------- */
+.widget ul, .widget #ArchiveList ul.flat {
+padding-left: 40px;
+list-style: disc;
+}
+.widget ul li, .widget #ArchiveList ul.flat li {
+border-top: dashed 1px #ccc;
+border-top: dashed 1px rgba(128, 128, 128, .5);
+}
+.widget ul li:first-child, .widget #ArchiveList ul.flat li:first-child {
+border-top: none;
+}
+.widget .post-body > ul, .widget .post-body > ol {
+margin-top: -20px
+}
+.widget .post-body H2 ~ol,
+.widget .post-body H2 ~ul,
+.widget .post-body p ~ol,
+.widget .post-body p ~ul {
+_margin-top: -20px;
+}
+.widget .post-body ul {
+list-style: none;
+margin-bottom: 20px;
+}
+.widget .post-body .separator ~ul,
+.widget .post-body .separator ~ol {
+margin-top: 20px;
+}
+.widget .post-body ul > li:before {
+content: '\2014\a0';
+margin-left: -30px;
+}
+.widget .post-body ul li {
+border: none;
+}
+/* Footer
+----------------------------------------------- */
+.footer-outer {
+color:#992211;
+background: transparent url(https://www.blogblog.com/1kt/transparent/black50.png) repeat scroll top left;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-goog-ms-border-radius: 10px 10px 10px 10px;
+border-radius: 10px 10px 10px 10px;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+}
+.footer-inner {
+padding: 10px 5px 20px;
+}
+.footer-outer a {
+color: #ffffdd;
+}
+.footer-outer a:visited {
+color: #cccc99;
+}
+.footer-outer a:hover {
+color: #b83d25;
+}
+.footer-outer .widget h2 {
+color: #ffffff;
+}
+html, body {
+font-family: 'Source Sans Pro', sans-serif !important;
+}
+a:link, a:visited {
+color: #000;
+text-decoration: none;
+_border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+a:hover {
+border-bottom: none;
+text-decoration: none;
+_border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+color: #b83d25;
+}
+blockquote {
+border-left: none;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0px;
+text-align: left;
+color: #000000;
+background: #f3f5f6;
+_margin-bottom: 10px;
+padding: 10px 50px 10 20px;
+margin-left: 0px;
+}
+.widget.HTML, .widget.Blog {
+_margin: 0 !important;
+}
+.footer-inner {
+padding-top: 0px;
+}
+.content-inner {
+/* max-width: 960px !important; */
+_min-width: 1240px;
+margin: 0 auto;
+_overflow-x: hidden;
+_overflow-y: hidden;
+}
+.separator a:link, .header-inner a:link {
+border-bottom: none;
+}
+.widget ul li, .widget #ArchiveList ul.flat li {
+border-top: none;
+}
+.PopularPosts .widget-content ul li {
+padding: 0.25em 0;
+}
+/* blog posts */
+.content-outer {
+box-shadow: none;
+}
+.header-outer {
+border-radius: 4px !important;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhf4YxR9Ijq_uYmDbwYqMXp8MJwzb33QqQXDrcJZBLf0SVG7PoM_CMo68kKjrH41BoD2AVLJTTVIbanxXLR9aNq8n6MuiJ1siUKvsG4zOhTvUGQ_ZmHe2CzLQbrm-tpwsUkM76_gg0-jwQA/s1600/Header_image+%25281%2529.png)
+}
+.post-header {
+margin-top: -15px;
+margin-bottom: 25px;
+}
+.post-outer{
+border-radius: 4px !important;
+padding-top: 0px;
+padding-bottom: 0px;
+margin-top: 70px;
+}
+h3.post-title {
+margin: 0;
+margin-top: 10px;
+padding-bottom: 20px;
+font-size: 34px;
+font-weight: 550;
+line-height: 1.1;
+letter-spacing: 0px;
+color: #000;
+}
+h3.post-title a {
+_font-size: 28px;
+color: #b83d25;
+}
+.post-inner-title {
+padding-top: 0px !important;
+_padding-bottom: 5px !important;
+_font-weight: 550 !important;
+}
+.entry-content p, .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+margin-top: 5px;
+margin-bottom: 20px;
+}
+.post-title.entry-title a:hover {
+border-bottom: none;
+text-decoration: none;
+}
+.entry-title__list {
+line-height: 0.9 !important;
+}
+.entry-content p {
+text-align: left;
+color: #000000;
+}
+.post-footer {
+font-size: 16px;
+margin-top: 20px;
+}
+.post-outer h2.date-header {
+font-size: 14px;
+font-weight: normal;
+line-height: 1.14;
+text-align: left;
+text-transform: uppercase;
+color: #999696;
+}
+.entry-content iframe {
+max-width: 100%;
+}
+.entry-content .separator a{
+margin-left: 0 !important;
+}
+.jump-link a,
+.post-backlinks.post-comment-link a,
+.disqus-blogger-comment-link {
+font-size: 14px;
+line-height: 1.25;
+letter-spacing: 0px;
+text-align: left;
+color: #999696 !important;
+}
+.jump-link a, .post-backlinks.post-comment-link a:hover {
+border-bottom:color: #b83d25 !important;
+}
+.post-footer {
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0px;
+}
+.post-footer abbr {
+text-decoration: none;
+color: black;
+}
+.post-footer-line {
+margin-bottom: 20px
+}
+post-footer-line-2 {
+margin-bottom: none;
+}
+/* blog header */
+.header.section {
+height: 180px !important;
+border: none !important;
+}
+.descriptionwrapper {
+padding-bottom: 5px;
+_border-bottom: solid 1px rgba(0,0,0,0.1);
+}
+.titlewrapper .title, .descriptionwrapper .description {
+display: inline;
+_padding: 0 18px;
+_color: #ccc;
+_background: #992211;
+}
+.titlewrapper .title a {
+_color: white;
+text-decoration: none;
+border: none;
+}
+.titlewrapper {
+_padding-top: 60px !important;
+}
+.titlewrapper .title {
+font-size: 28px;
+_font-weight: 600;
+}
+.descriptionwrapper .description {
+padding-bottom: 18px;
+font-size: 16px;
+_font-weight: bold;
+line-height: 1.04;
+}
+/* blog ads */
+.post-outer-ads {
+border: none !important;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+/* widget's headers  */
+post-title entry-title, .widget h2 {
+_font-size: 24px;
+line-height: 1.04;
+letter-spacing: 0px;
+text-transform: none;
+text-align: left;
+color: #000000;
+}
+.main-inner .column-right-inner {
+padding-left: 60px;
+}
+.post-outer-ads  .post-title {
+margin: 0px;
+}
+/* copiright */
+.footer-outer {
+background: none;
+}
+/* icons */
+.icon {
+display: inline-block;
+position: absolute;
+left: -26px;
+top: 2px;
+content: ''
+}
+.icon-bs {
+height: 24px;
+width: 24px;
+margin-top: -2px;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAnMIS51LYvy_X2RAKyu74LUGACiYTWPIQM5xozw2qpKIuroP6-UrE5HAcpwpc8KOBNLy9jnIYrn8TFzt-XkOL7p8KcRp5Dq9um_HXxLpdf2BgNjR3MeLoADA-8qkKFfqqUeIP3GAcoXSE/s1600/icon_bs.png)
+}
+.icon-labels {
+display: inline-block;
+position: relative;
+left: 0;
+top: 0;
+height: 14px;
+width: 9px;
+margin-top: -2px;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5F6T5eQNOrgTB3KJAKqdhSCD1sb62YAyoaXdZ-i3G5HX5IcYG89Ryb7VAezs9tBjbpJDcb36kILVRuKc7FRcLUNHV1paC435cU5AKth_X4EG4fx9Tfx7wdioBAkUHgOGkqt3K7zRzO33Q/s320/page-1.png)
+}
+.icon-popular {
+height: 24px;
+width: 24px;
+margin-top: -2px;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzHF_9b_n1_mJ9KuBm0Vzl7dtwdbk6o5WzVeqTAMPr120c4GABRLxRwc5gb9ASFrx013aciAlt8LM3BPWg9RC9gg0Z_IpSBwmIoAvd1N_bi6q_HEWOvErbbTwGnfBcq7bZrH-kYxywhJMO/s1600/icon_popular.png)
+}
+.icon-fav {
+height: 24px;
+width: 24px;
+margin-top: -2px;
+vertical-align: middle;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuk8DqESwXpqGFsvpxn7MooP4Rbuim40hSZ41wWulOqKrsu0znix_LMGz1p4kzcSgoFajCNLZ3-s1o0P3XTO6rZQ2CFWrOSRVdVAysWKHoUldI3FEoedwOBujtM1zVWngSboVDEgBIHM5-/s1600/icon_fav.pn)
+}
+/* категория */
+.status-msg-wrap1 {
+width: 100%;
+margin: 0px auto;
+font-size: 20px;
+line-height: 1.2;
+text-align: left;
+color: #000000;
+}
+.status-msg-body1 {
+padding: 15px 20px;
+margin: 0 -20px 20px;
+background-color: #ffffff;border-radius: 4px;
+background-color: #ffffff;
+border: solid 1px #e7e7e7;
+}
+/* стили забиты на id-шки что бы изменения темы, переключение и тд не сломали а хоть  как бы показывали. */
+#sidebar-left-1 {
+position: fixed;
+background: #ccc;
+top: 0px;
+left: 0px;
+z-index: 1000;
+width: 332px;
+height: 100%;
+margin-left: 0px;
+font-size: 16px;
+}
+#Header1 {
+margin-top: 10px;
+}
+#HTML2 {
+margin-bottom: 0px;
+}
+#Header1, #PageList1, .PopularPosts, #HTML5, #HTML8 {
+padding: 0 20px;
+}
+#HTML8 a {
+color: black;
+font-size: 14px;
+}
+#HTML8 a:hover {
+color: #992211;
+}
+_#PageList2 .widget-content {
+margin: 30px 20px;
+height: 21px;
+}
+#PageList2 .widget-content{
+margin: 30px 20px;
+}
+#PageList2 .widget-content ul {
+display: flex;
+flex-wrap: wrap;
+}
+#PageList2 .widget-content ul li {
+width: 50%;
+margin-bottom: 4px;
+}
+#PageList2 .widget-content a {
+display: inline;
+line-height: 1.6;
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+color: #666464;
+}
+#PageList2 .widget-content li.selected a {
+border-bottom: solid 2px #b83d25;
+background: none;
+color: #b83d25;
+}
+#PageList1 h2 {
+padding-top: 23px;
+letter-spacing: 0.9px;
+font-size: 20px;
+font-weight: bold;
+color: #666464;
+text-transform: uppercase;
+}
+#PageList1 a {
+line-height: 22px;
+color: #000;
+}
+#PageList1 a:hover {
+color: #992211;
+}
+#PageList1 li {
+margin-bottom: 8px;
+}
+.PopularPosts h2 {
+letter-spacing: 0.9px;
+font-size: 20px;
+font-weight: bold;
+color: #666464;
+text-transform: uppercase;
+}
+.PopularPosts a {
+line-height: 22px;
+color: #000;
+}
+.PopularPosts a:hover {
+color: #992211;
+}
+.PopularPosts li {
+margin-bottom: 8px;
+}
+.blog-posts {
+margin-top: 115px;
+_width: 80%;
+max-width: 800px;
+}
+.blog-posts--header {
+font-size: 30px !important;
+line-height: 1.3 !important;
+}
+.jump-link {
+display: none;
+}
+.goog-inline-block .goog-inline-block {
+margin-left: 372px;
+}
+
+--></style>
+<style id='template-skin-1' type='text/css'><!--
+body {
+_min-width: 940px;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+min-width: 80%;
+/* max-width: 80%; */
+_width: 940px;
+}
+.dsq-comment { min-width:250px; }
+.tabs-inner .section {
+padding-left: 330px;
+}
+.main-inner .columns {
+padding-left: 330px;
+padding-right: 0px;
+}
+.main-inner .fauxcolumn-center-outer {
+left: 330px;
+right: 0px;
+/* IE6 does not respect left and right together */
+_width: expression(this.parentNode.offsetWidth -
+parseInt("330px") -
+parseInt("0px") + 'px');
+}
+.main-inner .fauxcolumn-left-outer {
+width: 330px;
+}
+.main-inner .fauxcolumn-right-outer {
+width: 0px;
+}
+.main-inner .column-left-outer {
+width: 330px;
+right: 100%;
+margin-left: -330px;
+}
+.main-inner .column-right-outer {
+width: 0px;
+margin-right: -0px;
+}
+#layout {
+min-width: 0;
+}
+#layout .content-outer {
+min-width: 0;
+width: 800px;
+}
+#layout .region-inner {
+min-width: 0;
+width: auto;
+}
+#b-navbar {
+background: #dddddd;
+}
+--></style>
+<link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=458002489272917533&amp;zx=2b97e89a-aada-4273-8a6f-909e6efee200' media='none' onload='if(media!=&#39;all&#39;)media=&#39;all&#39;' rel='stylesheet'/><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=458002489272917533&amp;zx=2b97e89a-aada-4273-8a6f-909e6efee200' rel='stylesheet'/></noscript>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body class='loading'>
+<div class='body-fauxcolumns'>
+<div class='fauxcolumn-outer body-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content'>
+<div class='content-fauxcolumns'>
+<div class='fauxcolumn-outer content-fauxcolumn-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<div class='content-outer'>
+<div class='content-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left content-fauxborder-left'>
+<div class='fauxborder-right content-fauxborder-right'></div>
+<div class='content-inner'>
+<header>
+<div class='header-outer'>
+<div class='header-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left header-fauxborder-left'>
+<div class='fauxborder-right header-fauxborder-right'></div>
+<div class='region-inner header-inner'>
+<div class='header no-items section' id='header'></div>
+</div>
+</div>
+<div class='header-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</header>
+<div class='tabs-outer'>
+<div class='tabs-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left tabs-fauxborder-left'>
+<div class='fauxborder-right tabs-fauxborder-right'></div>
+<div class='region-inner tabs-inner'>
+<div class='tabs section' id='crosscol'><div class='widget PageList' data-version='1' id='PageList2'>
+<h2>Страницы</h2>
+<div class='widget-content'>
+<ul>
+<li>
+<a href='https://blog.byndyu.ru/'>Последние статьи</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/p/blog-page_19.html'>IT-архитектура</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/p/blog-page_4.html'>Управление</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/p/blog-page_95.html'>Инженерные практики</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/p/blog-page_24.html'>Образование и карьера</a>
+</li>
+</ul>
+<div class='clear'></div>
+</div>
+</div></div>
+<div class='tabs section' id='crosscol-overflow'><div class='widget HTML' data-version='1' id='HTML1'>
+<div class='widget-content'>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105333143', 'ym');
+
+    ym(105333143, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105333143" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</div>
+<div class='clear'></div>
+</div></div>
+</div>
+</div>
+<div class='tabs-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='main-outer'>
+<div class='main-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left main-fauxborder-left'>
+<div class='fauxborder-right main-fauxborder-right'></div>
+<div class='region-inner main-inner'>
+<div class='columns fauxcolumns'>
+<div class='fauxcolumn-outer fauxcolumn-center-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-left-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<div class='fauxcolumn-outer fauxcolumn-right-outer'>
+<div class='cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left'>
+<div class='fauxborder-right'></div>
+<div class='fauxcolumn-inner'>
+</div>
+</div>
+<div class='cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<!-- corrects IE6 width calculation -->
+<div class='columns-inner'>
+<div class='column-center-outer'>
+<div class='column-center-inner'>
+<div class='main section' id='main'><div class='widget Blog' data-version='1' id='Blog1'>
+<div class='blog-posts hfeed'>
+
+          <div class="date-outer">
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='post hentry'>
+<a data-qa='!!!' name='3507816127684024042'></a>
+<h3 class='post-title entry-title '>
+<a href='https://blog.byndyu.ru/2014/01/blog-post_8.html'>Работа с унаследованным кодом: Риски, анализ проекта и стратегии работы</a>
+</h3>
+<div class='post-header'>
+<div class='post-header-line-1'>
+<h2 class='date-header'><span>8 января 2014&#8239;г.</span></h2>
+</div>
+</div>
+<div class='post-body entry-content'>
+<p>В предыдущей статье я описал один из вариантов, <a href="http://blog.byndyu.ru/2013/12/it.html">как IT-проект может катиться к провалу</a> из-за слабых технических специалистов и неподготовленных заказчиков. Результатом этого движения будут прошедшие сроки релиза, много плохого кода, негодующие пользователи и грустные инвесторы. После осознания того, что проект идет к провалу, его отдают команде, которая берет на себя миссию по спасению.</p>
+
+<p>Сейчас я хочу рассмотреть более общий вариант работы со старыми или плохоработающими системами. Хочу дать ответ на вопрос: Что делать, если вам досталась в работу legacy system? В статье я буду использовать термины <a href="http://en.wikipedia.org/wiki/Legacy_system">legacy system</a> (унаследованная система) и <a href="http://en.wikipedia.org/wiki/Legacy_code">legacy code</a> (унаследованный код).</p>
+
+<p>Вообще унаследованный не значит плохой по-умолчанию. Бывают унаследованные системы с отличной архитектурой, документацией и т.п. В этой статье <i>унаследованный</i> будет иметь негативную окраску. Я буду говорить о проектах с проблемами в архитектуре, плохим кодом, отсутсвием тестов и документации. В этих системах бывает много чего "так исторически сложилось", "это лучше не трогать", использованы устаревшие фреймворки, подходы к разработке, языки программирования и СУБД.</p>
+
+<a name="more"></a>
+
+<h2 class="post-inner-title">Что такое унаследованная система?</h2>
+
+<p>Какие признаки можно выделить для унаследованных систем:</p>
+<ul>
+<li>Реализованы на старых технологиях и платформах</li>
+<li>Используются устаревшие подходы к разработке, дизайну и архитектуре</li>
+<li>Нет модульных и интеграционных тестов. Может при текущем дизайне вообще нельзя написать модульные тесты?</li>
+<li>В систему трудно вносить изменения, она хрупкая, ломается в неожиданных местах, в целом может быть низкое качество кода</li>
+<li>Плохой нечитаемый код со множеством <a href="http://en.wikipedia.org/wiki/Code_smell">запахов</a>, иногда непонятно почему он вообще работает</li>
+<li>Не автоматизированы рутинные операции, что периодически приводит к однотипным ошибкам и повышает <a href="http://ru.wikipedia.org/wiki/Bus_factor">bus-фактор</a>.</li>
+<li>Нет документации по системе и инфрастуктуре</li>
+</ul>
+
+<p>Возникает ощущение, что проект с такими характеристиками не будет радовать вас изо дня в день. Скорее станет вашей головной болью.</p>
+
+<p>Как системы становятся унаследованными? Можно выделить несколько популярных сценариев:</p>
+<ol>
+<li>Разработка началать много лет назад, за это время было реализовано много различной функциональности. Команды уже несколько раз полностью сменились. Разные части системы написаны в разном стиле. Такая система является большой ценностью для заказчика. Возможно система немного нестабильна, но для заказчика это не столь критично.</li>
+<li>Система разрабатывалась недолго, но командой с низкой технической компетентностью. Код оброс <a href="http://blog.byndyu.ru/2008/12/blog-post.html">техническими долгами</a>, является очень хрупким. Система почти остановила свое развитие и ждет героя, который проведет правильный рефакторинг. Изменения в системе, как и в предыдущем пункте, будут осложнятся тем, что ее уже используют в работе.</li>
+<li>Разработка первой версии оказалась неудачной (например, команда не справилась), система не была запущена. Теперь нужно сделать выводы из первого провала и реализовать всё как полагается.</li>
+<li>Ваша текущая система, которая раньше была такой небольшой и понятной, превращается в ужасного монстра, который выходит из под контроля. Нужно сломить ситуацию и сделать ее управляемой.</li>
+</ol>
+
+<h2 class="post-inner-title">Риски и ответственность</h2>
+
+<p>Какие риски могут вас ожидать:</p>
+
+<ul>
+<li>Унаследованные системы зачастую очень важны для заказчика. Этими системами уже пользуются, они уже приносят деньги,  поэтому ошибки в коде могут очень дорого стоить.</li>
+<li>Если система уже была запущена, то пользователи научились с ней работать, обходить проблемы, которые она содержит. Например, вы наверняка слышали в магазинах: "Сейчас система зависла, надо подождать немного, потом перезагрузить компьютер, потом я проведу оплату еще раз. Ничего страшного так бывает". Ваша новая реализация может быть будет лучше, но не забывайте про переобучение пользователей</li>
+<li>Знания об истории развития унаследованной системы могут быть потеряны, поэтому вы рискуете забыть реализовать функциональность, которая была в старой системе</li>
+<li>Или просто сломать то, что уже работает<br/>
+<i>Например, недавно мы рефакторили большую систему, она заливалась на несколько идентичных серверов для баланса нагрузки. Как оказалось, только на одном из них в файле конфигурации менялся параметр, чтобы один из сервисов запускался. Информации об этом нигде не было. Через месяц узнали случайно от разработчика из предыдущей команды.</i></li>
+<li>Из-за проблем в коде можно не сделать поставку новых функций к планируемой дате</li>
+<li>Обычно работа идет под давлением сроков и большого количества технических долгов, это грозит потерей мотивации в команде</li>
+<li>На некоторое время будет замедление разработки, т.к. вы будете входить в проект. Надо убедиться, что заказчик готов к этому</li>
+</ul>
+
+<p>Допустим, взвесив все риски, вы согласились взяться за работу. В этот момент надо понять важную вещь. Для заказчика не будет разделения на "наш код" и "не наш код". Код теперь весь ваш, вы с ним работаете. Возникли неожиданные проблемы в неожиданном месте? Теперь это ваша проблема. Вы в этом не виноваты? Код был хрупким и поэтому всё сломалось? Для заказчика теперь вы отвественный за код, вам и решать все проблемы. Приготовьтесь к тому, что будете искать, отлаживать, профилировать унаследованную систему значительное время.</p>
+
+<p>С точки зрения условий контракта я бы рекомендовал работать с унаследованными системами по T&M. Это частично снизит ваши риски. Работа по фиксированной цене и объему работы может быть опасна, т.к. унаследованные системы несут много сюрпризов. Есть риск сильно ошибиться, неправильно оценив объем работы.</p>
+
+<h2 class="post-inner-title">Анализ унаследованной системы</h2>
+
+<p>Перед началом работы нужно понять, что уже реализовано и как это работает. Текущую функциональность надо изучить, измерить и описать, чтобы в дальнейшем были метрики и флаги, которые не дадут сделать хуже, чем было. По возможности нужно убрать любые потери, связанные с рутинными операциями.</p>
+
+<p>Не всё перечисленное ниже удается сделать. Часть задач сам заказчик задвигает в низкоприоритетные и бесконечно откладывает.</p>
+
+<h3 class="post-inner-title">Где находится исходный код?</h3>
+
+<p>Под контроль нужно взять изменения в исходном коде системы и всех подсистем. Я бы рекомендовал следить за всеми ветками во всех репозиториях, к которым удастся получить доступ. Это позволит избежать побочных эффектов работы предыдущей команды или её остатков, которые будут работать вместе с вами.</p>
+
+<p>Если системы контроля версий нет (не смейтесь, это обычная ситуация), то её обязательно нужно завести в самом начале, еще до первых изменений в коде. Это позволит вам:</p>
+<ol>
+<li>Контроллировать все изменения, которые будут поступать от вашей команды и возможно от остатков старой команды</li>
+<li>Собрать все исходники системы и всех подсистем в одном месте</li>
+</ol>
+
+<h3 class="post-inner-title">Где развернута система?</h3>
+
+<p>Скорее всего про инфрастуктуру системы будет известно немного. Вам необходимо будет провести аудит серверов, политик безопасности, настроек домена, настроек бэкапа и т.п. Это довольно тяжелая и кропотливая работа для системного администратора. О доступе к серверам я бы рекомендовал позаботиться заранее, т.к. возможно придется получать специальные разрешения, восстанавливать логины/пароли или искать "того единственного, который помнит пароль".</p>
+
+<p>Если вам досталась актуальная документация инфрастуктуры, то это большая удача. В любом случае стоит ввести системного администратора в курс дела и дать ему задачу актуализировать документацию.</p>
+
+<h3 class="post-inner-title">Какая версия сейчас работает?</h3>
+
+<p>Если системой уже начали пользоваться, то нужно понять, какая версия в данный момент залита на боевых серверах. Номер версии должен быть <b>однозначно сопоставим с номером ревизии в системе контроля версий</b>. Это вам пригодится при изучении работы системы, анализе её поведения, отладке и профилировании.</p>
+
+<p>Обычная ситуация, что вам не могут сказать точно, какая версия сборок сейчас залита и где найти код именно той залитой версии. Тогда переходим к следующему шагу и настраиваем выпуск новых версий сами.</p>
+
+<h3 class="post-inner-title">Как выпустить новую версию?</h3>
+
+<p>Выпуск новой версии системы и любой её части должен быть автоматизирован. В идеале, вам надо получить доступ к <a href="http://en.wikipedia.org/wiki/Continuous_integration">CI-серверу</a> и убедиться, что выпуск новых версий делается одним нажатие кнопки.</p>
+
+<p>Нередко в проектах нет CI. В этом случае нужно запланировать с заказчиком время и настроить CI. В выпуск версии вам стоит включить <i>как минимум</i>:</p>
+
+<ol>
+<li>Сборку последних версий всех проектов в системе</li>
+<li>Проставление номера текущей версии</li>
+<li><a href="http://blog.byndyu.ru/2013/05/continuous-integration-config.html">Модификацию файлов конфигурации под окружение</a></li>
+<li>Запуск автоматических тестов</li>
+<li>Выпуск артефактов для заливки</li>
+</ol>
+
+<p>Это минимальный набор шагов, который позволит убрать большинство рутинных ошибок и сэкономит время в будущем. Плюс, вы научитесь собирать новый для вас проект, что бывает не так просто по ряду причин.</p>
+
+<p>Если вы будете использовать TeamCity, то можно сразу включить <a href="http://www.jetbrains.com/teamcity/features/code_quality.html">плагины для анализа кода</a>.</p>
+
+<h3 class="post-inner-title">Интегрирована ли система с другими системами?</h3>
+
+<p>Перед тем, как вносить в унаследованную систему какие-то изменения, нужно получить схемы интеграции со сторонними проектами. Возможно система что-то выгружает или забирает со сторонних FTP, у нее есть публичные веб-сервисы, она делает выгрузки в бухгалтерские системы и т.д.</p>
+
+<p>Если документации нет, то информацию нужно собрать и задокументировать самостоятельно, потом дать заказчику и его разработчикам на ревью. Вы ведь не хотите, чтобы после заливки вашей версии заказчику начали звонить контрагенты и спрашивать куда подевались их данные? Незначительные изменения в системе могут сломать хрупкую, складывающуюся годами схему интеграции с подсистемами компании и сторонних клиентов.</p>
+
+<p>Стоит проверить есть ли интеграция со сторонними сервисами типа Google Webmaster, картами и т.п. В пример могу привести систему, которую мы недавно в срочном порядке доделывали. Одна из команд заказчика после заливки потеряла из индекса Google около миллиона страниц. Они сделали несколько измений в архитектуре системы и не убедились, что интеграция с Google работает корректно.</p>
+
+<p>Если вам предоставили документацию обо всех точках интеграции, то её необходимо актуализировать.</p>
+
+<h3 class="post-inner-title">Логирование работы</h3>
+
+<p>Вам будет нужна постоянная обратная связь об ошибках, которые возникают. Её получают за счет системы логирования, запущенной на боевых серверах.</p>
+
+<p>Если системы логирования нет, то эту систему необходимо развернуть до внесения изменений в код. Если эта система есть, но логи просто лежат на серверах, то надо настроить уведомления к вам на почту. Желательно прикрутить систему типа <a href="https://code.google.com/p/elmah/">elmah</a>, чтобы было проще обрабатывать логи со всех серверов.</p>
+
+<p>Не надо бояться, что вас завалит ошибками. Вам нужна ситуация в системе "как есть", а поток ошибок, который вы увидите:</p>
+<ol>
+<li>Откроет глаза заказчику на реальную ситуацию на проекте</li>
+<li>Придаст вам дополнительную мотивацию поскорее всё исправить</li>
+</ol>
+
+<h3 class="post-inner-title">Настроен ли мониторинг и аналитика?</h3>
+
+<p>В сложных системах обычно делают сторонний анализатор, который периодически отправляет отчеты с результатами работы системы. Это могут быть отчеты по динамике регистраций в системе, анализ покупательской активности, анализ полноты и целостности данных и другие. Если что-то подобное уже есть в унаследованной системе, то стоит подписаться на все уведомления и дать к ним доступ вашему отделу контроля качества.</p>
+
+<h3 class="post-inner-title">Модульные и интеграционные тесты</h3>
+
+<p>Если в проекте есть модульные или интеграционные тесты, то это отличная возможность изучить сценарии работы системы. Для начала нужно прогнать все тесты, удалить пустые или бесполезные, чтобы они не висели техническим долгом. Бывают тесты, написанные ради увеличения покрытия кода, их тоже лучше удалить в самом начале. В проекте могут быть закомментированные тесты или отмеченны атрибутом [Skip], иногда их узучение может показать проблемы в проекте.</p>
+
+<p>Зеленые тесты будут вашими лучшми друзьями, т.к. являются самой актуальной документацией к системе. Существующие тесты надо обязательно включить в CI, если этого еще не было сделано.</p>
+
+<p>Если тестов недостаточно, то можно потратить некоторое время на <a href="http://www.infoq.com/news/2007/03/characterization-testing">Characterization Testing</a>. Это позволит лучше изучить поведение системы.</p>
+
+<p>Если тестов нет, то вам захочется покрыть код тестами. Здесь вы можете столкнуться с несколькими проблемами:</p>
+<ol>
+<li>Заказчик не выделяет время на покрытие кода тестами. Тогда QA обязательно должны сделать полное ручное тестирование системы и перед каждым релизом перепроверять регресс.</li>
+<li><a href="http://c2.com/cgi/wiki?SoftwareDesignForTesting">Модульные тесты невозможно написать</a> из-за ошибок в проектировании системы. В этом случае нежелательно кидать все силы на рефакторинг системы и постепенное покрытие кода тестами, т.к. этот процесс может затянуться, а при нехватке опыта оказаться безуспешным.</li>
+</ol>
+
+<h3 class="post-inner-title">Где можно найти тестовые сценарии?</h3>
+
+<p>Перед внесением изменений всю систему надо протестировать. QA обязательно спросят про тестовые сценарии и документацию, чтобы сделать полное тестирование текущей версии. Также будет необходимо получить доступ к bug-tracker'у для актуализации известного списка ошибок и задач.</p>
+
+<p>Если тестовых сценариев нет и документация устарела, то желательно рекомендовать заказчику полное тестировании системы и составление тестовых сценариев. Это необходимо, чтобы зафиксировать уже имеющиеся баги и в дальнейшем делать регрессионное тестированое.</p>
+
+<h3 class="post-inner-title">Какие требования предъявлялись к системе?</h3>
+
+<p>На протяжении разработки унаследованной системы к ней предъявлялся ряд требований. Желательно найти все документы/письма/страницы в вики проекта, где эти требования написаны. В них вы можете найти ответы на вопросы:</p>
+<ol>
+<li>Максимальное время отклика веб-интерфейса при обычной нагрузке</li>
+<li>Максимальное время отклика веб-интерфейса при пиковой нагрузке</li>
+<li>Ожидаемая нагрузка на систему</li>
+<li>Частота бэкапов</li>
+<li>...</li>
+</ol>
+
+<p>Если требования не оформлены, то желательно уточнить их у заказчика и оформить в соответствующие документы. Если вы нашли эти документы, то я бы рекомендовал их актуализировать. У нас был случай, когда в системе было искусственное ограничение в 10 пользователей, иначе процесс зависал и не возвращался к жизни. Заказчика убеждали, что это нормальное ограничение для подобных проектов.</p>
+
+<p>Очевидно, что список требований к системе нужно знать до начала внесения первых изменений. Команда QA должна провести анализ системы, уточнить какие из требований в данный момент выполняются, а какие нет. В дальнейшем QA должны постоянно проверять систему на соответствие этим требованиям и фиксировать улучшения или ухудшения ситуации.</p>
+
+<h3 class="post-inner-title">Общие рекомендации для начала работы</h3>
+<ul>
+<li>Для анализа кода можно прогнать его через разлиные инструменты аналитики и визуализации. Например, можно взять <a href="http://www.ndepend.com">NDepend</a> или FxCop. После анализа можно исправить самые критичные ошибки, которые выявят инструменты, если заказчик выделит на это время. В самом начале работы над унаследованной системой проблем довольно много, поэтому эти метрики не сыграют решающей роли. Они покажут, что всё плохо с отчетами в сотни ошибок, но что это даст? Вы и так знали, что в проекте много проблем. По мере разработки эти инструменты будут всё более и более востребованы.</li>
+<li>Заказчик может предложить тех. лида со своей стороны. Это довольно хорошая практика, но надо быть осторожными. Если этот тех. лид участвовал в разработке неудачной версии, которая провалилась, то он может продолжить реализацию ошибочных идей в вашей команде. Согласитесь, что трудно признавать свое творение ужасным. Мы однажды допустили такую ошибку, за что поплатились 4-мя месяцами борьбы со стереотипами, сложившимися на проекте.</li>
+<li>Несмотря на это взять, разработчика из предыдущей команды, который находится на проекте на правах консультанта, это хорошая идея. Вы будете придумывать решения, которые прошлая команда уже пробовала и они оказались неудачными по ряду причин, специфичных для проекта. Эти знания о развитии проекта пригодятся в будущем.</li>
+<li>Кроме численных метрик, вам будут нужны люди способные понять, что система становится лучше или хуже. Скорее всего это будет кто-то из отделов тех. поддержки, аналитики, сам заказчик или один из ключевых (или группа) пользователей. Используйте любые возможности для закрепления текущего состояния системы, чтобы при каждом изменении делать сравнение.</li>
+<li>Нужно собрать и занести в таблицу все технологии, фреймворки, ОС, СУБД и т.п., которые используется в системе. Посмотреть их версии, выделить те, которые уже не поддерживаются и составить план по обновлению. Это довольно рискованные и длительные изменения, поэтому вряд ли заказчик даст возможность сделать это в начале вашей работы, но иметь эту информацию пригодится.</li>
+<li>Если в системе нет тестового сервера (staging, UAT), то желательно его развернуть в самом начале. Это может оказаться трудоемкой задачей из-за сложности инфрастуктуры проекта или больших объемов данных, необходимых для работы системы.</li>
+<li>Если в самом начале непонятно куда двигаться, то можно разделиться на несколько команд, каждая из которых будет идти по своему пути развития. Таким образом, вы сможете быстрее выработать нужные решения.</li>
+</ul>
+
+<h2 class="post-inner-title" id="refactoring-strategies">Стратегия изменения</h2>
+
+<p>После проработки вышепечечисленных вопросов вы должны понять, что за система вам досталось и в каком она состоянии. Теперь надо понять, как двигаться дальше.</p>
+
+<p>Набор конретных тактик уже описан в книгах:</p>
+<ol>
+<li><a href="http://www.ozon.ru/context/detail/id/1308678/">Рефакторинг. Улучшение существующего кода про тестирование</a>, Мартин Фаулер</li>
+<li><a href="http://www.ozon.ru/context/detail/id/2909721/">Рефакторинг с использованием шаблонов</a>, Джошуа Кериевски</li>
+<li><a href="http://www.ozon.ru/context/detail/id/4311012/">Эффективная работа с унаследованным кодом</a>, Майкл К. Физерс</li>
+</ol>
+
+<p>В этих книгах разобраны конкретные примеры и даны ответы на вопросы про улучшение кода и его покрытие тестами. Например, что делать с длинным методом, который сложно тестировать? Как разорвать ненужные зависимости? Как убрать зависимость от статического класса? И многое другое. Рекомендую прочитать эти книги и 90% проблем в коде будут для вас не проблемой.</p>
+
+<p>Я же предлагаю рассмотреть основные стратегии, которые можно использовать при работе с унаследованными системами, показать их плюсы и минусы.</p>
+
+<h3 class="post-inner-title">1. Переписать</h3>
+
+<p>Вы смотрите на чужой код, видите в нем множество недочетов. Хочется просто написать правильно с нуля. Почему бы и нет? Один из возможных вариантов развития старой системы - это ее перерождние в greenfield-проекте.</p>
+
+<p>Плюсы:</p>
+<ul>
+<li>Проанализировав унаследованный код, мы узнаем как не надо делать</li>
+<li>Система наверняка будет содержать много хороших решений, которые можно будет взять как есть. Это сэкономит время при создании проекта с нуля</li>
+<li>Повышенная мотивация в команде, т.к. кодовая база будет полностью "ваша"</li>
+</ul>
+
+<p>Минусы:</p>
+<ul>
+<li>Заказчик оплатит создание той же системы во второй раз</li>
+<li>Заказчик долго не увидит разницы между тем, что было и как стало. Первый релиз новой системы, который превзойдет старую систему по количеству фич, появится не скоро</li>
+<li>Если система уже используется, то переписывание старых функций может занять значительное время</li>
+<li>Вам придется поддерживать одновременно и старую и новую системы, до тех пор пока все пользователи перейдут на новую</li>
+<li>Система может оказаться сложнее, чем вы изнально предполагали, есть шанс сделать также плохо как было или хуже. Вы не знаете всех нюансов системы и подсистем, которые копились годами.</li>
+</ul>
+
+<p>Рекомендация, когда стоит браться за переписывание всей системы с нуля:</p>
+<ol>
+<li>Заказчик дает время и деньги на переписывание старой системы с нуля, а вы со своей стороны уверены в своих силах</li>
+<li>Систему еще не начали использовать, возможно она представляет из себя прототип или 'proof of concept'</li>
+<li>Система действительно не работает, пользователи отказываются от нее. Например, у нас <a href="http://blog.byndyu.ru/2013/12/intergration-patterns.html">был проект, который предыдущая команда писала год</a>, в итоге он просто не соответствовал заявленным характеристикам. Дописывать или рефакторить его не было смысла. Мы проанализировали то, что было сделано не так и реализовали с учетом предыдущих ошибок новую версию с нуля</li>
+</ol>
+
+<p><a href="http://blog.byndyu.ru/2013/12/intergration-patterns.html">Пример проекта, когда пришлось полностью переписать первую неудачную версию</a>.</p>
+
+<h3 class="post-inner-title">2. Оставляем как было</h3>
+
+<p>Вы можете принять решение не трогать то, что уже написано. Новый код писать в том же стиле, не рефакторить, не изменять дизайн системы. Возможно система слишком большая и сложная, возможно давят сроки, возможно нет бюджета на исправление критических ошибок, а может код показался вам достаточно хорошим. Тогда вы принимаете стандарты и подходы из текущей реализации.</p>
+
+<p>Плюсы:</p>
+<ul>
+<li>Работа над системой не останавливается, клиент видит результаты своих вложений</li>
+<li>Поставка новых функций и исправление ошибок идет с самого начала вашей работы</li>
+</ul>
+
+<p>Минусы:</p>
+<ul>
+<li>Заказчик может настаивать на том, чтобы не тратить время на абстрактное улучшение дизайна, а просто поправить пару критичных ошибок. Если код в системе плохой, то вы добавляете туда еще больше костылей и стараетесь быстрее избавиться от этого проекта</li>
+<li>Есть шанс попасть в ситуацию, описанную Бруксом: "Все исправления имеют тенденцию к разрушению структуры, увеличению энтропии и дезорганизации системы. Все меньше сил тратится на исправление ошибок исходного проекта и все больше &#8212; на ликвидацию последствий предыдущих исправлений"</li>
+<li>Реанимация системы в разы сложнее, чем создание новой. Для этой работы нужна высокая квалификация</li>
+<li>Есть вероятность потратить время разработчиков и в итоге откатить все изменения</li>
+</ul>
+
+<p>Рекомендация, когда стоит оставить всё как есть:</p>
+<ol>
+<li>Бизнесу не нужны новые функции, нужно только исправить часть существующих. Такое случается, когда дальнейшее развитие системы не планируется. Возможно, параллельно создается новая система, с новыми идеями на новый платформе.</li>
+<li>Нужно очень быстро дать результат, даже путем осознанного добавления костылей в код. Я понимаю, что это может усугубить ситуацию, но если заказчик с этого рывка получит огромную прибыль, то в дальнейшем сможет инвестировать её в другие стратегии работы с унаследованной системой</li>
+<li>Код достаточно хороший, есть тесты, архитектура отвечает требованиям клиента</li>
+</ol>
+
+<h3 class="post-inner-title">3. Душитель</h3>
+
+<p>Этот подход является смягченной версией полного переписывания системы с нуля. Мы создаем новое приложение вокруг старого. По мере роста нового приложения оно перехватывает всё больше и больше функций существующей системы. Cтарую систему при этом не трогаем, новые функции пишем в новой.</p>
+
+<p>Метафора была описана у М. Фаулера в статье <a href="http://martinfowler.com/bliki/StranglerApplication.html">Strangler Application</a>.</p>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/s1600/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="791" data-original-width="835" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/s1600/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png"/></a></div>
+
+<p>Плюсы:</p>
+<ul>
+<li>Все плюсы первого подхода с полным переписыванием</li>
+<li>Работа старой системы не останавливается и при этом мы добавляем новые функции</li>
+<li>Заказчик сразу начинает видеть результаты своих вложений</li>
+<li>Если унаследованная система построена на Event Sourcing или с общей шиной, то реализация перехвата событий будет очень простой</li>
+</ul>
+
+<p>Минусы:</p>
+<ul>
+<li>Если в системе были серьезные ошибки, то нам придется исправлять их в унаследованном коде</li>
+<li>Есть опасность "не додушить" (например, финансирование закончится или прекратите работу с заказчиком), тогда система станет еще большим чудовищем с двумя головами</li>
+<li>При сложной и запутанной архитектуре унаследованной системы этот подход может быть трудно реализуем</li>
+<li>На мой взгляд это один из самых сложных подходов, который требует хорошего предварительного анализа и высокого уровня разработчиков</li>
+</ul>
+
+<p>Рекомендация, когда стоит "душить":</p>
+<ol>
+<li>Унаследованная система стабильно работает</li>
+<li>В основном надо добавлять новые функции, а не расширять уже существующие</li>
+</ol>
+
+<h3 class="post-inner-title">4. Переработка по модулям</h3>
+
+<p>Если создать новое приложение "душителя" не получается и код в текущем состоянии оставлять нельзя, то нам остается заняться постепенным рефаторингом и улучшеним дизайна системы. Для этого релиз за релизом мы изолируем части системы, выделяем независимые модули и переписываем их. Таким образом, через определенное время большая часть системы будет переписана.</p>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglAqRwFdQULXZMFbuz8mTDg9uPmYar8UgCDF5JL9xYaMcaKeUJdoGhtxjVhE9VB4Ep6jKZF7SpJgCIUP47LOwWr3i7iYrqJ4UjSuT-JfjM1UyHy6mo2AMsC6Dcrk96ZyVfiyTU1vLfdEiG5XmB3ebPrf7aPQEwP3yvUZAICtWcGbJ1263a3TO_mQjJ5g/s1600/Legacy%20system.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="705" data-original-width="518" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglAqRwFdQULXZMFbuz8mTDg9uPmYar8UgCDF5JL9xYaMcaKeUJdoGhtxjVhE9VB4Ep6jKZF7SpJgCIUP47LOwWr3i7iYrqJ4UjSuT-JfjM1UyHy6mo2AMsC6Dcrk96ZyVfiyTU1vLfdEiG5XmB3ebPrf7aPQEwP3yvUZAICtWcGbJ1263a3TO_mQjJ5g/s1600/Legacy%20system.png"/></a></div>
+
+<p>Плюсы:</p>
+<ul>
+<li>Постепенное улучшение качества системы</li>
+<li>Возможность сделать постоянную скорость поставки, не максимально высокую, но стабильную</li>
+<li>Пользователи продолжают работать с уже знакомой системой, получая периодические обновления</li>
+</ul>
+
+<p>Минусы:</p>
+<ul>
+<li>Не будет резкого скачка качества системы, возможно скорость разработки будет слишком низкой для заказчика</li>
+<li>Не всегда возможно выделить модули (добавление от hazzik)</li>
+</ul>
+
+<p>Рекомендация, когда стоит постепенно переписывать по модулям:</p>
+<ol>
+<li>Унаследованная система имеет высокую ценность для заказчика</li>
+<li>В системе реализовано много отлаженных модулей</li>
+<li>В основном надо расширять уже существующие функции</li>
+</ol>
+
+<h2 class="post-inner-title">Поддержка и развитие</h2>
+
+<p>Мы рассмотрели в основном технические вопросы при работе с унаследованными системами. Только технических изменений не будет достаточно для долгосрочного успеха. Например, внедрение CI или Continuous Deployment в корне меняет сами подходы, которые были на проекте.</p>
+
+<p>Для успеха проекта нужно поменять культуру разработки. Привить новые ценности владельцам продукта и пользователям. Убрать все потери, автоматизировать рутину.</p>
+
+<p>Была ли в вашей практике работа с унаследованной системой с плохим кодом? Удавалось ли выбросить плохой код и убедить заказчика переписать всё с нуля? Если она была успешно изменена, то что вам помогло решить проблемы? Если успеха не было, то что стало проблемой?</p>
+
+<p>Кроме того, вы можете <a href="http://byndyu.ru/trainings/refactoringlegacysystem">заказать у меня анализ вашей системы</a> и план по ее переработки.</p>
+
+<h2 class="post-inner-title">Истории работы с унаследованными системами</h2>
+
+<p>Рекомендую прочитать истории от разработчиков и менеджеров, которые работали с унаследованными системами, проводили рефакторинги, покрывали тестами и добивались успеха в выпуске новых версий. Истории разные и могут пригодится вам в работе, даже если прямо сейчас у вас нет унаследованной системы.</p>
+
+<ul>
+<li><a href="http://penxy.com/fypy">Legacy vs Agile Team</a>, AgileKitchen, Алексей Воронин</li>
+<li><a href="http://codebetter.com/jeremymiller/2006/05/04/lessons-learned-for-dealing-with-legacy-code">Lessons Learned for Dealing with Legacy Code</a>, Jeremy Miller</li>
+<li><a href="http://www.infoq.com/presentations/Legacy-Systems">A Team, A System, Some Legacy ... and You</a>, Eoin Woods</li>
+<li><a href="http://www.infoq.com/presentations/strategies-for-effectively-managing-legacy-systems">Strategies for Effectively Managing Legacy Systems</a>, Amit Uttam, Derek Longmuir</li>
+<li><a href="http://lostechies.com/jimmybogard/2009/05/28/ptom-black-box-analysis-of-legacy-applications">PTOM: Black-box analysis of legacy applications</a>, Jimmy Bogard</li>
+<li><a href="http://cdn.pols.co.uk/papers/agile-approach-to-legacy-systems.pdf">An Agile Approach to a Legacy System</a>, Chris Stevenson и Andy Pols</li>
+<li><a href="http://www.infoq.com/articles/tips-to-developers-starting-on-large-apps">Tips to Developers Starting on Large Applications</a>, Choudary Kothapalli</li>
+<li><a href="http://codebetter.com/jeremymiller/2007/04/01/removing-the-legacy-from-your-code">Removing the "Legacy" from your Code</a>, Jeremy Miller</li>
+<li><a href="http://www.infoq.com/presentations/large-legacy-techniques-tools">Cleaning Code - Tools and Techniques for Legacy Restoration Projects
+</a>, Mike Long</li>
+<li><a href="http://www.infoq.com/presentations/Strategy-Messy-Legacy-Systems">Recovering the Ability to Design when Surrounded by Messy Legacy Systems</a>, Eric Evans</li>
+<li><a href="http://stepaheadsoftware.blogspot.ru/2012/09/greenfield-or-refactor-legacy-code-base.html">Classic software engineering mistakes: To Greenfield or Refactor Legacy code?</a></li>
+</ul>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1' style='display:none;'>
+<span class='post-timestamp1'>
+<abbr class='published' title='2014-01-08T14:41:00+06:00'>1/08/2014</abbr>
+</span>
+<span class='post-labels'>
+<span class='post-author vcard'></span>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+<span class='post-backlinks post-comment-link'>
+</span>
+<span class='reaction-buttons'>
+<i class='icon icon-labels'></i>
+<a href='https://blog.byndyu.ru/search/label/Analytics' rel='tag'>Analytics</a>&#12539;
+<a href='https://blog.byndyu.ru/search/label/Best%20Practices' rel='tag'>Best Practices</a>
+</span>
+<span class='post-icons'>
+<span class='item-control blog-admin pid-506005603'>
+<a href='https://www.blogger.com/post-edit.g?blogID=458002489272917533&postID=3507816127684024042&from=pencil' title='Изменить сообщение'>
+<img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+</a>
+</span>
+</span>
+</div>
+</div>
+</div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<h4>28 комментариев:</h4>
+<div class='comments-content'>
+<script async='async' src='' type='text/javascript'></script>
+<script type='text/javascript'>
+    (function() {
+      var items = null;
+      var msgs = null;
+      var config = {};
+
+// <![CDATA[
+      var cursor = null;
+      if (items && items.length > 0) {
+        cursor = parseInt(items[items.length - 1].timestamp) + 1;
+      }
+
+      var bodyFromEntry = function(entry) {
+        var text = (entry &&
+                    ((entry.content && entry.content.$t) ||
+                     (entry.summary && entry.summary.$t))) ||
+            '';
+        if (entry && entry.gd$extendedProperty) {
+          for (var k in entry.gd$extendedProperty) {
+            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+              return '<span class="deleted-comment">' + text + '</span>';
+            }
+          }
+        }
+        return text;
+      }
+
+      var parse = function(data) {
+        cursor = null;
+        var comments = [];
+        if (data && data.feed && data.feed.entry) {
+          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+            var comment = {};
+            // comment ID, parsed out of the original id format
+            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+            comment.id = id ? id[2] : null;
+            comment.body = bodyFromEntry(entry);
+            comment.timestamp = Date.parse(entry.published.$t) + '';
+            if (entry.author && entry.author.constructor === Array) {
+              var auth = entry.author[0];
+              if (auth) {
+                comment.author = {
+                  name: (auth.name ? auth.name.$t : undefined),
+                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                };
+              }
+            }
+            if (entry.link) {
+              if (entry.link[2]) {
+                comment.link = comment.permalink = entry.link[2].href;
+              }
+              if (entry.link[3]) {
+                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                if (pid && pid[1]) {
+                  comment.parentId = pid[1];
+                }
+              }
+            }
+            comment.deleteclass = 'item-control blog-admin';
+            if (entry.gd$extendedProperty) {
+              for (var k in entry.gd$extendedProperty) {
+                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
+                }
+              }
+            }
+            comments.push(comment);
+          }
+        }
+        return comments;
+      };
+
+      var paginator = function(callback) {
+        if (hasMore()) {
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          if (cursor) {
+            url += '&published-min=' + new Date(cursor).toISOString();
+          }
+          window.bloggercomments = function(data) {
+            var parsed = parse(data);
+            cursor = parsed.length < 50 ? null
+                : parseInt(parsed[parsed.length - 1].timestamp) + 1
+            callback(parsed);
+            window.bloggercomments = null;
+          }
+          url += '&callback=bloggercomments';
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      };
+      var hasMore = function() {
+        return !!cursor;
+      };
+      var getMeta = function(key, comment) {
+        if ('iswriter' == key) {
+          var matches = !!comment.author
+              && comment.author.name == config.authorName
+              && comment.author.profileUrl == config.authorUrl;
+          return matches ? 'true' : '';
+        } else if ('deletelink' == key) {
+          return config.baseUri + '/delete-comment.g?blogID='
+               + config.blogId + '&postID=' + comment.id;
+        } else if ('deleteclass' == key) {
+          return comment.deleteclass;
+        }
+        return '';
+      };
+
+      var replybox = null;
+      var replyUrlParts = null;
+      var replyParent = undefined;
+
+      var onReply = function(commentId, domId) {
+        if (replybox == null) {
+          // lazily cache replybox, and adjust to suit this style:
+          replybox = document.getElementById('comment-editor');
+          if (replybox != null) {
+            replybox.height = '250px';
+            replybox.style.display = 'block';
+            replyUrlParts = replybox.src.split('#');
+          }
+        }
+        if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
+          document.getElementById(domId).insertBefore(replybox, null);
+          replybox.src = replyUrlParts[0]
+              + (commentId ? '&parentID=' + commentId : '')
+              + '#' + replyUrlParts[1];
+          replyParent = commentId;
+        }
+      };
+
+      var hash = (window.location.hash || '#').substring(1);
+      var startThread, targetComment;
+      if (/^comment-form_/.test(hash)) {
+        startThread = hash.substring('comment-form_'.length);
+      } else if (/^c[0-9]+$/.test(hash)) {
+        targetComment = hash.substring(1);
+      }
+
+      // Configure commenting API:
+      var configJso = {
+        'maxDepth': config.maxThreadDepth
+      };
+      var provider = {
+        'id': config.postId,
+        'data': items,
+        'loadNext': paginator,
+        'hasMore': hasMore,
+        'getMeta': getMeta,
+        'onReply': onReply,
+        'rendered': true,
+        'initComment': targetComment,
+        'initReplyThread': startThread,
+        'config': configJso,
+        'messages': msgs
+      };
+
+      var render = function() {
+        if (window.goog && window.goog.comments) {
+          var holder = document.getElementById('comment-holder');
+          window.goog.comments.render(holder, provider);
+        }
+      };
+
+      // render now, or queue to render when library loads:
+      if (window.goog && window.goog.comments) {
+        render();
+      } else {
+        window.goog = window.goog || {};
+        window.goog.comments = window.goog.comments || {};
+        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+        window.goog.comments.loadQueue.push(render);
+      }
+    })();
+// ]]>
+  </script>
+<div id='comment-holder'>
+<div class="comment-thread toplevel-thread"><ol id="top-ra"><li class="comment" id="c3564347258783993928"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">gleb Chermennov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389182774092#c3564347258783993928">8 января 2014&#8239;г. в 18:06</a></span></div><p class="comment-content">Да, об одном из прошлых. Что-то подсказывает, не я один сталкивался с такой ситуацией</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="3564347258783993928">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/3564347258783993928">Удалить</a></span></span></div><div class="comment-replies"><div id="c3564347258783993928-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c3564347258783993928-ra" class="thread-chrome thread-expanded"><div></div><div id="c3564347258783993928-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="3564347258783993928">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c3564347258783993928-ce"></div></li><li class="comment" id="c2325575430076984664"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389182917923#c2325575430076984664">8 января 2014&#8239;г. в 18:08</a></span></div><p class="comment-content">У меня было такое дважды. Первый раз я всё досконально обосновал, сделал прототип, но никто не слушал. Пришлось уйти с работы.<br>Второй раз я тоже всё обосновал и достучался до директора компании. После этого за месяц мы переделали весь говнокод, который копился в системе год. Все оказались в плюсе.<br>Я думаю надо пробовать одходчиво объяснять, а уж если не слышат, то не стоит на них время тратить.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2325575430076984664">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2325575430076984664">Удалить</a></span></span></div><div class="comment-replies"><div id="c2325575430076984664-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2325575430076984664-ra" class="thread-chrome thread-expanded"><div></div><div id="c2325575430076984664-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2325575430076984664">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2325575430076984664-ce"></div></li><li class="comment" id="c8298489513953129507"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">gleb Chermennov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389183055321#c8298489513953129507">8 января 2014&#8239;г. в 18:10</a></span></div><p class="comment-content">Поддерживаю. Единственное, что мне непонятно - как на проблемы в проекте могут закрывать глаза люди с огромным опытом в IT, в разы больше моего. Если схожее отношение заказчика еще как-то объяснимо, то человека из IT - я даже не знаю. Может это синдром перехода в менеджмент?</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="8298489513953129507">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/8298489513953129507">Удалить</a></span></span></div><div class="comment-replies"><div id="c8298489513953129507-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c8298489513953129507-ra" class="thread-chrome thread-expanded"><div></div><div id="c8298489513953129507-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="8298489513953129507">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c8298489513953129507-ce"></div></li><li class="comment" id="c8764896481431491587"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389183298298#c8764896481431491587">8 января 2014&#8239;г. в 18:14</a></span></div><p class="comment-content">Да множество причин. Возможно опыта много (по времени), а глубины понимания нет. Или стало плевать на работу. Или сидит на теплом месте и страшно брать на себя ответственность за такие решение. В общем, куча причин :)</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="8764896481431491587">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/8764896481431491587">Удалить</a></span></span></div><div class="comment-replies"><div id="c8764896481431491587-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c8764896481431491587-ra" class="thread-chrome thread-expanded"><div></div><div id="c8764896481431491587-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="8764896481431491587">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c8764896481431491587-ce"></div></li><li class="comment" id="c7902461541662688311"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389206560756#c7902461541662688311">9 января 2014&#8239;г. в 00:42</a></span></div><p class="comment-content">Так случилось, что последние два года я и мои коллеги занимались только работой с унаследованным кодом. Всё, что накопилось, я описал в статье.<br><br>На счет книги, я ее указал среди трех книг в списке &quot;Набор конретных тактик уже описан в книгах...&quot;. В любом случае спасибо за уточнение.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7902461541662688311">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7902461541662688311">Удалить</a></span></span></div><div class="comment-replies"><div id="c7902461541662688311-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7902461541662688311-ra" class="thread-chrome thread-expanded"><div></div><div id="c7902461541662688311-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7902461541662688311">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7902461541662688311-ce"></div></li><li class="comment" id="c7059607388138199366"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389212510601#c7059607388138199366">9 января 2014&#8239;г. в 02:21</a></span></div><p class="comment-content">В &quot;Переработка по модулям&quot; ты не учитываешь &quot;минус&quot;, когда невозможно эти самые модули выделить.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7059607388138199366">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7059607388138199366">Удалить</a></span></span></div><div class="comment-replies"><div id="c7059607388138199366-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7059607388138199366-ra" class="thread-chrome thread-expanded"><div></div><div id="c7059607388138199366-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7059607388138199366">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7059607388138199366-ce"></div></li><li class="comment" id="c2016503195550393134"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389212715679#c2016503195550393134">9 января 2014&#8239;г. в 02:25</a></span></div><p class="comment-content">Вообще, на мой взгляд, любой код после того, как попадает в главный репозиторий становится унаследованным.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2016503195550393134">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2016503195550393134">Удалить</a></span></span></div><div class="comment-replies"><div id="c2016503195550393134-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2016503195550393134-ra" class="thread-chrome thread-expanded"><div></div><div id="c2016503195550393134-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2016503195550393134">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2016503195550393134-ce"></div></li><li class="comment" id="c7326853481266262617"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389241570627#c7326853481266262617">9 января 2014&#8239;г. в 10:26</a></span></div><p class="comment-content">Точно, я ведь хотел написать про это, но второй пункт оказался копипастом из предыдущего. Спасибо, сейчас поправлю.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7326853481266262617">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7326853481266262617">Удалить</a></span></span></div><div class="comment-replies"><div id="c7326853481266262617-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7326853481266262617-ra" class="thread-chrome thread-expanded"><div></div><div id="c7326853481266262617-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7326853481266262617">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7326853481266262617-ce"></div></li><li class="comment" id="c2320071403921042551"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389246819655#c2320071403921042551">9 января 2014&#8239;г. в 11:53</a></span></div><p class="comment-content">У Фаулера буквально вчера вышла статья Branch By Abstraction о том, как изолировать и рефакторить унаследованные системы http://martinfowler.com/bliki/BranchByAbstraction.html</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2320071403921042551">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2320071403921042551">Удалить</a></span></span></div><div class="comment-replies"><div id="c2320071403921042551-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2320071403921042551-ra" class="thread-chrome thread-expanded"><div></div><div id="c2320071403921042551-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2320071403921042551">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2320071403921042551-ce"></div></li><li class="comment" id="c7066664001853774623"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389248172826#c7066664001853774623">9 января 2014&#8239;г. в 12:16</a></span></div><p class="comment-content">Спасибо за ссылку, пополнит коллекцию.<br>Что-то похожее было у Eric Evans с Anti-Corruption layer и чем-то подход напоминает &quot;душителя&quot;.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7066664001853774623">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7066664001853774623">Удалить</a></span></span></div><div class="comment-replies"><div id="c7066664001853774623-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7066664001853774623-ra" class="thread-chrome thread-expanded"><div></div><div id="c7066664001853774623-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7066664001853774623">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7066664001853774623-ce"></div></li><li class="comment" id="c4295044842960202355"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389249139728#c4295044842960202355">9 января 2014&#8239;г. в 12:32</a></span></div><p class="comment-content">Вообще ссылка всплыла из &quot;Workflows of Refactoring&quot; из части &quot;Long Term Refactoring&quot; http://martinfowler.com/articles/workflowsOfRefactoring/ и скорее всего была написана именно для статьи по рефакторингу.<br><br><br>Это скорее техника где-то по-середине между душителем и по-модульной переработкой. Такой микро-душитель на уровне модулей, а не системы.<br><br><br>Подходит, когда невозможно выделить четкие границы модулей. <br><br><br>Работает примерно как клин или топор.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="4295044842960202355">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/4295044842960202355">Удалить</a></span></span></div><div class="comment-replies"><div id="c4295044842960202355-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c4295044842960202355-ra" class="thread-chrome thread-expanded"><div></div><div id="c4295044842960202355-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="4295044842960202355">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c4295044842960202355-ce"></div></li><li class="comment" id="c2835432795092299249"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389250826504#c2835432795092299249">9 января 2014&#8239;г. в 13:00</a></span></div><p class="comment-content">Не, лучше &quot;Топор абстракции&quot;</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2835432795092299249">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2835432795092299249">Удалить</a></span></span></div><div class="comment-replies"><div id="c2835432795092299249-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2835432795092299249-ra" class="thread-chrome thread-expanded"><div></div><div id="c2835432795092299249-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2835432795092299249">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2835432795092299249-ce"></div></li><li class="comment" id="c7550274466226238018"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">Oleg Karpov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389273027150#c7550274466226238018">9 января 2014&#8239;г. в 19:10</a></span></div><p class="comment-content">Добавлю :) <br>1. Признаки: к признакам унаследованной системы я бы добавил еще один пункт, который считаю самым главным - нарушение проектирования БД, что обязательно должно быть выявлено при анализе перед тем, как заключать контракт по T&amp;M. Чаще всего проекты развиваются годами и скорость изменений фреймворков идет гораздо быстрее, чем метода проектирования баз данных в СУБД, поэтому чаще всего мы готовы переписать &quot;морду&quot; приложения, но как только мы погружаемся в структуру БД, у многих опускаются руки, т.к. применение того же ORM и работа по DDD никак отдельно не живет от структуры хранения. Исправление структуры данных - это чаще всего приведение к правильной НФ. <br>2. Сценарии: компания купила еще одну со своей системой и командой, и необходимо скрестить их работу в совместную КИС. Здесь вариант развития может быть и переход к SOA-архитектуре, как один из методов интеграции.<br>3. Стратегия изменений: добавил бы книгу для прочтения &quot;Рефакторинг баз данных&quot;<br>4. Далее по подходам изменений есть пара вопросов. Ну, если есть теория, то почему бы ее не подкрепить реальными примерами, ведь народ читает про подход, но точка приложения в голове у них не усваивается, поэтому статься - снова только теория. Никто не опирается на плюсы и минусы при выборе, они вообще следствие и в компаниях делается для конкретной системы свой SWOT-анализ.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7550274466226238018">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7550274466226238018">Удалить</a></span></span></div><div class="comment-replies"><div id="c7550274466226238018-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7550274466226238018-ra" class="thread-chrome thread-expanded"><div></div><div id="c7550274466226238018-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7550274466226238018">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7550274466226238018-ce"></div></li><li class="comment" id="c7554712569141053744"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389277671060#c7554712569141053744">9 января 2014&#8239;г. в 20:27</a></span></div><p class="comment-content">Олег спасибо за добавления.<br>На счет описания примеров, я думал их добавлять, но тогда статью бы никогда не закончил, она и так огромная. В дальнейшем буду описывать изменения в системах, которые были на практике.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7554712569141053744">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7554712569141053744">Удалить</a></span></span></div><div class="comment-replies"><div id="c7554712569141053744-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7554712569141053744-ra" class="thread-chrome thread-expanded"><div></div><div id="c7554712569141053744-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7554712569141053744">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7554712569141053744-ce"></div></li><li class="comment" id="c5290559466462603384"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389278214702#c5290559466462603384">9 января 2014&#8239;г. в 20:36</a></span></div><p class="comment-content">Как раз недавно писал про полное переписывание системы после первой неудачной попытки http://blog.byndyu.ru/2013/12/intergration-patterns.html</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="5290559466462603384">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/5290559466462603384">Удалить</a></span></span></div><div class="comment-replies"><div id="c5290559466462603384-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c5290559466462603384-ra" class="thread-chrome thread-expanded"><div></div><div id="c5290559466462603384-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="5290559466462603384">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c5290559466462603384-ce"></div></li><li class="comment" id="c7095759875981070083"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389304418681#c7095759875981070083">10 января 2014&#8239;г. в 03:53</a></span></div><p class="comment-content">Во-первых, с вашим кодом начинают работать другие программисты и для них он по определению унаследованный. <br><br><br>Во-вторых, вы и вы из прошлого это два совершенно разных человека. Прошлый &quot;вы&quot; знает, скорее всего, гораздо меньше вас настоящего. У вас настоящего гораздо больше сведений о том, как работает система и т.д.<br><br><br>У вас никогда не было такого, вы открываете проект, и думаете: &quot;о боже, какой чудак написал ЭТО?&quot;, а git blame (к примеру) показывает, что это были вы месяца два назад?<br><br><br>В-третьих требования постоянно изменяются<br><br><br>Ну и так далее.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7095759875981070083">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7095759875981070083">Удалить</a></span></span></div><div class="comment-replies"><div id="c7095759875981070083-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7095759875981070083-ra" class="thread-chrome thread-expanded"><div></div><div id="c7095759875981070083-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7095759875981070083">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7095759875981070083-ce"></div></li><li class="comment" id="c2086963239236653210"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">Oleg Karpov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389334939987#c2086963239236653210">10 января 2014&#8239;г. в 12:22</a></span></div><p class="comment-content">Тем не менее, отличный RoadMap, спасибо Саша!</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2086963239236653210">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2086963239236653210">Удалить</a></span></span></div><div class="comment-replies"><div id="c2086963239236653210-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2086963239236653210-ra" class="thread-chrome thread-expanded"><div></div><div id="c2086963239236653210-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2086963239236653210">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2086963239236653210-ce"></div></li><li class="comment" id="c5705875055645619025"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389335086679#c5705875055645619025">10 января 2014&#8239;г. в 12:24</a></span></div><p class="comment-content">Спасибо, Олег! Я вообще отчасти статьи для себя, чтобы не забыть :)<br><br>Например, вот эту http://blog.byndyu.ru/2010/11/stand-up-meeting.html и http://blog.byndyu.ru/2012/09/pair-programming.html<br><br>Такие чек-листы для самопроверки.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="5705875055645619025">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/5705875055645619025">Удалить</a></span></span></div><div class="comment-replies"><div id="c5705875055645619025-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c5705875055645619025-ra" class="thread-chrome thread-expanded"><div></div><div id="c5705875055645619025-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="5705875055645619025">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c5705875055645619025-ce"></div></li><li class="comment" id="c4374103891472771485"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">Oleg Karpov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389335151673#c4374103891472771485">10 января 2014&#8239;г. в 12:25</a></span></div><p class="comment-content">Ясно. Отчасти согласен. )</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="4374103891472771485">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/4374103891472771485">Удалить</a></span></span></div><div class="comment-replies"><div id="c4374103891472771485-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c4374103891472771485-ra" class="thread-chrome thread-expanded"><div></div><div id="c4374103891472771485-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="4374103891472771485">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c4374103891472771485-ce"></div></li><li class="comment" id="c7564793119888135291"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389336148480#c7564793119888135291">10 января 2014&#8239;г. в 12:42</a></span></div><p class="comment-content">А с чем не согласен?</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="7564793119888135291">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/7564793119888135291">Удалить</a></span></span></div><div class="comment-replies"><div id="c7564793119888135291-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c7564793119888135291-ra" class="thread-chrome thread-expanded"><div></div><div id="c7564793119888135291-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="7564793119888135291">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c7564793119888135291-ce"></div></li><li class="comment" id="c6153620069160502959"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">Oleg Karpov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389336546974#c6153620069160502959">10 января 2014&#8239;г. в 12:49</a></span></div><p class="comment-content">Тогда весь код можно считать legacy по умолчанию и отказаться от этого термина. Если мы его вводим, то для того, чтобы все-таки разделить на legacy и не очень :)</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="6153620069160502959">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/6153620069160502959">Удалить</a></span></span></div><div class="comment-replies"><div id="c6153620069160502959-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c6153620069160502959-ra" class="thread-chrome thread-expanded"><div></div><div id="c6153620069160502959-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="6153620069160502959">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c6153620069160502959-ce"></div></li><li class="comment" id="c2107642108832717643"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">hazzik</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389338210968#c2107642108832717643">10 января 2014&#8239;г. в 13:16</a></span></div><p class="comment-content">Ну для меня так и есть. Весь код по умолчанию legacy. В моей теории не legacy код, это тот код, который еще не зафиксирован в главном репозитории, т.е. тот, который живет в feature branch, в локальном репозитории или в незавершенном pull request и т.д.<br><br><br>Встречный вопрос: какой код является legacy?</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2107642108832717643">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2107642108832717643">Удалить</a></span></span></div><div class="comment-replies"><div id="c2107642108832717643-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2107642108832717643-ra" class="thread-chrome thread-expanded"><div></div><div id="c2107642108832717643-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2107642108832717643">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2107642108832717643-ce"></div></li><li class="comment" id="c8886461290075764196"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">Oleg Karpov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389338971279#c8886461290075764196">10 января 2014&#8239;г. в 13:29</a></span></div><p class="comment-content">Ну, т.е. если ты вернешься к своему коду во feature branch через месяц, он также может быть для тебя legacy, если скорость твоего обучения достаточно высока, чтобы считать его устаревшим. Таким образом нет разницы зафиксирован он в главном репозитории или нет. Я думаю, что сам термин означает принадлежность к чему-то, т.е. в  к лицу или группе разработки. Другими словами - тот код, которого ты никогда не касался, а был написан другими.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="8886461290075764196">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/8886461290075764196">Удалить</a></span></span></div><div class="comment-replies"><div id="c8886461290075764196-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c8886461290075764196-ra" class="thread-chrome thread-expanded"><div></div><div id="c8886461290075764196-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="8886461290075764196">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c8886461290075764196-ce"></div></li><li class="comment" id="c3769463271831581949"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://maxshulga-ru.blogspot.com/" rel="nofollow">Максим Шульга (Maxim Shulga)</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389345111470#c3769463271831581949">10 января 2014&#8239;г. в 15:11</a></span></div><p class="comment-content">Хорошая статья. Но есть ряд моментов. Например, &quot;Для начала нужно прогнать все тесты, удалить пустые или бесполезные, чтобы они не висели техническим долгом. Бывают тесты, написанные ради увеличения покрытия кода, их тоже лучше удалить в самом начале.&quot; - действительно ли есть нужно это делать в самом начале, когда только изучаешь систему и есть шанс ошибиться и удалить нужное? Что такое &quot;пустые&quot; тесты? Что такое тесты &quot;для покрытия&quot;?</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="3769463271831581949">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/3769463271831581949">Удалить</a></span></span></div><div class="comment-replies"><div id="c3769463271831581949-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c3769463271831581949-ra" class="thread-chrome thread-expanded"><div></div><div id="c3769463271831581949-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="3769463271831581949">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c3769463271831581949-ce"></div></li><li class="comment" id="c589174405124961246"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389355786314#c589174405124961246">10 января 2014&#8239;г. в 18:09</a></span></div><p class="comment-content">Действительно подробнее расписать этот абзац, иначе может возникнуть заблуждение.<br><br>Тут ход мыслей какой: Смотрим код -&gt; Не понимаем его  -&gt; Смотрим тесты на код -&gt; Начинаем понимать что делает. Т.е. в самом начале только тесты и помогают разобраться, если они есть.<br><br>&gt; Что такое &quot;пустые&quot; тесты?<br><br>Пустые тесты, это пустые тесты :) В них есть название, открывающая скобка и закрывающая, вообще нет кода, они проходят и прибавляют кол-во тестов в системе. Целенаправленно заниматься только удалением пустых тестов не надо, но надо удалять их по мере нахождения.<br><br>&gt; Что такое тесты &quot;для покрытия&quot;?<br><br>Заказчики могут выдвигать требования о минимальном % покрытия кода тестами. В этом случае, чтобы догнать % до нужного разработчики начинают писать тесты, которые ничего не тестируют, а просто гоняют код. В них часто нет Assert. Опять же просто тратить время на их выявление не стоит, но при обнаружение лучше сразу удалять.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="589174405124961246">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/589174405124961246">Удалить</a></span></span></div><div class="comment-replies"><div id="c589174405124961246-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c589174405124961246-ra" class="thread-chrome thread-expanded"><div></div><div id="c589174405124961246-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="589174405124961246">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c589174405124961246-ce"></div></li><li class="comment" id="c3842456032190126937"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://maxshulga-ru.blogspot.com/" rel="nofollow">Максим Шульга (Maxim Shulga)</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1389356492863#c3842456032190126937">10 января 2014&#8239;г. в 18:21</a></span></div><p class="comment-content">так я себе приблизительно и представил. Но это жесть конечно :) (я про пустые тесты и без проверок). Ясно, спасибо.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="3842456032190126937">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/3842456032190126937">Удалить</a></span></span></div><div class="comment-replies"><div id="c3842456032190126937-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c3842456032190126937-ra" class="thread-chrome thread-expanded"><div></div><div id="c3842456032190126937-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="3842456032190126937">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c3842456032190126937-ce"></div></li><li class="comment" id="c2833148742919739689"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user">Daniel Vygolov</cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1415462964044#c2833148742919739689">8 ноября 2014&#8239;г. в 21:09</a></span></div><p class="comment-content">не &quot;повышают bus-фактор&quot;, а наоборот понижают! чем меньше bus-фактор, тем хуже.</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="2833148742919739689">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/2833148742919739689">Удалить</a></span></span></div><div class="comment-replies"><div id="c2833148742919739689-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c2833148742919739689-ra" class="thread-chrome thread-expanded"><div></div><div id="c2833148742919739689-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="2833148742919739689">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c2833148742919739689-ce"></div></li><li class="comment" id="c6604628541696719131"><div class="avatar-image-container"><img src="//resources.blogblog.com/img/blank.gif" alt=""/></div><div class="comment-block"><div class="comment-header"><cite class="user"><a href="http://www.byndyu.ru/" rel="nofollow">Alexander Byndyu</a></cite><span class="icon user "></span><span class="datetime secondary-text"><a rel="nofollow" href="https://blog.byndyu.ru/2014/01/blog-post_8.html?showComment=1415724897189#c6604628541696719131">11 ноября 2014&#8239;г. в 21:54</a></span></div><p class="comment-content">Bus-фактор равный 1 означает, что только 1 человек знает, что творится в коде :) Я имел ввиду повышают отрицательный эффект от этого. Спасибо, тут не совсем точно написал!</p><span class="comment-actions secondary-text"><a class="comment-reply" target="_self" data-comment-id="6604628541696719131">Ответить</a><span class="item-control blog-admin blog-admin pid-476298591"><a target="_self" href="https://www.blogger.com/comment/delete/458002489272917533/6604628541696719131">Удалить</a></span></span></div><div class="comment-replies"><div id="c6604628541696719131-rt" class="comment-thread inline-thread hidden"><span class="thread-toggle thread-expanded"><span class="thread-arrow"></span><span class="thread-count"><a target="_self">Ответы</a></span></span><ol id="c6604628541696719131-ra" class="thread-chrome thread-expanded"><div></div><div id="c6604628541696719131-continue" class="continue"><a class="comment-reply" target="_self" data-comment-id="6604628541696719131">Ответить</a></div></ol></div></div><div class="comment-replybox-single" id="c6604628541696719131-ce"></div></li></ol><div id="top-continue" class="continue"><a class="comment-reply" target="_self">Добавить комментарий</a></div><div class="comment-replybox-thread" id="top-ce"></div><div class="loadmore hidden" data-post-id="3507816127684024042"><a target="_self">Ещё</a></div></div>
+</div>
+</div>
+<p class='comment-footer'>
+<div class='comment-form'>
+<a name='comment-form'></a>
+<p>
+</p>
+<a href='https://www.blogger.com/comment/frame/458002489272917533?po=3507816127684024042&hl=ru&saa=85391&origin=https://blog.byndyu.ru' id='comment-editor-src'></a>
+<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<script src='https://www.blogger.com/static/v1/jsbin/2830521187-comment_from_post_iframe.js' type='text/javascript'></script>
+<script type='text/javascript'>
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+</p>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class='blog-pager' id='blog-pager'>
+<a class='home-link' href='https://blog.byndyu.ru/'>Главная страница</a>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='https://blog.byndyu.ru/2013/12/intergration-patterns.html' id='Blog1_blog-pager-older-link' title='Предыдущее'>&#8592; Предыдущее</a>
+</span>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='https://blog.byndyu.ru/2014/01/intergration-patterns-shared-db-state.html' id='Blog1_blog-pager-newer-link' title='Следующее'>Следующее &#8594;</a>
+</span>
+</div>
+<div class='clear'></div>
+<div class='post-feeds' style='display:none;'>
+<div class='feed-links'>
+Подписаться на:
+<a class='feed-link' href='https://blog.byndyu.ru/feeds/3507816127684024042/comments/default' target='_blank' type='application/atom+xml'>Комментарии к сообщению (Atom)</a>
+</div>
+</div>
+</div><div class='widget HTML' data-version='1' id='HTML6'>
+<div class='widget-content'>
+<blockquote>  
+<p>Диагностика ситуации для вас и вашего бизнеса. Напишите нам в <a href="https://byndyu.ru/assistant"  style="text-decoration: none;color: #b83d25;font-size:18px">телеграмм</a> и мы решим ваш вопрос.</p>
+</blockquote>
+</div>
+<div class='clear'></div>
+</div></div>
+</div>
+</div>
+<div class='column-left-outer'>
+<div class='column-left-inner'>
+<aside>
+<div class='sidebar section' id='sidebar-left-1'><div class='widget HTML' data-version='1' id='HTML2'>
+<div class='widget-content'>
+</div>
+<div class='clear'></div>
+</div><div class='widget Header' data-version='1' id='Header1'>
+<div id='header-inner'>
+<div class='titlewrapper'>
+<h1 class='title'>
+<a href='https://blog.byndyu.ru/'>
+Блог Александра Бындю
+</a>
+</h1>
+</div>
+<div class='descriptionwrapper'>
+<p class='description'><span>Практикую теории</span></p>
+</div>
+</div>
+</div><div class='widget HTML' data-version='1' id='HTML8'>
+<div class='widget-content'>
+<p>Диагностика ситуации для вас и вашего бизнеса. Напишите нам в <a href="https://byndyu.ru/assistant"  style="text-decoration: none;color: #b83d25;font-size:18px">телеграмм</a> и мы решим ваш вопрос.</p>
+
+<a href="https://byndyusoft.com?utm_source=rb_blog" style="border:none;">
+<img border="0" width="320"src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5azM6y2CkgncdRPZNWVdkypbCwrWo_393uxnrTaN5j0khN4zbF3LW3m75BBIm1Jj0ylShECNbceknfdrNmW-D0dBTQBKm72ynfjnh_9vwR8SsAqpI8k-we6ZKj0t3IYK1wYuU4CpuCNIPC1PY65E3eheS54fUtiYPtB5gFWoE52W0MyZkIUH5DL3t4g/s1600/bs-social-picture-colorful.png" />
+</a>
+
+<br />
+
+<p>Проектируем и программируем IT-продукты под цели заказчика для e-commerce, ритейла, банков и других бизнесов по всему миру. <a href="https://byndyusoft.com?utm_source=rb_blog" style="text-decoration: none;color: #b83d25;font-size:18px">Подробнее...</a></p>
+</div>
+<div class='clear'></div>
+</div><div class='widget HTML' data-version='1' id='HTML5'>
+<div class='widget-content'>
+<a href="https://byndyu.ru/antifragileit" style="border-bottom: 1px solid rgba(0, 0, 0, 0.2);">Книга &#171;Антихрупкость в IT&#187;</a>. Как достигать результатов в IT-проектах в условиях неопределённости.
+<br/><br/>
+
+<a href="https://картагипотез.рф" style="border-bottom: 1px solid rgba(0, 0, 0, 0.2);">Карта гипотез</a> &#8211; технология создания стратегии.
+</div>
+<div class='clear'></div>
+</div><div class='widget PopularPosts' data-version='1' id='PopularPosts1'>
+<h2>Популярные статьи</h2>
+<div class='widget-content popular-posts'>
+<ul>
+<li>
+<a href='https://blog.byndyu.ru/2009/10/solid.html'>Принципы проектирования классов (S.O.L.I.D.)</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2009/12/blog-post.html'>Принцип инверсии зависимости</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2009/10/blog-post.html'>Принцип единственности ответственности</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2020/04/it.html'>Как выбрать IT-архитектуру: от хаоса до микросервисов</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2020/04/blog-post_16.html'>Архитектурные риски при планировании спринтов</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2016/12/lean-software-development.html'>Лекция про Lean Software Development в университете</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2014/07/command-and-query-responsibility.html'>Command and Query Responsibility Segregation (CQRS) на практике</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2013/07/blog-post.html'>Техническое задание как база знаний о проекте</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2017/05/blog-post.html'>Откровенное общение с заказчиком</a>
+</li>
+<li>
+<a href='https://blog.byndyu.ru/2008/12/blog-post.html'>Технические долги</a>
+</li>
+</ul>
+<div class='clear'></div>
+</div>
+</div></div>
+</aside>
+</div>
+</div>
+<div class='column-right-outer'>
+<div class='column-right-inner'>
+<aside>
+</aside>
+</div>
+</div>
+</div>
+<div style='clear: both'></div>
+<!-- columns -->
+</div>
+<!-- main -->
+</div>
+</div>
+<div class='main-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<footer>
+<!-- syntaxhighlighter -->
+<link href='https://byndyu.ru/sh/shCore.css' rel='stylesheet'/>
+<link href='https://byndyu.ru/sh/shThemeDefault.css' rel='stylesheet'/>
+<script src='https://byndyu.ru/sh/shCore.js' type='text/javascript'></script>
+<script src='https://byndyu.ru/sh/shBrushCSharp.js' type='text/javascript'></script>
+<script src='https://byndyu.ru/sh/shBrushSql.js' type='text/javascript'></script>
+<script src='https://byndyu.ru/sh/shBrushXml.js' type='text/javascript'></script>
+<div class='footer-outer'>
+<div class='footer-cap-top cap-top'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+<div class='fauxborder-left footer-fauxborder-left'>
+<div class='fauxborder-right footer-fauxborder-right'></div>
+<div class='region-inner footer-inner'>
+<div class='foot no-items section' id='footer-1'></div>
+<!-- outside of the include in order to lock Attribution widget -->
+<div class='foot no-items section' id='footer-3'></div>
+</div>
+</div>
+<div class='footer-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+<script type='text/javascript'>
+ SyntaxHighlighter.config.bloggerMode = true;
+ SyntaxHighlighter.all();
+</script>
+</footer>
+<!-- content -->
+</div>
+</div>
+<div class='content-cap-bottom cap-bottom'>
+<div class='cap-left'></div>
+<div class='cap-right'></div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+    window.setTimeout(function() {
+        document.body.className = document.body.className.replace('loading', '');
+      }, 10);
+  </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5187f1482504e318' type='text/javascript'></script>
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/3432011497-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'ACvIOeD_dDHaADQRwa3byGoFAufv:1785666946380';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d458002489272917533','//blog.byndyu.ru/2014/01/blog-post_8.html','458002489272917533');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '458002489272917533', 'title': '\u0411\u043b\u043e\u0433 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u0411\u044b\u043d\u0434\u044e', 'url': 'https://blog.byndyu.ru/2014/01/blog-post_8.html', 'canonicalUrl': 'https://blog.byndyu.ru/2014/01/blog-post_8.html', 'homepageUrl': 'https://blog.byndyu.ru/', 'searchUrl': 'https://blog.byndyu.ru/search', 'canonicalHomepageUrl': 'https://blog.byndyu.ru/', 'blogspotFaviconUrl': 'https://blog.byndyu.ru/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': true, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'ru', 'localeUnderscoreDelimited': 'ru', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22\u0411\u043b\u043e\u0433 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u0411\u044b\u043d\u0434\u044e - Atom\x22 href\x3d\x22https://blog.byndyu.ru/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22\u0411\u043b\u043e\u0433 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u0411\u044b\u043d\u0434\u044e - RSS\x22 href\x3d\x22https://blog.byndyu.ru/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22\u0411\u043b\u043e\u0433 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u0411\u044b\u043d\u0434\u044e - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/458002489272917533/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22\u0411\u043b\u043e\u0433 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u0411\u044b\u043d\u0434\u044e - Atom\x22 href\x3d\x22https://blog.byndyu.ru/feeds/3507816127684024042/comments/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/d046e0cddf00ec44', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': '\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0443', 'key': 'link', 'shareMessage': '\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0443', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': '\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Facebook', 'target': 'facebook'}, {'name': '\u041d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u043e\u0431 \u044d\u0442\u043e\u043c \u0432 \u0431\u043b\u043e\u0433\u0435', 'key': 'blogThis', 'shareMessage': '\u041d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u043e\u0431 \u044d\u0442\u043e\u043c \u0432 \u0431\u043b\u043e\u0433\u0435', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': '\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': '\u041f\u043e\u0434\u0435\u043b\u0438\u0442\u044c\u0441\u044f \u0432 Pinterest', 'target': 'pinterest'}, {'name': '\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u0447\u0442\u0430', 'key': 'email', 'shareMessage': '\u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u0447\u0442\u0430', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27ru\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': '\u0414\u0430\u043b\u0435\u0435...', 'pageType': 'item', 'postId': '3507816127684024042', 'postImageThumbnailUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/s72-c/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png', 'postImageUrl': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/s1600/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png', 'pageName': '\u0420\u0430\u0431\u043e\u0442\u0430 \u0441 \u0443\u043d\u0430\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c: \u0420\u0438\u0441\u043a\u0438, \u0430\u043d\u0430\u043b\u0438\u0437 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0438 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0438 \u0440\u0430\u0431\u043e\u0442\u044b', 'pageTitle': '\u0411\u043b\u043e\u0433 \u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u0430 \u0411\u044b\u043d\u0434\u044e: \u0420\u0430\u0431\u043e\u0442\u0430 \u0441 \u0443\u043d\u0430\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c: \u0420\u0438\u0441\u043a\u0438, \u0430\u043d\u0430\u043b\u0438\u0437 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0438 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0438 \u0440\u0430\u0431\u043e\u0442\u044b'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': '\u0418\u0437\u043c\u0435\u043d\u0438\u0442\u044c', 'linkCopiedToClipboard': '\u0421\u0441\u044b\u043b\u043a\u0430 \u0441\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0430 \u0432 \u0431\u0443\u0444\u0435\u0440 \u043e\u0431\u043c\u0435\u043d\u0430!', 'ok': '\u041e\u041a', 'postLink': '\u0421\u0441\u044b\u043b\u043a\u0430 \u043d\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': '\u0421\u0432\u043e\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': '\u0420\u0430\u0431\u043e\u0442\u0430 \u0441 \u0443\u043d\u0430\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c: \u0420\u0438\u0441\u043a\u0438, \u0430\u043d\u0430\u043b\u0438\u0437 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0438 \u0441\u0442\u0440\u0430\u0442\u0435\u0433\u0438\u0438 \u0440\u0430\u0431\u043e\u0442\u044b', 'description': '\u0412 \u043f\u0440\u0435\u0434\u044b\u0434\u0443\u0449\u0435\u0439 \u0441\u0442\u0430\u0442\u044c\u0435 \u044f \u043e\u043f\u0438\u0441\u0430\u043b \u043e\u0434\u0438\u043d \u0438\u0437 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u043e\u0432, \u043a\u0430\u043a IT-\u043f\u0440\u043e\u0435\u043a\u0442 \u043c\u043e\u0436\u0435\u0442 \u043a\u0430\u0442\u0438\u0442\u044c\u0441\u044f \u043a \u043f\u0440\u043e\u0432\u0430\u043b\u0443  \u0438\u0437-\u0437\u0430 \u0441\u043b\u0430\u0431\u044b\u0445 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u043e\u0432 \u0438 \u043d\u0435\u043f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043b\u0435...', 'featuredImage': 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgucY58Y-kENjVS288BqG27gwf8znVB8UmivOuPitZ8BTU1LGRcHjMXmM1CiHFuwiyOzR4gHJKpbgkTplzP4QHvVSmEO8SgHJFgCjlZIrRUdx5jO4j1Ih_xAuQzOpAelXLPGai_2ntiAwf5_LVHwjKpp5jwVRsfKZbEm1y8dM0Xzpt-KMCjcFk9o9ZHNA/s1600/Legacy%20system%20-%20%D0%94%D1%83%D1%88%D0%B8%D1%82%D0%B5%D0%BB%D1%8C.png', 'url': 'https://blog.byndyu.ru/2014/01/blog-post_8.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 3507816127684024042}}]);
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList2', 'crosscol', document.getElementById('PageList2'), {'title': '\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u044b', 'links': [{'isCurrentPage': false, 'href': 'https://blog.byndyu.ru/', 'title': '\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u0435 \u0441\u0442\u0430\u0442\u044c\u0438'}, {'isCurrentPage': false, 'href': 'https://blog.byndyu.ru/p/blog-page_19.html', 'id': '8994562925443255105', 'title': 'IT-\u0430\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u0430'}, {'isCurrentPage': false, 'href': 'https://blog.byndyu.ru/p/blog-page_4.html', 'id': '1423215697637586111', 'title': '\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435'}, {'isCurrentPage': false, 'href': 'https://blog.byndyu.ru/p/blog-page_95.html', 'id': '1931739866784042719', 'title': '\u0418\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u044b\u0435 \u043f\u0440\u0430\u043a\u0442\u0438\u043a\u0438'}, {'isCurrentPage': false, 'href': 'https://blog.byndyu.ru/p/blog-page_24.html', 'id': '6271735362188676636', 'title': '\u041e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u043a\u0430\u0440\u044c\u0435\u0440\u0430'}], 'mobile': false, 'showPlaceholder': true, 'hasCurrentPage': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'crosscol-overflow', document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/2319263250-lbx__ru.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'main', document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar-left-1', document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'sidebar-left-1', document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML8', 'sidebar-left-1', document.getElementById('HTML8'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'sidebar-left-1', document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar-left-1', document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>

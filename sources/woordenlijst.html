@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/js/own-js.js" as="script">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.js"></script>
+</head>
+
+<style>
+    /* Add root colors and fonts here */
+
+/* Root colors: */
+:root {
+  --darkblue: #182b49;
+  --midblue: #0d7c96;
+  --lightblue: #88D6DF;
+  --gray: #d9d7cc;
+  --gray50perc: #d9d7cc73;
+  --kingsblue: #005983;
+  --darkgray: #666762;
+  --black: #000000;
+  --white: #ffffff;
+  --green: #2B7A78;
+  --gold: #857E66;
+}
+
+#headercontainer{
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+.mb-4 {
+  margin-bottom: 0rem!important;
+}
+body{
+  padding-top: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
+#headercontainer .logo {
+  height:70px;
+}
+
+
+/* Initially hidden elements */
+.initial-fade-in {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Elements to fade in on scroll */
+.scroll-fade-in {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
+.darkblue {
+  color: var(--darkblue);
+}
+
+.midblue {
+  color: var(--midblue);
+}
+
+.lightblue {
+  color: var(--lightblue);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.gray50perc {
+  color: var(--gray50perc);
+}
+
+.kingsblue {
+  color: var(--kingsblue);
+}
+
+.darkgray {
+  color: var(--darkgray);
+}
+
+.white {
+  color: var(--white);
+}
+
+.bg-darkblue {
+  background-color: var(--darkblue);
+}
+
+.bg-midblue {
+  background-color: var(--midblue);
+}
+
+.bg-lightblue {
+  background-color: var(--lightblue);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.bg-gray50perc {
+  background-color: var(--gray50perc);
+}
+
+.bg-kingsblue {
+  background-color: var(--kingsblue);
+}
+
+.bg-darkgray {
+  background-color: var(--darkgray);
+}
+
+
+/* Root fonts: */
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--darkblue);
+}
+
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--darkgray);
+}
+
+.title-h2{
+  margin-top: 5vh !important;
+}
+
+
+.iconBeginSearch{
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 10px;
+}
+
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(1.3rem + .6vw);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--kingsblue);
+}
+
+.title-h3{
+  margin-top: 2.5vh !important;
+}
+
+.h3-strong{
+    font-weight: 600;
+    font-size:calc(1.3rem + .6vw);
+  color: var(--kingsblue);
+}
+
+.footerlink{
+    color: var(--lightblue) !important;
+}
+
+.footertext{
+    color: white !important;
+}
+
+#leesverderLink {
+    font-size: 1rem; /* This ensures that 1em = 1rem in this context */
+}
+
+#leesverderLink svg {
+    width: 1em; /* Sets the SVG width to match the font-size of the link */
+    height: 1em; /* Sets the SVG height to match the font-size of the link */
+}
+
+
+.h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc(1.275rem + .3vw);
+  font-weight: 200;
+  line-height: 1.2;
+  color: var(--midblue);
+}
+
+.h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--gold);
+}
+
+.h6 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--darkblue);
+}
+
+a {
+  color: var(--darkblue) !important;
+}
+
+a:hover {
+  color: var(--midblue) !important;
+}
+
+.footerCol2 a{
+  color: var(--lightblue) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.footerCol2 a:hover{
+  color: var(--green) !important;
+}
+
+.p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--darkblue);
+}
+
+#basic-addon1, #searchterm{
+  color: var(--darkblue) !important;
+  border: none !important;
+  background-color: white !important;
+}
+
+#headercontainer .nav-link {
+  color: var(--green) !important; /* Example link color */
+  font-size: 1.3rem;
+  font-family: schoolboek, Helvetica,Arial,Open-sans,Verdana,sans-serif;
+}
+
+.navbar{
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+
+#headercontainer .navbar-toggler {
+  border-color: transparent;
+  color: var(--darkblue); /* Example toggler color */
+}
+
+#headercontainer .navbar-toggler-icon {
+  background-image: url("img/icon_hamburger.svg"); /* Custom toggler icon */
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  #headercontainer .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    padding-top: 10px;
+  }
+}
+
+.footerCol1{
+  flex:1 !important;
+}
+.footerCol2{
+  flex:4 !important;
+}
+
+#searchcontainer {
+  transition: height 0.3s ease;
+}
+
+#searchinfodiv{
+  color: var(--darkblue) !important;
+  border: none !important;
+}
+
+#searchform, #searchinfodiv {
+  display: none; /* Initially hide both */
+}
+
+#searchform {
+  display: block; /* Show the search form by default */
+}
+
+
+.searcharea {
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin-bottom: 20px;
+  width: -webkit-fill-available;
+  width:-moz-available;
+}
+
+/* Media query for tablet and mobile screens */
+@media (max-width: 768px) {
+  .searcharea {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+  }
+  #technical_document_viewer{
+    width: 100vw;
+  }
+
+  /* Improve search form on mobile */
+  .searchform {
+    padding: 3% !important;
+  }
+
+  #zoekform-title {
+    font-size: 1.5rem !important;
+  }
+}
+#searchcontainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  align-content: flex-start;
+}
+
+
+.searchform{
+  padding: 5%;
+}
+
+.hidden{
+  display: none;
+}
+
+.hidden-btn{
+  display: none;
+}
+
+.searchinfo{
+  background-color: transparent;
+  font-weight: 600;
+  border: none;
+  text-align: left;
+  color: white;
+}
+
+#hoverinfo{
+  color: white !important;
+}
+
+.brandedLinkList{
+  display: flex;
+  flex-direction: column;
+}
+
+.brandedLink{
+  color: var(--kingsblue) !important;
+  text-decoration: none;
+}
+
+.brandedLink:hover{
+  color: var(--lightblue) !important;
+  text-decoration: none;  
+}
+
+/* Remove focus outline and shadow */
+.form-control:focus, .btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Additional styles for the search button */
+#searchButton {
+  border: none;
+  background-color: white;
+  color: var(--kingsblue);
+}
+
+.footer{
+  background-color: var(--kingsblue);
+  color: white;
+  display: flex !important;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  padding: 20px;
+}
+
+.footer a{
+  color: var(--lightblue);
+}
+
+.footer a:hover{
+  color: var(--white);
+}
+/* Footer Column CSS */
+.footer .col:first-child {
+  width: auto; /* Set the width to auto to fit the content */
+  display: flex; /* Use flex to center the content if needed */
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Image CSS */
+.footer .col .logo {
+  display: block; /* Ensure the image is a block-level element */
+  max-width: 100%; /* Optional: Ensure the image is responsive */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .footer .col {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  .footer .col:first-child {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .footerCol1, .footerCol2 {
+    flex: 1 1 100% !important;
+  }
+}
+
+.spaceholder{
+  height: 20px;
+}
+/* Card links */
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#cardlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin-top:2rem;
+  margin-bottom:2rem;
+}
+
+#cardlinks .card{
+  flex: 1 1 calc(25% - 10px);
+  max-width: calc(25% - 10px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  border: none;
+  background-color: var(--midblue);
+  transition: transform 0.3s ease;
+  color: white;
+  text-transform: uppercase;
+  /* Maintain aspect ratio */
+  padding-top: 25%; /* This will act as the height for the card */
+  background-color:var(--darkblue)
+}
+
+#cardlinks .card a {
+  color: inherit;
+  text-decoration: none;
+  display: flex; /* Flex display to allow centering */
+  position: absolute; /* Absolute position to overlay on top of the padding area */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#cardlinks .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Position relative to align with the absolute link element */
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#cardlinks .card:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  #cardlinks .card {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-top: 50%; /* Increase padding-top to maintain aspect ratio on smaller screens */
+  }
+  #technical_document_viewer{
+    width: 100vw;
+    height: 50vh;
+  }
+}
+
+
+/* Card features */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .col {
+  flex: 1;
+  padding: 10px;
+}
+
+#cardfeatures {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 10px;
+}
+
+#cardfeatures .card {
+  flex: 0 0 auto; /* Do not grow or shrink */
+  width: 100%; /* Full width of the parent */
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  border-style: solid !important;
+  color: var(--darkblue);
+  text-transform: uppercase;
+  /*background: linear-gradient(226deg, #182b49, #005983, #ffffff);
+  background-size: 180% 180%;
+  animation: gradient-animation 8s ease infinite;*/
+  background: white;
+  border: thin;
+  border-radius: 75px;
+  /*left bottom corner, square*/
+  border-bottom-left-radius: 0px;
+  border-color: var(--darkblue);
+  /* Height is equal to the current width to maintain square shape */
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+
+#cardfeatures .card a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#cardfeatures .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+@media (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container .col {
+    flex: 0 0 100%;
+    padding: 5px;
+  }
+
+  #cardfeatures {
+    width: 50%; /* Ensure card features take full width */
+  }
+
+  .div {
+    padding: 10px;
+  }
+
+  h3, .h3 {
+    font-size: 1.5rem !important;
+  }
+
+  p, ul {
+    font-size: 0.95rem;
+  }
+}
+
+/* Container and Column adjustments */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  clear: both; /* Clearfix to ensure container extends to contain floated elements */
+}
+
+.container .col {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .col:first-child {
+  flex: 4;
+}
+
+@media (max-width: 830px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .col {
+    flex: 0 0 100%;
+  }
+  
+  /* Set cardkeyfeatures and cardlinks to take full width on small screens */
+  #cardfeatures, #cardlinks {
+    width: 100%;
+  }
+
+  /* Set a minimum height for cards to ensure they are visible */
+  #cardlinks .card, #cardfeatures .card {
+    padding-top: 0; /* Remove aspect ratio padding */
+    min-height: 150px; /* Set a minimum height for visibility */
+  }
+}
+
+/* Ensure cardkeyfeatures takes full width on very small screens */
+@media (max-width: 600px) {
+  #cardlinks .card, #cardfeatures .card {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-top: 0; /* Remove aspect ratio padding */
+    min-height: 150px; /* Set a minimum height for visibility */
+  }
+
+  #headercontainer .logo{
+    height:40px;
+  }
+
+  #buttonlinks{
+    gap: 10px;
+  }
+}
+
+#cardnieuwwoord {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 10px;
+}
+
+#cardnieuwwoord .card {
+  flex: 0 0 auto; /* Do not grow or shrink */
+  width: 100%; /* Full width of the parent */
+  position: relative;
+  overflow: hidden;
+  border-radius: 75px;
+  /*left bottom corner, square*/
+  border-bottom-left-radius: 0px;
+  border-style:solid;
+  border-width: thin;
+  border-color: var(--darkblue);
+  color: var(--darkblue);
+  text-transform: uppercase;
+  /*
+  background: linear-gradient(226deg, #182b49, #005983, #ffffff);
+  background-size: 180% 180%;
+  animation: gradient-animation 8s ease infinite;
+  */
+  /* Height is equal to the current width to maintain square shape */
+}
+
+#cardnieuwwoord .card a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#cardnieuwwoord .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  height:240px;
+  min-height: 240px;
+}
+
+.data-value-text {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 830px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .col {
+    flex: 0 0 100%;
+  }
+  
+  #cardnieuwwoord {
+    width: 50%; /* Ensure card features take full width */
+  }
+  #cardnieuwwoord .card-body {
+    height:auto;
+    min-height: 150px;
+  }
+}
+
+/* Container and Column adjustments */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  clear: both; /* Clearfix to ensure container extends to contain floated elements */
+}
+
+.container .col {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#featurescol{
+  min-width:25%;
+  max-width:25%;
+}
+
+.container .col:first-child {
+  flex: 4;
+}
+
+@media (max-width: 830px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #featurescol{
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .container .col {
+    flex: 0 0 100%;
+  }
+
+  /* Set cardkeyfeatures and cardlinks to take full width on small screens */
+  #cardnieuwwoord, #cardlinks, #cardfeatures {
+    width: 100%;
+  }
+
+  /* Set a minimum height for cards to ensure they are visible */
+  #cardlinks .card, #cardnieuwwoord .card , #cardfeatures .card{
+    padding-top: 0; /* Remove aspect ratio padding */
+    min-height: 120px; /* Set a minimum height for visibility */
+    padding-bottom: 0;
+  }
+
+  #cardfeatures .card-body, #cardnieuwwoord .card-body {
+    padding: 15px;
+  }
+
+  .card-value-number, .card-value-text {
+    font-size: 1.5rem !important;
+  }
+
+  .card-title {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Ensure cardkeyfeatures takes full width on very small screens */
+@media (max-width: 830px) {
+  #cardlinks .card, #cardnieuwwoord .card , #cardfeatures .card{
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-top: 0; /* Remove aspect ratio padding */
+    min-height: 150px; /* Set a minimum height for visibility */
+    padding-bottom: 0;
+  }
+}
+
+.card-value-number{
+  font-size:2rem;
+  font-weight:600;
+  word-break: break-all;
+}
+.card-title{
+  font-size:.8rem;
+  font-weight:normal;
+}
+
+#nieuwwoordlink{
+  display:flex;
+  flex-direction: column-reverse;
+}
+
+#pdf-download-button{
+  background-color: #02b588;
+  position: fixed;
+  border:none;
+}
+
+#pdf-download-button:hover{
+  background-color: var(--darkblue);
+}
+
+#buttonlinks{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btnLinks{
+  background-color: var(--darkblue) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 10px !important;
+  min-width: 20vw !important;
+  padding: 10px 20px !important;
+}
+
+.btnLinks:hover{
+  background-color: var(--lightblue) !important;
+  color: var(--darkblue) !important;
+}
+
+@media (max-width: 768px) {
+  #buttonlinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btnLinks {
+    min-width: 80vw !important;
+    width: 100%;
+  }
+}
+
+.btnLinks a{
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/*All li without marker*/
+li{
+  list-style-type: none;
+}
+
+/* if li class = list-with-markup, show marker dot */
+.list-with-markup{
+  list-style-type: disc !important;
+}
+
+.text-strong-green{
+  color: var(--green);
+  font-weight: 600;
+}
+
+.smaller-header{
+  padding:10px;
+}
+
+#leesverderLink{
+  text-decoration: none !important;
+}
+
+/* ANIMATED BACKGROUND */
+blockquote {
+  font: 1.05rem system-ui;
+	--letter-moving-distance: 150px;
+	--letter-moving-duration: 100ms;
+	--letter-moving-delay: 1ms;
+	--letter-reset-delay: 5ms;
+}
+blockquote .word {
+  display: inline-block;
+}
+
+blockquote .letter {
+  display: inline-block;
+  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) translateZ(var(--letter-moving-distance));
+  transition: transform var(--letter-moving-duration) ease-in-out calc(var(--nth-child) * var(--letter-reset-delay));
+	animation: flyInAnimation 8s ease forwards;
+}
+
+@keyframes flyInAnimation {
+  0% {
+    opacity: 0;
+    transform: translate3d(-1010px, 50, 50);
+  }
+  80%,
+  100% {
+    opacity: 0.7;
+    transform: translate3d(var(--end-x), var(--end-y), 0) rotate(var(--end-rotation));
+  }
+}
+
+#searcharea {
+  position: relative;
+}
+
+
+
+blockquote {
+  position: absolute;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height of the parent */
+  top:50%; /* Center vertically */
+  left: 0;
+  transform: translateY(-50%); /* Adjust for centering */
+  z-index: 1; /* Behind the search container */
+  overflow:hidden;
+  color: var(--darkblue);
+  display:hidden;
+}
+
+#searchcontainer {
+  position: relative;
+  z-index: 2; /* Above the blockquote */
+}
+
+/* Animate the header */
+#zoekform-title,
+#searcharea,
+#searchform,
+#TUlogo,
+#navbarcontainer {
+    transition: all 0.6s ease-in-out;
+}
+
+#bodycontent {
+    transition: margin-top 0.6s ease-in-out;
+}
+
+#TUlogo {
+  height: 70px; /* Default height */
+  transition: height 0.6s ease-in-out; /* Smooth transition for resizing */
+}
+
+@media screen and (max-width: 600px) {
+  #TUlogo {
+      height: 40px;
+  }
+}
+
+#headercontainer {
+  -webkit-user-select: none !important; /* Safari */
+  -moz-user-select: none !important; /* Firefox */
+  -ms-user-select: none !important; /* IE10+/Edge */
+  user-select: none !important; /* Standard syntax */
+}
+
+.text-body-secondary{
+    color: white;
+}
+</style>
+
+<div class="container-fluid" id="headercontainer" style="background-color:white;">
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light py-3" id="navbarcontainer">
+            <a href="/" class="navbar-brand">
+                <img id="TUlogo" src="img/Logo_TU_woordenlijst_white_bg_big.png" alt="logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img id="hamburger" src="img/list.svg" alt="menu" class="icon">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="https://woordenlijst.org/zoeken/?leidraad=menu"
+                            class="nav-link">Spellingregels</a>
+                    </li>
+                    <li class="nav-item"><a href="https://taaladvies.net/" target="_blank"
+                            class="nav-link">Taaladvies</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="searcharea bg-lightblue" id="searcharea">
+        <blockquote id="randomletters" style="z-index:-1;">
+        <p>
+        Woordsoorten zijn selecteerbaar
+Als je met een joker zoekt, krijg je eerst een rij zoeksuggesties die allemaal beantwoorden aan de zoekterm. Pas na aanklikken van een van de gesuggereerde woorden in de lijst krijg je alle informatie over dat woord te zien.
+
+Als je zonder joker zoekt, krijg je meteen alle woorden te zien waarin je zoekterm voorkomt, met al hun woordvormen en bijbehorende informatie. Dat kunnen woorden zijn met verschillende woordsoorten. Wil je alleen resultaten met (een) specifieke woordsoort(en), dan kun je die woordsoort(en) aanvinken bij het zoeken.
+
+Voorbeelden:
+
+Je zoekt op 'min' zonder een woordsoort aan te vinken  resultaat is 1x bijvoeglijk naamwoord min, 1x voegwoord min, 2x werkwoord minnen, 3x zelfstandig naamwoord min, 2x symbool min
+Je zoekt op 'min' en vinkt daarbij 'zelfstandig naamwoord' aan  resultaat is 3x zelfstandig naamwoord min
+Zoekterm matcht met minimaal één woordvorm
+Je zoekresultaten kunnen ook woorden opleveren die niet exact matchen met je zoekterm. Bij 'min' krijg je ook 2x het woord minnen ('houden van' en 'berekenen'). Dat komt omdat 'min' overeenkomt met meerdere werkwoordsvormen van beide werkwoorden minnen. De matchen staan altijd in het groen. Het gaat in dit geval om de gebiedende wijs (min!) en om de tegenwoordige tijd (ik min, min jij?).
+
+Als je 'ballen' zoekt, krijg je behalve het werkwoord ballen (met in groen alle werkwoordsvormen die matchen met 'ballen') ook het zelfstandige naamwoord bal te zien in de betekenis 'voorwerp', want daarvan is ballen de meervoudsvorm.
+
+Zie-verwijzingen
+Onder het kopje Zie ook: vind je spellingvarianten en verkleinvormen.
+
+Bij verbindingen ('meerwoordsexpressies', zoals te allen tijde) kun je doorlinken naar de delen waaruit de verbinding is gevormd. Bij als het ware zie je bv. links naar het voegwoord als, het voornaamwoord het en het werkwoord zijn.</p>
+        </blockquote>
+        <div class="row bg-kingsblue searchform" id="searchcontainer">
+            <div id="searchform">
+                <h2 class="white" id="zoekform-title">Zoek een woord</h2>
+                <form action=none>
+                    <!-- input type with search icon in placeholder -->
+                    <div class="input-group mb-3">
+                        <img id="searchIcon" src="img/search.svg" alt="search" class="iconBeginSearch" >
+                        <input autocapitalize=off  type="text" class="form-control" placeholder="Zoeken naar" aria-label="Zoeken"
+                            aria-describedby="basic-addon1" id="searchterm" >
+                        <button id="searchButton" class="btn btn-outline-secondary" type="button"><img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon" ></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<body id="fullpage">
+<div class="container" id="bodycontent">
+    <div class="col">
+        <div class="div" id="hoezoekik">
+            <h3 class="title-h3 h3">Hoe zoek ik op <span class="h3-strong">Woordenlijst.org</span>?</h3>
+            <h4 class="title-h4 h4">Jokers gebruiken</h4>
+            <p>Je kunt je zoekopdracht verfijnen aan de hand van de volgende jokers of wildcards:</p>
+            <ul>
+                <li><strong>?</strong> staat voor exact één willekeurig karakter</li>
+                <li><strong>*</strong> staat voor geen, één of meer willekeurige karakters</li>
+            </ul>
+            <p>Het is ook mogelijk om jokers in een zoekopdracht te combineren.</p>
+            <p><strong>Voorbeelden:</strong></p>
+            <ul>
+                <li>*vakantie <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon" > alle woorden die op vakantie eindigen</li>
+                <li>v?n <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon" > van, ven, vin</li>
+                <li>v?n?? <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon"> vanen, venen</li>
+                <li>v?n*n <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon"> vang aan, vink aan, vannen, van jongs af aan</li>
+                <li>boven*in <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon"> boven in, bovenin</li>
+                <li>boven?in <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon"> boven in</li>
+            </ul>
+            <a id="leesverderLink" href="/zoektips.php">Lees verder 
+            <img id="rightArrow" src="img/arrow-right.svg" alt="next" class="icon">
+</a>
+
+        </div>
+        <div class="div" id="#watisertevinden">
+            <h3 class="h3 title-h3">Wat vind ik op <span class="h3-strong">Woordenlijst.org</span>?</h3>
+            <p>In de Woordenlijst vind je o.a.:</p>
+            <ul>
+                <li class="list-with-markup">de officiële <strong>spelling</strong> van woorden</li>
+                <li class="list-with-markup">alle mogelijke <strong>vormen</strong> (vervoegingen en verbuigingen) die
+                    een woord kan aannemen</li>
+                <li class="list-with-markup">de <strong>woordsoort</strong> van elk woord (zelfstandig naamwoord,
+                    voegwoord, etc.)</li>
+                <li class="list-with-markup"><strong>afbrekingen</strong>: op welke punten kun je een woord afbreken?
+                </li>
+                <li class="list-with-markup">korte <strong>betekenissen</strong> bij woorden die hetzelfde klinken
+                    (<em>lijden</em> en <em>leiden</em>) of die je hetzelfde schrijft (<em>golf</em> = 'spel', 'baar' en
+                    'baai'), zodat je ze uit elkaar kunt houden.</li>
+                <li class="list-with-markup">voluit geschreven vormen van <strong>afkortingen</strong></li>
+                <li class="list-with-markup"><strong>verkleinwoorden</strong> bij zelfstandige naamwoorden (indien
+                    aanwezig; werk in uitvoering)</li>
+                <li class="list-with-markup"><strong>uitspraakinformatie</strong> bij de meeste woorden
+                </li>
+                <li class="list-with-markup">extra <strong>toelichting</strong> bij de spelling (indien van toepassing)
+                </li>
+        </div>
+        <div class="div" id="overWoordenlijst.org">
+            <h3 class="h3 title-h3">Over <span class="h3-strong">Woordenlijst.org</span></h3>
+            <p><strong>Officiële spelling</strong></p>
+            <p>Op Woordenlijst.org vind je de Woordenlijst Nederlandse Taal: de lijst met de officiële spelling van het
+                Nederlands. Het woordenbestand en de applicatie worden ontwikkeld en beheerd door het Instituut voor de
+                Nederlandse Taal (INT) in opdracht van de Taalunie. In Nederland en Vlaanderen is de officiële spelling
+                verplicht voor het onderwijs en de overheid. Het Comité van Ministers van de Taalunie stelt de spelling
+                vast. De <a href="https://taalunie.org/informatie/50/commissie-spelling" target="_blank">Commissie
+                    Spelling</a> ondersteunt de Taalunie bij het uitvoeren van deze taak en begeleidt de actualisering
+                van Woordenlijst.org.</p>
+            <p><strong>Spellingregels</strong></p>
+            <p>De regels voor de officiële spelling staan in de Leidraad van de Woordenlijst. De Technische Handleiding
+                is een uitgebreider overzicht van de spellingregels van het Nederlands. Deze tekst biedt meer specifieke
+                regels, principes en nuanceringen dan de Leidraad. De Leidraad, de Woordenlijst en de Technische
+                Handleiding zijn de grondslag voor beslissingen van de Commissie Spelling over de spelling van woorden.
+            </p>
+            <div class="container" id="buttonlinks">
+                <div class="btn btn-primary btnLinks" id="linkLeidraad">
+                        Leidraad
+                </div>
+                <div class="btn btn-primary btnLinks" id="linkTH">
+                        Technische handleiding
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col" id="featurescol">
+        <div class="container" id="cardfeatures">
+            <!-- Dynamic cards will be appended here -->
+        </div>
+        <div class="container" id="cardnieuwwoord" style="margin-top:10px;">
+            <div class="card">
+                    <div class="card-body">
+                        <p class="data-value-text" id="nieuwwoordplaceholder"></p>
+                        <h5 class="card-title" id="nieuwwoordtitle">Laatste update</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="keyfeatures.js"></script>
+
+
+<div class="spaceholder"></div>
+
+<footer class="footer">
+    <div class="container footer" style="
+    display: flex !important;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top:1vh;
+    padding-bottom:1vh;">
+  <div class="col footerCol1" style="margin-right:20px; justify-content:flex-start !important;">
+    <a href="https://taalunie.org" target="_blank"><img id="logoTU" src="img/Logo_TU_woordenlijst_dark_bg_big.png" alt="logo" class="logo"></a>
+    <a href="https://ivdnt.org" target="_blank"><img id="logoINT" src="img/ivdNt-logo-w-2regels-cmyk.png" alt="logo" class="logo"></a>
+  </div>
+  <div class="col footerCol2">
+    <p class="mb-3 mb-md-0 text-body-secondary footertext">&copy; Nederlandse Taalunie, alle rechten voorbehouden</p>
+    <p class="mb-3 mb-md-0 text-body-secondary footertext">Suggesties of vragen? Stuur een e-mail naar <a class="footerlink"
+        href="mailto:info@taalunie.org" target="_blank">info@taalunie.org</a></p>
+    <p class="mb-3 mb-md-0 text-body-secondary footertext">Meer weten over taal? Kijk op <a class="footerlink" href="https://www.taalunie.org"
+        target="_blank">www.taalunie.org</a> of <a class="footerlink" href="https://taaladvies.net" target="_blank">www.taaladvies.net</a></p>
+
+  </div>
+</div></footer>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/own-js.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+---
+date: 2026-08-02
+type: bookmark
+tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+url: "https://chat.qwen.ai/?inputFeature=web_dev"
+source_folder: "Bladwijzerwerkbalk/Разное"
+---
+
+# Qwen
+
+https://chat.qwen.ai/?inputFeature=web_dev
+
+## Summary
+
+Qwen Official App provided by Qwen Get the App Current System does not Support Qwen is actively working to ensure compatibility with the current system. Download App Designed for mobile devices, offering better experience and more features Press and hold to scan the QR code for download

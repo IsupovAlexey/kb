@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://*.amazonaws.com https://*.facebook.com https://*.doubleclick.net https://*.paypal.com https://*.paypalobjects.com https://fonts.gstatic.com https://*.google.com https://*.googleadservices.com https://*.googletagmanager.com https://*.qualtrics.com https://*.scryfall.com https://*.scryfall.io https://*.tcgplayer.com https://www.ex-astris-scientia.org https://*.jtvnw.net https://*.ytimg.com https://*.ggpht.com/; script-src-elem 'self' 'strict-dynamic' 'sha256-2Az1OJrNCVjZw2Jo/CkPTWiXFB7EA7M9Xl3lO0HV06Y=' 'sha256-JQSXwQXfPS6ofCg0PGYxFjYhgh1r9Y9N18ox4Ep1IQM=' 'sha256-f5vm1RvZ/wdPjhzBMPcBUVkziZ3CEb9b4NCU762yDeA=' 'sha256-sgHSvJsZnJWmzYoWhNwJdcZdXzvvl21FMwH4d4Yuw3c='; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.googletagmanager.com; font-src 'self' data: fonts.gstatic.com; script-src 'strict-dynamic' 'unsafe-eval'; style-src 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self' wss: https://*.hcaptcha.com https://*.braintree-api.com https://*.braintreegateway.com https://*.nr-data.net https://*.doubleclick.net https://*.facebook.net https://*.qualtrics.com https://*.forethought.ai https://*.ada.support https://*.google.com https://*.google-analytics.com https://*.googleadservices.com https://*.googletagmanager.com https://*.paypal.com https://*.tcgplayer.com; frame-src 'self' https://*.braintreegateway.com https://*.doubleclick.net https://*.googletagmanager.com https://*.paypal.com https://*.paypalobjects.com https://*.qualtrics.com https://*.ada.support https://*.forethought.ai https://*.hcaptcha.com https://www.youtube.com https://player.twitch.tv https://platform.twitter.com; manifest-src 'self'; media-src 'self' https://*.tcgplayer.com/;">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta data-vmid="og:site_name" property="og:site_name" content="TCGplayer Content">
+    <link href="https://bam-cell.nr-data.net" rel="preconnect" crossorigin="">
+    <link href="https://js-agent.newrelic.com" rel="preconnect" crossorigin="">
+    <link href="https://api.segment.tcgplayer.com" rel="preconnect" crossorigin="">
+    <link href="https://cdn.segment.tcgplayer.com" rel="preconnect" crossorigin="">
+    <link href="https://infinite-api.tcgplayer.com" rel="preconnect" crossorigin="">
+    <link href="https://mktg-assets.tcgplayer.com" rel="preconnect" crossorigin="">
+    <link href="https://tcgplayer-cdn.tcgplayer.com" rel="preconnect" crossorigin="">
+    <link href="https://tcgplayer-marketing.s3.amazonaws.com" rel="preconnect" crossorigin="">
+    <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin="">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="">
+    <link href="https://connect.facebook.net" rel="preconnect" crossorigin="">
+    <link href="https://script.hotjar.com" rel="preconnect" crossorigin="">
+    <link href="https://static.hotjar.com" rel="preconnect" crossorigin="">
+    <link href="https://vars.hotjar.com" rel="preconnect" crossorigin="">
+    <link href="https://www.facebook.com" rel="preconnect" crossorigin="">
+    <link href="https://www.youtube.com" rel="preconnect" crossorigin="">
+    <script>
+      !(function () {
+        var analytics = (window.analytics = window.analytics || [])
+        if (!analytics.initialize)
+          if (analytics.invoked)
+            window.console &&
+              console.error &&
+              console.error('Segment snippet included twice.')
+          else {
+            analytics.invoked = !0
+            analytics.methods = [
+              'trackSubmit',
+              'trackClick',
+              'trackLink',
+              'trackForm',
+              'pageview',
+              'identify',
+              'reset',
+              'group',
+              'track',
+              'ready',
+              'alias',
+              'debug',
+              'page',
+              'once',
+              'off',
+              'on',
+              'addSourceMiddleware',
+              'addIntegrationMiddleware',
+              'setAnonymousId',
+              'addDestinationMiddleware',
+            ]
+            analytics.factory = function (e) {
+              return function () {
+                var t = Array.prototype.slice.call(arguments)
+                t.unshift(e)
+                analytics.push(t)
+                return analytics
+              }
+            }
+            for (var e = 0; e < analytics.methods.length; e++) {
+              var key = analytics.methods[e]
+              analytics[key] = analytics.factory(key)
+            }
+            analytics.load = function (key, e) {
+              var t = document.createElement('script')
+              t.type = 'text/javascript'
+              t.async = !0
+              t.src =
+                'https://cdn.segment.tcgplayer.com/analytics.js/v1/' +
+                key +
+                '/analytics.min.js'
+              var n = document.getElementsByTagName('script')[0]
+              n.parentNode.insertBefore(t, n)
+              analytics._loadOptions = e
+            }
+            analytics._writeKey = 'ZJJfmU2YTQbw4VoMDoiqDoLvJcAjk8hJ'
+            analytics.SNIPPET_VERSION = '4.15.3'
+          }
+      })()
+      
+      dataLayer = []
+      
+      var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/
+      if (navigator.userAgent.indexOf('MSIE') !== -1) {
+        detectIEregexp = /MSIE (\d+\.\d+);/
+      }
+      if (detectIEregexp.test(navigator.userAgent)) {
+        let d = document.getElementById('unsupported-browser')
+        d.innerHTML =
+          '<p>We apologize, but we do not support Internet Explorer. Please use <a href="https://www.google.com/chrome/" style="color: #ffffff; text-decoration: underline;">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" style="color: #ffffff; text-decoration: underline;">Firefox</a> for the best viewing experience on TCGplayer.</p>'
+        d.style.display = 'block'
+        d.style.backgroundColor = '#346AEE'
+        d.style.color = '#ffffff'
+        d.style.padding = '16px'
+        d.style.textAlign = 'center'
+        d.style.fontFamily = 'Arial'
+        d.style.lineHeight = '24px'
+      }
+    </script>
+    <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3t-4s51ostz0rdg.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="icon" href="/content/favicon.ico">
+    <title> TCGplayer </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,400;1,600;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;600;700;900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600,700,900|Barlow:400,600,700,900&amp;display=swap">
+    <script type="module">
+const __mfCacheGlobalKey = "__mf_module_cache__";
+globalThis[__mfCacheGlobalKey] ||= { share: {}, remote: {} };
+globalThis[__mfCacheGlobalKey].share ||= {};
+globalThis[__mfCacheGlobalKey].remote ||= {};
+const __mfModuleCache = globalThis[__mfCacheGlobalKey];
+
+const __mfImport = (src) =>
+  globalThis.System && typeof globalThis.System.import === 'function'
+    ? globalThis.System.import(src)
+    : import(src);
+
+
+(async () => {
+  const { initHost } = await __mfImport("/content/assets/hostInit-nF0mDKHf.js");
+  await initHost();
+})().then(() => __mfImport("/content/assets/index-HHqUjGCX.js"));
+</script>
+        <link rel="modulepreload" crossorigin="" href="/content/assets/hostInit-nF0mDKHf.js" integrity="sha256-JQSXwQXfPS6ofCg0PGYxFjYhgh1r9Y9N18ox4Ep1IQM=">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/index-HHqUjGCX.js" integrity="sha256-2Az1OJrNCVjZw2Jo/CkPTWiXFB7EA7M9Xl3lO0HV06Y=">
+<link rel="modulepreload" crossorigin="" href="/content/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/BaseLink-DcOFmXqA.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useUser-p00K2kL4.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/api-CqpgfsRc.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/dates-gYTt6OI6.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/authors-BVWbLfHP.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/tags-DAFUJtGf.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/verticals-A5iTxCZF.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/FullArtPlaceholder-D2CowFMI.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/tcgplayer-amplitude.modern-C_FQX1Mn.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/config-C3RVXBx-.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/OnEnterNavigateCard-Dpcz16aq.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useDelayLoad-Dlh7klkT.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/BaseButton-Y7IHACS5.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/deviceType-aBLIE9Qr.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/alter-DXGh3X5v.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useSelectPromotion-DqZ4z9Ns.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/CloseIcon-drmzp9Xz.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/CloseButton-vGaNhzFb.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Chevron-ClzbmGwQ.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/InfoIcon-CIafqWA3.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Alert-sMDmRsvk.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/BoxView-CqjTzvNO.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/GridEventCard-zDbHhArZ.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/alter-Ltp8rAYv.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/AuthorImage-DWuh7nfu.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useLinksSameTab-DRtbTqky.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useFetchArticles-DubjkK4H.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/GridDeckCard-CWwVHedi.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/LatestContent-DW_eom69.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/magic-1JKKQlvi.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useNiceLoad-D9dmmoyR.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/ArticleList-CDIiR6ie.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Article-CGKRIrIN.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/strings-DfJcDM5c.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/VerticalLandingSubNav-s65897pR.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/clickOutside-CiWsf4bd.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/DefaultSelect-Bf7gHKrn.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/MultiOptionButton-BmGqH8Kn.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/onepiece-DcLr8s55.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/magic-Bnog9kTR.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/CardListEmbed-CW0qD65b.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/PopularContent-DOe8CZS1.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/PopularCarousel-i7PDYYI5.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/SlimArticleCard-BJ4XN9it.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/TagCarousel-CpjuBjv3.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/LatestEvents-D-uR5IT5.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/CloseIcon-juZ8qbzP.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/IconBase-klfFfTqa.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/RelatedContentTemplate-BXP7HMYq.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/index.esm-BGCL4tru.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/store-G_DvrmXL.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useSlugUtils-pnlhCcNg.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/useGetTopics-BkGpbqwq.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/PageLevelError-B_8C6ZV-.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/vue.Cn5tnr29-D8gqeKvd.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/PageNotFound-CAN6o8HU.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/src-Cegl-bkR.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/src-B4P1-MdS.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/BaseDropdown.vue-C1wqZCcZ.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/focus-trap-DxvS883c.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/InputTextarea.vue-6h1d3gOL.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/ModalActions.vue_vue_type_script_lang-CER7U9pU.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/throttle-D5YHS9oD.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Breadcrumbs.vue-CgYH6yPQ.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Drawer.vue-B1L0oFCI.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/InputSelect.vue-BIIGD2Qr.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Table.vue-CFlGu-Hz.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/components-C7zHB906.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/SeriesCard-CHf1iv6r.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/SpotlightButtonCard-DhUk0l1w.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/ProIcon-B4ucR7np.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/Hero-DrL5nRmG.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/DangerOutlineIcon-XLnSuiVy.js">
+    <link rel="modulepreload" crossorigin="" href="/content/assets/FullArt-BJo3s2On.js">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/_virtual_mf___mfe_internal__infinite__loadShare___mf_0_tcgplayer_mf_1_marketplace_mf_2_components__loadShare__-BFtzWuhD.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/FullArtPlaceholder-Frn2YTML.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/BoxView-VfN7-lV3.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/LatestContent-DqJ-7VEB.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/ArticleList-C3GPnkjG.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/Article-CWTWyl_t.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/VerticalLandingSubNav-Cc-Wp8OW.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/PopularContent-C9l-kgnU.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/PopularCarousel-Bn9_BaLh.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/SlimArticleCard-CEzuSYej.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/TagCarousel-DkCSRlkO.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/LatestEvents-W1pLf5y-.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/IconBase-IQY6DE2u.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/RelatedContentTemplate-C7Gl2uFt.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/PageLevelError-D21_7PZC.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/PageNotFound-B_rwouWO.css">
+    <link rel="stylesheet" crossorigin="" href="/content/assets/index-CNSNRiP-.css">
+  
+  <link rel="modulepreload" href="/content/assets/Format-ChlfMJec.js" integrity="sha256-M66usILcap5iZEl4uML1mgZCXCJpqcMjHxXEBTWugJY=">
+  <link rel="modulepreload" href="/content/assets/VerticalLanding-Cd6fYBTK.js" integrity="sha256-6MjD7xzAUvyU0cyYPkhpwidQiSSG2L9eEpn/QT0NKlE=">
+  <link rel="modulepreload" href="/content/assets/Decks-BydHzgFK.js" integrity="sha256-Rqu5XBOqYH8Qem6Bgg8J6T4qE91qyglIGLr6a0VK5ZQ=">
+  <link rel="modulepreload" href="/content/assets/AuthorLandingRouterView-CziAXMgI.js" integrity="sha256-Tq9jGw71FWNEZcT8fBfqGt2OE07QI/RzTP1orXLv45w=">
+  <link rel="modulepreload" href="/content/assets/AuthorLanding-BQ0Wcrs_.js" integrity="sha256-MqR0IbyihaPiKO8wPnaEy2nVYC8tpCxCq7kyYhC5C+E=">
+  <link rel="modulepreload" href="/content/assets/SubmitDeck-DqWv9YF0.js" integrity="sha256-va6811yXFceQi0/z9C0sEH4WvlCwHE0VWCfjbjLUPuM=">
+  <link rel="modulepreload" href="/content/assets/ManageDecks-CZRlpfkq.js" integrity="sha256-1oV2HfCVdCiR2XsQXDZvBIiLVuiFR02b6h5nv7bubS8=">
+  <link rel="modulepreload" href="/content/assets/DeckLanding-oebe1lzq.js" integrity="sha256-/aWL/gTtc+a4YjRdbUNEBTplW0S7frauGSgx3rirfN0=">
+  <link rel="modulepreload" href="/content/assets/VerticalLandingRouterView-CziAXMgI.js" integrity="sha256-Tq9jGw71FWNEZcT8fBfqGt2OE07QI/RzTP1orXLv45w=">
+  <link rel="modulepreload" href="/content/assets/TagLanding-1Hpm7otc.js" integrity="sha256-2Y9PvUSt1TKYp0A+jCaMu5AdRYKDUdNa5o2TbfY8N0o=">
+  <link rel="modulepreload" href="/content/assets/HowToPlay-Db0Tkxs6.js" integrity="sha256-IvSrxMpkFrTwO4ZFzGY0qMavZQJbAjNTwc5dJgamIlk=">
+  <link rel="modulepreload" href="/content/assets/ChannelFireball-BERlj_Ub.js" integrity="sha256-A2UMxeUdmxITCEBurfSTxVozKvAuIMW/fFnTGjsL+Es=">
+  <link rel="modulepreload" href="/content/assets/Formats-C3z23WqL.js" integrity="sha256-vkRdBw4IDidFyNhYZxYXNqpZBgFHSlAGHR9NKZ24wk4=">
+  <link rel="modulepreload" href="/content/assets/Event-EBRuZD7C.js" integrity="sha256-t/lQlUDUhLEA3FADo3lXoQbQTCtJhfwBNMfsXJ4CHYI=">
+  <link rel="modulepreload" href="/content/assets/AdvancedDeck-DBSHQoCl.js" integrity="sha256-BL4/Yv5bZcPk0kDZSEiwACWAQkrb3y1aJayvzm68z2g=">
+  <link rel="modulepreload" href="/content/assets/TopicsLanding-D_qsK48Z.js" integrity="sha256-1sOv2hExXc2Q7cDsNv2s/RtAUjjH6ERPWQPDNRngb2M=">
+  <link rel="modulepreload" href="/content/assets/SeriesLanding-DeURHv0B.js" integrity="sha256-jkgwxYkQpS966dUB/cTQsb6eh0DYB/3hBdSjHYRusn8=">
+  <link rel="modulepreload" href="/content/assets/EdgeMasterClasses-Dbnc5XCt.js" integrity="sha256-/Ppp21LvU8jJivyf9AbT9umfNuW6XJQni+O4H1f3gjU=">
+  <link rel="modulepreload" href="/content/assets/virtual_mf___mfe_internal__infinite__loadRemote__discovery_mf_1_UnifiedHeader__loadRemote__-ZVOT4pG0.js" integrity="sha256-CsFbXrEjOBdevmhYlkpXMimpBfALTg5hkXdvh9bsBLs=">
+  <link rel="modulepreload" href="/content/assets/virtual_mf___mfe_internal__infinite__loadRemote__discovery_mf_1_UnifiedFooter__loadRemote__-HgaPeSYe.js" integrity="sha256-Zb8hzaC2ocOv9UCtv9BrDqQ9QqyZHpBdsy1WAOZ9LHo=">
+  <link rel="modulepreload" href="/content/assets/_virtual_mf___mfe_internal__infinite__loadShare___mf_0_fortawesome_mf_1_fontawesome_mf_2_svg_mf_2_core__loadShare__.js-DVfqp_be.js" integrity="sha256-sqYkQrGsuESBegle+yBHo1pqtNErirhhlXF6UaUyIUI=">
+  <link rel="modulepreload" href="/content/assets/design-system-shared-entry-BfCWSTWB.js" integrity="sha256-mqwJXKa0OK9EL+rqHyWWbur1oM33KmN+ddiNnTOVMio=">
+  <link rel="modulepreload" href="/content/assets/_virtual_mf___mfe_internal__infinite__loadShare___mf_0_tcgplayer_mf_1_marketplace_mf_2_components__loadShare__.js-DhkVm7gz.js" integrity="sha256-EWHoEnDv55uuqxhY6M+sGDDGb4na/bWnbxU0OJFmJXU=">
+  <link rel="modulepreload" href="/content/assets/dist-BSpa3Va4.js" integrity="sha256-bhMwuvnoG8UgTEm00/U74IaGx6+KZpWA67tjiu/O9r4=">
+  <link rel="modulepreload" href="/content/assets/src-CJnQBG3C.js" integrity="sha256-jwOhMmdm6usmsnqLV8vUStIiUCvJNjq5iJwNgzN2Hs0=">
+  <link rel="modulepreload" href="/content/assets/dist-wsiNepfW.js" integrity="sha256-wQXVwOB8ZGucwgt3zYSI6QneC8kwiRKckxHmbRqjWtE=">
+  <link rel="modulepreload" href="/content/assets/virtual_mf-REMOTE_ENTRY_ID___mfe_internal__infinite__remoteEntry-_hash_-kBrkSuBc.js" integrity="sha256-/95sw23DGMclWytdcGYBiXCqzG/XQH2j69/P1YRaaxk=">
+  <link rel="modulepreload" href="/content/assets/module-runner-CAUgywct.js" integrity="sha256-NMHilGCXEaR86ZWN4rMDWh5OA7ffyVN0G8K6eInXQBQ=">
+  <link rel="modulepreload" href="/content/assets/_virtual_mf-localSharedImportMap___mfe_internal__infinite-DyNtLACH.js" integrity="sha256-cdbbWSWWIGo5iNzF53CLlbgyRQSmtT4ASvnZPWHETfw=">
+  <link rel="modulepreload" href="/content/assets/virtual_mf-exposes___mfe_internal__infinite__remoteEntry-_hash_-DnnXQRkG.js" integrity="sha256-4yQLJLfdV6jv14jh42ndh0UpDEIgiZzdvb/kw30GmEE=">
+  <link rel="modulepreload" href="/content/assets/_virtual_mf___mfe_internal__infinite__loadShare___mf_0_tcgplayer_mf_1_mp_mf_2_utils__loadShare__.js-D8z2Dhd9.js" integrity="sha256-HGey40tlpmBsHFaqATFM+KZ+OQqUyt+EhS33LwZvHU8=">
+  <link rel="modulepreload" href="/content/assets/ssrEntryLoader-CAyw5cyn.js" integrity="sha256-8j0YXIxr20fY0rMDo4VGaPlF4nEXStODCGEMGSoSL4o="></head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MDKRQP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+        title="JavaScript Required"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <noscript>
+      <strong
+        >We're sorry but content doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div id="unsupported-browser"> </div>
+    <div id="consent-container"></div>
+  
+
+</body></html>

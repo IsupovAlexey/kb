@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://www.joelonsoftware.com/xmlrpc.php">
+
+<title>The Guerrilla Guide to Interviewing (version 3.0) &#8211; Joel on Software</title>
+<meta name='robots' content='max-image-preview:large' />
+<!-- Jetpack Site Verification Tags -->
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='preconnect' href='//i0.wp.com' />
+<link rel='preconnect' href='//c0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Joel on Software &raquo; Feed" href="https://www.joelonsoftware.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Joel on Software &raquo; Comments Feed" href="https://www.joelonsoftware.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.joelonsoftware.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.joelonsoftware.com%2F2006%2F10%2F25%2Fthe-guerrilla-guide-to-interviewing-version-30%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.joelonsoftware.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.joelonsoftware.com%2F2006%2F10%2F25%2Fthe-guerrilla-guide-to-interviewing-version-30%2F&#038;format=xml" />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='cloudflare-stream-block-style-css-css' href='https://www.joelonsoftware.com/wp-content/plugins/cloudflare-stream/dist/blocks.style.build.css?ver=1671234854' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='editor-style-css' href='https://www.joelonsoftware.com/wp-content/themes/editor-redux/style.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='editor-font-awesome-css-css' href='https://www.joelonsoftware.com/wp-content/themes/editor-redux/inc/fontawesome/font-awesome.css?ver=4.1.0' media='screen' />
+<link rel='stylesheet' id='editor-fonts-css' href='//fonts.googleapis.com/css?family=Source%20Sans%20Pro%3A400%2C600%2C700%2C400italic%2C600italic%2C700italic%7CRoboto%20Condensed%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' media='all' />
+<script id="jquery-core-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/jquery/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<link rel="https://api.w.org/" href="https://www.joelonsoftware.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.joelonsoftware.com/wp-json/wp/v2/posts/919" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.joelonsoftware.com/xmlrpc.php?rsd" />
+
+<link rel="canonical" href="https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/" />
+<link rel='shortlink' href='https://wp.me/p83KNI-eP' />
+	<style>img#wpstats{display:none}</style>
+			<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-225715-5', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<meta name="description" content="A motley gang of anarchists, free-love advocates, and banana-rights agitators have hijacked The Love Boat out of Puerto Vallarta and are threatening to sink it in 7 days with all 616 passengers and 327 crew members unless their demands are met. The demand? A million dollars in small unmarked bills, and a GPL implementation of&hellip;" />
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Guerrilla Guide to Interviewing (version 3.0)" />
+<meta property="og:url" content="https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/" />
+<meta property="og:description" content="A motley gang of anarchists, free-love advocates, and banana-rights agitators have hijacked The Love Boat out of Puerto Vallarta and are threatening to sink it in 7 days with all 616 passengers and…" />
+<meta property="article:published_time" content="2006-10-25T00:15:20+00:00" />
+<meta property="article:modified_time" content="2016-12-05T19:34:54+00:00" />
+<meta property="og:site_name" content="Joel on Software" />
+<meta property="og:image" content="https://www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing1.jpg" />
+<meta property="og:image:width" content="250" />
+<meta property="og:image:height" content="188" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="The Guerrilla Guide to Interviewing (version 3.0)" />
+<meta name="twitter:image" content="https://www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing1.jpg?w=144" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=270%2C270&#038;ssl=1" />
+<style id="wp-custom-css">
+/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+/* Joel Test Div */
+.joel-test {
+	border: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	font-size: 16px;
+	margin: 2.5em auto;
+	max-width: 400px;
+	padding: 10px;
+}
+
+.joel-test-title {
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+}
+</style>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-919 single-format-standard wp-theme-editor-redux">
+
+
+<div id="page" class="hfeed site container">
+
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
+		<header id="masthead" class="site-header light" role="banner">
+		<!-- Tab navigation -->
+		<ul class="toggle-bar" role="tablist">
+			<!-- Main navigation -->
+			<li id="panel-1" class="current" role="presentation">
+				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text">View menu</span></a>
+			</li>
+
+			<!-- Featured Posts navigation -->
+			
+			<!-- Sidebar widgets navigation -->
+			<li id="panel-3" role="presentation">
+				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text">View sidebar</span></a>
+			</li>
+		</ul>
+
+		<div id="tabs" class="toggle-tabs">
+			<div class="site-header-inside">
+				<!-- Logo, description and main navigation -->
+				<div id="tab-1" class="tab-content current fadeIn">
+					<div class="site-branding">
+						<!-- Get the site branding -->
+													<h1 class="site-title"><a href="https://www.joelonsoftware.com/" rel="home">Joel on Software</a></h1>
+							<h2 class="site-description"></h2>
+											</div>
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+											</nav><!-- #site-navigation -->
+
+					
+					<div id="front-widgets" class="widget-area" role="complementary">
+
+	<aside id="text-3" class="widget widget_text"><h2 class="widget-title">Your host</h2>			<div class="textwidget"><a href="https://www.joelonsoftware.com/about-me/"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/Pong.png?w=730&#038;ssl=1" notsrc="https://www.joelonsoftware.com/wp-content/uploads/2016/12/11969842-1.jpg" /></a><p>I’m Joel Spolsky, a software developer in New York City. <a href="https://www.joelonsoftware.com/about-me/">More about me</a>.</p>
+</div>
+		</aside>
+</div><!-- #front-widgets -->
+
+				</div><!-- #tab-1 -->
+
+				<!-- Featured Posts template (template-featured-posts.php) -->
+				
+				<!-- Sidebar widgets -->
+				<div id="tab-3" class="tab-content animated fadeIn" role="tabpanel" aria-labelledby="panel-3" aria-hidden="true">
+					<div id="secondary" class="widget-area" role="complementary">
+
+	<aside id="search-3" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://www.joelonsoftware.com/search-results/" id="cse-search-box">
+	<div>
+		<input type="hidden" name="cx" value="004631902266951669168:g9jvyociwrg" />
+		<input type="hidden" name="ie" value="UTF-8" />
+	</div>
+	<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="q" title="Search for:" />
+	</label>
+	<input type="submit" class="search-submit" name="sa"><span class="screen-reader-text">Search</span></button>
+</form>
+</aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/newdesign-books.png?w=730&#038;ssl=1" style="float: left; margin-right: 15px;" />Read the archives in dead-tree format! Many of these articles have been collected into <a href="https://www.joelonsoftware.com/buy-the-books/">four books</a>, available at your favorite bookstore. It’s an excellent way to read the site in the bath, or throw it at your boss.</div>
+		</aside><aside id="text-4" class="widget widget_text"><h2 class="widget-title">Careers</h2>			<div class="textwidget"><p><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/jobs.jpg?w=730&#038;ssl=1" /></p>
+<p>Ready to level up? <a href="http://stackoverflow.com/jobs">Stack Overflow Jobs</a> is the job site that puts the needs of developers first. Whether you want to take control of your search or <a href="http://stackoverflow.com/jobs/why-jobs">let employers discover you</a>, we’re on a mission to help every developer find a job they love.</p>
+<p>Looking to hire smart programmers who get things done? <a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a> is a fully-customized sourcing solution that helps you understand, reach, and attract developers on the platform they trust most. Find the right candidates for your jobs. <a href="https://www.stackoverflowbusiness.com/talent/request-a-demo?utm_source=joelonsoftware&utm_medium=referral&utm_term=learn-more">Learn more.</a></p>
+</div>
+		</aside><aside id="text-6" class="widget widget_text">			<div class="textwidget"><p><a href="http://stackoverflow.com"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/so-logo.png?w=730&#038;ssl=1" /></a></p>
+<p>For my day job, I'm the co-founder and CEO of <a href="http://stackoverflow.com">Stack Overflow</a>, the largest online community for programmers to learn, share their knowledge, and level up. Each month, more than 40 million professional and aspiring programmers visit Stack Overflow to ask and answer questions and find better jobs. Stack Overflow is also the flagship site of the <a href="http://stackexchange.com">Stack Exchange network</a>, 160+ question and answer sites dedicated to all kinds of topics from cooking to gaming. According to Quantcast, Stack Overflow is the 30th largest web property in the United States and in the top 100 in the world.<br />
+<a href="https://stackoverflow.com/users/story/4"><br />
+<img data-recalc-dims="1" src="https://i0.wp.com/stackexchange.com/users/flair/4.png?resize=208%2C58&#038;ssl=1" width="208" height="58" alt="profile for Joel Spolsky on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Joel Spolsky on Stack Exchange, a network of free, community-driven Q&amp;A sites"><br />
+</a></p>
+</div>
+		</aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><p><a href="http://fogcreek.com/"><img data-recalc-dims="1" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/fc-logo.png?w=730&#038;ssl=1" /></a><br />
+I also founded <a href="http://fogcreek.com/">Fog Creek Software</a>, one of the most influential small tech companies in the world. As an independent, privately-owned company, we’ve been making customers happy since the turn of the century. We share what we've learned about how to make great software, both by writing about our ideas and by creating products, like <a href="http://www.fogcreek.com/fogbugz">FogBugz</a>, <a href="http://trello.com">Trello</a> and <a href="https://gomix.com/">Gomix</a>, that help others make great technology. As a result, Fog Creek's impact on the world of developers rivals companies a thousand times our size.</p>
+</div>
+		</aside><aside id="twitter_timeline-4" class="widget widget_twitter_timeline"><h2 class="widget-title">Twitter! Twitter!</h2><a class="twitter-timeline" data-height="400" data-theme="light" data-border-color="#e8e8e8" data-tweet-limit="1" data-lang="EN" data-partner="jetpack" data-chrome="noheader nofooter noborders" href="https://twitter.com/spolsky" href="https://twitter.com/spolsky">My Tweets</a></aside>
+</div><!-- #secondary -->
+				</div><!-- #tab-3 -->
+			</div><!-- .site-header-inside -->
+		</div><!-- #tabs -->
+	</header><!-- #masthead -->
+	<div id="content" class="site-content fadeInFast">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-919" class="post post-919 type-post status-publish format-standard hentry category-recruiter category-news">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/" rel="bookmark"><time class="entry-date published" datetime="2006-10-25T00:15:20+00:00">October 25, 2006</time><time class="updated" datetime="2016-12-05T19:34:54+00:00">December 5, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="https://www.joelonsoftware.com/author/joelonsoftware/">Joel Spolsky</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title">The Guerrilla Guide to Interviewing (version 3.0)</h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="https://www.joelonsoftware.com/category/reading-lists/recruiter/" rel="category tag">Recruiter</a>, <a href="https://www.joelonsoftware.com/category/news/" rel="category tag">News</a></li>
+									</ul>
+</div>
+
+	<div class="entry-content">
+		<p>A motley gang of anarchists, free-love advocates, and banana-rights agitators have hijacked <em>The Love Boat</em> out of Puerto Vallarta and are threatening to sink it in 7 days with all 616 passengers and 327 crew members unless their demands are met. The demand? A million dollars in small unmarked bills, and a GPL implementation of WATFIV, that is, the esteemed Waterloo Fortran IV compiler. (It’s surprising how few things the free-love people can find to agree on with the banana-rights people.)</p>
+<p><img data-recalc-dims="1" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing1.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />As chief programmer of the Festival Cruise programming staff, you’ve got to decide if you can deliver a Fortran compiler from scratch in seven days. You’ve got a staff of two programmers to help you.</p>
+<p>Can you do it?</p>
+<p>“Well, I suppose, it depends,” you say. One of the benefits of writing this article is that I get to put words into your mouth and you can’t do a darn thing about it.</p>
+<p>On what? </p>
+<p>“Um, will my team be able to use UML-generating tools?”</p>
+<p>Does that really matter? Three programmers, seven days, Waterloo Fortran IV. Are UML tools going to make or break it?</p>
+<p>“I guess not.”</p>
+<p>OK, so, what does it depend on? </p>
+<p>“Will we have 19 inch monitors? And will we have access to all the Jolt we can drink?”</p>
+<p>Again, does this matter? Is caffeine going to determine whether you can do it?</p>
+<p>“I guess not. Oh, wait. You said I have a staff of two programmers?”</p>
+<p>Right.</p>
+<p>“Who are they?”</p>
+<p>Does that matter?</p>
+<p>“Sure! If the team doesn’t get along, we’ll never be able to work together. And I know a few superstar programmers who could crank out a Fortran compiler <em>by themselves</em> in one week, and <em>lots</em> of programmers who couldn’t write the code to print the startup banner if they had six months.”</p>
+<p>Now we’re on to something!</p>
+<p>Everybody gives lip service to the idea that people are the most important part of a software project, but nobody is quite sure what you can <em>do</em> about it. The very first thing you have to do right if you want to have good programmers is to <em>hire</em> the right programmers, and that means you have to be able to figure out who the right programmers <em>are</em>, and this is usually done in the interview process. So this chapter is all about interviewing.</p>
+<p>(The in-person interview is just one part of the hiring process, which starts with <a href="https://www.joelonsoftware.com/articles/SortingResumes.html">sorting resumes</a> and a <a href="https://www.joelonsoftware.com/articles/ThePhoneScreen.html">phone screen</a>. This article only covers in-person interviews.)</p>
+<p><img data-recalc-dims="1" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing2.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />You should always try to have at least six people interview each candidate that gets hired, including at least five who would be peers of that candidate (that is, other programmers, not managers). You know the kind of company that just has some salty old manager interview each candidate, and that decision is the only one that matters? These companies don’t have very good people working there. It’s too easy to fake out one interview, especially when a non-programmer interviews a programmer. </p>
+<p>If even two of the six interviewers thinks that a person is not worth hiring, don’t hire them. That means you can technically end the “day” of interviews after the first two if the candidate is not going to be hired, which is not a bad idea, but to avoid cruelty you may not want to tell the candidate in advance how many people will be interviewing them. I have heard of companies that allow any interviewer to reject a candidate. This strikes me as a little bit too aggressive; I would probably allow any senior person to reject a candidate but would not reject someone just because one junior person didn’t like them.</p>
+<p>Don’t try to interview a bunch of people at the same time. It’s just not fair. Each interview should consist of one interviewer and one interviewee, in a room with a door that closes and a whiteboard. I can tell you from extensive experience that if you spend less than one hour on an interview you’re not going to be able to make a decision.</p>
+<p>You’re going to see three types of people in your interviews. At one end of the scale, there are the unwashed masses, lacking even the most basic skills for this job. They are easy to ferret out and eliminate, often just by asking two or three quick questions. At the other extreme you’ve got your brilliant superstars who write lisp compilers for fun, in a weekend, in Assembler for the Nintendo DS. And in the middle, you have a large number of “maybes” who seem like they might just be able to contribute something. The trick is telling the difference between the superstars and the maybes, because the secret is that you don’t want to hire any of the maybes. Ever.</p>
+<p>At the end of the interview, you must be prepared to make a sharp decision about the candidate. There are only two possible outcomes to this decision: <em>Hire</em> or <em>No Hire</em>. There is no other possible answer. <em>Never</em> say, “Hire, but not for my team.” This is rude and implies that the candidate is not smart enough to work with you, but maybe he’s smart enough for those losers over in that other team. If you find yourself tempted to say “Hire, but not in my team,” simply translate that mechanically to “No Hire” and you’ll be OK. Even if you have a candidate that would be brilliant at doing your particular task, but wouldn’t be very good in another team, that’s a <em>No Hire</em>. In software, things change so often and so rapidly that you need people that can succeed at just about any programming task that you throw at them. If for some reason you find an idiot savant that is really, really, really good at SQL but completely incapable of ever learning any other topic, <em>No Hire</em>. You’ll solve some short term pain in exchange for a lot of long term pain.</p>
+<p><em>Never</em> say “Maybe, I can’t tell.” If you can’t tell, that means <em>No Hire</em>. It’s really easier than you’d think. Can’t tell? Just say no! If you are on the fence, that means <em>No Hire.</em> Never say, “Well, Hire, I guess, but I’m a little bit concerned about…” That’s a <em>No Hire</em> as well. Mechanically translate all the waffling to “no” and you’ll be all right.</p>
+<p><img data-recalc-dims="1" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing3.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />Why am I so hardnosed about this? It’s because it is much, <em>much</em> better to reject a good candidate than to accept a bad candidate. A bad candidate will cost a lot of money and effort and waste other people’s time fixing all their bugs. Firing someone you hired by mistake can take months and be nightmarishly difficult, especially if they decide to be litigious about it. In some situations it may be completely impossible to fire anyone. Bad employees demoralize the good employees. And they might be bad programmers but really <em>nice people</em> or maybe they <em>really need this job</em>, so you can’t bear to fire them, or you can’t fire them without pissing everybody off, or whatever. It’s just a bad scene.</p>
+<p>On the other hand, if you reject a good candidate, I mean, I <em>guess</em> in some existential sense an injustice has been done, but, hey, if they’re so smart, don’t worry, they’ll get <em>lots</em> of good job offers. Don’t be afraid that you’re going to reject too many people and you won’t be able to find anyone to hire. During the interview, it’s not your problem. Of course, it’s important to seek out good candidates. But once you’re actually interviewing someone, pretend that you’ve got 900 more people lined up outside the door. Don’t lower your standards no matter how hard it seems to find those great candidates.</p>
+<p>OK, I didn’t tell you the most important part—how do you know whether to hire someone?</p>
+<p>In principle, it’s simple. You’re looking for people who are</p>
+<ol>
+<li>Smart, and</li>
+<li>Get things done.</li>
+</ol>
+<p>That’s it. That’s all you’re looking for. Memorize that. Recite it to yourself before you go to bed every night. You don’t have enough time to figure out much more in a short interview, so don’t waste time trying to figure out whether the candidate might be pleasant to be stuck in an airport with, or whether they really know ATL and COM programming or if they’re just faking it.</p>
+<p>People who are <em>Smart</em> but don’t <em>Get Things Done</em> often have PhDs and work in big companies where nobody listens to them because they are completely impractical. They would rather mull over something academic about a problem rather than ship on time. These kind of people can be identified because they love to point out the theoretical similarity between two widely divergent concepts. For example, they will say, “Spreadsheets are really just a special case of programming language,” and then go off for a week and write a thrilling, brilliant whitepaper about the theoretical computational linguistic attributes of a spreadsheet as a programming language. Smart, but not useful. The other way to identify these people is that they have a tendency to show up at your office, coffee mug in hand, and try to start a long conversation about the relative merits of Java introspection vs. COM type libraries, <em>on the day you are trying to ship a beta</em>.</p>
+<p>People who <em>Get Things Done</em> but are not <em>Smart</em> will do stupid things, seemingly without thinking about them, and somebody else will have to come clean up their mess later. This makes them net <em>liabilities</em> to the company because not only do they fail to contribute, but they soak up good people’s time. They are the kind of people who decide to refactor your core algorithms to use the Visitor Pattern, which they just read about the night before, and completely misunderstood, and instead of simple loops adding up items in an array you’ve got an AdderVistior class (yes, it’s spelled wrong) and a VisitationArrangingOfficer singleton and none of your code works any more.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing4.jpg?resize=188%2C250&#038;ssl=1" width="188" height="250" />How do you detect <em>smart</em> in an interview? The first good sign is that you don’t have to explain things over and over again. The conversation just flows. Often, the candidate says something that shows real insight, or brains, or mental acuity. So an important part of the interview is creating a situation where someone can show you how smart they are. The worst kind of interviewer is the blowhard. That’s the kind who blabs the whole time and barely leaves the candidate time to say, “yes, that’s <em>so</em> true, I <em>couldn’t agree with you more</em>.” Blowhards hire everyone; they think that the candidate must be smart because “he thinks so much like me!”</p>
+<p>The second worst kind of interviewer is the Quiz Show Interviewer. This is the kind of person who thinks that smart means “knows a lot of facts.” They just ask a bunch of trivia questions about programming and give points for correct answers. Just for fun, here is the worst interview question on Earth: “What’s the difference between varchar and varchar2 in Oracle 8i?” This is a terrible question. There is no possible, imaginable correlation between people that know that particular piece of trivia and people that you want to hire. Who cares what the difference is? You can find out online in about fifteen seconds! Remember, smart does <em>not</em> mean “knows the answer to trivia questions.” Anyway, software teams want to hire people with <em>aptitude</em>, not a particular skill set. Any skill set that people can bring to the job will be technologically obsolete in a couple of years, anyway, so it’s better to hire people that are going to be able to learn any new technology rather than people who happen to know how to make JDBC talk to a MySQL database <em>right this minute</em>.</p>
+<p>But in general, the way to learn the most about a person is to let them do the talking. Give them open-ended questions and problems.</p>
+<p>So, what do you ask?</p>
+<p>My personal list of interview questions originates from my first job at Microsoft. There are actually hundreds of famous Microsoft interview questions. Everybody has a set of questions that they really like. You, too, will develop a particular set of questions and a personal interviewing style which helps you make the <em>Hire/No Hire</em> decision. Here are some techniques that I have used that have been successful.</p>
+<p>Before the interview, I read over the candidates resume and jot down an interview plan on a scrap of paper. That’s just a list of questions that I want to ask. Here’s a typical plan for interviewing a programmer: </p>
+<ol>
+<li>Introduction </li>
+<li>Question about recent project candidate worked on </li>
+<li>Easy Programming Question </li>
+<li>Pointer/Recursion Question</li>
+<li>Are you satisfied? </li>
+<li>Do you have any questions? </li>
+</ol>
+<p>I am very, very careful to avoid anything that might give me some preconceived notions about the candidate. If you think that someone is smart before they even walk into the room, just because they have a Ph.D. from MIT, then nothing they can say in one hour is going to overcome that initial prejudice. If you think they are a bozo because they went to community college, nothing they can say will overcome that initial impression. An interview is like a very, very delicate scale—it’s very hard to judge someone based on a one hour interview and it may seem like a very close call. But if you know a little bit about the candidate beforehand, it’s like a big weight on one side of the scale, and the interview is useless. Once, right before an interview, a recruiter came into my office. “You’re going to <em>love</em> this guy,” she said. <em>Boy</em> did this make me mad. What I should have said was, “Well, if you’re so sure I’m going to love him, why don’t you just hire him instead of wasting my time going through this interview.” But I was young and naïve, so I interviewed him. When he said not-so-smart things, I thought to myself, “gee, must be the exception that proves the rule.” I looked at everything he said through rose-colored glasses. I wound up saying <em>Hire</em> even though he was a crappy candidate. You know what? Everybody else who interviewed him said <em>No Hire</em>. So: don’t listen to recruiters; don’t ask around about the person before you interview them; and never, ever talk to the other interviewers about the candidate until you’ve both made your decisions independently. That’s the scientific method.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing5.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />The <em>introduction</em> phase of the interview is intended to put the candidate at ease. I ask them if they had a nice flight. I spend about 30 seconds telling the person who I am and how the interview will work. I always reassure candidates that we are interested in <em>how</em> they go about solving problems, not the actual answer.</p>
+<p>Part two is a question about some recent project that the candidate worked on. For interviewing college kids, ask them about their senior thesis, if they had one, or about a course they took that involved a long project that they really enjoyed. For example, sometimes I will ask, “what class did you take last semester that you liked the most? It doesn’t have to be computer-related.” When interviewing experienced candidates, you can talk about their most recent assignment from their previous job.</p>
+<p>Again, ask open-ended questions and sit back and listen, with only the occasional “tell me more about that” if they seem to stall.</p>
+<p>What should you look for during the open ended questions?</p>
+<p>One: Look for passion. Smart people are passionate about the projects they work on. They get very excited talking about the subject. They talk quickly, and get animated. Being passionately <em>negative</em> can be just as good a sign. “My last boss wanted to do everything on VAX computers because it was all he understood. What a dope!” There are far too many people around that can work on something and not really care one way or the other. It’s hard to get people like this motivated about anything.</p>
+<p>Bad candidates just don’t care and will not get enthusiastic at all during the interview. A really good sign that a candidate is passionate about something is that when they are talking about it, they will forget for a moment that they are in an interview. Sometimes a candidate comes in who is very nervous about being in an interview situation—this is normal, of course, and I always ignore it. But then when you get them talking about Computational Monochromatic Art they will get extremely excited and lose all signs of nervousness. Good. I like passionate people who really care. (To see an example of Computational Monochromatic Art try unplugging your monitor.) You can challenge them on something (try it—wait for them to say something that’s probably true and say “that couldn’t be true”) and they will defend themselves, even if they were sweating five minutes ago, because they care so much they forget that you are going to be making Major Decisions About Their Life soon.</p>
+<p>Two: Good candidates are careful to explain things well, at whatever level. I have rejected candidates because when they talked about their previous project, they couldn’t explain it in terms that a normal person could understand. Often CS majors will just assume that everyone knows what Bates Theorem is or what O(log <em>n</em>) means. If they start doing this, stop them for a minute and say, “could you do me a favor, just for the sake of the exercise, could you please explain this in terms my grandmother could understand.” At this point many people will <em>still</em> continue to use jargon and will completely fail to make themselves understood. <em>Gong!</em> You don’t want to hire them, basically, because they are not smart enough to comprehend what it takes to make other people understand their ideas.</p>
+<p>Three: If the project was a team project, look for signs that they took a leadership role. A candidate might say, “We were working on X, but the boss said Y and the client said Z.” I’ll ask, “So what did <em>you</em> do?” A good answer to this might be “I got together with the other members of the team and wrote a proposal…” A bad answer might be, “Well, there was nothing I <em>could</em> do. It was an impossible situation.” Remember, <em>Smart</em> and <em>Gets Things Done</em>. The only way you’re going to be able to tell if somebody <em>Gets Things Done</em> is to see if historically they have tended to get things done in the past. In fact, you can even ask them directly to give you an example from their recent past when they took a leadership role and got something done—overcoming some institutional inertia, for example.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing6.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />Most of the time in the interview, though, should be spent letting the candidate prove that they can write code.</p>
+<p>Reassure candidates that you understand that it’s hard to write code without an editor, and you will forgive them if the whiteboard gets really messy. Also you understand that it’s hard to write bug-free code without a compiler, and you will take that into account.</p>
+<p>For the first interview of the day, I’ve started including a really, really easy programming problem. I had to start doing this during the dotcom boom when a lot of people who thought HTML was “programming” started showing up for interviews, and I needed a way to avoid wasting too much time with them. It’s the kind of problem that any programmer working today should be able to solve in about one minute. Some examples:</p>
+<ol>
+<li>Write a function that determines if a string starts with an upper-case letter A-Z</li>
+<li>Write a function that determines the area of a circle given the radius</li>
+<li>Add up all the values in an array</li>
+</ol>
+<p>These softball questions seem too easy, so when I first started asking them, I had to admit that I really expected everyone to sail right through them. What I discovered was that everybody <em>solved</em> the problem, but there was a lot of variation in <em>how long</em> it took them to solve.</p>
+<p>That reminded me of why I couldn’t trade bonds for a living.</p>
+<p>Jared is a bond trader. He is always telling me about interesting deals that he did. There’s this thing called an option, and there are puts, and calls, and the market steepens, so you put on steepeners, and it’s all very confusing, but the weird thing is that <em>I know what all the words mean,</em> I know exactly what a put is (the right, but not the responsibility, to sell something at a certain price) and in only three minutes I can figure out what should happen if you own a put and the market goes up, but I need the <em>full</em> three minutes to figure it out, and when he’s telling me a more complicated story, where the puts are just the first bit, there are lots of other bits to the story, I lose track very quickly, because I’m lost in thought (“let’s see, market goes up, that mean interest rates go <em>down</em>, and now, a put is the right to sell something…”) until he gets out the graph paper and starts walking me through it, and my eyes glazeth over and it’s very sad. Even though I understand all the little bits, I can’t understand them <em>fast enough</em> to get the big picture.</p>
+<p>And the same thing happens in programming. If the basic concepts aren’t so easy that you don’t even have to think about them, you’re not going to get the big concepts.</p>
+<p>Serge Lang, a math professor at Yale, used to give his Calculus students a fairly simple algebra problem on the first day of classes, one which almost everyone could solve, but some of them solved it <em>as quickly as they could write</em> while others took a while, and Professor Lang claimed that all of the students who solved the problem as quickly as they could write would get an A in the Calculus course, and all the others wouldn’t. The <em>speed</em> with which they solved a simple algebra problem was as good a predictor of the final grade in Calculus as a whole semester of homework, tests, midterms, and a final.</p>
+<p>You see, if you can’t whiz through the <em>easy</em> stuff at 100 m.p.h., you’re never gonna get the advanced stuff.</p>
+<p>But like I said, the good programmers stand up, write the answer on the board, sometimes adding a clever fillip (Ooh! Unicode compliant! Nice!), and it takes thirty seconds, and now I have to decide if they’re really good, so I bring out the big guns: recursion and pointers.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing7.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />15 years of experience interviewing programmers has convinced me that the best programmers all have an easy aptitude for dealing with multiple levels of abstraction simultaneously. In programming, that means specifically that they have no problem with recursion (which involves holding in your head multiple levels of the call stack at the same time) or complex pointer-based algorithms (where the address of an object is sort of like an abstract representation of the object itself).</p>
+<p>I’ve come to realize that understanding pointers in C is not a skill, it’s an aptitude. In first year computer science classes, there are always about 200 kids at the beginning of the semester, all of whom wrote complex adventure games in BASIC for their PCs when they were 4 years old. They are having a good ol’ time learning C or Pascal in college, until one day the professor introduces pointers, and suddenly, <em>they don’t get it</em>. They just don’t understand anything any more. 90% of the class goes off and becomes Political Science majors, then they tell their friends that there weren’t enough good looking members of the appropriate sex in their CompSci classes, that’s why they switched. <em>For some reason most people seem to be born without the part of the brain that understands pointers.</em> Pointers require a complex form of doubly-indirected thinking that some people just can’t do, and it’s pretty crucial to good programming. A lot of the “script jocks” who started programming by copying JavaScript snippets into their web pages and went on to learn Perl never learned about pointers, and they can never quite produce code of the quality you need.</p>
+<p>That’s the source of all these famous interview questions you hear about, like “reversing a linked list” or “detect loops in a tree structure.”</p>
+<p>Sadly, despite the fact that I think that all good programmers should be able to handle recursion and pointers, and that this is an excellent way to tell if someone is a good programmer, the truth is that these days, programming languages have almost completely made that specific art unnecessary. Whereas ten years ago it was rare for a computer science student to get through college without learning recursion and functional programming in one class and C or Pascal with data structures in another class, today <a href="https://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">it’s possible in many otherwise reputable schools to coast by on Java alone</a>.</p>
+<p>A lot of programmers that you might interview these days are apt to consider recursion, pointers, and even data structures to be a silly implementation detail which has been abstracted away by today’s many happy programming languages. “When was the last time you had to write a sorting algorithm?” they snicker.</p>
+<p>Still, I don’t really care. I want my ER doctor to understand anatomy, even if all she has to do is put the computerized defibrillator nodes on my chest and push the big red button, and I want programmers to know programming down to the CPU level, even if Ruby on Rails <em>does</em> read your mind and build a complete Web 2.0 social collaborative networking site for you with three clicks of the mouse.</p>
+<p><img data-recalc-dims="1" loading="lazy" decoding="async" style="MARGIN-LEFT: 5px" border="0" alt="" align="right" src="https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2006/10/interviewing8.jpg?resize=250%2C188&#038;ssl=1" width="250" height="188" />Even though the format of the interview is, superficially, just a candidate writing some code on the whiteboard, my real goal here is to have a conversation about it. “Why did you do it that way?” “What are the performance characteristics of your algorithm?” “What did you forget?” “Where’s your bug?”</p>
+<p>That means I don’t really mind giving programming problems that are too hard, as long as the candidate has some chance of starting out, and then I’m happy to dole out little hints along the way, little toeholds, so to speak. I might ask someone, say, to project a triangle onto a plane, a typical graphics problem, and I don’t mind helping them with the trig (SOH-CAH-TOA, baby!), and when I ask them how to speed it up, I might drop little hints about look-up tables. Notice that the kinds of hints I’m happy to provide are really just answers to trivia questions—the kinds of things that you find on Google.</p>
+<p>Inevitably, you will see a bug in their function. So we come to question five from my interview plan: “Are you satisfied with that code?” You may want to ask, “OK, so where’s the bug?” The quintessential Open Ended Question From Hell. All programmers make mistakes, there’s nothing wrong with that, they just have to be able to find them. With string functions in C, most college kids forget to null-terminate the new string. With almost any function, they are likely to have off-by-one errors. They will forget semicolons sometimes. Their function won’t work correctly on 0 length strings, or it will GPF if malloc fails… Very, very rarely, you will find a candidate that doesn’t have any bugs the first time. In this case, this question is even more fun. When you say, “There’s a bug in that code,” they will review their code carefully, and then you get to see if they can be diplomatic yet firm in asserting that the code is perfect.</p>
+<p>As the last step in an interview, ask the candidate if they have any questions. Remember, even though you’re interviewing them, the good candidates have lots of choices about where to work and they’re using this day to figure out if they want to work for you.</p>
+<p>Some interviewees try to judge if the candidate asks “intelligent” questions. Personally, I don’t care what questions they ask; by this point I’ve already made my decision. The trouble is, candidates have to see about five or six people in one day, and it’s hard for them to ask five or six people different, brilliant questions, so if they don’t have any questions, fine.</p>
+<p>I always leave about five minutes at the end of the interview to sell the candidate on the company and the job. This is actually important <em>even if you are not going to hire them.</em> If you’ve been lucky enough to find a really good candidate, you want to do everything you can at this point to make sure that they want to come work for you. Even if they are a bad candidate, you want them to like your company and go away with a positive impression.</p>
+<p>Ah, I just remembered that I should give you some more examples of really bad questions.</p>
+<p>First of all, avoid the illegal questions. Anything related to race, religion, gender, national origin, age, military service eligibility, veteran status, sexual orientation, or physical handicap is illegal here in the United States. If their resume says they were in the Marines, you can’t ask them, even to make pleasant conversation, if they were in Iraq. It’s against the law to discriminate based on veteran status. If their resume says that they attended the Technion in Haifa, don’t ask them, even conversationally, if they are Israeli, even if you’re just making conversation because your wife is Israeli, or you love Felafel. It’s against the law to discriminate based on national origin.</p>
+<p>Next, avoid any questions which might make it seem like you care about, or are discriminating based on, things which you don’t actually care about or discriminate based on. The best example of this I can think of is asking someone if they have kids or if they are married. This might give the impression that you think that people with kids aren’t going to devote enough time to their work or that they are going to run off and take maternity leave. Basically, stick to questions which are completely relevant to the job for which they are interviewing.</p>
+<p>Finally, avoid brain teaser questions like the one where you have to arrange 6 equal length sticks to make exactly 4 identical perfect triangles. Or anything involving pirates, marbles, and secret codes. Most of these are “Aha!” questions—the kind of question where either you know the answer or you don’t. With these questions knowing the answer just means you heard that brain teaser before. So as an interviewer, you don’t get any information about “smart/get things done” by figuring out if they happen to make a particular mental leap.</p>
+<p>In the past, I’ve used “impossible questions,” also known as “back of the envelope questions.” Classic examples of this are “How many piano tuners are there in Seattle?” The candidate won’t know the answer, but smart candidates won’t give up and they’ll be happy to try and estimate a reasonable number for you. Let’s see, there are probably… what, a million people in Seattle? And maybe 1% of them have pianos? And a piano needs to be tuned every couple of years? And it takes 35 minutes to tune one? All wrong, of course, but at least they’re attacking the problem. The only reason to ask a question like this is that it lets you have a conversation with the candidate. “OK, 35 minutes, but what about travel time between pianos?”</p>
+<p>“Good point. If the piano tuner could take reservations well in advance they could probably set up their schedule to minimize travel time. You know, do all the pianos in Redmond on Monday rather than going back and forth across 520 three times a day.”</p>
+<p>A good back-of-the-envelope question allows you to have a conversation with the candidate that helps you form an opinion about whether they are smart. A bad “Aha!” pirate question usually results in the candidate just sort of staring at you for a while and then saying they’re stuck.</p>
+<p>If, at the end of the interview, you’ve convinced yourself that this person is <em>smart</em> and <em>gets things done</em>, and four or five other interviewers agree, you probably won’t go wrong in hiring them. But if you have any doubts, you’re better off waiting for someone better.</p>
+<p>The optimal time to make a decision about the candidate is about three minutes after the end of the interview. Far too many companies allow interviewers to wait days or weeks before turning in their feedback. Unfortunately, the more time that passes, the less you’ll remember.</p>
+<p>I ask interviewers to write <em>immediate</em> feedback after the interview, either a “hire” or “no hire”, followed by a one or two paragraph justification. It’s due 15 minutes after the interview ends.</p>
+<p>If you’re having trouble deciding, there’s a very simple solution. NO HIRE. Just don’t hire people that you aren’t sure about. This is a little nerve wracking the first few times—what if we <em>never</em> find someone good? That’s OK. If your resume and phone-screening process is working, you’ll probably have about 20% hires in the live interview. And when you find the smart, gets-things-done candidate, <em>you’ll know it.</em> If you’re not thrilled with someone, move on.</p>
+<p></p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+
+
+	<div id="post-footer-widgets" class="widget-area" role="complementary">
+
+	<aside id="text-8" class="widget widget_text"><h2 class="widget-title">Subscribe!</h2>			<div class="textwidget"><p>You&#8217;re reading <a href="https://www.joelonsoftware.com/">Joel on Software</a>, stuffed with years and years of completely raving mad articles about software development, managing software teams, designing user interfaces, running successful software companies, and rubber duckies.</p>
+<p>If you want to know when I publish something new, I recommend getting an RSS reader like <a href="https://newsblur.com/">NewsBlur</a> and subscribing to my <a href="https://www.joelonsoftware.com/feed/">RSS feed</a>.</p>
+</div>
+		</aside>
+</div><!-- #post-footer-widgets -->
+
+<div class="author-info">
+	<div class="author-avatar">
+		<img alt='' src='https://secure.gravatar.com/avatar/4f742758d6ff8a422a0d154b351751a90a10542fda27afe910c1e16cb3779bf4?s=64&#038;d=mm&#038;r=pg' srcset='https://secure.gravatar.com/avatar/4f742758d6ff8a422a0d154b351751a90a10542fda27afe910c1e16cb3779bf4?s=128&#038;d=mm&#038;r=pg 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/>	</div><!-- .author-avatar -->
+
+	<div class="author-description">
+		<h2 class="author-title"><span class="author-heading">About the author.</span></h2>
+
+		<p class="author-bio">
+			In 2000 I co-founded Fog Creek Software, where we created lots of cool things like the FogBugz bug tracker, Trello, and Glitch. I also worked with Jeff Atwood to create Stack Overflow and served as CEO of Stack Overflow from 2010-2019.
+
+Today I serve as the chairman of the board for <a href="https://stackoverflow.com/">Stack Overflow</a>, <a href="https://glitch.com/">Glitch</a>, and <a href="https://hash.ai/">HASH</a>.		</p><!-- .author-bio -->
+	</div><!-- .author-description -->
+</div><!-- .author-info -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30-now-shipping/" rel="prev"><span class="meta-nav">&larr; Previous Post</span> The Guerrilla Guide to Interviewing: version 3.0 now shipping!</a></div><div class="nav-next"><a href="https://www.joelonsoftware.com/2006/10/30/internships/" rel="next"><span class="meta-nav">Next Post &rarr;</span> Internships</a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+		
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a class="powered-by" href="https://wordpress.org/">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/editor-redux/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+				<meta
+					id="bilmur"
+					property="bilmur:data"
+					content=""
+					data-provider="wp.cloud"
+					data-service="pressable.com"
+					data-custom-props="{&quot;wpcomsp&quot;:&quot;1&quot;,&quot;woo_active&quot;:&quot;0&quot;}"
+					data-site-tz="Etc/GMT-0"
+				>
+					<div style="display:none">
+			<div class="grofile-hash-map-e215aff4c20f1e1759f0b74a2703f04d">
+		</div>
+		</div>
+		<script data-wp-strategy="defer" defer id="bilmur-js" src="https://s0.wp.com/wp-content/js/bilmur.min.js?m=202631&#038;ver=1"></script>
+<script id="fitvids-js" src="https://www.joelonsoftware.com/wp-content/themes/editor-redux/js/jquery.fitvids.js?ver=20140820"></script>
+<script id="editor-js-js" src="https://www.joelonsoftware.com/wp-content/themes/editor-redux/js/editor.js?ver=20161202"></script>
+<script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"119105578","post":"919","tz":"0","srv":"www.joelonsoftware.com","hp":"atomic","ac":"3","amp":"0","j":"1:16.1-a.5"} ]);
+_stq.push([ "clickTrackerInit", "119105578", "919" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script data-wp-strategy="defer" defer fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202631.js"></script>
+<script id="jetpack-twitter-timeline-js" src="https://www.joelonsoftware.com/wp-content/plugins/jetpack/_inc/build/twitter-timeline.min.js?ver=4.0.0"></script>
+<script id="react-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/react.min.js"></script>
+<script id="react-dom-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/react-dom.min.js"></script>
+<script id="wp-hooks-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/hooks.min.js"></script>
+<script id="wp-i18n-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/i18n.min.js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-url-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/url.min.js"></script>
+<script id="wp-api-fetch-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/api-fetch.min.js"></script>
+<script id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://www.joelonsoftware.com/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "a99530c7c7" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://www.joelonsoftware.com/wp-admin/admin-ajax.php?action=rest-nonce";
+//# sourceURL=wp-api-fetch-js-after
+</script>
+<script id="react-jsx-runtime-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/react-jsx-runtime.min.js"></script>
+<script id="wp-dom-ready-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/dom-ready.min.js"></script>
+<script id="wp-a11y-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/a11y.min.js"></script>
+<script id="wp-blob-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/blob.min.js"></script>
+<script id="wp-block-serialization-default-parser-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/block-serialization-default-parser.min.js"></script>
+<script id="wp-autop-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/autop.min.js"></script>
+<script id="wp-deprecated-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/deprecated.min.js"></script>
+<script id="wp-dom-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/dom.min.js"></script>
+<script id="wp-escape-html-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/escape-html.min.js"></script>
+<script id="wp-element-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/element.min.js"></script>
+<script id="wp-is-shallow-equal-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/is-shallow-equal.min.js"></script>
+<script id="wp-keycodes-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/keycodes.min.js"></script>
+<script id="wp-priority-queue-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/priority-queue.min.js"></script>
+<script id="wp-undo-manager-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/undo-manager.min.js"></script>
+<script id="wp-compose-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/compose.min.js"></script>
+<script id="wp-private-apis-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/private-apis.min.js"></script>
+<script id="wp-redux-routine-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/redux-routine.min.js"></script>
+<script id="wp-data-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/data.min.js"></script>
+<script id="wp-data-js-after">
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+//# sourceURL=wp-data-js-after
+</script>
+<script id="wp-html-entities-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/html-entities.min.js"></script>
+<script id="wp-rich-text-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/rich-text.min.js"></script>
+<script id="wp-shortcode-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/shortcode.min.js"></script>
+<script id="wp-warning-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/warning.min.js"></script>
+<script id="wp-blocks-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/blocks.min.js"></script>
+<script id="moment-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/vendor/moment.min.js"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+//# sourceURL=moment-js-after
+</script>
+<script id="wp-date-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/date.min.js"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":1},"formats":{"time":"g:i a","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":0,"offsetFormatted":"0","string":"","abbr":""}} );
+//# sourceURL=wp-date-js-after
+</script>
+<script id="wp-primitives-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/primitives.min.js"></script>
+<script id="wp-components-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/components.min.js"></script>
+<script id="wp-keyboard-shortcuts-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/keyboard-shortcuts.min.js"></script>
+<script id="wp-commands-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/commands.min.js"></script>
+<script id="wp-notices-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/notices.min.js"></script>
+<script id="wp-preferences-persistence-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/preferences-persistence.min.js"></script>
+<script id="wp-preferences-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/preferences.min.js"></script>
+<script id="wp-preferences-js-after">
+( function() {
+				var serverData = false;
+				var userId = "0";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+//# sourceURL=wp-preferences-js-after
+</script>
+<script id="wp-style-engine-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/style-engine.min.js"></script>
+<script id="wp-theme-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/theme.min.js"></script>
+<script id="wp-token-list-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/token-list.min.js"></script>
+<script id="wp-upload-media-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/upload-media.min.js"></script>
+<script id="wp-block-editor-js" src="https://c0.wp.com/c/7.0.2/wp-includes/js/dist/block-editor.min.js"></script>
+<script id="blockprotocol-render-script-js" src="https://www.joelonsoftware.com/wp-content/plugins/blockprotocol/build/render.js?ver=d02daa73f930ea4bd873"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.joelonsoftware.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.joelonsoftware.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+		<script type="text/javascript">
+			(function() {
+			var t   = document.createElement( 'script' );
+			t.type  = 'text/javascript';
+			t.async = true;
+			t.id    = 'gauges-tracker';
+			t.setAttribute( 'data-site-id', '57a9715ec88d90063f018386' );
+			t.src = '//secure.gaug.es/track.js';
+			var s = document.getElementsByTagName( 'script' )[0];
+			s.parentNode.insertBefore( t, s );
+			})();
+		</script>
+		
+</body>
+</html>
+<!--
+	generated in 0.234 seconds
+	81675 bytes batcached for 300 seconds
+-->

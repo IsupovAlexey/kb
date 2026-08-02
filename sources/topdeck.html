@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Topdeck_ru" />
+    <meta property="og:title" content="TOPDeck — Обнулить суточный лимит колобков">
+    <meta property="og:type" content="object">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://topdeck.ru/uploads/monthly_2017_12/td-200.png.aa5b9a381e1f240c69e7c6a8f9b3de12.png">
+    <meta property="og:site_name" content="TOPDeck.ru">
+    <meta property="og:locale" content="ru_RU">
+    <title>TOPDeck — Обнулить суточный лимит колобков</title>
+    <link rel="stylesheet" type="text/css" href="/apps/shared/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/apps/toptrade/toptrade.min.css" />
+    <link rel="stylesheet" type="text/css" href="/apps/tdmtg/tdmtg.min.css" media="all">
+    <script type="text/javascript" src="/apps/shared/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/apps/shared/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/apps/shared/bootstrap.confirmation.min.js"></script>
+    <script type="text/javascript" src="/apps/requirejs/topdeck.require.js"></script>
+    <script type="text/javascript">
+    var reqAppConfig = topdeck.require.config({
+        baseUrl: "/apps/",
+    });
+    reqAppConfig(["tdmtg/tdmtg"]);
+    reqAppConfig(["toptrade/toptrade.es6"]);
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6094612-2"></script>
+    <script>
+    /* eslint-disable */
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-6094612-2');
+    /* eslint-enable */
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Включить навигацию</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">TOPdeck.ru</a>
+                            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="/login">Войти</a></li>
+                                        <li class="dropdown">
+                        <ul class="dropdown-menu" role="menu">
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+                
+
+
+
+
+        <div class="page-header">
+    <h1>
+        Обнулить суточный лимит колобков
+        <div class="pull-right col-xs-4">
+        </div>
+    </h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <form class="form-inline" action="/apps/donate/kolobki/lift-daily-limit" method="post">
+                <input type="hidden" name="csrf_name" value="csrf6a6f1e3032722">
+                <input type="hidden" name="csrf_value" value="acdf064a38b89660cd8d192cf32e9ca5">
+                <div class="form-group form-group-lg">
+                    <label class="sr-only" for="donateid">Donate ID</label>
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-addon">Donate ID</div>
+                        <input type="text" class="form-control" name="donateid" id="donateid" placeholder="Вставьте Donate ID" />
+                    </div>
+                    <button type="submit" class="btn btn-lg btn-primary">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+
+</html>

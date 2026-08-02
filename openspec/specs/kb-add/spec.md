@@ -104,3 +104,27 @@ When the user requests wiki lint, the skill SHALL run the TypeScript wiki-lint C
 
 - **WHEN** the user invokes `/kb lint` or asks for a wiki health check
 - **THEN** the agent runs `scripts/kb/` wiki-lint and optional Prettier check commands
+
+### Requirement: Bulk Firefox bookmark import
+
+The repository SHALL provide a TypeScript CLI to import Firefox Netscape bookmark HTML exports into the wiki with folder-aware paths, dead-link exclusion, and short summaries from fetched page content.
+
+#### Scenario: Firefox HTML import
+
+- **WHEN** the user runs the Firefox import CLI against a bookmarks HTML file
+- **THEN** the tool copies the export to `sources/`, writes a manifest, creates wiki bookmark pages under `wiki/bookmarks/` mirroring folder structure, and appends batch summary lines to `wiki/index.md` and `wiki/log.md`
+
+#### Scenario: Dead link exclusion
+
+- **WHEN** a bookmark URL fails fetch or returns an HTTP error during import
+- **THEN** no wiki page is created for that URL and the manifest records it as dead or skipped with reason
+
+#### Scenario: Imported bookmark summary
+
+- **WHEN** a bookmark URL is successfully fetched during bulk import
+- **THEN** the wiki page includes a `## Summary` section with excerpt or meta description from the fetched content
+
+#### Scenario: Idempotent re-import
+
+- **WHEN** the Firefox import CLI is run again for the same export date and URLs were already imported
+- **THEN** existing imported URLs are skipped without creating duplicate wiki pages

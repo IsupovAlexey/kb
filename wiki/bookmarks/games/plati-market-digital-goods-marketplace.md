@@ -1,0 +1,15 @@
+---
+date: 2026-08-02
+type: bookmark
+tags: ["bookmark", "import", "firefox", "bladwijzerwerkbalk", "разное"]
+url: "https://plati.market/"
+source_folder: "Bladwijzerwerkbalk/Разное"
+---
+
+# Plati.Market. Digital goods marketplace.
+
+https://plati.market/
+
+## Summary
+
+Plati.Market — маркетплейс цифровых товаров: игры, ключи, аккаунты, подписки, софт и внутриигровая валюта. Более миллиона лотов от проверенных продавцов с отзывами и рейтингами. Быстрая доставка, защита покупателя и удобная система оплаты. Найдите нужный товар по выгодной цене — от лицензионных игр до программ и сервисов.

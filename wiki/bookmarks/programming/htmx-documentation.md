@@ -1,0 +1,15 @@
+---
+date: 2026-08-02
+type: bookmark
+tags: ["bookmark", "import", "firefox", "программирование"]
+url: "https://htmx.org/docs/"
+source_folder: "Программирование"
+---
+
+# </> htmx ~ Documentation
+
+https://htmx.org/docs/
+
+## Summary
+
+htmx gives you access to AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes, so you can build modern user interfaces with the simplicity and power of hypertext htmx is small (~14k min.gz’d), dependency-free, extendable, IE11 compatible & has reduced code base sizes by 67% when compared with react

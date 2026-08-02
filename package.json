@@ -6,7 +6,11 @@
     "format:check": "prettier --check \"wiki/**/*.md\"",
     "format:write": "prettier --write \"wiki/**/*.md\"",
     "kb:slug": "tsx scripts/kb/slug.ts",
-    "kb:lint": "tsx scripts/kb/wiki-lint.ts"
+    "kb:lint": "tsx scripts/kb/wiki-lint.ts",
+    "kb:import-firefox": "tsx scripts/kb/import-firefox.ts",
+    "kb:reclassify": "tsx scripts/kb/apply-llm-reclassify.ts",
+    "kb:reclassify:legacy": "tsx scripts/kb/apply-reclassify.ts",
+    "test": "tsx --test scripts/kb/**/*.test.ts"
   },
   "devDependencies": {
     "@types/node": "22.13.10",

@@ -1,0 +1,5719 @@
+{
+  "sourceCapture": "sources/firefox-bookmarks-2026-08-02.html",
+  "importDate": "2026-08-02",
+  "totals": {
+    "parsed": 529,
+    "unique": 516,
+    "imported": 51,
+    "dead": 99,
+    "skipped": 390,
+    "duplicates": 6
+  },
+  "entries": [
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/bookmarks/",
+      "title": "Get Bookmark Add-ons",
+      "folderPath": [],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.telerik.com/",
+      "title": "Telerik & Kendo UI - .NET Components Suites & JavaScript UI Libraries",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/adams85/po",
+      "title": "adams85/po: A library for reading and writing Gettext PO files.",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://tyrrrz.me/blog/fakes-over-mocks",
+      "title": "Prefer Fakes Over Mocks • Oleksii Holub",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://12factor.net/",
+      "title": "The Twelve-Factor App",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://blog.ndepend.com/5x-lessons-learned-from-migrating-a-large-legacy-to-net-5-6/",
+      "title": "5x Lessons Learned from Migrating a Large Legacy to .NET 5/6 - NDepend",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://maximgorbatyuk.notion.site/maximgorbatyuk/M-Gorbatyuk-s-knowledge-base-f87dcc7b0e98498499cfd606d06bd0c7",
+      "title": "M.Gorbatyuk’s knowledge base",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/dotnet-outdated/dotnet-outdated",
+      "title": "GitHub - dotnet-outdated/dotnet-outdated: A .NET Core global tool to display and update outdated NuGet packages in a project",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://metanit.com/",
+      "title": "METANIT.COM - Сайт о программировании",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://sergeyteplyakov.blogspot.com/2014/10/about-design-principles.html",
+      "title": "Programming stuff: О принципах проектирования",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://sergeyteplyakov.blogspot.com/2014/10/solid.html",
+      "title": "Programming stuff: Шпаргалка по SOLID принципам",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://maximgorbatyuk.notion.site/14-SQL-Server-452c0695db9b406e8183f16865339f8e",
+      "title": "14 вопросов об индексах в SQL Server, которые вы стеснялись задать",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://maximgorbatyuk.notion.site/AppDomain-736d9696024f44089d5affbb3564e50d",
+      "title": "Что такое AppDomain",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://habr.com/ru/post/254773/",
+      "title": "Нормализация отношений. Шесть нормальных форм / Хабр",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://blog.byndyu.ru/2014/01/blog-post_8.html",
+      "title": "Блог Александра Бындю: Работа с унаследованным кодом: Риски, анализ проекта и стратегии работы",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://luminousmen.com/post/ode-to-unit-tests",
+      "title": "Ode to Unit Tests - Blog | luminousmen",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/6over3/hako/tree/main",
+      "title": "6over3/hako: An embeddable, lightweight, secure, high-performance JavaScript engine.",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://eddy.com/hr-encyclopedia/screening-interview/",
+      "title": "Screening Interviews: Best Practices & Questions to Ask | Eddy",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.themuse.com/advice/star-interview-method",
+      "title": "How to Use the STAR Method to Ace Your Job Interview | The Muse",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://gratis-lemur-2d3.notion.site/CV-tips-17580096f6544435b4d35fee62dc69c7",
+      "title": "CV tips",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://relocate.me/search?query%5B0%5D=.NET&time=any&page=2",
+      "title": "Developer Job Search Abroad | Relocate.me",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/poteto/hiring-without-whiteboards",
+      "title": "poteto/hiring-without-whiteboards: ⭐️ Companies that don't have a broken hiring process",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://blog.pragmaticengineer.com/software-engineering-salaries-in-the-netherlands-and-europe/",
+      "title": "The Trimodal Nature of Software Engineering Salaries in the Netherlands and Europe - The Pragmatic Engineer",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1WnIcOyUIfok3f8xGVyNoV_7wbOuqu54GPaj7APD2MjI/edit#heading=h.8orunppnxpdn",
+      "title": "Resources to Find Great Tech Jobs [The Pragmatic Engineer] - Google Документы",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.kalzumeus.com/2012/01/23/salary-negotiation/",
+      "title": "Salary Negotiation: Make More Money, Be More Valued | Kalzumeus Software",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://fearlesssalarynegotiation.com/salary-negotiation-guide/",
+      "title": "How to negotiate salary in 2021 - Complete salary negotiation guide | Fearless Salary Negotiation",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://fearlesssalarynegotiation.com/salary-negotiation-email-sample/",
+      "title": "Salary negotiation email samples and a counter offer letter template | Fearless Salary Negotiation",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.searchenginewatch.com/2015/11/20/googles-five-key-success-factors-for-effective-teams/",
+      "title": "Google’s five key success factors for effective teams",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.codeproject.com/Articles/1137307/Factory-Patterns-Abstract-Factory-Pattern",
+      "title": "Factory Patterns - Abstract Factory Pattern - CodeProject",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://ind.nl/en/public-register-recognised-sponsors",
+      "title": "Public Register Recognised Sponsors | IND",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.linkedin.com/pulse/how-i-landed-job-foreign-country-you-can-too-sho-dewan/",
+      "title": "How I Landed a Job in a Foreign Country (and How You Can Too) | LinkedIn",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.interviewcake.com/coding-interview-tips",
+      "title": "Coding Interview Advice | Interview Cake",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://jobsearchandinterviewcoach.com/good-questions-to-ask-in-hr-screening-interview/",
+      "title": "Good Questions to Ask in the HR Screening Interview | Thea Kelley Career Services",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/4ce2s3/resource_interview_questions_my_massive/",
+      "title": "[Resource] Interview Questions - My massive cheat-sheet of questions I ask in Software Engineering interviews. : cscareerquestions",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://telegra.ph/Benelux-ru-chats-05-22",
+      "title": "Русскоязычный Бенилюкс – Telegraph",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://rabotaem.nl/",
+      "title": "Работаем в NL - Новости и информация для приезжающих и живущих в Голландии",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/vitkarpov/coding-interviews-blog-archive/tree/main/posts",
+      "title": "coding-interviews-blog-archive/posts at main · vitkarpov/coding-interviews-blog-archive · GitHub",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://maximgorbatyuk.notion.site/EPAM-1d9e7522bee5469893bb0e25a7f48f86",
+      "title": "[EPAM] Вопросы для собеседования",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://maximgorbatyuk.notion.site/EPAM-TI-43338a54104b47e98032827e8b4c87dd",
+      "title": "[EPAM] Проведение TI, шпаргалка.",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://sijinjoseph.com/programmer-competency-matrix/",
+      "title": "Programmer Competency Matrix | Sijin Joseph",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://ind.nl/en/living-in-the-netherlands-with-a-residence-permit/living-in-the-netherlands#registration-with-municipality",
+      "title": "Living in the Netherlands | IND",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/jobs/comments/16jib8y/i_feel_embarrassed_that_i_didnt_get_any/",
+      "title": "I feel embarrassed that I didn’t get any interviews until I redid my CV to shamelessly sell myself : jobs",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/AndrewStetsenko/tech-jobs-with-relocation",
+      "title": "AndrewStetsenko/tech-jobs-with-relocation: All-in-one guide to getting a tech job abroad 🌎",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.linkedin.com/help/linkedin/answer/a524335",
+      "title": "Use Boolean search on LinkedIn | LinkedIn Help",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/18xgvcb/please_stop_asking_what_my_day_to_day_is_like/",
+      "title": "Please stop asking what my day to day is like : cscareerquestions",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/recruitinghell/comments/197jgft/if_youre_rejected_have_fun_asking_for_your/",
+      "title": "If you’re rejected, have fun asking for your detailed data. It’s bureaucracy hell for them. : recruitinghell",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://ind.nl/en/public-register-recognised-sponsors/public-register-regular-labour-and-highly-skilled-migrants",
+      "title": "Public Register Regular Labour and Highly Skilled Migrants | IND",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.finalroundai.com/interview-copilot",
+      "title": "AI Interview Copilot: Streamline Your Interview Process with Intelligent Interview Assistance | Final Round AI",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.interviews.chat/",
+      "title": "Interviews Chat: AI Interview Copilot & Prep",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://interviewcopilot.io/",
+      "title": "Interview Copilot: AI-Powered Tool to Ace Interviews",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/jobs/comments/1hsg571/top_mock_interview_tools_my_honest_review_after_3/",
+      "title": "Top Mock Interview Tools: My Honest Review After 3 Months of Job Searching as a Senior Data Scientist : r/jobs",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://airtable.com/appQWRUJA8s7JBJHn/shrMHsqzD0ZqyPEk1/tblvIBp9Y86Xae4k5/viwpcGOZ7CoxupF7B?blocks=hide",
+      "title": "Airtable - 900 Job Boards WW by Hello New Job!",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://interviewing.io/guides/system-design-interview",
+      "title": "System Design Interview Guide for Senior Engineers",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://sergeyteplyakov.blogspot.com/2013/01/di-property-injection.html",
+      "title": "Programming stuff: DI Паттерны. Property Injection",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://lk.seven-sky.net/index.jsp",
+      "title": "Вход в личный кабинет Абонента",
+      "folderPath": [
+        "ЛК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://litreactor.com/columns/20-common-grammar-mistakes-that-almost-everyone-gets-wrong",
+      "title": "20 Common Grammar Mistakes That (Almost) Everyone Makes | LitReactor",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://mobiledevicesize.com/compare/#470,899,134,772,778;1",
+      "title": "Compare Mobile Phones Side by Side with Actual size",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/3795394",
+      "title": "Что должно быть в домашней аптечке / таблетки :: медицина :: аптечка / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/3844574",
+      "title": "\"Светодиодное враньё невиданных масштабов\" / habrahabr :: факты :: обман :: лампы :: технологии / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/3894893",
+      "title": "Чем джинсы за 1,5к отличаются от джинсов за 7к? / пидоры помогите (реактор помоги) / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1d9_E3h8bLp-TXr-0zTJFqqVxdCR9daIVNyMatydkpFA/htmlview?sle=true#gid=639584818",
+      "title": "AM4 Vcore VRM Ratings v1.1 (2019-07-02)",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://vk.com/album-1618109_134831606",
+      "title": "И-155Мк, И-155Мм, И-155МКБ – 799 фотографий",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.tblop.com/",
+      "title": "TBLOP - The Big List of Porn",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.pornhub.com/view_video.php?viewkey=ph594baa2f3b07f",
+      "title": "Dirty Talking PAWG Begs for Cum in her Ass - Pornhub.com",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://fr.pornhub.com/view_video.php?viewkey=ph5a64f21f188b0",
+      "title": "Elle me Force à L'enculer (étudiante Trop Bonne En HD) - Pornhub.com",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/4389805",
+      "title": "pornhub :: Карл / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://xhamster.com/videos/schoolgirl-finds-teacher-in-parking-lot-and-wants-to-pass-xhMHFvk",
+      "title": "Schoolgirl Finds Teacher in Parking Lot and Wants to... | xHamster",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/4582137",
+      "title": "Сегодня я праздную конец своего вынужденного недрочабря, мне наконец-то сняли гипс. / Халява :: Боярский аккаунт :: NSFW / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ASj_VAi4a-c&list=WL&index=4",
+      "title": "Нидерландский язык - Бас Лооманн (ММФЯ-2022) - YouTube",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6hUBBJgPf5A&list=PLxzSZG7g8c8wAS2XgFp_PNYyFZLkuIDax&index=34",
+      "title": "VNV Nation - Legion (Vivace Con Affeto) - YouTube",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://zichtbaarnederlands.nl/nl/adverbium/modale_partikels#toch",
+      "title": "Modale partikels: even, eens, nou, maar, misschien, ... | Zichtbaar Nederlands",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://gifhq.com/#",
+      "title": "BEST HQ PORN GIFS OF THE DAY",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.bookseriesinorder.com/david-weber/",
+      "title": "David Weber - Book Series In Order",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gW-USL0EHjQ",
+      "title": "Comus - Out of the Coma - YouTube",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://joyreactor.cc/tag/Home+Porn/415",
+      "title": "Home Porn (домашнее порно) :: Порно :: Секретные разделы JoyReactor - строго 18+! / картинки, гифки, прикольные комиксы, интересные статьи по теме.",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://joyreactor.cc/tag/%D0%A1%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D1%8B%D0%B5+%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8",
+      "title": "Секретные Истории :: Секретные разделы JoyReactor - строго 18+! / картинки, гифки, прикольные комиксы, интересные статьи по теме.",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://razgovornyj.com/",
+      "title": "Разговорный жанр",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/AnalGW/comments/17ehnje/i_think_i_look_cute_getting_fucked_in_the_ass/?share_id=a3ffYFynuwvoKNxgjb7iP&utm_content=1&utm_medium=ios_app&utm_name=ioscss&utm_source=share&utm_term=1",
+      "title": "I think I look cute getting fucked in the ass from this angle 😚 : AnalGW",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://soundcloud.com/retro21-band",
+      "title": "Retro21 Band | Free Listening on SoundCloud",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://bencraven.bandcamp.com/track/spy-in-the-sky-part-3-featuring-william-shatner",
+      "title": "Spy In The Sky Part 3 (featuring William Shatner) | Ben Craven",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=_4IRMYuE1hI&list=RDiCEDfZgDPS8&index=13",
+      "title": "Beethoven's 5th Symphony - YouTube",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Tos3o_GWED4",
+      "title": "Most Epic Classical Music Pieces Collection | 6-Hour Playlist [HD] - YouTube",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://sonicelements.bandcamp.com/track/acoustic-medley-feat-jon-davison",
+      "title": "Acoustic Medley (feat. Jon Davison) | Dave Kerzner & Sonic Elements",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dev.mysql.com/doc/refman/5.5/en/crashing.html",
+      "title": "MySQL :: MySQL 5.5 Reference Manual :: B.5.3.3 What to Do If MySQL Keeps Crashing",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://habrahabr.ru/company/kingservers/blog/257291/",
+      "title": "Исправляем поврежденные MySQL-таблицы с myisamchk / Блог компании King Servers / Хабрахабр",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://superuser.com/questions/269818/change-default-code-page-of-windows-console-to-utf-8",
+      "title": "Change default code page of Windows console to UTF-8 - Super User",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series",
+      "title": "OWASP Cheat Sheet Series - OWASP",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mrcoles.com/blog/use-jquery-firebug/",
+      "title": "Use jQuery in Firebug or Chrome Inspector - Peter Coles",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://bootswatch.com/3/spacelab/",
+      "title": "Bootswatch: Spacelab",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://pinetools.com/lighten-color",
+      "title": "Lighten color online",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://getbootstrap.com/docs/3.3/",
+      "title": "Bootstrap · The world's most popular mobile-first and responsive front-end framework.",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://element.eleme.io/#/en-US",
+      "title": "Element - A Desktop UI Toolkit for Web",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://iag.me/twools/",
+      "title": "Twools - Twitter Power Tool | Ian Anderson Gray",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.branah.com/unicode-converter",
+      "title": "Unicode Converter - Decimal, text, URL, and unicode converter",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.madelineproto.xyz/docs/LOGIN.html",
+      "title": "Login | MadelineProtoDocs",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://lesscss.org/less-preview/",
+      "title": "less-preview",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.tryphotino.io/Overview",
+      "title": "Overview - Photino Docs",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1fRNVjr0kzkp2BIhQX1X1mLpbcoy3SV8UKJw3I257p_g/edit#gid=1188451312",
+      "title": ".NET interview prep (sharable) - Google Таблицы",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/Mbucari/InjectDotnet",
+      "title": "Mbucari/InjectDotnet: Inject dotnet .NET Core dlls into Win32 or Win64 native processes and hook native functions",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://programming.dev/c/dotnet",
+      "title": ".NET - programming.dev",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/airbnb/ts-migrate",
+      "title": "airbnb/ts-migrate: A tool to help migrate JavaScript code quickly and conveniently to TypeScript",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://htmx.org/",
+      "title": "</> htmx - high power tools for html",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.developing.dev/p/speedrunning-guide-senior-l5-staff",
+      "title": "Speedrunning Guide: Senior (L5) -> Staff (L6)",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.developing.dev/p/finding-staff-level-scope",
+      "title": "Finding Staff-Level Scope - by Ryan Peterman",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/devops/?view=azure-devops",
+      "title": "Azure DevOps documentation | Microsoft Learn",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/free-offer?view=azuresql",
+      "title": "Azure SQL Database free offer - Azure SQL Database | Microsoft Learn",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://gleexa.com/web/blazor-components-library/",
+      "title": "Blazor Components Library: Everything Developers Need To Know",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/ByteByteGoHq/system-design-101",
+      "title": "ByteByteGoHq/system-design-101: Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dhall-lang.org/#",
+      "title": "The Dhall configuration language",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/dotnet/comments/18km68i/what_ai_code_helpers_are_net_people_using/",
+      "title": "Reddit - Dive into anything",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/khalidabuhakmeh/Htmx.Net",
+      "title": "khalidabuhakmeh/Htmx.Net: Adds extensions methods to HttpResponse and HttpRequest to make working with Htmx easier.",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://youmightnotneedjquery.com/",
+      "title": "You Might Not Need jQuery",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://devblogs.microsoft.com/visualstudio/php-in-visual-studio/",
+      "title": "PHP in Visual Studio - Visual Studio Blog",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.didact.dev/compare/didact-vs-hangfire",
+      "title": "Alternative To Hangfire | Didact",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://neetcode.io/",
+      "title": "NeetCode.io",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://new.reddit.com/r/ExperiencedDevs/comments/1bxuqtr/what_are_your_biggest_onboarding_pain_points_for/",
+      "title": "What are your biggest onboarding pain points for new developers joining the team? : ExperiencedDevs",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/fabiospampinato/cash",
+      "title": "fabiospampinato/cash: An absurdly small jQuery alternative for modern browsers.",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/xoofx/ultra?tab=readme-ov-file",
+      "title": "xoofx/ultra: An advanced profiler for .NET Applications on Windows",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/alibaba-aero/technical-interview",
+      "title": "alibaba-aero/technical-interview: Technical interview questions for Alibaba Travels Co.",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/cscareerquestionsEU/comments/1her7j6/system_design_interview/",
+      "title": "System design interview : r/cscareerquestionsEU",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/ExperiencedDevs/comments/1fhcl14/had_interview_for_system_design_with_linkedin/",
+      "title": "Had interview for system design with LinkedIn some time ago, this was the only question I didn't get. Thoughts? : r/ExperiencedDevs",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/top-k",
+      "title": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/top-k",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/deepseek-ai/Janus",
+      "title": "deepseek-ai/Janus: Janus-Series: Unified Multimodal Understanding and Generation Models",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.joelonsoftware.com/2006/09/06/finding-great-developers-2/",
+      "title": "Finding Great Developers – Joel on Software",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.joelonsoftware.com/2006/09/07/a-field-guide-to-developers/",
+      "title": "A Field Guide to Developers – Joel on Software",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.joelonsoftware.com/2006/09/08/sorting-resumes-2/",
+      "title": "Sorting Resumes – Joel on Software",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/",
+      "title": "The Guerrilla Guide to Interviewing (version 3.0) – Joel on Software",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.joelonsoftware.com/2005/01/27/news-58/",
+      "title": "News – Joel on Software",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://flattened.net/",
+      "title": "bflat - C# as you know it but with Go-inspired tooling (small, selfcontained, and native executables)",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://pgoutput2json.net/",
+      "title": "PgOutput2Json library for .NET | PgOutput2Json.NET",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://andrewlock.net/using-unix-domain-sockets-with-aspnetcore-and-httpclient/",
+      "title": "Using Unix domain sockets with ASP.NET Core and HttpClient",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://blog.wesleyac.com/posts/why-not-javascript-cdn",
+      "title": "Wesley Aptekar-Cassels | Reasons to avoid Javascript CDNs",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://htmx.org/docs/",
+      "title": "</> htmx ~ Documentation",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/davidfowl/AspirePipelines",
+      "title": "davidfowl/AspirePipelines: An sample pipeline using new deployment APIs in aspire",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1Ld7c_8pHYd-1tENTOMSiW-kRyw5NJJLGdIGsONHuWtY/edit#gid=0",
+      "title": "Vr Games List - Google Sheets",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.pcadvisor.co.uk/buying-advice/game/19-best-htc-vive-games-of-2017-dinosaurs-star-wars-puzzlers-more-3636022/",
+      "title": "Best HTC Vive games & experiences of 2017: 19 best HTC Vive games - Buying Advice - PC Advisor",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://vrsource.com/best-htc-vive-games-552/",
+      "title": "Best HTC Vive games",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/Vive/comments/5e1cbp/allinone_doom_3_bfg_vr_mod_texture_pack_guide/",
+      "title": "All-in-One Doom 3 BFG VR Mod + texture pack Guide : Vive",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://questtime.net/games/list.html",
+      "title": "Игротека",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://howlongtobeat.com/",
+      "title": "How long does it take to beat your favorite games? - HowLongToBeat.com",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/3332516",
+      "title": "Новая игра от People Can Fly (Painkiller, Bulletstorm) / Witchfire :: гифка :: нечисть :: fps :: Игры / красивые картинки и арты, гифки, прикольные комиксы, интересные статьи по теме.",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/NetStorm/",
+      "title": "NetStorm",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://questtime.net/prohozhdenie/422-black-mirror-prohogdenie.html",
+      "title": "Парад прохождений - Черное зеркало / Black Mirror, The - Автор: Алина",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://iway.ru/?utm=meduza#!",
+      "title": "Трансферы в 670 аэропортах | i’way – transferseveryday",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://encyclopatia.ru/wiki/Welcome",
+      "title": "Encyclopedia Pathologica",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://meduza.io/cards/mne-zvonyat-v-dver-govoryat-otkroyte-politsiya-chto-delat",
+      "title": "Мне звонят в дверь, говорят: «Откройте, полиция!» Что делать? — Meduza",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/3507223",
+      "title": "гифка :: периметр / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1d9_E3h8bLp-TXr-0zTJFqqVxdCR9daIVNyMatydkpFA/edit#gid=639584818",
+      "title": "AM4 Vcore VRM Ratings v1.2 (2019-07-10) - Google Таблицы",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.cheapshark.com/browse?storeID=6",
+      "title": "Browse | CheapShark",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://piratebay-proxylist.com/",
+      "title": "PirateBay Proxy - Working The Pirate Bay Proxy sites and mirrors",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://zaka-zaka.com/",
+      "title": "Zaka-Zaka.com - Магазин компьютерных игр | Магазин steam игр | Купить дешево steam и origin ключи",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://joyreactor.cc/post/4421830",
+      "title": "Лишился переднего зуба и встал вопрос насчет протезирования, а тут уже я встретил проблемы с недоста / пидоры помогите (реактор помоги) :: стоматология / смешные картинки и другие приколы: комиксы, гиф анимация, видео, лучший интеллектуальный юмор.",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1PuUWroxA0HvSSipsXlB8hnYkshxD8LdeO5EA6WLdOQw/edit#gid=0",
+      "title": "B550 VRM DB sheet (ver 1.4) - Google Таблицы",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.rtings.com/monitor/reviews/lg/43ud79-b#page-test-results",
+      "title": "LG 43UD79-B Review - RTINGS.com",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/98o7zh/global_keyboard_shortcut_support/",
+      "title": "Global keyboard shortcut support. : firefox",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1B27_j9NDPU3cNlj2HKcrfpJKHkOf-Oi1DbuuQva2gT4/edit#gid=0",
+      "title": "SSDs - Google Таблицы",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://badge.design/?_ga=2.141563250.1132734527.1610359144-583521409.1605026358",
+      "title": "Open Badge Designer",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.photopea.com/",
+      "title": "Photopea | Online Photo Editor",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dogmamix.com/MimeHeadersDecoder/",
+      "title": "Online MIME Headers Decoder (RFC 2047)",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://companiesmarketcap.com/",
+      "title": "Companies ranked by Market Cap - CompaniesMarketCap.com",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.snooker.org/res/index.asp?template=2",
+      "title": "Calendar 2021/2022 - snooker.org",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://blog.logrocket.com/using-codegeex-github-copilot-alternative/",
+      "title": "Using CodeGeeX as a GitHub Copilot alternative - LogRocket Blog",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.rtings.com/monitor/reviews/lg",
+      "title": "The 5 Best LG Monitors of 2023: Reviews - RTINGS.com",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.lorenzostanco.com/lab/steam/u/tinefol",
+      "title": "Steam library filters",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://nometa.xyz/",
+      "title": "nometa",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://forum.volnistye.ru/viewtopic.php?t=4253",
+      "title": "Принудительное кормление попугая через шприц - Форумы о попугаях",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZOcY4BdCkg8",
+      "title": "HOW TO GET YOUR BIRD TO EAT PELLETS | Seeds VS Pellets, Pellet Diet For Parrots, Tips and Tricks - YouTube",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://vetexpert.am/ru/%d1%8d%d0%ba%d0%b7%d0%be%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%b6%d0%b8%d0%b2%d0%be%d1%82%d0%bd%d1%8b%d0%b5/",
+      "title": "Экзотические животные - VetExpert",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.minisforum.com/",
+      "title": "minisforum",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://bt4gprx.com/",
+      "title": "Torrent Search Engine - BT4G",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://vk.com/topic-31128109_29228801",
+      "title": "Паруйр Севак стихи на русском",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/armenia/comments/1j1fhcy/explainer_armenias_new_income_declaration_system/",
+      "title": "EXPLAINER: Armenia’s New Income Declaration System: Step-By-Step Guide : r/armenia",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/catalyst/moodle-auth_userkey/blob/MOODLE_33PLUS/README.md",
+      "title": "moodle-auth_userkey/README.md at MOODLE_33PLUS · catalyst/moodle-auth_userkey",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/catalyst/moodle-auth_userkey",
+      "title": "catalyst/moodle-auth_userkey: Log in to Moodle using one time user key based login URL. Auth plugin for organising simple SSO (single sign on) between moodle and your external web application.",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cobalt.tools/",
+      "title": "cobalt",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/dylanraga/win11hdr-srgb-to-gamma2.2-icm",
+      "title": "dylanraga/win11hdr-srgb-to-gamma2.2-icm: Transform Windows 11's virtual SDR-in-HDR curve from piecewise sRGB to Gamma 2.2",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://molochinations.substack.com/p/insta-sell-all-rsus-always?r=168s7",
+      "title": "Insta-Sell All RSUs, Always - by Philip Su - Molochinations",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://xosum.am/",
+      "title": "Xosum.am - Հայերեն խոսքը տեքստի վերածող գործիք",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://teamcity.st.dev/buildConfiguration/Services_ServiceTitan_Playground_BuildWithBetterCache?branch=75.1saturn&buildTypeTab=overview&mode=builds&focusLine=NaN",
+      "title": "Build With Better Cache — TeamCity",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.ohjoysextoy.com/anal-sex-preparation/",
+      "title": "Oh Joy Sex Toy - Anal Sex Preparation",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/MagicAlchemy/comments/1sbv1t0/welcome_to_rmagicalchemy_deck_lists_and_ideas/",
+      "title": "👋 Welcome to r/MagicAlchemy - Deck Lists and Ideas : r/MagicAlchemy",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://outages.plhk.dev/#now",
+      "title": "Армения — Отключения коммунальных услуг",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/harry-the-nerd/interview-notes-questions",
+      "title": "harry-the-nerd/interview-notes-questions: Real interview questions and notes provided by darkinterview.com covering OpenAI, Anthropic, xAI, Databricks, Perplexity, Stripe, Rippling, Netflix, Coinbase, Snowflake, Uber and more.",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.nngroup.com/articles/less-chat-more-answer/?utm_source=Alertbox&utm_campaign=content&utm_content=articles&utm_medium=email",
+      "title": "Less Chat, More Answer: Site AI Chatbots Need to Get to the Point - NN/G",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/armenia/comments/1ux427q/national_library_of_armenia_mcp_server/?post_fullname=t3_1ux427q&post_index=4&target_user=Tinefol",
+      "title": "National Library of Armenia MCP Server : r/armenia",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.draftaholicsanonymous.com/",
+      "title": "Draftaholics Anonymous",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.limitedinformation.net/top8.aspx",
+      "title": "Top 8 Predictor - A Swiss Rounds Tournament Tool. | limitedinformation",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.starcitygames.com/article/32066_What-To-Do-When-You-Dont-Know-What-To-Do.html",
+      "title": "StarCityGames.com - What To Do When You Don't Know What To Do",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.channelfireball.com/articles/how-many-colored-mana-sources-do-you-need-to-consistently-cast-your-spells-a-guilds-of-ravnica-update/",
+      "title": "How Many Colored Mana Sources Do You Need to Consistently Cast Your Spells? A Guilds of Ravnica Update",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.coolstuffinc.com/a/",
+      "title": "CoolStuffInc.com online retailer of board games, mtg and many other collectible card games",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://article.hareruyamtg.com/article/16588/?lang=en",
+      "title": "KCI Deck Guide | 記事",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://armlx.blogspot.com/2019/02/the-rna-draft-meeting-part-1-archetypes.html",
+      "title": "Less Practical Magic: The RNA Draft Meeting Part #1: Archetypes",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://topdeck.ru/forums/topic/289043-gfcardsru/?tab=comments#comment-1486591",
+      "title": "Gfcards.ru - Новое в мире магии - TOPDeck.ru",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt1442462/?ref_=nv_sr_1",
+      "title": "Правильная жена (TV Series 2009–2016) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt5853176/?ref_=fn_al_tt_1",
+      "title": "Хорошая борьба (TV Series 2017– ) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt4093826/?ref_=fn_al_tt_1",
+      "title": "Твин Пикс (TV Series 2017– ) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt6103962/",
+      "title": "It's All Good (2016) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt5620076/?ref_=nv_sr_1",
+      "title": "Доктор Шанс (TV Series 2016– ) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt3339966/?ref_=nv_sr_1",
+      "title": "Несгибаемая Кимми Шмидт (TV Series 2015– ) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt1856010/?ref_=fn_al_tt_1",
+      "title": "Карточный домик (TV Series 2013– ) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt3032476/?ref_=nv_sr_1",
+      "title": "Лучше звоните Солу (TV Series 2015– ) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.imdb.com/title/tt2937900/?ref_=nv_sr_1",
+      "title": "Больница Никербокер (TV Series 2014–2015) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://meduza.io/feature/2017/10/18/serial-ohotnik-za-razumom-devida-finchera-1-sezon",
+      "title": "Сериал «Охотник за разумом» Дэвида Финчера, 1 сезон: У Netflix наконец-то появился свой «Настоящий детектив» — Meduza",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://lifehacker.ru/20-serialov-nulevyx/",
+      "title": "20 легендарных сериалов нулевых, которые хочется пересмотреть даже сейчас - Лайфхакер",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://meduza.io/shapito/2019/09/16/vyshel-treyler-trillera-v-teni-luny-v-glavnyh-rolyah-aktery-iz-narko-i-dekstera",
+      "title": "Вышел трейлер триллера «В тени Луны». В главных ролях — актеры из «Нарко» и «Декстера» — Meduza",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.imdb.com/title/tt0480669/?ref_=fn_al_tt_1",
+      "title": "Timecrimes (2007) - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.imdb.com/list/ls068617191/",
+      "title": "The 50 All-Time Best Time-Travel Films - IMDb",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.purewow.com/entertainment/best-time-travel-movies",
+      "title": "20 Best Time Travel Movies to Stream Right Now - PureWow",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/ededdneddy/comments/n6whqz/ed_edd_n_eddy_definitive_edition/",
+      "title": "Ed, Edd N Eddy: Definitive Edition : ededdneddy",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.justwatch.com/us/tv-show/ed-edd-n-eddy",
+      "title": "Ed, Edd n Eddy - streaming tv show online",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/ededdneddy/comments/g7cyrz/where_can_i_watch_ed_edd_and_eddy/",
+      "title": "Where can I watch Ed Edd and Eddy : ededdneddy",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL_0hXA5jz_THj40nWKLz58UPAq5dpjo0y",
+      "title": "армянский язык онлайн - YouTube",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Noise_of_Time",
+      "title": "The Noise of Time - Wikipedia",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Consider_Phlebas",
+      "title": "Consider Phlebas - Wikipedia",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dune_(franchise)",
+      "title": "Dune (franchise) - Wikipedia",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.mirf.ru/special/luchshie-knigi-fantastika-fentezi",
+      "title": "Лучшие книги: фантастика и фэнтези | Мир фантастики и фэнтези",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://vr-compare.com/",
+      "title": "VRcompare - The Internet's Largest VR & AR Headset Database",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=84LBVtBMLrU",
+      "title": "Best Gaming Monitors For Your Budget 2022: $100 to $1000+ - YouTube",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zOVyCavf__o",
+      "title": "Месяц спустя — министр экономики Андрей Нечаев и журналист Дмитрий Бутрин о последствиях санкций - YouTube",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/hardware/comments/vcizar/gigantic_retrotest_of_80_cpu_coolers_20052015/",
+      "title": "Gigantic retrotest of 80 CPU coolers (2005–2015) : hardware",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.displayninja.com/new-monitors/",
+      "title": "New Monitors In 2022: What To Expect [Professional, Gaming]",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1m6VKBnCqwQT5dUsBV7MTyPlT-ABGaFLo53rdB5aTJpk/edit",
+      "title": "Обязанности, заметки - Google Документы",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://inoreader.com/",
+      "title": "Ino",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://85.198.116.9:1500/ispmgr#/dashboard?func=dashboard&tab_id=0",
+      "title": "NADPO 5.0",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://crm.nadpo.ru/crm/deal/details/18775/",
+      "title": "Тестовая сделка",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv1830557.vps.regruhosting.ru:1500/ispmgr#/dashboard/dashboard/0",
+      "title": "Сайт НАДПО новый",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv6007851.regru.cloud:1500/ispmgr#/dashboard?func=dashboard&tab_id=0",
+      "title": "НЦРДО 5.0",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://server109.hosting.reg.ru:1500/ispmgr?sfrom=loginform",
+      "title": "NCRDO_old",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://crm.ncrdo.ru/",
+      "title": "CRM NCRDO",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv6100685.regru.cloud:1500/ispmgr#/list?clickstat=yes&p_num=1&func=webdomain&tab_id=1",
+      "title": "NCRDO intermediate",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv5489905.regru.cloud:1500/ispmgr?sfrom=loginform",
+      "title": "ЦАППКК М5",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АППКК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://server250.hosting.reg.ru:1500/",
+      "title": "APPKK old",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АППКК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv996049.vps.regruhosting.ru:1500/ispmgr#/dashboard/dashboard/0",
+      "title": "АППКК new",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АППКК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://crm.appkk.ru/stream/?login=yes",
+      "title": "(69) АППКК",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АППКК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv1144231.vps.regruhosting.ru:1500/ispmgr#/dashboard/dashboard/0",
+      "title": "НИПКЭФ Новый",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://server88.hosting.reg.ru:1500/ispmgr?sfrom=loginform",
+      "title": "Старый НИПКЭФ",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://crm.nipkef.ru/stream/?login=yes",
+      "title": "АНО ДПО \"НИПКЭФ\"",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dnsadmin.hosting.reg.ru/manager/ispmgr?theme=orion",
+      "title": "DNS",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv7073017.regru.cloud:1500/ispmgr#/dashboard?func=dashboard&tab_id=0",
+      "title": "cv7073017.regru.cloud:1500",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "ТКСПО"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://server246.hosting.reg.ru:1500/ispmgr#/dashboard/dashboard/0",
+      "title": "server246.hosting.reg.ru:1500",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НФЭК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv7075199.regru.cloud:1500/ispmgr?sfrom=loginform",
+      "title": "NFEK 5.0",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НФЭК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://crm.nfek.ru/crm/catalog/",
+      "title": "(1) Каталог товаров",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НФЭК"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://server254.hosting.reg.ru:1500/ispmgr#/dashboard/dashboard/0",
+      "title": "server254.hosting.reg.ru:1500",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НКПЭП"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://server174.hosting.reg.ru:1500/",
+      "title": "Authorization --- OLD",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПСР"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv2256663.vps.regruhosting.ru:1500/?func=auth&username=root&password=w_$LJT#A4aep&theme=sirius&lang=ru&checkcookie=no",
+      "title": "Authorization",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПСР"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dev.1c-bitrix.ru/rest_help/crm/cdeals/crm_deal_update.php",
+      "title": "crm.deal.update",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://lk.sbergate.ru/mportal3/auth/login",
+      "title": "Личный кабинет | Вход в систему",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://yookassa.ru/developers/payment-acceptance/after-the-payment/declined-payments",
+      "title": "Неуспешные платежи — Прием платежей по API ЮKassa",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/yoomoney/yookassa-sdk-php/blob/master/docs/classes/YooKassa-Model-Metadata.md",
+      "title": "yookassa-sdk-php/docs/classes/YooKassa-Model-Metadata.md at master · yoomoney/yookassa-sdk-php",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://github.com/bitrix-tools/crest/blob/master/src/crest.php",
+      "title": "crest/src/crest.php at master · bitrix-tools/crest",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://cv3003043.vps.regruhosting.ru:1500/?",
+      "title": "Центр карьеры",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Центр Карьеры"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dnsadmin.hosting.reg.ru/manager/ispmgr?sfrom=loginform",
+      "title": "dnsadmin.hosting.reg.ru",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://regex101.com/",
+      "title": "regex101: build, test, and debug regex",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.urtech.ca/2018/03/solved-where-are-the-license-keys-for-server-2016-virtual-machines-avma/",
+      "title": "SOLVED: Where Are The License Keys For Server 2016 Virtual Machines AVMA? – Up & Running Technologies, Tech How To's",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://sdo.nadpo.ru/admin/webservice/service_functions.php?id=2",
+      "title": "АНО ДПО «НАДПО»: Управление: Плагины: Веб-службы: Функции внешних служб",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.mtggoldfish.com/",
+      "title": "Goldfish",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/bed4f37a-1e07-4be6-84c4-51b3b2ec379f/FB4B4C8A479EE979?timeFrame=last_2_sets",
+      "title": "Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/8d47be5e-b1ed-45aa-95de-8f5e921b937a/12BF9013885DCB39",
+      "title": "crokodil's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/38e25c3b-f832-40dd-a063-a58f69057431/6C4C137387806273?timeFrame=last_two_sets",
+      "title": "Zenith777's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/d739ba4b-0d85-4d41-a183-08ab45877a9a/D6280FA0FED38B04",
+      "title": "Vlados's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/8edfd903-62fe-4a70-b6be-e972aa6970cb/VHGSCUGSLREXPO3WMSMWP2UXIU",
+      "title": "littlebeep's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/13c8e099-a53c-461f-addf-42fa6dd983bb/24DA0DB9091D2C7B?timeFrame=last_two_sets",
+      "title": "lucky_dragon's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/1035ec34-fc19-489d-b9b2-50b8a1d2f3db/6BB92BFA0C054878",
+      "title": "Ivilis's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/3a22a27d-4651-4513-b0d7-384a13b69f28/5E47272B5917A66C?timeFrame=current_season",
+      "title": "Dmios's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://sites.google.com/view/mtgduelist/",
+      "title": "MTG Duelist",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://caselookup.nmcourts.gov/caselookup/app?component=cnLink&page=SearchResults&service=direct&session=T&sp=SD-101-CR-202000095",
+      "title": "Caselookup - Case Detail",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.streamdecker.com/deck/pjvxwaVwv",
+      "title": "Stream Decker",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/39da52d4-c613-445a-8c13-39a9ba614817/TOFIMYM5SVCBVIRGLMICNKV7CU",
+      "title": "LSV's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/fb4b8701-ea80-4e63-a061-8c083c2899c5/62A7665E1543C4FD",
+      "title": "Galopin's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://magicthegatheringarena.statuspage.io/",
+      "title": "MTG Arena Status",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/bee6f10e-eab9-4973-a76a-5e8cb54f0cad/62D6DE43F73882D5",
+      "title": "Gainsay's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://sealeddeck.tech/",
+      "title": "SealedDeck.Tech",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/ac950f57-0c4f-4c7d-a3f9-8b7a7aa365a6/72EAE533D6FE9470?gameType=limited&limitedType=ranked&limitedSet=EOE",
+      "title": "HalF's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://new.reddit.com/",
+      "title": "reddit",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/",
+      "title": "YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.linkedin.com/",
+      "title": "LinkedIn",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.verbix.com/languages/dutch",
+      "title": "Dutch - verb conjugation -- Verbix verb conjugator",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://woordenlijst.org/#/",
+      "title": "woordenlijst",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/a8kv0h/when_to_use_is_or_staat_or_ligt_or_zit/",
+      "title": "When to use “is” or “staat” or “ligt” or “zit” : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://hinative.com/questions/43203",
+      "title": "What is the difference between \"niks\" and \"niets\" ? \"niks\" vs \"niets\" ? | HiNative",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/yanp41/when_to_use_dat_wat_die_wie/",
+      "title": "When to use dat, wat, die, wie, : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://jeugdjournaal.nl/",
+      "title": "NOS Jeugdjournaal",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/ybk21c/finished_memrise_dutch/",
+      "title": "Finished memrise Dutch! : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.dutchpod101.com/",
+      "title": "Learn Dutch Online - DutchPod101",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://app.memrise.com/course/1179858/dutch-1/1/",
+      "title": "Level 1 - Launchpad! - Dutch 1 - Memrise",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/yhmju0/dutch_movies/",
+      "title": "Dutch movies : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/h8m87s/difference_between_beneden_and_omlaag/",
+      "title": "Difference between beneden and omlaag? : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/yohy9p/which_learning_resource_duolingo_pro_memrise_pro/",
+      "title": "Which learning resource (Duolingo Pro, Memrise Pro, etc.) do you NOT regret paying for? : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/6wsxgl/any_recommendation_for_dutch_cartoons/",
+      "title": "Any recommendation for Dutch cartoons? : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dutchreview.com/expat/learn-dutch/free-ways-to-learn-dutch/",
+      "title": "The top 16 free ways to learn Dutch – DutchReview",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/c/AdAppeltaaltrainingen/playlists",
+      "title": "Ad Appel - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/c/DutchRound1/videos",
+      "title": "Dutch Round 1 - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gbFIplJhpPk",
+      "title": "Welcome to Dutch Round 1 - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://zichtbaarnederlands.nl/en/adverb/er",
+      "title": "How does ‘er’ work? | Zichtbaar Nederlands",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://zichtbaarnederlands.nl/nl/woorden/tijd#hoe_laat_is_het",
+      "title": "De tijd: Hoe laat is het? | Zichtbaar Nederlands",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/u4cuqq/learning_verbs_that_are_weak_or_strong_depending/",
+      "title": "Learning verbs that are weak or strong depending on the meaning : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://ielanguages.com/dutch-reflexive-verbs.html",
+      "title": "Dutch Reflexive Verbs - ielanguages.com",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ktikutDOA0E",
+      "title": "Чтение голландских букв V, W и F. - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://duome.eu/tips/en/dn",
+      "title": "Duolingo · Tips and Notes @ duome.eu",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://e-ans.ivdnt.org/over",
+      "title": "ANS | Over de E-ANS",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.vandale.nl/gratis-woordenboek/nederlands/betekenis/winkelwagen",
+      "title": "Gratis woordenboek | Van Dale",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/10mjby7/are_there_any_good_dutch_kids_tv_shows_so_i_can/",
+      "title": "Are there any good Dutch kids TV shows so i can learn? : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.welklidwoord.nl/woord",
+      "title": "De of het woord? Welk lidwoord",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://amsterdamhangout.com/is-dutch-hard-or-easy-to-learn/",
+      "title": "Is Dutch Hard Or Easy To Learn? - Amsterdam Hangout",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/1357ry0/naar_welke_youtube_kanalen_kijken_jullie/",
+      "title": "Naar Welke YouTube Kanalen Kijken Jullie? : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/1454haf/i_read_5000_pages_worth_of_novels_in_dutch_by/",
+      "title": "I read 5,000 pages worth of novels in Dutch by Dutch and Flemish authors over the past year and it drastically increased my reading level : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/dutch-english/voorbereiden",
+      "title": "voorbereiden in English - Cambridge Dictionary",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.ensie.nl/woordenboek-van-populair-taalgebruik/geen-hol",
+      "title": "geen hol - de betekenis volgens Woordenboek van Populair Taalgebruik",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://www.taalbureautxt.nl/downloads/Speaking_Dutch_like_a_Native_excerpt.pdf",
+      "title": "Speaking_Dutch_like_a_Native_excerpt.pdf",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://onzetaal.nl/taalloket/wel-of-geen-er",
+      "title": "er: wel of geen er? | Genootschap Onze Taal",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.facebook.com/watch/?v=221931818155275",
+      "title": "Video | Facebook",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://films.bz/films/34456-irlandacin.html",
+      "title": "Իռլանդացին / Ирландец (2019) - դիտել ֆիլմը օնլայն՝ բարձր որակով",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://armtv.org/ru/523-sevazgest-mardik-2.html",
+      "title": "Севазгест мардик 2 (2002)",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9MdjvL6TJeI",
+      "title": "Հեքիաթ/Heqia/Չարի վերջը. Chari verj. Чари верч. Հեքիաթներ մանկական /ՀԱՅԵՐԵՆ ՄՈՒԼՏՖԻԼՄ.Mankakan - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=q2DfQ7Dib9E",
+      "title": "Приключения Гамприка 5 серия | Գամփռիկի արկածները 5 սերիյա | հայկական մուլտեր | | մանկական հեքիաթ - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/@PanArmenianTVOfficial/playlists",
+      "title": "PanArmenian TV - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://ma6.free.fr/",
+      "title": "Armenian conjugation",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://vahagnakanch.wordpress.com/wp-content/uploads/2011/04/d181d0b0d0bcd0bed183d187d0b8d182d0b5d0bbd18c-d0b0d180d0bcd18fd0bdd181d0bad0bed0b3d0be-d18fd0b7d18bd0bad0b0-2007.pdf",
+      "title": "d181d0b0d0bcd0bed183d187d0b8d182d0b5d0bbd18c-d0b0d180d0bcd18fd0bdd181d0bad0bed0b3d0be-d18fd0b7d18bd0bad0b0-2007.pdf",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://easternarmeniantextbook.com/about/expected-results",
+      "title": "Eastern Armenian Textbook",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.imdproc.am/p/hayoc-lezu/7-dasaran/gvoyakan-9869/ughghakan-serakan-trakan-haycakan-hvolvovner-9876/re-bcc8137d-1777-466b-82bd-fe7ed50d25b3",
+      "title": "Տեսություն. ուղղական, սեռական, տրական և հայցական հոլովներ — դաս։ Հայոց լեզու, 7-րդ դասարան.",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://song.guru/text/armen-yedigaryan-a-sudden-bright-shine",
+      "title": "Armen Yedigaryan - A Sudden Bright Shine | Текст песни",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://studfile.net/preview/7301377/page:14/",
+      "title": "Падежи и склонения հոլովներ եվ հոլովումներ Родительно-дательный падеж и склонение существительных Սեռական-տրակաե հոլով և գոյականների հոլովումները",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://elevenlabs.io/text-to-speech/armenian",
+      "title": "Free Armenian Text to Speech & AI Voice Generator | ElevenLabs",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://hy.wikisource.org/wiki/%D5%94%D5%A1%D5%B8%D5%BD/%D4%B1%D5%BC%D5%A1%D5%BB%D5%AB%D5%B6_%D5%B4%D5%A1%D5%BD",
+      "title": "Քաոս/Առաջին մաս — Վիքիդարան",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "http://armenianhouse.org/shirvanzade/novels-ru/I.html",
+      "title": "Александр Ширванзаде - Хаос",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://bararan.am/%D5%BA%D5%A5%D5%BF%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6",
+      "title": "պետություն բացատրություն, petutyun bacatrutyun, պետություն հոմանիշ, պետություն ռուսերեն թարգմանություն, պետություն հականիշ, պետություն անգլերեն թարգմանություն, պետություն դարձվածքներ",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/@ArmenianPublicTV/playlists",
+      "title": "Armenian Public TV - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.youtube.com/@HDProductionofficial/playlists",
+      "title": "HD Production - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.president.am/hy/constitution-2015/",
+      "title": "Հայաստանի Հանրապետության Սահմանադրություն - Գրադարան - Հայաստանի Հանրապետության Նախագահ",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.president.am/ru/constitution-2015/",
+      "title": "Конституция Республики Армения - Библиотека - Президент Республики Армения",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.arlis.am/hy/acts/122105",
+      "title": "ՀՀ ԿԱՌԱՎԱՐՈՒԹՅԱՆ ՈՐՈՇՈՒՄԸ ՀՀ ՔԱՂԱՔԱՑԻՈՒԹՅՈՒՆ ՍՏԱՑՈՂ ԱՆՁԱՆՑ ՀԱՄԱՐ ՀՀ ՍԱՀՄԱՆԱԴՐՈՒԹՅԱՆ ԵՎ ՀԱՅՈՑ ԼԵԶՎԻ ԻՄԱՑՈՒԹՅԱՆ ՍՏՈՒԳՄԱՆ ԿԱՐԳԸ ՍԱՀՄԱՆԵԼՈՒ ՄԱՍԻՆ",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://armtv.org/ru/",
+      "title": "Новые армянские сериалы на ARMTV",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.connectmyhandy.com/",
+      "title": "ConnectMyHandy",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1eoTKYSiQYO5jfJSeHGrZTsf3ptOOjB-8topacI5eQ_k/edit#gid=1300978637",
+      "title": "Free VR scripts list - Google Таблицы",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://plati.market/",
+      "title": "Plati.Market. Digital goods marketplace.",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://onlinejsontools.com/unstringify-json",
+      "title": "Unstringify JSON - Online JSON Tools",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://morow.com/morow.m3u",
+      "title": "morow.m3u",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://zaka-zaka.com/profile/purchase/9cc326f9-7ab4-4e9f-86a6-8e998c599e27",
+      "title": "Zaka-Zaka.com – Интернет магазин компьютерных игр",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://wecoverletters.com/",
+      "title": "We ❤️ Cover Letters",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://workpermit.am/ru/ssn",
+      "title": "Workpermit web",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/author/42",
+      "title": "Books by Baum, L. Frank (Lyman Frank) (sorted by popularity) - Project Gutenberg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/ExperiencedDevs/comments/14ulw9h/how_to_approach_interviewing_juniors/",
+      "title": "How to approach interviewing juniors? : ExperiencedDevs",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://sankeymatic.com/",
+      "title": "SankeyMATIC: Make Beautiful Flow Diagrams",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://x.com/ke9/status/1803947047990563085",
+      "title": "Nadya Whatever on X: \"Большую часть жизни я была без ребенка. Родила в 34. И мне всегда было интересно — материнство это ваще что? На что похоже? Плюсы минусы? Когда я родила, то искала ответы на все эти вопросы для бездетной себя. На некоторые я попробую ответить на бездетном. Любопытствующие люди\" / X",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://petcity.am/ru/sign-up",
+      "title": "Padovan GRANDMIX Комплексный корм для маленьких попугаев 400г",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://stphanepicq.bandcamp.com/album/dune-spice-opera-2024-remaster-lp",
+      "title": "Dune Spice Opera 2024 remaster (LP) | EXXOS (Stéphane Picq with Philippe Ulrich) | Stéphane Picq",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.flickr.com/photos/ivan_bodhidharma/",
+      "title": "Ivan Bodhidharma [Igor I] | Flickr",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.flickr.com/photos/ivan_bodhidharma/2288161312/",
+      "title": "Sound morning sleep. Son | Он меня убьёт-2! (Right now, 24 F… | Flickr",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/",
+      "title": "Novel Universal Bypass for All Major LLMs",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://chat.qwen.ai/?inputFeature=web_dev",
+      "title": "Qwen",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://jsonresume.org/schema",
+      "title": "Schema — JSON Resume",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.flickr.com/photos/ivan_bodhidharma/with/2170182288",
+      "title": "Ivan Bodhidharma [Igor I] | Flickr",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://course.emova.language-ua.online/register?next=%2F",
+      "title": "Sign in or Register | Є-мова",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://bsky.app/",
+      "title": "Following — Bluesky",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://translate.kagi.com/?from=en&to=linkedin&text=I+am+starting+a+new+job+at+Google+next+Monday.+I+will+work+as+a+contractor+cleaning+toilets",
+      "title": "Kagi Translate",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.twitch.tv/",
+      "title": "Twitch",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://keep.google.com/u/0/#home",
+      "title": "Google Keep",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://boards.eu.greenhouse.io/imc?gh_src=5a208672teu",
+      "title": "Jobs at IMC",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://optiver.com/working-at-optiver/career-opportunities/?gh_src=9fb491cd2",
+      "title": "Make an Impact with Optiver Careers",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.eneco.nl/",
+      "title": "Energieleverancier Eneco - duurzame energie van iedereen",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.xing.com/jobs/find",
+      "title": "XING",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://app.otta.com/",
+      "title": "Otta - The better way to find a job in tech",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://www.kroesadvocaten.nl/en/companies/eu-blue-card/",
+      "title": "EU Blue Card - Immigration Laywers | Kroes Advocaten",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://interviewing.io/guides/system-design-interview/part-three",
+      "title": "A 3-Step Framework to Nail Your System Design Interview",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://us.etrade.com/etx/sp/stockplan?accountIndex=0&traxui=tsp_accountshome#/overview",
+      "title": "E*TRADE - Stock Plan Overview",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://mcs-citizenship.am/",
+      "title": "https://mcs-citizenship.am/",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "skipped",
+      "reason": "already_imported"
+    },
+    {
+      "url": "https://medium.com/entech-solutions/generate-realistic-test-data-in-net-with-interactive-examples-33343c543a68",
+      "title": "Generate realistic Test Data in .NET, with interactive examples | by Eric Popivker | ENTech Solutions | Jul, 2022 | Medium",
+      "folderPath": [
+        ".net"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://intch.org/63891/1524/apply",
+      "title": "Looking for IT specialists for relocation to Sweden - Pavel Rabetski",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://job.danskebank.lt/jobs/?category=2&level=374,684,19&search=.NET",
+      "title": "Jobs – Danske jobs",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://medium.com/%D1%82%D0%B0%D0%BC-%D0%B3%D0%B4%D0%B5-%D0%BC%D1%8B-%D0%B5%D1%81%D1%82%D1%8C/%D0%BF%D0%B5%D1%80%D0%B5%D0%B5%D0%B7%D0%B4-%D0%B2-%D0%BD%D0%B8%D0%B4%D0%B5%D1%80%D0%BB%D0%B0%D0%BD%D0%B4%D1%8B-%D1%88%D0%BF%D0%B0%D1%80%D0%B3%D0%B0%D0%BB%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%81%D0%B5-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B8-%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-22f12ce6a13c",
+      "title": "Переезд в Нидерланды: Шпаргалка на все случаи жизни | by Ekaterina Gor | Там, где мы есть | Medium",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://dotnet-jobs.com/",
+      "title": "Find and list incredible C# and .NET developer jobs.",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://career.proxify.io/?utm_source=linkedin&utm_medium=cpc&utm_campaign=in-mail_mena_senior-developers&li_fat_id=44631fb8-4535-4bed-8259-eb79bbde867a",
+      "title": "Remote developer jobs, work from anywhere - Proxify",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://jobs.ict.eu/en/developing/e-books",
+      "title": "E-books - Download een gratis e-book | ICT Group",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://tejofi.com/",
+      "title": "Find tech jobs using AI | tejofi",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://amazoninterviewwhizz.com/blog/tell-me-about-a-time-you-failed/",
+      "title": "Tell Me About A Time You Failed",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://interviewbotai.com/",
+      "title": "Interview Bot AI | Your AI-Powered Interview Copilot",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "http://vintage-erotica-forum.com/",
+      "title": "Vintage Erotica Forums",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://erotic-home.com/porno-foto/page/2/",
+      "title": "Порно фото домашние - личные порно галереи на Amateur Girls | Страница 2",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://65words.com/",
+      "title": "65 Words: Write daily in your target language",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://bunkr-albums.io/?search=&page=465",
+      "title": "Bunkr Albums - A Simple List of all Bunkr Albums",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "http://tvtropes.org/",
+      "title": "TVTropes",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://context.reverso.net/translation/dutch-english/pseudokroep",
+      "title": "pseudokroep - Translation into English - examples Dutch | Reverso Context",
+      "folderPath": [
+        "Порно",
+        "[Mapnaam]"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://techpays.eu/europe/netherlands/eng_fullstack/senior",
+      "title": "Senior Fullstack Salaries in the Netherlands - TechPays Europe",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://www.progarchives.com/mp3.asp?id=5683",
+      "title": "TUNDERGROUND About Istambul MP3 (Stream/Download)",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://musopen.org/music/1201/johann-sebastian-bach/orchestral-suite-no-3-in-d-bwv-1068/",
+      "title": "Johann Sebastian Bach - Orchestral suite no. 3 in D, BWV 1068 - Download free",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://medium.com/@the1mills/hot-reloading-with-react-requirejs-7b2aa6cb06e1",
+      "title": "Hot-reloading in 2017: updated and unabridged – Alex Mills – Medium",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://ruselection.herokuapp.com/",
+      "title": "Результаты выборов 2021",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.deliaweb.net/post/collection-of-sample-databases",
+      "title": "Collection of Sample Databases",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://docs.moodle.org/dev/Local_plugins",
+      "title": "Local plugins - MoodleDocs",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://dotabuff.com/players/138131377/matches",
+      "title": "DOTABUFF - Dota 2 Stats - Scarecrow - Matches",
+      "folderPath": [
+        "Игры",
+        "Dota"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://dotabuff.com/players/36886104",
+      "title": "DOTABUFF - Dota 2 Stats - Pavlin Mavlin",
+      "folderPath": [
+        "Игры",
+        "Dota"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://www.dotabuff.com/players/133093827",
+      "title": "HalF - Overview - DOTABUFF - Dota 2 Stats",
+      "folderPath": [
+        "Игры",
+        "Dota"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://liquipedia.net/dota2/Main_Page",
+      "title": "Dota 2 Wiki | Liquipedia",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://xhamster.com/movies/94926/mommy_s_holidays_vintage_movie_f70.html",
+      "title": "Mommy s Holidays...Vintage Movie.F70",
+      "folderPath": [
+        "Порно"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://tourney.ru/forum/viewtopic.php?id=27696",
+      "title": "tourney.ru форумЪ / Инператору",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "wiki/bookmarks/games/tourney-ru.md",
+      "capturePath": "sources/tourney-ru.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://www.deadcandance.com/main/",
+      "title": "Dead Can Dance",
+      "folderPath": [
+        "Музыка"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.reddit.com/r/Vive/comments/67e8cf/my_top_20_games_after_a_year_with_the_vive/",
+      "title": "My Top 20 Games after a year with the Vive : Vive",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "wiki/bookmarks/games/my-top-20-games-after-year-vive-vive.md",
+      "capturePath": "sources/my-top-20-games-after-year-vive-vive.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1wmsTYK9Z3-jUX5LGRoFnsZYZiW1pfiDZnKCjaXyzd1o/edit#gid=2112472504%C2%A0",
+      "title": "X570/X470/X370/B450/B350/A320 Motherboards (AM4-socket for AMD Ryzen CPUs) Comparison - Google Таблицы",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://ruki-zolotye.ru/sovety-mebelschiku/urok-23-rabota-s-pro100-kak-postroit-mebel.html",
+      "title": "Работа с PRO100 (как построить мебель) | Всё своими руками",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://floorplanner.com/projects/72189288/editor",
+      "title": "Floorplanner - i155mk 2",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/personal/home/floorplanner-i155mk-2.md",
+      "capturePath": "sources/floorplanner-i155mk-2.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://linustechtips.com/topic/1092033-ssd-tier-list/",
+      "title": "SSD TIER LIST - Storage Devices - Linus Tech Tips",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.reddit.com/r/SteamVR/comments/etvbh8/how_to_disable_steamvr_from_automatically/",
+      "title": "How to disable SteamVR from automatically starting up when launching a game. : SteamVR",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/games/how-disable-steamvr-from-automatically-starting-up-when-launchin.md",
+      "capturePath": "sources/how-disable-steamvr-from-automatically-starting-up-when-launchin.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.spotlistr.com/search/lastfm-top-for-time-period",
+      "title": "Last.fm Top Songs for Time Period - Spotlistr",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/music/last-fm-top-songs-time-period-spotlistr.md",
+      "capturePath": "sources/last-fm-top-songs-time-period-spotlistr.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://topdeck.ru/apps/donate/kolobki/lift-daily-limit",
+      "title": "TOPDeck — Обнулить суточный лимит колобков",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/games/topdeck.md",
+      "capturePath": "sources/topdeck.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://techcommunity.microsoft.com/t5/windows-insider-program/can-t-set-default-app-for-some-common-file-types-in-windows-11/m-p/2618849",
+      "title": "Can't set default app for some common file types in Windows 11 - Microsoft Community Hub",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://docs.robokassa.ru/fiscalization/",
+      "title": "Фискализация",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://workpermit.am/ru/ssn/current-applications",
+      "title": "Workpermit web",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/careers/immigration/workpermit-web.md",
+      "capturePath": "sources/workpermit-web-2.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://z-library.rs/",
+      "title": "Z-Library – the world’s largest e-book library. Your gateway to knowledge and culture.",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://www.downloadgemist.nl/",
+      "title": "Online Programma Gemist Downloader",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/online-programma-gemist-downloader.md",
+      "capturePath": "sources/online-programma-gemist-downloader.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://forum.keenetic.net/topic/4741-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-dns-%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%B8%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE-%D0%B4%D0%BE%D0%BC%D0%B5%D0%BD-%D0%BA-ip/",
+      "title": "Локальный DNS: как привязать локально домен к IP - Keenetic Community Support - Keenetic Community",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.opensubtitles.org/en/search/sublanguageid-arm/offset-40",
+      "title": "Subtitles - download movie and TV Series subtitles",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://spakhm.substack.com/p/how-to-get-promoted",
+      "title": "How to get promoted - by Slava Akhmechet - Zero Credibility",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.armflix.com/browse",
+      "title": "Browse - Armflix | Largest Armenian Movies Streaming Portal",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/armenian/browse-armflix-largest-armenian-movies-streaming-portal.md",
+      "capturePath": "sources/browse-armflix-largest-armenian-movies-streaming-portal.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://tourney.ru/forum/viewtopic.php?pid=1243962#p1243962",
+      "title": "tourney.ru форумЪ / серьезная тема",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "wiki/bookmarks/games/tourney-ru-2.md",
+      "capturePath": "sources/tourney-ru-2.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://armenian-lawyer.com/ru/%D1%82%D0%B5%D1%81%D1%82-%D0%BD%D0%B0-%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/",
+      "title": "Тест на гражданство | Армянский юрист",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/personal/armenia/untitled-6.md",
+      "capturePath": "sources/untitled-27.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://armeniansubtitles.org/quiz/",
+      "title": "Թեստ հայաստանի հանրապետության Սահմանադրության իմացության ստուգման",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://www.reg.ru/web-tools/punycode?utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.com",
+      "title": "Punycode конвертер: перевод домена .рф в punycode | Рег.ру",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/tools/punycode-punycode.md",
+      "capturePath": "sources/punycode-punycode.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.reddit.com/r/budgies/comments/1lfenqq/a_guide_to_sexing_budgies/",
+      "title": "A guide to sexing budgies : r/budgies",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/pets/guide-sexing-budgies-r-budgies.md",
+      "capturePath": "sources/guide-sexing-budgies-r-budgies.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://airquality.am/ru/air-quality/yerevan",
+      "title": "Качество воздуха в Ереване - AirQuality.am",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/personal/armenia/airquality-am.md",
+      "capturePath": "sources/airquality-am.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://tailscale.com/",
+      "title": "Tailscale | Secure Connectivity for AI, IoT & Multi-Cloud",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/programming/devops/tailscale-secure-connectivity-ai-iot-multi-cloud.md",
+      "capturePath": "sources/tailscale-secure-connectivity-ai-iot-multi-cloud.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://github.com/jlevy/og-equity-compensation",
+      "title": "jlevy/og-equity-compensation: Stock options, RSUs, taxes — read the latest edition: www.holloway.com/ec",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/careers/equity/jlevy-og-equity-compensation-stock-options-rsus-taxes-read-lates.md",
+      "capturePath": "sources/jlevy-og-equity-compensation-stock-options-rsus-taxes-read-lates.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.facebook.com/story.php?story_fbid=1093535312136742&id=100044408500174&rdid=exzbQYcOO1qt6aTG",
+      "title": "(1) Սիրելի հաճախորդներ ՜,ցանկանում ենք... - Vet Line Veterinary Clinic | Facebook",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/pets/1-vet-line-veterinary-clinic-facebook.md",
+      "capturePath": "sources/1-vet-line-veterinary-clinic-facebook.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://us.etrade.com/etx/hw/v2/accountshome",
+      "title": "E*TRADE - Complete View",
+      "folderPath": [
+        "Полезности"
+      ],
+      "wikiPath": "wiki/bookmarks/finance/e-trade-complete-view.md",
+      "capturePath": "sources/e-trade-complete-view.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/19FbNxOoYH7YwhA2Em7ui34F6-M9j-BZKxwbKOd4vans/htmlview#",
+      "title": "Ari's Core Set 2019 Limited Review",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "wiki/bookmarks/magic/mtg/ari-s-core-set-2019-limited-review.md",
+      "capturePath": "sources/ari-s-core-set-2019-limited-review.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://www.eternalcentral.com/magic-deck-building-statistics/",
+      "title": "Magic Deck Building Statistics | Eternal Central",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "wiki/bookmarks/magic/mtg/magic-deck-building-statistics-eternal-central.md",
+      "capturePath": "sources/magic-deck-building-statistics-eternal-central.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://www.channelfireball.com/articles/frank-analysis-how-many-colored-mana-sources-do-you-need-to-consistently-cast-your-spells/",
+      "title": "» Frank Analysis – How Many Colored Mana Sources Do You Need to Consistently Cast Your Spells?",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "wiki/bookmarks/magic/mtg/frank-analysis-how-many-colored-mana-sources-do-you-need-consist.md",
+      "capturePath": "sources/frank-analysis-how-many-colored-mana-sources-do-you-need-consist.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://m.wcostream.org/anime/ed-edd-n-eddy?utm_source=share&utm_medium=ios_app&utm_name=iossmf",
+      "title": "Ed Edd n Eddy | Watch cartoons online, Watch anime online, English dub anime",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://m.wcostream.org/ed-edd-n-eddy-season-1-episode-1-the-ed-touchables-nagged-to-ed",
+      "title": "Ed Edd n Eddy Season 1 Episode 1 The Ed-touchables / Nagged to Ed | Watch cartoons online, Watch anime online, English dub anime",
+      "folderPath": [
+        "Кино и Сериалы"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://docs.google.com/document/d/1t-T5KxlpYONeH8NMHFBCnKocAgNmP4ReEgqu_H37O_g/edit",
+      "title": "Кешины знания - Google Docs",
+      "folderPath": [],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BD%D0%BA%D0%B5%D0%B2%D0%B8%D1%87,_%D0%93%D0%B5%D0%BD%D1%80%D0%B8%D0%BA",
+      "title": "Сенкевич, Генрик — Википедия",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "wiki/bookmarks/books/untitled-2.md",
+      "capturePath": "sources/untitled-28.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://mtgarena.community.gl/forums",
+      "title": "Forums - Magic the Gathering: Arena",
+      "folderPath": [],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://linustechtips.com/topic/1116640-psu-tier-list?__cf_chl_jschl_tk__=pmd_xfWXQPDQGOVnnZXySW9bUgz1Fa2b3J.9lg62IOVDleg-1630252382-0-gqNtZGzNAiWjcnBszQZl",
+      "title": "PSU Tier List - Power Supplies - Linus Tech Tips",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "http://www.starcitygames.com/articles/38078_You-Can-Play-Moderns-Best-Decks-Heres-How.html",
+      "title": "StarCityGames.com - You Can Play Modern's Best Decks. Here's How.",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "wiki/bookmarks/magic/mtg/starcitygames-com-you-can-play-modern-s-best-decks-here-s-how.md",
+      "capturePath": "sources/starcitygames-com-you-can-play-modern-s-best-decks-here-s-how.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://www.davidweber.net/",
+      "title": "Official Home Page || David Weber",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "wiki/bookmarks/books/official-home-page-david-weber.md",
+      "capturePath": "sources/official-home-page-david-weber.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://topdeck.ru/discover/9",
+      "title": "TD",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://89.108.126.15/phpmyadmin/",
+      "title": "phpMyAdmin НАДПО",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://89.108.126.15:1500/ispmgr#/list/domain.record/5?elid=nadpo.ru&elname=nadpo.ru&p_num=1",
+      "title": "НОВЫЙ СДО НАДПО 89.108.126.15:1500",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://www.fine.am/catalog/where/eng/category:computers-office-electronics&pc-components&power-supply_p:1_s:48_attr:1211%5E30990",
+      "title": "Computers & Office Supplies|PC Components|Power Supply Fine",
+      "folderPath": [
+        "Железки"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://securepayments.sberbank.ru/mportal3/auth/login",
+      "title": "Личный кабинет | Вход в систему",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://sdo.nadpo.ru/course/dpp/b24/",
+      "title": "https://sdo.nadpo.ru/course/dpp/b24/",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://crm.nadpo.ru/stream/",
+      "title": "(260) nadpo",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/nadpo/260-nadpo.md",
+      "capturePath": "sources/260-nadpo.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://witcher.reactor.cc/post/3667404",
+      "title": "CD Projekt RED :: Разработчики игр :: ведьмак :: Ведьмак Сапковский Жадность :: Сапковский :: фэндомы :: Игры / картинки, гифки, прикольные комиксы, интересные статьи по теме.",
+      "folderPath": [
+        "Книги"
+      ],
+      "wikiPath": "wiki/bookmarks/books/cd-projekt-red.md",
+      "capturePath": "sources/cd-projekt-red.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://sdo.nadpo.ru/course/dpp/tools/phpmyadmin/",
+      "title": "phpMyAdmin",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://partner.robokassa.ru/Fiscalization",
+      "title": "- Client Cabinet",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://sdo.ncrdo.ru/course/dpp/pma/",
+      "title": "phpMyAdmin NCRDO",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://cv608957.vps.regruhosting.ru:1500/ispmgr?sfrom=loginform",
+      "title": "NCRDO ROOT",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://sdo.ncrdo.ru/course/dpp/b24/",
+      "title": "https://sdo.ncrdo.ru/course/dpp/b24/",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НЦРДО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://cv996049.vps.regruhosting.ru/phpmyadmin/index.php",
+      "title": "cv996049.vps.regruhosting.ru:443 / MySQL | phpMyAdmin 4.9.5deb2",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АППКК"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/appkk/cv996049-vps-regruhosting-ru-443-mysql-phpmyadmin-4-9-5deb2.md",
+      "capturePath": "sources/cv996049-vps-regruhosting-ru-443-mysql-phpmyadmin-4-9-5deb2.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://sdo.appkk.ru/course/dpp/b24/",
+      "title": "https://sdo.appkk.ru/course/dpp/b24/",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АППКК"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://cv5382979.regru.cloud:1500/",
+      "title": "НИПКЭФ 5.0",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/nipkef/5-0.md",
+      "capturePath": "sources/5-0-2.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://sdo.nipkef.ru/course/dpp/b24/",
+      "title": "https://sdo.nipkef.ru/course/dpp/b24/",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://ns5.hosting.reg.ru/manager/dnsmgr",
+      "title": "ns5.hosting.reg.ru",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/nipkef/ns5-hosting-reg-ru.md",
+      "capturePath": "sources/ns5-hosting-reg-ru.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://ns6.hosting.reg.ru/manager/dnsmgr",
+      "title": "ns6.hosting.reg.ru",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/nipkef/ns6-hosting-reg-ru.md",
+      "capturePath": "sources/ns6-hosting-reg-ru.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://server12.hosting.reg.ru:1500/ispmgr#/dashboard/dashboard/0",
+      "title": "АРИНТ ISP",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "АРИНТ"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/arint/isp.md",
+      "capturePath": "sources/isp.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://logs.sdo.nipsr.ru/?orgId=1",
+      "title": "Grafana",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПСР"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/nipsr/grafana.md",
+      "capturePath": "sources/grafana.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://securepayments.sberbank.ru/wiki/doku.php/overview",
+      "title": "Выбор способа подключения [Документация Сбербанка]",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://securepayments.sberbank.ru/wiki/doku.php/main_page",
+      "title": "Документация Сбербанка [Документация Сбербанка]",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://securepayments.sberbank.ru/wiki/doku.php/test_cards",
+      "title": "Тестовые банковские карты [Документация Сбербанка]",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://dnsadmin.hosting.reg.ru/ispmgr?theme=orion",
+      "title": "dnsadmin.hosting.reg.ru",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НИПКЭФ"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/nipkef/dnsadmin-hosting-reg-ru.md",
+      "capturePath": "sources/dnsadmin-hosting-reg-ru-2.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://www.whatmovieshouldiwatchtonight.com/#/THE-OUTSIDERS",
+      "title": "What Movie Should I Watch Tonight?",
+      "folderPath": [
+        "Интересности"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://zlibrary-global.se/",
+      "title": "Z-Library – the world’s largest e-book library. Your gateway to knowledge and culture.",
+      "folderPath": [
+        "поиск"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://sdo.nipkef.ru/course/dpp/tools/php-redis-admin/",
+      "title": "127.0.0.1 - phpRedisAdmin",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://dev.1c-bitrix.ru/learning/course/index.php?COURSE_ID=43&LESSON_ID=2683&LESSON_PATH=3913.4610.2683",
+      "title": "Теория. Фильтрация",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/bitrix-yookassa-docs/untitled-2.md",
+      "capturePath": "sources/untitled-29.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://apiok.ru/dev/methods/",
+      "title": "Методы",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "Документация по СДО и Б24"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/bitrix-yookassa-docs/untitled-3.md",
+      "capturePath": "sources/untitled-30.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://158.250.18.203:6920/",
+      "title": "Projects -- TeamCity",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "http://960ls.atomidata.com/",
+      "title": "960 Layout System | Grids made easy",
+      "folderPath": [
+        "Программирование"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://nl.bab.la/woordenboek/nederlands-engels/",
+      "title": "Nederlands-Engels woordenboek - vertaling - bab.la",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.goatbots.com/prices-rna",
+      "title": "GoatBots",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.dutchgrammar.com/forum/viewtopic.php?t=703",
+      "title": "Weten en Kennen? - The Dutch Grammar Forum",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://buildin.ai/share/e2e1d49d-ca79-4c0d-aa9b-23a83557fa22?code=JFBX8E",
+      "title": "BuildIn.AI | Create, connect, publish instantly",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "wikiPath": "wiki/bookmarks/work/nadpo/buildin-ai-create-connect-publish-instantly.md",
+      "capturePath": "sources/buildin-ai-create-connect-publish-instantly.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://drawtwo.gg/hypeds-draft-tier-list",
+      "title": "DrawTwo",
+      "folderPath": [
+        "Игры"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://thedutchonlineacademy.com/en/grammar/hun-or-hen-in-dutch",
+      "title": "Hun or Hen in Dutch - what is the difference - Learn Dutch Online",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://lingua.com/dutch/reading/#exercises",
+      "title": "Dutch Reading: Dutch Texts for Beginners",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/dutch-reading-dutch-texts-beginners.md",
+      "capturePath": "sources/dutch-reading-dutch-texts-beginners.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://football.kulichki.net/",
+      "title": "ФНК",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "wikiPath": "wiki/bookmarks/interests/sports/fnk-football-kulichki.md",
+      "capturePath": "sources/untitled-31.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.dutchgrammar.com/en/?n=WordOrder.36",
+      "title": "Dutch Grammar • A funny word: 'er'",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://mtga.untapped.gg/profile/d5ae7532-1a1d-48e0-99de-6caa7fafba44/A1CC654595900FB2?timeFrame=last_2_sets",
+      "title": "Prava's Profile - Untapped.gg",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://hinative.com/questions/16382535",
+      "title": "What is the difference between \"omdat\" and \"want\" and \"vanwege\" and \"doordat\" ? \"omdat\" vs \"want\" vs \"vanwege\" vs \"doordat\" ? | HiNative",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/omdat-want-vanwege-doordat-conjunctions.md",
+      "capturePath": "sources/what-is-difference-between-omdat-want-vanwege-doordat-omdat-vs-w.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://nt2taalmenu.nl/learn-dutch-a1-dutch-for-beginners-menu-module-1/",
+      "title": "Learn Dutch - A1 - Dutch for beginners - Menu module 1 - NT2 TaalMenu",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/learn-dutch-a1-dutch-beginners-menu-module-1-nt2-taalmenu.md",
+      "capturePath": "sources/learn-dutch-a1-dutch-beginners-menu-module-1-nt2-taalmenu.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://bartgroot.nl/tips-trucs/typing-symbols-in-windows/",
+      "title": "Typing special characters in Windows | BartGroot.nl",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/typing-special-characters-windows-bartgroot-nl.md",
+      "capturePath": "sources/typing-special-characters-windows-bartgroot-nl.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.dutchgrammar.com/en/index.php?n=Grammar.DutchGrammar",
+      "title": "Dutch Grammar • Learning Dutch grammar",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.quora.com/What-is-the-difference-between-dit-and-deze-in-Dutch",
+      "title": "What is the difference between 'dit' and 'deze' in Dutch? - Quora",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.quora.com/What-does-zon-and-zulke-in-Dutch-mean-How-do-you-use-it",
+      "title": "What does zo'n and zulke in Dutch mean? How do you use it? - Quora",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.ucl.ac.uk/dutchstudies/an/SP_LINKS_UCL_POPUP/SPs_english/linguistics/syntax_er.html",
+      "title": "Dutch Linguistics: Syntax - the special case of ER",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.ucl.ac.uk/dutchstudies/an/SP_LINKS_UCL_POPUP/SPs_english/linguistics/outline.html",
+      "title": "Introduction to Dutch Linguistics: Outline of course",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.reddit.com/r/learndutch/comments/cil9qw/good_shows_on_youtube_to_learn_dutch/",
+      "title": "Good shows on youtube to learn dutch : learndutch",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/good-shows-youtube-learn-dutch-learndutch.md",
+      "capturePath": "sources/good-shows-youtube-learn-dutch-learndutch.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.dutchgrammar.com/en/?n=Verbs.ir04",
+      "title": "Dutch Grammar • Conjugation patterns in strong verbs",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://online.saby.ru/page/my_statements",
+      "title": "Documents",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://medium.com/language-hub/i-learned-4676-new-words-in-10-months-9787aed45975",
+      "title": "I Learned 4676 New Words in 10 Months With Anki | Language Hub",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://thedutchonlineacademy.com/en/grammar/de-or-het",
+      "title": "When to use de or het in Dutch | De and het in Dutch | neuter",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://inburgeren.nl/examen-doen/oefenen.jsp",
+      "title": "Inburgeringsexamen doen: Oefenen – DUO Inburgeren",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/citizenship-exam-practice-duo-inburgeren.md",
+      "capturePath": "sources/inburgeringsexamen-doen-oefenen-duo-inburgeren.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://mooinederlands.ru/",
+      "title": "MOOI Nederlands",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://armfilm.co/filmy-na-armyanskom/30395-barbi-hayeren.html",
+      "title": "Բարբի / Barbi ֆիլմը՝ օնլայն:",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.encyclo.nl/begrip/ontevreden",
+      "title": "Ontevreden - 2 definities - Encyclo",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://armenian-lawyer.com/ru/citizenship-test/",
+      "title": "Тест на гражданство | Армянский юрист",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/armenian/untitled-7.md",
+      "capturePath": "sources/untitled-32.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://jsonformatter.curiousconcept.com/#",
+      "title": "JSON Formatter & Validator",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://samuraiplace.com/index.php",
+      "title": "Samurai Place",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.youtube.com/@CrazyFilmStdioYT/videos",
+      "title": "Crazy Film Studio - YouTube",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://myrsv.org/profile/#devices",
+      "title": "Red Shield VPN: dashboard",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://www.moddb.com/mods/black-mesa-blue-shift-remake",
+      "title": "Black Mesa: Blue Shift mod - Mod DB",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://gama-gama.ru/",
+      "title": "Интернет-магазин компьютерных игр — онлайн продажа ключей на PC (ПК)",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.fluentin3months.com/fluent-in-3-years/",
+      "title": "Fluent in 3 years?! What I Learned From a 1,033 Day Duolingo Streak -- Plus How to Actually Learn a Language Fast",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/fluent-3-years-what-i-learned-from-1-033-day-duolingo-streak-plu.md",
+      "capturePath": "sources/fluent-3-years-what-i-learned-from-1-033-day-duolingo-streak-plu.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://192.168.1.1/",
+      "title": "Router",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://x.com/ke9/status/1804517943855767686",
+      "title": "Nadya Whatever on X: \"@ddpanier Никак. Ваш ребенок — индивидуальность. Личный совет: купите заранее коляску, кроватку, пеленальный столик и 4 бодика. Больше ничего. Я накупила кучу всего заранее и половину продала. Покупайте по надобности. Читайте тоже по надобности. Мой маст: «Федиатрия» и «Тайная опора». Всё\" / X",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "wiki/bookmarks/social/nadya-whatever-x-ddpanier-4-x.md",
+      "capturePath": "sources/nadya-whatever-x-ddpanier-4-x.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://tanstack.com/",
+      "title": "TanStack | High Quality Open-Source Software for Web Developers",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "wiki/bookmarks/programming/tanstack-high-quality-open-source-software-web-developers.md",
+      "capturePath": "sources/tanstack-high-quality-open-source-software-web-developers.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://speakukraine.net/",
+      "title": "Національна платформа з вивчення української мови Міністерства культури та інформаційної політики України1",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://89.108.120.51:1500/ispmgr#/dashboard/dashboard/0?func=dashboard",
+      "title": "Nadpo supernew 89.108.120.51:1500",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://31.31.202.57:1500/ispmgr",
+      "title": "СТАРОЕ Авторизация НАДПО",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо",
+        "НАДПО"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://app.honeypot.io/users/login",
+      "title": "Honeypot - The Developer-Focused Job Platform",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    },
+    {
+      "url": "https://www.amazon.jobs/en/jobs/2653026/software-development-engineer?utm_medium=email&_hsmi=309370990&utm_content=309370988&utm_source=hs_email",
+      "title": "Amazon.jobs",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Jobs"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://docs.google.com/spreadsheets/d/1L8OiegAETD5k393PGegq7Ps5sgsRi-0Zqy4r3e4qULg/htmlview#",
+      "title": "Deathsie's Limited Tierlists: The Master Collection",
+      "folderPath": [
+        "Магия"
+      ],
+      "wikiPath": "wiki/bookmarks/magic/mtg/deathsie-s-limited-tierlists-master-collection.md",
+      "capturePath": "sources/deathsie-s-limited-tierlists-master-collection.html",
+      "status": "imported"
+    },
+    {
+      "url": "http://viruseproject.tv/releases/serials/blekaut-zhizn-na-voloske-i-zhizn-ostanovilas-black-out-sezon-1",
+      "title": "Viruse Project - Блэкаут – Жизнь на волоске / И жизнь остановилась / Black Out / сезон 1",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "wiki/bookmarks/adult/viruse-project-black-out-1.md",
+      "capturePath": "sources/viruse-project-black-out-1.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://ssyoutube.online/en5/",
+      "title": "YouTube Video Downloader - SSYouTube.online",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/armenian/youtube-video-downloader-ssyoutube-online.md",
+      "capturePath": "sources/youtube-video-downloader-ssyoutube-online.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://www.freeformatter.com/json-escape.html#before-output",
+      "title": "Free Online JSON Escape / Unescape Tool - FreeFormatter.com",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://svelte.dev/tutorial/basics",
+      "title": "Introduction / Basics • Svelte Tutorial",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "http_error"
+    },
+    {
+      "url": "https://www.nt2.nl/en/dossier/de-nieuwe-wet-inburgering-/hoe-bereid-ik-me-voor-op-het-inburgeringsexamen-",
+      "title": "NT2.nl |",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Nederlands"
+      ],
+      "wikiPath": "wiki/bookmarks/languages/dutch/nt2-second-language-dutch-portal.md",
+      "capturePath": "sources/nt2-nl.html",
+      "status": "imported"
+    },
+    {
+      "url": "https://zlibrary-global.se/s/Dadiv%20Weber",
+      "title": "Dadiv Weber: search on Z-Library",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное"
+      ],
+      "wikiPath": "",
+      "status": "dead",
+      "reason": "network_error"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://support.mozilla.org/products/firefox",
+      "title": "Get Help",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize",
+      "title": "Customize Firefox",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/contribute/",
+      "title": "Get Involved",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/about/",
+      "title": "About Us",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/products/firefox",
+      "title": "Получить помощь",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize",
+      "title": "Настроить Firefox",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/contribute/",
+      "title": "Присоединиться",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/about/",
+      "title": "О нас",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/products/firefox",
+      "title": "Help and Tutorials",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize",
+      "title": "Customize Firefox",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/en-US/contribute/",
+      "title": "Get Involved",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/en-US/about/",
+      "title": "About Us",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/ru/firefox/customize/",
+      "title": "Настройка Firefox",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/ru/products/firefox",
+      "title": "Справка и руководства",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/ru/contribute/",
+      "title": "Присоединяйтесь к сообществу",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://www.mozilla.org/ru/about/",
+      "title": "О нас",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "https://support.mozilla.org/ru/kb/customize-firefox-controls-buttons-and-toolbars?utm_source=firefox-browser&utm_medium=default-bookmarks&utm_campaign=customize",
+      "title": "Настройка Firefox",
+      "folderPath": [
+        "Mozilla Firefox"
+      ],
+      "reason": "skip_folder"
+    },
+    {
+      "url": "place:parent=menu________&parent=unfiled_____&parent=toolbar_____&queryType=1&sort=12&maxResults=10&excludeQueries=1",
+      "title": "Recently Bookmarked",
+      "folderPath": [],
+      "reason": "skip_url_prefix"
+    },
+    {
+      "url": "place:type=6&sort=14&maxResults=10",
+      "title": "Последние метки",
+      "folderPath": [],
+      "reason": "skip_url_prefix"
+    },
+    {
+      "url": "javascript:void(0)",
+      "title": "javascript:void(0)",
+      "folderPath": [],
+      "reason": "skip_url_prefix"
+    },
+    {
+      "url": "javascript:void((function(doc){if(typeof jQuery=='undefined'){var script_jQuery=document.createElement('script');script_jQuery.setAttribute('src','//code.jquery.com/jquery-latest.min.js');document.body.appendChild(script_jQuery);console.log('jQuery included ^_^');}else{console.log('jQuery already included ...');}})(document));",
+      "title": "Inject jQuery",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Надпо"
+      ],
+      "reason": "skip_url_prefix"
+    },
+    {
+      "url": "about:blank",
+      "title": "about:blank",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "MTG"
+      ],
+      "reason": "invalid_url"
+    },
+    {
+      "url": "file:///C:/Downloads/Armenian/samouchitel_armianskogo.pdf",
+      "title": "samouchitel_armianskogo.pdf",
+      "folderPath": [
+        "Bladwijzerwerkbalk",
+        "Разное",
+        "Հայերեն"
+      ],
+      "reason": "invalid_url"
+    },
+    {
+      "url": "about:logins",
+      "title": "Logins & Passwords",
+      "folderPath": [
+        "Bladwijzerwerkbalk"
+      ],
+      "reason": "invalid_url"
+    }
+  ]
+}

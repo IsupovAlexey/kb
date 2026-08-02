@@ -1,0 +1,1562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html data-bs-theme='light' data-skip-ads='false' lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<script async='' src='https://www.googletagmanager.com/gtag/js?id=G-PS4ZC64YQQ'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PS4ZC64YQQ');
+</script>
+<title>MTGGoldfish - Magic the Gathering Prices, Decks and Strategy</title>
+<meta name="description" content="Magic the Gathering and Magic Online prices, decks and strategy.">
+<meta name="keywords" content="magic: the gathering price list, mtg price list, mtgo price list, decks, metagame, archetype, standard, modern, legacy, graphs, charts, mtgo prices, prices, speculation, speculators, trends, stocks">
+<meta property="og:title" content="MTGGoldfish - Magic the Gathering Prices, Decks and Strategy">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mtggoldfish.com/">
+<meta property="og:description" content="Magic the Gathering and Magic Online prices, decks and strategy.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mtggoldfish">
+<link rel="alternate" type="application/atom+xml" title="ATOM" href="https://www.mtggoldfish.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.mtggoldfish.com/feed.rss" />
+<link href='https://assets1.mtggoldfish.com/assets/goldfish-32-921a4c78.png' rel='apple-touch-icon'>
+<link href='https://assets1.mtggoldfish.com/assets/goldfish-72-20ed8757.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='https://assets1.mtggoldfish.com/assets/goldfish-114-5f1ede8f.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='https://assets1.mtggoldfish.com/assets/goldfish-144-ca2cdea7.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='https://assets1.mtggoldfish.com/assets/goldfish-64-2bca3035.png' rel='apple-touch-icon-precomposed'>
+<link href='https://assets1.mtggoldfish.com/assets/goldfish-32-921a4c78.png' rel='shortcut icon' type='image/png'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700,800|Roboto' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+<link href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' rel='stylesheet'>
+<link href='//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.css' rel='stylesheet' type='text/css'>
+<link href='https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css' rel='stylesheet' type='text/css'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css' rel='stylesheet'>
+<!-- Editor's Style -->
+<link href='https://uicdn.toast.com/editor/2.5.2/toastui-editor.min.css' rel='stylesheet'>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='no-cache' name='turbo-cache-control'>
+<meta content='false' name='turbo-prefetch'>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="HeRdA7SLe55r0H-VJIZ8HFCcu4LRVOPjyTBEKEJWzWqx9yk_esV_Xl5gxV1Ou1nyeMSxZQ0qiu6Chwfizo6jJA" />
+<link rel="stylesheet" href="https://assets1.mtggoldfish.com/assets/application-b8b53b22.css" media="all" data-turbo-track="reload" />
+<link rel="stylesheet" href="https://assets1.mtggoldfish.com/assets/print-66dc6231.css" media="print" data-turbo-track="reload" />
+<script>
+  (function () {
+    var q = [];
+    // Queue functions to run AFTER your app is interactive
+    window.__onAppBoot = function (fn) { q ? q.push(fn) : fn(); };
+    // Call this once your app is ready (end of your init)
+    window.__markAppBootReady = function () {
+      if (!q) return;
+      var run = q; q = null;
+      for (var i = 0; i < run.length; i++) { try { run[i](); } catch (_) {} }
+    };
+    // Failsafe: if your app never signals ready, run queued tasks anyway
+    setTimeout(function () { if (q) window.__markAppBootReady(); }, 8000);
+  })();
+</script>
+<link crossorigin='true' href='https://hb.vntsm.com' rel='preconnect'>
+<script src="https://assets1.mtggoldfish.com/assets/application-401ef540.js" crossorigin="anonymous" defer="defer" type="module" data-turbo-track="reload" data-app-bundle="1"></script>
+<script>
+  (function () {
+    var tabulatorSrc   = "https://assets1.mtggoldfish.com/assets/tabulator_controllers-693203fd.js";
+    var spoilerSrc     = "https://assets1.mtggoldfish.com/assets/spoiler_page-faa14d91.js";
+    var deckTechsSrc   = "https://assets1.mtggoldfish.com/assets/deck_techs_admin-1a734bb5.js";
+    function loadModule(src) {
+      if (document.querySelector('script[src="' + src + '"]')) return;
+      var s = document.createElement('script');
+      s.type = 'module';
+      s.src = src;
+      document.head.appendChild(s);
+    }
+    function detectAndLoad() {
+      if (document.querySelector('[data-controller~="tabulator"],[data-controller~="tabulator-set-completion"],[data-controller~="tablesorter-super-brew"],[data-controller~="tablesorter-price-table"]')) {
+        loadModule(tabulatorSrc);
+      }
+      if (document.querySelector('#spoiler-card-filters, .spoiler-set-pill')) {
+        loadModule(spoilerSrc);
+      }
+      if (document.querySelector('.deck-techs-form')) {
+        loadModule(deckTechsSrc);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', detectAndLoad, { once: true });
+    document.addEventListener('turbo:before-stream-render', function (event) {
+      var orig = event.detail.render;
+      event.detail.render = function (streamElement) { orig(streamElement); detectAndLoad(); };
+    });
+  })();
+</script>
+<script src="https://assets1.mtggoldfish.com/assets/google_analytics-1e6b6677.js" defer="defer"></script>
+<script>
+  (function () {
+    function loadVNTSM() {
+      var s = document.createElement('script');
+      s.src = "https://hb.vntsm.com/v4/live/vms/sites/mtggoldfish.com/index.js";
+      s.async = true;
+      s.crossOrigin = "anonymous";
+      document.head.appendChild(s);
+    }
+    if (window.__onAppBoot) {
+      __onAppBoot(loadVNTSM);
+    } else if (document.readyState !== "loading") {
+      setTimeout(loadVNTSM, 0);
+    } else {
+      addEventListener("DOMContentLoaded", function () { setTimeout(loadVNTSM, 0); }, { once: true });
+    }
+  })();
+</script>
+</head>
+<body class=''>
+<script>
+  window.__keyruneUnsupportedSvgMap = {"trk":"https://images1.mtggoldfish.com/uploads/mtg_sets/svg/TRK__2_.svg","trc":"https://images1.mtggoldfish.com/uploads/mtg_sets/svg/TRC.svg","sds":"https://images1.mtggoldfish.com/uploads/mtg_sets/svg/SDS.svg"};
+</script>
+<img alt="MTGGoldfish" class="layout-print-logo" src="https://assets1.mtggoldfish.com/assets/print-logo-dea946e2.png" />
+<header class='layout-v3' data-mobile-scroll-nav='true'>
+<nav class='primary-navigation navbar navbar-expand-xl navbar-light' data-bs-theme='light'>
+<div class='navbar-logo-container'>
+<a href="/"><img class="layout-brand-image layout-brand-circle img-circle" alt="MTGGoldfish Icon" src="https://assets1.mtggoldfish.com/assets/mtggoldfish-mobile-nav-icon-a82857eb.png" />
+<img class="layout-header-banner-logo-img layout-brand-long" alt="MTGGoldfish Logo" src="https://assets1.mtggoldfish.com/assets/mtggoldfish-website-logo-b633b084.png" />
+</a></div>
+<button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-bs-target='#navbarSupportedContent' data-bs-toggle='collapse' type='button'>
+<img src="https://assets1.mtggoldfish.com/assets/svg/navbar-toggler-icon-207db56e.svg" />
+</button>
+<form class="layout-searchbar-mobile" role="search" data-controller="nav-search-mode" data-action="focusin-&gt;nav-search-mode#expand focusout-&gt;nav-search-mode#handleFocusOut pointerdown-&gt;nav-search-mode#markPointerDown pointerdown@window-&gt;nav-search-mode#outsidePointerDown keydown@window-&gt;nav-search-mode#closeWithKeyboard" action="/q" accept-charset="UTF-8" method="get"><div class='layout-search-backdrop' data-action='click-&gt;nav-search-mode#collapse' data-nav-search-mode-target='backdrop'></div>
+<div class='layout-header-search-menu'>
+<a aria-label="Home" href="/"><img class="layout-header-search-menu-logo" alt="MTGGoldfish Home" src="https://assets1.mtggoldfish.com/assets/logo-with-type-d0226f6f.png" />
+</a><div class='input-group layout-navbar-input-group'>
+<button aria-expanded='false' aria-haspopup='listbox' class='btn btn-outline-secondary nav-search-mode-btn' data-action='pointerdown-&gt;nav-search-mode#toggle click-&gt;nav-search-mode#toggle' data-nav-search-mode-target='modeButton' title='Choose search mode' type='button'>
+<span data-nav-search-mode-target='modeLabel'>
+Printings
+</span>
+<span aria-hidden='true' class='fa fa-caret-down nav-search-mode-caret'></span>
+</button>
+<div aria-hidden='true' aria-label='Search mode' class='nav-search-mode-sheet' data-nav-search-mode-target='modeSheet' role='listbox'>
+<button class='nav-search-mode-option' data-action='pointerdown-&gt;nav-search-mode#select click-&gt;nav-search-mode#select' data-nav-search-mode-mode-param='cards' data-nav-search-mode-target='modeOption' role='option' type='button'>
+<span>Card Names</span>
+<span aria-hidden='true' class='nav-search-mode-radio'></span>
+</button>
+<button class='nav-search-mode-option' data-action='pointerdown-&gt;nav-search-mode#select click-&gt;nav-search-mode#select' data-nav-search-mode-mode-param='specific' data-nav-search-mode-target='modeOption' role='option' type='button'>
+<span>Printings</span>
+<span aria-hidden='true' class='nav-search-mode-radio'></span>
+</button>
+<button class='nav-search-mode-option' data-action='pointerdown-&gt;nav-search-mode#select click-&gt;nav-search-mode#select' data-nav-search-mode-mode-param='decks' data-nav-search-mode-target='modeOption' role='option' type='button'>
+<span>Decks</span>
+<span aria-hidden='true' class='nav-search-mode-radio'></span>
+</button>
+<button class='nav-search-mode-option' data-action='pointerdown-&gt;nav-search-mode#select click-&gt;nav-search-mode#select' data-nav-search-mode-mode-param='articles' data-nav-search-mode-target='modeOption' role='option' type='button'>
+<span>Articles</span>
+<span aria-hidden='true' class='nav-search-mode-radio'></span>
+</button>
+<button class='nav-search-mode-option' data-action='pointerdown-&gt;nav-search-mode#select click-&gt;nav-search-mode#select' data-nav-search-mode-mode-param='tournaments' data-nav-search-mode-target='modeOption' role='option' type='button'>
+<span>Tournaments</span>
+<span aria-hidden='true' class='nav-search-mode-radio'></span>
+</button>
+</div>
+<input type="hidden" name="search_mode" id="search_mode" value="specific" data-nav-search-mode-target="modeField" autocomplete="off" />
+<input type="search" name="query_string" id="query_string" class="form-control layout-search-input autocomplete-card-id-submit" placeholder="Search cards, decks, articles ..." data-nav-search-mode-target="input" />
+<label class='sr-only' for='query_string'>Search Bar</label>
+<button aria-label='Search Submit' class='fa fa-search btn btn-secondary layout-navbar-search-btn' type='submit'></button>
+</div>
+</div>
+</form><div class='collapse navbar-collapse' id='navbarSupportedContent'>
+<ul class='navbar-nav'>
+<li class='nav-item dropdown'>
+<a class='nav-link dropdown-toggle' data-bs-auto-close='false' data-bs-toggle='dropdown' href='#'>
+Cards
+</a>
+<ul class='dropdown-menu' role='menu'>
+<li>
+<a class="dropdown-item dropdown-item-set" href="/spoilers/Reality+Fracture"><span aria-hidden='true' class='dropdown-item-set-icon'>
+<i class='set-symbol ss-mythic ss-grad ss ss-fra'></i>
+</span>
+Reality Fracture
+</a></li>
+<li>
+<a class="dropdown-item dropdown-item-set" href="/spoilers/The+Hobbit"><span aria-hidden='true' class='dropdown-item-set-icon'>
+<i class='set-symbol ss-mythic ss-grad ss ss-hob'></i>
+</span>
+The Hobbit
+</a></li>
+<li>
+<a class="dropdown-item dropdown-item-set" href="/spoilers/Star+Trek"><span aria-hidden='true' class='dropdown-item-set-icon'>
+<span class='set-symbol ss-mythic ss-grad set-symbol-svg' style='mask-image: url(https://images1.mtggoldfish.com/uploads/mtg_sets/svg/TRK__2_.svg); -webkit-mask-image: url(https://images1.mtggoldfish.com/uploads/mtg_sets/svg/TRK__2_.svg);' title='Star Trek'></span>
+</span>
+Star Trek
+</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/prices/select">Sets</a></li>
+<li><a class="dropdown-item" href="/format-staples/standard">Popular</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/prices/standard">Prices</a></li>
+<li><a class="dropdown-item" href="/movers/standard">Movers and Shakers</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/proxies/new">Create Proxies</a></li>
+</ul>
+</li>
+<li class='nav-item dropdown'>
+<a class='nav-link dropdown-toggle' data-bs-auto-close='false' data-bs-toggle='dropdown' href='#'>
+Decks
+</a>
+<ul class='dropdown-menu' role='menu'>
+<li><a class="dropdown-item" href="/metagame/standard">Popular Decks / Metagame</a></li>
+<li><a class="dropdown-item" href="/deck/custom/standard">User Submitted Decks</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/decks/new">Create a Deck</a></li>
+<li><a class="dropdown-item" href="/tools/deck_pricer">Price a Deck</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/deck_searches/new">Deck Search</a></li>
+<li><a class="dropdown-item" href="/tournament_searches/new">Tournaments</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/superbrew">SuperBrew</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/decks">My Decks</a></li>
+</ul>
+</li>
+<li class='nav-item'>
+<a class="nav-link" href="/articles">Articles</a>
+</li>
+<li class='nav-item dropdown'>
+<a class='nav-link dropdown-toggle' data-bs-auto-close='false' data-bs-toggle='dropdown' href='#'>
+Tools
+</a>
+<ul class='dropdown-menu' role='menu'>
+<li><a class="dropdown-item" href="/portfolio">My Collection</a></li>
+<li><a class="dropdown-item" href="/decks">My Decks</a></li>
+<li><a class="dropdown-item" href="/price_alerts">My Price Alerts</a></li>
+<li class='dropdown-divider' role='presentation'></li>
+<li><a class="dropdown-item" href="/premium">Premium Membership</a></li>
+</ul>
+</li>
+<li class='nav-item'>
+<a class="nav-link" href="https://www.mtggoldfishmerch.com">Store</a>
+</li>
+<li class='nav-item dropdown'>
+<a class='nav-link dropdown-toggle' data-bs-target='#login-modal' data-bs-toggle='modal' href='#'>
+Login
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<main class='cd-main-content'>
+<div class='container-fluid layout-container-fluid'>
+<div class='layout-affiliate-disclosure'>
+MTGGoldfish is supported by its audience. When you buy through links on our site, we may earn a commission.
+<div class='layout-ads-top-container'>
+<div id='ad-layout-header'></div>
+</div>
+</div>
+<div id='error'>
+
+</div>
+<h1 class='sr-only'>MTGGoldfish Homepage</h1>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=308173545971080&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class='home-row'>
+<div class='home-featured-hero' id='featured-unit'>
+<div class='featured-unit'>
+<a aria-label='The Hobbit Spoilers — July 31 | Last Rare and Full Gallery!' href='/articles/the-hobbit-spoilers-july-31-last-rare-and-full-gallery'>
+<picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11525/HOB_Daily_Spoilers_Full_featured.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11525/HOB_Daily_Spoilers_Full.jpg' type='image/jpeg'>
+<img alt="Image for The Hobbit Spoilers — July 31 | Last Rare and Full Gallery!" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11525/HOB_Daily_Spoilers_Full.jpg" />
+</picture>
+</a>
+<div class='featured-unit-contents'>
+<a aria-label='The Hobbit Spoilers — July 31 | Last Rare and Full Gallery!' href='/articles/the-hobbit-spoilers-july-31-last-rare-and-full-gallery'>
+<h2 class='featured-unit-title'>
+The Hobbit Spoilers — July 31 | Last Rare and Full Gallery!
+</h2>
+</a>
+<p>All the remaining cards from the main set, and the eternal set</p>
+<div class='featured-unit-author'>
+<strong>Jul 31</strong>
+| by mtggoldfish
+</div>
+</div>
+</div>
+
+</div>
+<div id='home-popular-decks'>
+<div class='home-popular-decks-title-format'>
+<h3>Popular Decks</h3>
+<form class="form-inline" data-controller="form-submit" data-turbo="true" action="/metagame/top" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="authenticity_token" value="ATxPMoZbgEa8gRuvMkIvu08JjltsKmRsTxf3-znSl3qNoCzS3EqpVYI8yMhNEYhKouygYCEQkNyls__HB7a8Ig" autocomplete="off" /><div class='form-group'>
+<label for='deck-format-filter'>Format</label>
+<select name="mformat" id="deck-format-filter" class="form-select u-ms-2" data-action="change-&gt;form-submit#submit" data-controller="format-tree-select" data-format-tree-select-formats-value="[&quot;standard&quot;,&quot;modern&quot;,&quot;pioneer&quot;,&quot;historic&quot;,&quot;explorer&quot;,&quot;timeless&quot;,&quot;alchemy&quot;,&quot;pauper&quot;,&quot;legacy&quot;,&quot;vintage&quot;,&quot;penny_dreadful&quot;,&quot;premodern&quot;,&quot;duel_commander&quot;,&quot;commander&quot;,&quot;brawl&quot;]" data-format-tree-select-url-value="/deck_formats.json"><option selected="selected" value="standard">Standard</option>
+<option value="modern">Modern</option>
+<option value="pioneer">Pioneer</option>
+<option value="historic">Historic</option>
+<option value="explorer">Explorer</option>
+<option value="timeless">Timeless</option>
+<option value="alchemy">Alchemy</option>
+<option value="pauper">Pauper</option>
+<option value="legacy">Legacy</option>
+<option value="vintage">Vintage</option>
+<option value="penny_dreadful">Penny Dreadful</option>
+<option value="premodern">Premodern</option>
+<option value="duel_commander">Duel Commander</option>
+<option value="commander">Commander</option>
+<option value="brawl">Brawl</option></select>
+</div>
+</form></div>
+<div class='archetype-tile-container'>
+<div class='archetype-tile' id='29068'>
+<div class='archetype-tile-image'>
+<div aria-label='Image of Badgermole Cub' class='card-tile' role='img'>
+<div class='card-image-tile' style='background-image: url(&#39;https://cards.mtggoldfish.com/images/019ce2f0-298d-7246-856a-d463a4bde0cd/variants/672/938/card_image.webp&#39;);'></div>
+<a class='card-image-tile-link-overlay' href='/archetype/standard-selesnya-ouroboroid-woe'>
+<span class='sr-only'>Badgermole Cub</span>
+</a>
+</div>
+
+</div>
+<div class='archetype-tile-description-wrapper'>
+<div class='archetype-tile-description'>
+<div class='archetype-tile-title'>
+<span class='deck-price-online'>
+<a href="/archetype/standard-selesnya-ouroboroid-woe#online">Selesnya Ouroboroid</a>
+</span>
+<span class='deck-price-paper'>
+<a href="/archetype/standard-selesnya-ouroboroid-woe#paper">Selesnya Ouroboroid</a>
+</span>
+</div>
+<div class='manacost-container'>
+<span class='manacost' aria-label='colors: white green'><i class='ms ms-w ms-cost ms-shadow'></i><i class='ms ms-g ms-cost ms-shadow'></i></span>
+</div>
+<ul>
+<li>Badgermole Cub</li>
+<li>Leatherhead, Swamp Stalker</li>
+<li>Spider Manifestation</li>
+</ul>
+</div>
+<div class='archetype-tile-statistics'>
+<div class='archetype-tile-statistics-left'>
+<div class='archetype-tile-statistic metagame-percentage'>
+<div class='archetype-tile-statistic-name'>
+META%
+</div>
+<div class='archetype-tile-statistic-value'>
+16.7%
+<span class='archetype-tile-statistic-value-extra-data'>
+(260)
+</span>
+</div>
+</div>
+</div>
+<div class='archetype-tile-statistics-right'>
+<div class='archetype-tile-statistic deck-price-paper'>
+<div class='archetype-tile-statistic-name'>
+Tabletop
+</div>
+<div class='archetype-tile-statistic-value'>
+$ 574
+</div>
+</div>
+<div class='archetype-tile-statistic deck-price-online'>
+<div class='archetype-tile-statistic-name'>
+MTGO
+</div>
+<div class='archetype-tile-statistic-value'>
+150 tix
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='archetype-tile' id='29330'>
+<div class='archetype-tile-image'>
+<div aria-label='Image of Jeskai Revelation' class='card-tile' role='img'>
+<div class='card-image-tile' style='background-image: url(&#39;https://cards.mtggoldfish.com/images/019ce2f0-1ecf-7f3a-aeeb-f0ad91c0b179/variants/672/938/card_image.webp&#39;);'></div>
+<a class='card-image-tile-link-overlay' href='/archetype/standard-jeskai-lessons-woe'>
+<span class='sr-only'>Jeskai Revelation</span>
+</a>
+</div>
+
+</div>
+<div class='archetype-tile-description-wrapper'>
+<div class='archetype-tile-description'>
+<div class='archetype-tile-title'>
+<span class='deck-price-online'>
+<a href="/archetype/standard-jeskai-lessons-woe#online">Jeskai Lessons</a>
+</span>
+<span class='deck-price-paper'>
+<a href="/archetype/standard-jeskai-lessons-woe#paper">Jeskai Lessons</a>
+</span>
+</div>
+<div class='manacost-container'>
+<span class='manacost' aria-label='colors: white blue red'><i class='ms ms-w ms-cost ms-shadow'></i><i class='ms ms-u ms-cost ms-shadow'></i><i class='ms ms-r ms-cost ms-shadow'></i></span>
+</div>
+<ul>
+<li>Jeskai Revelation</li>
+<li>Tablet of Discovery</li>
+<li>Accumulate Wisdom</li>
+</ul>
+</div>
+<div class='archetype-tile-statistics'>
+<div class='archetype-tile-statistics-left'>
+<div class='archetype-tile-statistic metagame-percentage'>
+<div class='archetype-tile-statistic-name'>
+META%
+</div>
+<div class='archetype-tile-statistic-value'>
+14.9%
+<span class='archetype-tile-statistic-value-extra-data'>
+(231)
+</span>
+</div>
+</div>
+</div>
+<div class='archetype-tile-statistics-right'>
+<div class='archetype-tile-statistic deck-price-paper'>
+<div class='archetype-tile-statistic-name'>
+Tabletop
+</div>
+<div class='archetype-tile-statistic-value'>
+$ 275
+</div>
+</div>
+<div class='archetype-tile-statistic deck-price-online'>
+<div class='archetype-tile-statistic-name'>
+MTGO
+</div>
+<div class='archetype-tile-statistic-value'>
+43 tix
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='archetype-tile' id='28088'>
+<div class='archetype-tile-image'>
+<div aria-label='Image of Astrologian&#39;s Planisphere' class='card-tile' role='img'>
+<div class='card-image-tile' style='background-image: url(&#39;https://cards.mtggoldfish.com/images/019ce2f0-213d-7944-8369-ce6e7170ad9d/variants/672/938/card_image.webp&#39;);'></div>
+<a class='card-image-tile-link-overlay' href='/archetype/standard-izzet-prowess-woe'>
+<span class='sr-only'>Astrologian&#39;s Planisphere</span>
+</a>
+</div>
+
+</div>
+<div class='archetype-tile-description-wrapper'>
+<div class='archetype-tile-description'>
+<div class='archetype-tile-title'>
+<span class='deck-price-online'>
+<a href="/archetype/standard-izzet-prowess-woe#online">Izzet Prowess</a>
+</span>
+<span class='deck-price-paper'>
+<a href="/archetype/standard-izzet-prowess-woe#paper">Izzet Prowess</a>
+</span>
+</div>
+<div class='manacost-container'>
+<span class='manacost' aria-label='colors: blue red'><i class='ms ms-u ms-cost ms-shadow'></i><i class='ms ms-r ms-cost ms-shadow'></i></span>
+</div>
+<ul>
+<li>Astrologian&#39;s Planisphere</li>
+<li>Slickshot Show-Off</li>
+<li>Flow State</li>
+</ul>
+</div>
+<div class='archetype-tile-statistics'>
+<div class='archetype-tile-statistics-left'>
+<div class='archetype-tile-statistic metagame-percentage'>
+<div class='archetype-tile-statistic-name'>
+META%
+</div>
+<div class='archetype-tile-statistic-value'>
+14.8%
+<span class='archetype-tile-statistic-value-extra-data'>
+(230)
+</span>
+</div>
+</div>
+</div>
+<div class='archetype-tile-statistics-right'>
+<div class='archetype-tile-statistic deck-price-paper'>
+<div class='archetype-tile-statistic-name'>
+Tabletop
+</div>
+<div class='archetype-tile-statistic-value'>
+$ 326
+</div>
+</div>
+<div class='archetype-tile-statistic deck-price-online'>
+<div class='archetype-tile-statistic-name'>
+MTGO
+</div>
+<div class='archetype-tile-statistic-value'>
+157 tix
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<p>
+<a class="btn btn-secondary" href="/metagame/standard">See all Standard Decks
+<span class='fa fa-caret-right'></span>
+</a></p>
+</div>
+
+</div>
+<div id='ad-layout-mobile-inline'></div>
+<div class='home-articles'>
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/single-scoop-giving-ranked-brawl-an-honest-try"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11513/crim_tries_brawl_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11513/crim_tries_brawl.jpg' type='image/jpeg'>
+<img alt="Image for Single Scoop: Giving Ranked Brawl an Honest Try" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11513/crim_tries_brawl.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=single+scoop">single scoop</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/single-scoop-giving-ranked-brawl-an-honest-try">Single Scoop: Giving Ranked Brawl an Honest Try</a>
+</div>
+<p class='article-tile-abstract'>BY ODIN&#39;S BEARD! We had to try ranked brawl out!! Who better than the God of Thunder to Burn and Blood Moon our opponents for our first forray into ranked Brawl?</p>
+</div>
+<div class='article-tile-author'>
+<strong>Aug 2</strong>
+| by <a href="/articles/search?author=93">TheAsianAvenger</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/much-abrew-i-figured-out-land-destruction-in-standard"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11493/big_red_land_destruction_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11493/big_red_land_destruction.jpg' type='image/jpeg'>
+<img alt="Image for Much Abrew: I Figured Out Land Destruction in Standard" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11493/big_red_land_destruction.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=much+abrew+about+nothing">much abrew about nothing</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/much-abrew-i-figured-out-land-destruction-in-standard">Much Abrew: I Figured Out Land Destruction in Standard</a>
+</div>
+<p class='article-tile-abstract'>The secret is Thor, God of Thunder, of all things!</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 31</strong>
+| by <a href="/articles/search?author=26">SaffronOlive</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/the-power-of-pauper-is-sneaky-snacker-too-good-for-pauper"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11516/is_sneaky_snacker_too_good_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11516/is_sneaky_snacker_too_good.jpg' type='image/jpeg'>
+<img alt="Image for The Power of Pauper: Is Sneaky Snacker Too Good for Pauper?" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11516/is_sneaky_snacker_too_good.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=the+power+of+pauper">the power of pauper</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/the-power-of-pauper-is-sneaky-snacker-too-good-for-pauper">The Power of Pauper: Is Sneaky Snacker Too Good for Pauper?</a>
+</div>
+<p class='article-tile-abstract'>Joe Dyer talks about Sneaky Snacker.</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 31</strong>
+| by <a href="/articles/search?author=90">Joe Dyer</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/100-burn-vs-100-mill-vs-100-lifegain-vs-100-looting-commander-clash-s20-e11"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11484/100-_Game_Actions_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11484/100-_Game_Actions.jpg' type='image/jpeg'>
+<img alt="Image for 100% Burn vs. 100% Mill vs. 100% Lifegain vs. 100% Looting | Commander Clash S20 E11" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11484/100-_Game_Actions.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=commander+clash">commander clash</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/100-burn-vs-100-mill-vs-100-lifegain-vs-100-looting-commander-clash-s20-e11">100% Burn vs. 100% Mill vs. 100% Lifegain vs. 100% Looting | Commander Clash S20 E11</a>
+</div>
+<p class='article-tile-abstract'>Which deck comes out on top?</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 31</strong>
+| by <a href="/articles/search?author=39">Tomer Abramovici</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/single-scoop-lifegain-enjoyers-got-a-new-disruptive-tool"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11512/lifegain_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11512/lifegain.jpg' type='image/jpeg'>
+<img alt="Image for Single Scoop: Lifegain Enjoyers got a New Disruptive Tool" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11512/lifegain.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=commander">commander</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/single-scoop-lifegain-enjoyers-got-a-new-disruptive-tool">Single Scoop: Lifegain Enjoyers got a New Disruptive Tool</a>
+</div>
+<p class='article-tile-abstract'>Orzhov Lifegain is always popular on the ladder and they just got a sweet new disruptive toy to use!</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 31</strong>
+| by <a href="/articles/search?author=93">TheAsianAvenger</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/the-hobbit-spoilers-july-29-30-a-handful-of-rare-dwarves-settle-the-wreckage-is-back"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11523/HOB_Daily_Spoilers_6_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11523/HOB_Daily_Spoilers_6.jpg' type='image/jpeg'>
+<img alt="Image for The Hobbit Spoilers — July 29-30 | A Handful of Rare Dwarves, Settle the Wreckage is Back!" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11523/HOB_Daily_Spoilers_6.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=daily+spoilers">daily spoilers</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/the-hobbit-spoilers-july-29-30-a-handful-of-rare-dwarves-settle-the-wreckage-is-back">The Hobbit Spoilers — July 29-30 | A Handful of Rare Dwarves, Settle the Wreckage is Back!</a>
+</div>
+<p class='article-tile-abstract'>Many of the rare legendary dwarves, and the return of Settle the Wreckage to Standard</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 30</strong>
+| by <a href="/articles/search?author=1">mtggoldfish</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/vintage-101-the-resurgence-of-countervine"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11515/ressurgence_of_countervine__1__webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11515/ressurgence_of_countervine__1_.jpg' type='image/jpeg'>
+<img alt="Image for Vintage 101: The Resurgence of Countervine" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11515/ressurgence_of_countervine__1_.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=vintage+101">vintage 101</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/vintage-101-the-resurgence-of-countervine">Vintage 101: The Resurgence of Countervine</a>
+</div>
+<p class='article-tile-abstract'>Joe Dyer talks some CounterVine this week in Vintage!</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 30</strong>
+| by <a href="/articles/search?author=90">Joe Dyer</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/this-week-in-legacy-energy"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11514/energy_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11514/energy.jpg' type='image/jpeg'>
+<img alt="Image for This Week in Legacy: Energy!" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11514/energy.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=this+week+in+legacy">this week in legacy</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/this-week-in-legacy-energy">This Week in Legacy: Energy!</a>
+</div>
+<p class='article-tile-abstract'>Joe Dyer dives into the world of Energy in Legacy!</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 30</strong>
+| by <a href="/articles/search?author=90">Joe Dyer</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/against-the-odds-i-built-a-deck-that-copies-itself-infinitely-standard"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11491/it_never_ends_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11491/it_never_ends.jpg' type='image/jpeg'>
+<img alt="Image for Against the Odds: I Built a Deck That Copies Itself Infinitely! (Standard)" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11491/it_never_ends.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=against+the+odds">against the odds</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/against-the-odds-i-built-a-deck-that-copies-itself-infinitely-standard">Against the Odds: I Built a Deck That Copies Itself Infinitely! (Standard)</a>
+</div>
+<p class='article-tile-abstract'>Thanks to Multiversal Incursion, it&#39;s now possible to build a deck that copies itself infinitely, and it&#39;s as hilarious as it sounds!</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 30</strong>
+| by <a href="/articles/search?author=26">SaffronOlive</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/the-hobbit-spoilers-july-25-28-a-lot-of-bears-artifact-draw-enchantment-and-more"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11519/HOB_Daily_Spoilers_5_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11519/HOB_Daily_Spoilers_5.jpg' type='image/jpeg'>
+<img alt="Image for The Hobbit Spoilers — July 25-28 | A Lot of Bears, Artifact Draw Enchantment and More!" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11519/HOB_Daily_Spoilers_5.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=daily+spoilers">daily spoilers</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/the-hobbit-spoilers-july-25-28-a-lot-of-bears-artifact-draw-enchantment-and-more">The Hobbit Spoilers — July 25-28 | A Lot of Bears, Artifact Draw Enchantment and More!</a>
+</div>
+<p class='article-tile-abstract'>Three more mythics, including a powerful enchantment that draws from all your artifacts.</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 28</strong>
+| by <a href="/articles/search?author=1">mtggoldfish</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/single-scoop-splinter-twin-actually-has-returned-but-with-ants"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11478/ant_twin_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11478/ant_twin.jpg' type='image/jpeg'>
+<img alt="Image for Single Scoop: Splinter Twin Actually has Returned but with Ants" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11478/ant_twin.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=single+scoop">single scoop</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/single-scoop-splinter-twin-actually-has-returned-but-with-ants">Single Scoop: Splinter Twin Actually has Returned but with Ants</a>
+</div>
+<p class='article-tile-abstract'>I know the community always jokes about things being basically Splinter Twin but we actually got it this time but with Ants! Lol.</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 28</strong>
+| by <a href="/articles/search?author=93">TheAsianAvenger</a>
+</div>
+</div>
+
+<div class='article-tile'>
+<div class='article-tile-image'>
+<a href="/articles/commander-clash-podcast-262-fake-group-hug-cards"><picture>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11518/Fake_Group_Hug_webp.webp' type='image/webp'>
+<source srcset='https://images1.mtggoldfish.com/featured_images/11518/Fake_Group_Hug.jpg' type='image/jpeg'>
+<img alt="Image for Commander Clash Podcast 262: Fake Group Hug Cards" class="article-tile-thumbnail" src="https://images1.mtggoldfish.com/featured_images/11518/Fake_Group_Hug.jpg" />
+</picture>
+</a><a class="label article-tile-super-tag" href="/articles/search?tag=commander+clash+podcast">commander clash podcast</a>
+</div>
+<div class='article-tile-contents'>
+<div class='article-tile-title'>
+<a class="stealth-link" href="/articles/commander-clash-podcast-262-fake-group-hug-cards">Commander Clash Podcast 262: Fake Group Hug Cards</a>
+</div>
+<p class='article-tile-abstract'>I&#39;m helping you... or am I?</p>
+</div>
+<div class='article-tile-author'>
+<strong>Jul 28</strong>
+| by <a href="/articles/search?author=1">mtggoldfish</a>
+</div>
+</div>
+
+</div>
+<p class='home-read-more'>
+<a class="btn btn-secondary" href="/articles">More Articles
+<span class='fa fa-caret-right'></span>
+</a></p>
+<div class='home-stats'>
+<div class='home-stats-widget'>
+<h3 class='home-trending'>Recent Major Tournaments</h3>
+<table class='table table-striped home-sidebar-table'>
+<tbody>
+<tr>
+<td>Pauper</td>
+<td><a href="/tournament/central-liga-gaucha-de-pauper-2026-etapa-6">Central Liga Gaucha de Pauper 2026 - Etapa 6</a></td>
+<td class='decks-event-rating'>
+<span aria-label='rating: 1 out of 3 stars' class='decks-event-stars' role='img'>
+<span class='glyph fa fa-star decks-event-star'></span>
+</span>
+</td>
+<td class='decks-event-date'>Jul 26</td>
+</tr>
+<tr>
+<td>Modern</td>
+<td><a href="/tournament/brussels-sun-09-30-destination-qualifier-modern">[Brussels Sun 09:30] Destination Qualifier: Modern</a></td>
+<td class='decks-event-rating'>
+<span aria-label='rating: 1 out of 3 stars' class='decks-event-stars' role='img'>
+<span class='glyph fa fa-star decks-event-star'></span>
+</span>
+</td>
+<td class='decks-event-date'>Jul 26</td>
+</tr>
+<tr>
+<td>Pauper</td>
+<td><a href="/tournament/6-open-mpl-mont-pauper-league">6º Open MPL - Mont Pauper League</a></td>
+<td class='decks-event-rating'>
+<span aria-label='rating: 2 out of 3 stars' class='decks-event-stars' role='img'>
+<span class='glyph fa fa-star decks-event-star'></span>
+<span class='glyph fa fa-star decks-event-star'></span>
+</span>
+</td>
+<td class='decks-event-date'>Jul 25</td>
+</tr>
+<tr>
+<td>Legacy</td>
+<td><a href="/tournament/mlcg-july-legacy-challenge-2">MLCG July Legacy Challenge #2</a></td>
+<td class='decks-event-rating'>
+<span aria-label='rating: 1 out of 3 stars' class='decks-event-stars' role='img'>
+<span class='glyph fa fa-star decks-event-star'></span>
+</span>
+</td>
+<td class='decks-event-date'>Jul 25</td>
+</tr>
+<tr>
+<td>Premodern</td>
+<td><a href="/tournament/sacred-torch-showdown-2026">Sacred Torch Showdown 2026</a></td>
+<td class='decks-event-rating'>
+<span aria-label='rating: 1 out of 3 stars' class='decks-event-stars' role='img'>
+<span class='glyph fa fa-star decks-event-star'></span>
+</span>
+</td>
+<td class='decks-event-date'>Jul 25</td>
+</tr>
+</tbody>
+</table>
+<p class='home-read-more'>
+<a aria-label="See More Recent Tournaments" href="/metagame/standard">See More
+<span class='fa fa-caret-right'></span>
+</a></p>
+</div>
+<div class='home-stats-widget home-stats-widget-winners'>
+<h3 class='home-trending'>Top Cards Increasing in Price</h3>
+<table class='table table-striped home-sidebar-table'>
+<tbody>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='increase'>+$ 28.23</span>
+
+<span aria-label='Increase Indicator' class='fa fa-arrow-up color-rising' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Plunge into Darkness [5DN]" data-full-image="https://cards.mtggoldfish.com/images/019ce2ef-2652-7fe2-b298-f125e60f73f9/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/fifth-dawn/57/plunge-into-darkness#paper">Plunge into Darkness</a> <span class='card-num'>#57</span></span></td>
+<td class='text-end'>
+$ 46.00
+</td>
+<td class='text-end'>
+<span class='increase'>+159%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='increase'>+$ 11.45</span>
+
+<span aria-label='Increase Indicator' class='fa fa-arrow-up color-rising' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Mox Opal [MM2]" data-full-image="https://cards.mtggoldfish.com/images/019ce2ef-67dc-7184-b27f-9221a330f394/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/modern-masters-2015/223/mox-opal#paper">Mox Opal</a> <span class='card-num'>#223</span></span></td>
+<td class='text-end'>
+$ 293.09
+</td>
+<td class='text-end'>
+<span class='increase'>+4%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='increase'>+$ 6.94</span>
+
+<span aria-label='Increase Indicator' class='fa fa-arrow-up color-rising' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Emrakul, the Promised End [EMN]" data-full-image="https://cards.mtggoldfish.com/images/019ce2ef-74fd-766d-b481-5197ecc2b00d/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/eldritch-moon/6/emrakul-the-promised-end#paper">Emrakul, the Promised End</a> <span class='card-num'>#6</span></span></td>
+<td class='text-end'>
+$ 31.24
+</td>
+<td class='text-end'>
+<span class='increase'>+29%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='increase'>+$ 6.46</span>
+
+<span aria-label='Increase Indicator' class='fa fa-arrow-up color-rising' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Mycosynth Golem [5DN]" data-full-image="https://cards.mtggoldfish.com/images/019ce2ef-2652-7714-9012-cea41ea8b70a/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/fifth-dawn/137/mycosynth-golem#paper">Mycosynth Golem</a> <span class='card-num'>#137</span></span></td>
+<td class='text-end'>
+$ 62.42
+</td>
+<td class='text-end'>
+<span class='increase'>+12%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='increase'>+$ 5.34</span>
+
+<span aria-label='Increase Indicator' class='fa fa-arrow-up color-rising' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Gemstone Caverns [TSP]" data-full-image="https://cards.mtggoldfish.com/images/019ce2ef-2726-7a28-9086-af2572bdef24/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/time-spiral/274/gemstone-caverns#paper">Gemstone Caverns</a> <span class='card-num'>#274</span></span></td>
+<td class='text-end'>
+$ 61.84
+</td>
+<td class='text-end'>
+<span class='increase'>+9%</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p class='home-read-more'>
+<a aria-label="See More Cards Increasing in Price" href="/movers/paper/standard">See More
+<span class='fa fa-caret-right'></span>
+</a></p>
+</div>
+<div class='home-stats-widget home-stats-widget-losers'>
+<h3 class='home-trending'>Top Cards Decreasing in Price</h3>
+<table class='table table-striped home-sidebar-table'>
+<tbody>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='decrease'>-$ 40.98</span>
+
+<span aria-label='Decrease Indicator' class='fa fa-arrow-down color-declining' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Captain James T. Kirk &lt;019f6198-e834-7eef-8140-cee10f2350da&gt; [TRK]" data-full-image="https://cards.mtggoldfish.com/images/019f6198-e834-7eef-8140-cee10f2350da/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/star-trek/142/captain-james-t-kirk#paper">Captain James T. Kirk</a> <span class='card-num'>#142</span></span></td>
+<td class='text-end'>
+$ 58.99
+</td>
+<td class='text-end'>
+<span class='decrease'>-41%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='decrease'>-$ 40.86</span>
+
+<span aria-label='Decrease Indicator' class='fa fa-arrow-down color-declining' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Captain Kathryn Janeway &lt;019f6198-e9af-7f4c-9f44-0ec1e5d167b3&gt; [TRK]" data-full-image="https://cards.mtggoldfish.com/images/019f6198-e9af-7f4c-9f44-0ec1e5d167b3/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/star-trek/187/captain-kathryn-janeway#paper">Captain Kathryn Janeway</a> <span class='card-num'>#187</span></span></td>
+<td class='text-end'>
+$ 58.99
+</td>
+<td class='text-end'>
+<span class='decrease'>-41%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='decrease'>-$ 40.86</span>
+
+<span aria-label='Decrease Indicator' class='fa fa-arrow-down color-declining' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Crystalline Entity &lt;019f61a8-5102-7fd7-8248-e162dc51a42f&gt; [TRK]" data-full-image="https://cards.mtggoldfish.com/images/019f61a8-5102-7fd7-8248-e162dc51a42f/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/star-trek/261/crystalline-entity#paper">Crystalline Entity</a> <span class='card-num'>#261</span></span></td>
+<td class='text-end'>
+$ 58.99
+</td>
+<td class='text-end'>
+<span class='decrease'>-41%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='decrease'>-$ 40.86</span>
+
+<span aria-label='Decrease Indicator' class='fa fa-arrow-down color-declining' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="Dr. Beverly Crusher &lt;019f61a8-531f-7998-855f-0a01012d6a68&gt; [TRK]" data-full-image="https://cards.mtggoldfish.com/images/019f61a8-531f-7998-855f-0a01012d6a68/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/star-trek/13/dr-beverly-crusher#paper">Dr. Beverly Crusher</a> <span class='card-num'>#13</span></span></td>
+<td class='text-end'>
+$ 58.99
+</td>
+<td class='text-end'>
+<span class='decrease'>-41%</span>
+</td>
+</tr>
+<tr>
+<td class='text-end'>
+<div class='common-price-change'>
+<span class='decrease'>-$ 10.68</span>
+
+<span aria-label='Decrease Indicator' class='fa fa-arrow-down color-declining' role='img'></span>
+
+</div>
+</td>
+<td><span class='card_id card_name'><a data-card-id="The City on the Edge of Forever &lt;019f61a8-5412-78e6-96dd-6810f67accfc&gt; [TRK]" data-full-image="https://cards.mtggoldfish.com/images/019f61a8-5412-78e6-96dd-6810f67accfc/variants/265/370/card_image.webp" data-full-image-rotation="FALSE" rel="popover" data-turbo-frame="_top" href="/price/star-trek/228/the-city-on-the-edge-of-forever#paper">The City on the Edge of Forever</a> <span class='card-num'>#228</span></span></td>
+<td class='text-end'>
+$ 18.99
+</td>
+<td class='text-end'>
+<span class='decrease'>-36%</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p class='home-read-more'>
+<a aria-label="See More Cards Decreasing in Price" href="/movers/paper/standard">See More
+<span class='fa fa-caret-right'></span>
+</a></p>
+</div>
+</div>
+<div class='home-card-previews'>
+<h3>Latest Card Previews</h3>
+<div class='spoiler-card-container'>
+<div class='spoiler-card'>
+<ins class='widget-price-compact-placeholder' data-card='Rogue%27s%20Passage%20%3C019fb8b7-36bb-76b1-82b5-324e7af603d7%3E%20%5BHOC%5D'>
+<a class="widget-price-image-link" href="/price/the-hobbit-commander/212/rogues-passage"><span class='price-card-invisible-label'>Rogue&#39;s Passage</span>
+<img class="widget-price-compact-placeholder-preview" alt="Rogue&#39;s Passage" width="265" height="370" src="https://cdn1.mtggoldfish.com/images/gf/back.jpg" />
+</a><span class='widgetPriceCompact-prices clearfix'>
+<p class='spoiler-card-title'>
+<a href="/price/the-hobbit-commander/212/rogues-passage">Rogue&#39;s Passage
+</a></p>
+<span class='widgetPriceCompact-prices-paper widgetPriceCompact-prices-paper-only'>
+<a class="btn btn-secondary btn-primary widgetPriceCompact-prices-link" href="/price/the-hobbit-commander/212/rogues-passage#paper">$ -</a>
+</span>
+<span class='widgetPriceCompact-prices-online widgetPriceCompact-prices-paper-only'></span>
+</span>
+</ins>
+
+</div>
+<div class='spoiler-card'>
+<ins class='widget-price-compact-placeholder' data-card='The%20Black%20Gate%20%3C019fb8b7-357e-79b6-9685-487c60dd5f3a%3E%20%5BHOC%5D'>
+<a class="widget-price-image-link" href="/price/the-hobbit-commander/87/the-black-gate-borderless-surge-foil"><span class='price-card-invisible-label'>The Black Gate</span>
+<img class="widget-price-compact-placeholder-preview" alt="The Black Gate" width="265" height="370" src="https://cdn1.mtggoldfish.com/images/gf/back.jpg" />
+</a><span class='widgetPriceCompact-prices clearfix'>
+<p class='spoiler-card-title'>
+<a href="/price/the-hobbit-commander/87/the-black-gate-borderless-surge-foil">The Black Gate
+</a></p>
+<span class='widgetPriceCompact-prices-paper widgetPriceCompact-prices-paper-only'>
+<a class="btn btn-secondary btn-primary widgetPriceCompact-prices-link" href="/price/the-hobbit-commander/87/the-black-gate-borderless-surge-foil#paper">$ -</a>
+</span>
+<span class='widgetPriceCompact-prices-online widgetPriceCompact-prices-paper-only'></span>
+</span>
+</ins>
+
+</div>
+<div class='spoiler-card'>
+<ins class='widget-price-compact-placeholder' data-card='The%20Black%20Gate%20%3C019fb8b7-3448-7534-bfed-0678edfe9af6%3E%20%5BHOC%5D%20%28F%29'>
+<a class="widget-price-image-link" href="/price/the-hobbit-commander/47/the-black-gate-borderless-foil"><span class='price-card-invisible-label'>The Black Gate</span>
+<img class="widget-price-compact-placeholder-preview" alt="The Black Gate" width="265" height="370" src="https://cdn1.mtggoldfish.com/images/gf/back.jpg" />
+</a><span class='widgetPriceCompact-prices clearfix'>
+<p class='spoiler-card-title'>
+<a href="/price/the-hobbit-commander/47/the-black-gate-borderless-foil">The Black Gate
+</a></p>
+<span class='widgetPriceCompact-prices-paper widgetPriceCompact-prices-paper-only'>
+<a class="btn btn-secondary btn-primary widgetPriceCompact-prices-link" href="/price/the-hobbit-commander/47/the-black-gate-borderless-foil#paper">$ -</a>
+</span>
+<span class='widgetPriceCompact-prices-online widgetPriceCompact-prices-paper-only'></span>
+</span>
+</ins>
+
+</div>
+<div class='spoiler-card'>
+<ins class='widget-price-compact-placeholder' data-card='Wayfarer%27s%20Bauble%20%3C019fb8b7-325d-7d00-b763-008efecf5785%3E%20%5BHOC%5D'>
+<a class="widget-price-image-link" href="/price/the-hobbit-commander/211/wayfarers-bauble"><span class='price-card-invisible-label'>Wayfarer&#39;s Bauble</span>
+<img class="widget-price-compact-placeholder-preview" alt="Wayfarer&#39;s Bauble" width="265" height="370" src="https://cdn1.mtggoldfish.com/images/gf/back.jpg" />
+</a><span class='widgetPriceCompact-prices clearfix'>
+<p class='spoiler-card-title'>
+<a href="/price/the-hobbit-commander/211/wayfarers-bauble">Wayfarer&#39;s Bauble
+</a></p>
+<span class='widgetPriceCompact-prices-paper widgetPriceCompact-prices-paper-only'>
+<a class="btn btn-secondary btn-primary widgetPriceCompact-prices-link" href="/price/the-hobbit-commander/211/wayfarers-bauble#paper">$ -</a>
+</span>
+<span class='widgetPriceCompact-prices-online widgetPriceCompact-prices-paper-only'></span>
+</span>
+</ins>
+
+</div>
+<div class='spoiler-card'>
+<ins class='widget-price-compact-placeholder' data-card='Glamdring%20%3C019fb8b7-2fe7-717a-90f4-774dad257e98%3E%20%5BHOC%5D%20%28F%29'>
+<a class="widget-price-image-link" href="/price/the-hobbit-commander/42/glamdring-borderless-foil"><span class='price-card-invisible-label'>Glamdring</span>
+<img class="widget-price-compact-placeholder-preview" alt="Glamdring" width="265" height="370" src="https://cdn1.mtggoldfish.com/images/gf/back.jpg" />
+</a><span class='widgetPriceCompact-prices clearfix'>
+<p class='spoiler-card-title'>
+<a href="/price/the-hobbit-commander/42/glamdring-borderless-foil">Glamdring
+</a></p>
+<span class='widgetPriceCompact-prices-paper widgetPriceCompact-prices-paper-only'>
+<a class="btn btn-secondary btn-primary widgetPriceCompact-prices-link" href="/price/the-hobbit-commander/42/glamdring-borderless-foil#paper">$ -</a>
+</span>
+<span class='widgetPriceCompact-prices-online widgetPriceCompact-prices-paper-only'></span>
+</span>
+</ins>
+
+</div>
+</div>
+<p class='text-center'>Check out our <a href="/previews">preview page</a> for all the latest cards and prices.</p>
+<div class='home-read-more'>
+<a class="btn btn-secondary" href="/previews">Card Previews
+<span class='fa fa-caret-right'></span>
+</a></div>
+</div>
+<div class='home-merchandise mt-5'>
+<h3>Grab Some MTGGoldfish Merch and Help Support the Website</h3>
+<p>Shop by categories, or visit <a href="https://www.mtggoldfishmerch.com">www.mtggoldfishmerch.com</a> now to grab some Scoops swag!</p>
+<div class='home-merchandise-widget-container'>
+<div class='home-merchandise-widget'>
+<div class='home-merchandise-image'>
+<img alt="MTGGoldfish Deckboxes" src="https://cdn.shopify.com/s/files/1/1281/5301/collections/shopify-collection-deckboxes_580x.png?v=1523855677" />
+</div>
+<div class='home-merchandise-text'>
+<a class="btn btn-online" target="_blank" href="https://mtggoldfishmerch.com/collections/deck-boxes-sleeves">Deck Boxes &amp; Sleeves</a>
+</div>
+</div>
+<div class='home-merchandise-widget'>
+<div class='home-merchandise-image'>
+<img alt="MTGGoldfish Playmats" src="https://cdn.shopify.com/s/files/1/1281/5301/collections/playmat_collection_580x.png?v=1520029735" />
+</div>
+<div class='home-merchandise-text'>
+<a class="btn btn-online" target="_blank" href="https://mtggoldfishmerch.com/collections/playmats">Playmats</a>
+</div>
+</div>
+<div class='home-merchandise-widget'>
+<div class='home-merchandise-image'>
+<img alt="MTGGoldfish Tokens" src="https://cdn.shopify.com/s/files/1/1281/5301/collections/tokens_collection_580x.png?v=1520030828" />
+</div>
+<div class='home-merchandise-text'>
+<a class="btn btn-online" target="_blank" href="https://mtggoldfishmerch.com/collections/tokens">Tokens</a>
+</div>
+</div>
+<div class='home-merchandise-widget'>
+<div class='home-merchandise-image'>
+<img alt="MTGGoldfish Apparel" src="https://cdn.shopify.com/s/files/1/1281/5301/products/shopify-tee-mtggoldfish_580x.png?v=1523855260" />
+</div>
+<div class='home-merchandise-text'>
+<a class="btn btn-online" target="_blank" href="https://mtggoldfishmerch.com/collections/apparel">Apparel</a>
+</div>
+</div>
+</div>
+</div>
+<div class='home-premium-membership'>
+<h4>Premium Membership</h4>
+<p>MTGGoldfish Premium takes your Magic experience to the next level. Premium members enjoy our SuperBrew deck finder, unlimited card tracking, unlimited price alerts, collection import and card price history downloads. $6 per month. 30-day money back guarantee.</p>
+<a class="btn btn-primary" href="/premium">Go Premium</a>
+</div>
+<div class='home-tools-container'>
+<h3>Tools &amp; Features Around the Site</h3>
+<div class='home-tools-widget'>
+<h4>Card</h4>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Spoilers Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-spoilers-5e28917b.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/previews">Previews</a>
+<p>Stay on top of new spoilers before each new set releases</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Movers Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-movers-c2fdb28c.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/movers/standard">Movers &amp; Shakers</a>
+<p>See what cards are increasing and decreasing in value</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="My Cards Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-my-cards-5b44b3d0.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/portfolio">Collections</a>
+<p>Add your entire card collection and see current prices</p>
+</div>
+</div>
+</div>
+<div class='home-tools-widget'>
+<h4>Decks</h4>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Tournament Decks Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-tournament-decks-e1ede26c.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/metagame">Tournament Decks</a>
+<p>See all of the top decks in the current metagame</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Submit a Deck Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-submit-a-deck-39cc04fa.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/decks/new">Submit a Deck</a>
+<p>Build and save your own deck and share it with your friends</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Tournament Staples Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-tournament-staples-64143afa.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/format-staples/standard">Deck Staples</a>
+<p>View an updated list of the most played cards by format</p>
+</div>
+</div>
+<div class='home-tools-widget-footer'></div>
+</div>
+<div class='home-tools-widget'>
+<h4>Free Tools</h4>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="My Price Alerts Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-my-price-alerts-26e84fbc.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/price_alerts">Price Alerts</a>
+<p>Set updates for when cards increase or decrease in value</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Visual Deck View Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-upcoming-sets-36895e68.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<p>Visual Deck View</p>
+<p>Produce a high-res visual overview of your decklist</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Stream Popout Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-upcoming-sets-36895e68.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<p>Stream Popout</p>
+<p>Instantly generate a stream overlay of your decklists</p>
+</div>
+</div>
+<div class='home-tools-widget-footer'></div>
+</div>
+<div class='home-tools-widget home-tools-widget-highlight'>
+<h4>Premium</h4>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Superbrew Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-superbrew-f15d66f1.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/superbrew">Super Brew</a>
+<p>Discover new decks based on the cards you already own</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="My Price Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-upcoming-sets-36895e68.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/premium">My Price</a>
+<p>Price decks based on cards in your collection</p>
+</div>
+</div>
+<div class='home-tools-widget-bullet'>
+<div class='home-tools-widget-icon'>
+<img alt="Collection Tracking Icon" src="https://assets1.mtggoldfish.com/assets/layout-icons/layout-menu-upcoming-sets-36895e68.svg" />
+</div>
+<div class='home-tools-widget-description'>
+<a href="/premium">Collection Tracking</a>
+<p>Track when you buy/sell cards and for how much profit</p>
+</div>
+</div>
+<div class='home-tools-widget-footer'></div>
+</div>
+<div id="ad-layout-content-primary"></div>
+
+</div>
+<script defer src='https://embed.twitch.tv/embed/v1.js'></script>
+<script>
+  window.MTGGoldfish = window.MTGGoldfish || {};
+  window.MTGGoldfish.onDocumentReadyArray = window.MTGGoldfish.onDocumentReadyArray || [];
+  window.MTGGoldfish.onDocumentReadyArray.push(function() {
+    if (typeof window.MTGGoldfish.initHomepageLiveEmbed === "function") {
+      window.MTGGoldfish.initHomepageLiveEmbed();
+    }
+  });
+</script>
+
+</div>
+</main>
+<div class='layout-bottom-ad'>
+<div id='ad-layout-footer-content'></div>
+</div>
+<div class='layout-bottom-banner'>
+<div class='layout-bottom-contents'>
+<h2 class='sr-only'>Layout Footer</h2>
+<div class='layout-newsletter-panel'>
+<p class='layout-newsletter-cta'>Never miss important MTG news again!</p>
+<form class="form layout-newsletter-form" action="/subscriptions/new" accept-charset="UTF-8" method="get"><label class='sr-only' for='footer-subscription_email'>Email for Newsletter Subscription</label>
+<input type="text" name="email" id="footer-subscription_email" value="" class="form-control layout-newsletter-input" placeholder="Email Address" autocomplete="off" />
+<input type="submit" name="commit" value="Join!" class="btn btn-secondary btn-orange layout-newsletter-btn" data-disable-with="Join!" />
+</form><p class='small' style='margin-top: 5px;'>All emails include an <a href="/subscriptions/unsubscribe">unsubscribe</a> link. You may opt-out at any time. See our <a href="/policies/privacy">privacy policy</a>.</p>
+<h3>Follow Us</h3>
+<ul class='list-inline'>
+<li class='layout-social-item'><a href="https://www.facebook.com/mtggoldfish"><img alt="Facebook" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-facebook-6afbb272.svg" /></a></li>
+<li class='layout-social-item'><a href="https://twitter.com/mtggoldfish"><img alt="Twitter" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-twitter-4d23b719.svg" /></a></li>
+<li class='layout-social-item'><a href="https://www.twitch.tv/mtggoldfish"><img alt="Twitch" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-twitch-23de18bc.svg" /></a></li>
+<li class='layout-social-item'><a href="https://instagram.com/mtggoldfish/"><img alt="Instagram" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-instagram-566d057f.svg" /></a></li>
+<li class='layout-social-item'><a href="https://mtggoldfish.tumblr.com/"><img alt="Tumblr" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-tumblr-2d4964a1.svg" /></a></li>
+<li class='layout-social-item'><a href="/feed"><img alt="RSS" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-rss-ca1fe7d2.svg" /></a></li>
+<li class='layout-social-item'><a href="/cdn-cgi/l/email-protection#ceada1a0baafadba8ea3baa9a9a1a2aaa8a7bda6e0ada1a3"><img alt="Email" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-email-ea893673.svg" /></a></li>
+<li class='layout-social-item'><a href="https://discord.gg/mtggoldfish"><img alt="Discord" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-discord-6bf08e74.svg" /></a></li>
+<li class='layout-social-item'><a href="https://www.youtube.com/c/mtggoldfish"><img alt="YouTube" src="https://assets1.mtggoldfish.com/assets/layout-icons/social-icon-youtube-09d70a44.svg" /></a></li>
+</ul>
+<h3 class='footer-toggle-dark-mode'>
+<span class='me-3'>Toggle Dark Mode</span>
+<input id='btn-toggle-dark' type='checkbox'>
+<label for='btn-toggle-dark'>
+<i></i>
+<span class='sr-only' data-text-false='Light' data-text-true='Dark'>
+Toggle Dark Mode
+</span>
+</label>
+</h3>
+<h3 class='layout-type-switcher-header'>Price Preference</h3>
+<fieldset class='layout-type-switcher'>
+<legend class='sr-only'>Default Price Switcher</legend>
+<div class='btn-group'>
+<button class='btn btn-paper-muted' id='default-toggle-paper' type='button'>Tabletop</button>
+<button class='btn btn-arena-muted' id='default-toggle-arena' type='button'>Arena</button>
+<button class='btn btn-online-muted' id='default-toggle-online' type='button'>MTGO</button>
+</div>
+</fieldset>
+</div>
+<div class='layout-footer-panel'>
+<div class='layout-footer-panel-container'>
+<h3>Company</h3>
+<ul class='layout-footer-panel-menu'>
+<li><a href="/policies/privacy">Privacy Policy</a></li>
+<li><a href="/policies/terms-of-use">Terms of Use</a></li>
+<li><a href="/contact">Contact</a></li>
+<li>
+<a data-bs-target='#privacy-modal' data-bs-toggle='modal' href='#'>
+Do Not Sell My Personal Information
+</a>
+</li>
+</ul>
+</div>
+<div class='layout-footer-panel-container'>
+<h3>Contribute</h3>
+<ul class='layout-footer-panel-menu'>
+<li><a href="/tournaments/new">Submit Tournament Results</a></li>
+</ul>
+</div>
+</div>
+<div class='layout-social-panel'>
+<div id='ad-layout-footer-nav'></div>
+</div>
+</div>
+</div>
+<div class='bottom-shelf'>
+<div class='layout-container-fluid container-fluid'>
+<div class='banner-contents'>
+<p class='layout-copyright-notice'>
+All original content on this page is © 2012-2026 MTGGoldfish, Inc. and may not be used or reproduced without consent.  Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC. © 1995-2026 Wizards. All rights reserved. MTGGoldfish, Inc. is not affiliated with Wizards of the Coast LLC.
+<br class='mt-2'>
+When you click on links to various merchants on this site and make a purchase, this can result in this site earning a commission. Affiliate programs and affiliations include, but are not limited to, the eBay Partner Network, TCGplayer.com, CardKingdom.com, CardConduit.com, Cardhoarder.com.
+</p>
+</div>
+</div>
+</div>
+<div class='hidden' data-value='1' id='ab-test-flag'></div>
+<div id='ad-layout-desktop-sticky'></div>
+<div aria-labelledby='Login Dialog' class='modal fade' id='login-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-lg'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h2 class='modal-title'>Sign in Using an Existing Account</h2>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+<span class='sr-only'>Close Login Popup</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='existing-account'>
+<div class='row'>
+<div class='col-md-6'>
+<form class="layout-auth-oauth-form layout-auth-oauth-form-facebook" data-turbo="false" data-provider="facebook" action="/auth/facebook" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="xJNACH64zbF_Z3kFL_FDkx7MJmnDtlwyuMg_WKFLiWFogDQ0sPbJcUrXw81FzGZ9NpQsjh_INT_zf3ySLZPnLw" autocomplete="off" /><input type="hidden" name="override_origin" value="" class="login-override_origin" autocomplete="off" />
+<input type="hidden" name="display" value="touch" class="login-facebook-display" disabled="disabled" autocomplete="off" />
+<button class='btn login-btn' data-provider='facebook' type='submit'>
+<img alt="Sign in with Facebook" src="https://assets1.mtggoldfish.com/assets/login-facebook-0a5ef53b.jpg" />
+</button>
+<fieldset>
+<legend class='sr-only'>Remember Facebook Login</legend>
+<div class='checkbox'>
+<label class='text-muted' for='layout-modal-facebook-remember-me'>
+<input type="checkbox" name="remember_me" id="layout-modal-facebook-remember-me" value="remember_me" aria-label="Remember Facebook Login" />
+Remember me
+</label>
+</div>
+</fieldset>
+</form></div>
+<div class='col-md-6'>
+<form class="layout-auth-oauth-form layout-auth-oauth-form-twitter" data-turbo="false" data-provider="twitter" action="/auth/twitter" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="gAPV_6lNeB3RNDJqoXT7ORabbzS3kSgTkWAAHo8UEWksEKHDZwN83eSEiKLLSd7XPsNl02vvQR7a10PUA8x_Jw" autocomplete="off" /><input type="hidden" name="override_origin" value="" class="login-override_origin" autocomplete="off" />
+<button class='btn login-btn' data-provider='twitter' type='submit'>
+<img alt="Sign in with Twitter" src="https://assets1.mtggoldfish.com/assets/login-twitter-9184056a.jpg" />
+</button>
+<fieldset>
+<legend class='sr-only'>Remember Twitter Login</legend>
+<div class='checkbox'>
+<label class='text-muted' for='layout-modal-twitter-remember-me'>
+<input type="checkbox" name="remember_me" id="layout-modal-twitter-remember-me" value="remember_me" aria-label="Remember Twitter Login" />
+Remember me
+</label>
+</div>
+</fieldset>
+</form></div>
+<div class='col-md-6' style='margin-top: 10px;'>
+<form class="layout-auth-oauth-form layout-auth-oauth-form-twitch" data-turbo="false" data-provider="twitch" action="/auth/twitch" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ekBhaodLmFEGMzcL1WY69EgusKEchHIzIa3KxCfodAjWUxVWSQWckTODjcO_Wx8aYHa6RsD6Gz5qGokOqzAaRg" autocomplete="off" /><input type="hidden" name="override_origin" value="" class="login-override_origin" autocomplete="off" />
+<button class='btn login-btn login-btn-twitch' data-provider='twitch' type='submit'>
+<img style="height: 20px;" alt="Sign in with Twitch.tv" src="https://assets1.mtggoldfish.com/assets/GlitchIcon_White_48px-130c0dda.png" />
+&nbsp;Sign-in with Twitch.tv
+</button>
+<fieldset>
+<legend class='sr-only'>Remember Twitch.tv Login</legend>
+<div class='checkbox'>
+<label class='text-muted' for='layout-modal-twitch-remember-me'>
+<input type="checkbox" name="remember_me" id="layout-modal-twitch-remember-me" value="remember_me" aria-label="Remember Twitch.tv Login" />
+Remember me
+</label>
+</div>
+</fieldset>
+</form></div>
+</div>
+</div>
+<hr>
+<h2 class='modal-title'>Sign in Using an MTGGoldfish Email Account</h2>
+<form class="form layout-auth-identity-form" action="/auth/identity/callback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="PaEd5nLNe39ec8uZ04SviYtLSD7WNkp60UVtuHF4TD6RsmnavIN_v2vDcVG5uYpnoxNC2QpII3ea8i5y_aAicA" autocomplete="off" /><input type="hidden" name="override_origin" value="" class="login-override_origin" autocomplete="off" />
+<div class='form-group'>
+<label for='layout-modal-email-email'>Email Address</label>
+<input type="text" name="auth_key" id="layout-modal-email-email" value="" class="form-control layout-auth-identity-form-email" />
+</div>
+<div class='form-group'>
+<label for='layout-modal-email-password'>Password</label>
+<input type="password" name="password" id="layout-modal-email-password" value="" class="form-control" />
+<div class='clearfix'>
+<fieldset>
+<legend class='sr-only'>Remember Email Login</legend>
+<div class='checkbox pull-left'>
+<label class='text-muted' for='layout-modal-email-remember-me'>
+<input type="checkbox" name="remember_me" id="layout-modal-email-remember-me" value="remember_me" aria-label="Remember Email Login" />
+Remember me
+</label>
+</div>
+</fieldset>
+<p class='help-block pull-right' style='margin-top: 10px;'>Forgot your password? <a href="/password/reset/new">Reset it here</a>.</p>
+</div>
+<input type="submit" name="commit" value="Log In" class="btn btn-primary" data-disable-with="Log In" />
+</div>
+</form><p></p>
+<form id="layout-modal-layout-login-signup-form" action="/identity/new" accept-charset="UTF-8" method="get"><input type="hidden" name="override_origin" value="" class="login-override_origin" autocomplete="off" />
+<p>Don't have an account? <a id="layout-modal-layout-login-signup-btn" href="/identity/new">Sign Up for free!</a></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden='true' aria-labelledby='Important Updates' class='modal fade' id='conditions-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title'>Important Updates</h4>
+</div>
+<div class='modal-body clearfix'>
+<p>We've updated our <a href="/policies/terms-of-use">Terms of Use</a> and <a href="/policies/privacy">Privacy Policy</a>. Please take a moment to review them and accept to continue.</p>
+<p class='text-center'>
+<form data-turbo="true" data-turbo-stream="true" class="button_to" method="post" action="/account/accept_conditions"><input class="btn btn-primary" type="submit" value="I Agree to the Terms of Use and Privacy Policy" /><input type="hidden" name="authenticity_token" value="PWZ19EEa0NXuNryvwnAK15aFI1pUL0l1YHCYiW4XWI6RdQHIj1TUFduGBmeoTS85vt0pvYhRIHgrx9tD4s82wA" autocomplete="off" /></form>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-labelledby='Privacy Act Popup' class='modal fade' id='privacy-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h1 class='modal-title'>California Consumer Privacy Act (CCPA)</h1>
+<button aria-label='Close Privacy Act Popup' class='btn-close' data-bs-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+<span class='sr-only'>Close Privacy Popup</span>
+</button>
+</div>
+<div class='modal-body clearfix'>
+<h3 style='margin-top: 0px;'>
+Exercising Your Rights
+</h3>
+<p>If you are a resident of California, you have the right under the CCPA to opt out of the sale of personal information to third parties. Use the options below to exercise this right, and please review our privacy policy for complete information on how your data is used and stored.</p>
+<hr>
+<label for='do_not_sell_my_information_no'>
+<input type="radio" name="do_not_sell_my_information" id="do_not_sell_my_information_no" value="no" />
+<span style='font-weight: normal'>
+My personal information may be used for the purposes defined in the privacy policy.
+</span>
+</label>
+<label for='do_not_sell_my_information_yes'>
+<input type="radio" name="do_not_sell_my_information" id="do_not_sell_my_information_yes" value="yes" />
+<span style='font-weight: normal'>
+Do not sell my personal information.
+</span>
+</label>
+<p id='privacy_modal_message'></p>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden='true' aria-labelledby='Card Popup' class='modal fade' id='card-popup-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header text-center'>
+<h4 id='card-popup-modal-title'>Card</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<p class='text-center' data-back-src='https://cdn1.mtggoldfish.com/images/gf/back.jpg' id='card-popup-modal-image-container'>
+<a id="card-popup-modal-image-link" href=""><img id="card-popup-modal-image" class="price-card-image-image" alt="Generic Card Back" src="https://cdn1.mtggoldfish.com/images/gf/back.jpg" />
+</a></p>
+<div class='d-flex align-items-center justify-content-center gap-2 mt-2'>
+<button aria-label='Previous card' class='btn btn-outline-secondary d-none' id='card-popover-prev-btn'>
+<span class='fa fa-chevron-left'></span>
+</button>
+<a class="btn btn-secondary" id="card-popup-modal-link" href="">Card Details</a>
+<button aria-label='Next card' class='btn btn-outline-secondary d-none' id='card-popover-next-btn'>
+<span class='fa fa-chevron-right'></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"f7d6ca91073547b9aed6f40fb623e032","r":1}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a24c72335b7dddce',t:'MTc4NTY2NzAzNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

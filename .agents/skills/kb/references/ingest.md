@@ -92,6 +92,31 @@ Capture bodies are immutable after initial commit unless the user explicitly req
 
 Default: commit and push after successful ingest.
 
+## Bulk Firefox import
+
+For large bookmark corpora, use the import CLI (not one-at-a-time `/kb`):
+
+```bash
+npm run kb:import-firefox -- "path/to/bookmarks.html"
+npm run kb:import-firefox -- "path/to/bookmarks.html" --dry-run
+```
+
+Behavior:
+
+1. Copy HTML export to `sources/firefox-bookmarks-<date>.html` (immutable capture)
+2. Parse folders and URLs; skip Firefox default folders and `place:` pseudo-URLs
+3. Dedupe by URL; fetch live pages; exclude dead links (logged in manifest)
+4. Write captures to `sources/` and wiki pages to `wiki/bookmarks/<folder-path>/` with `## Summary` from meta/excerpt
+5. Write manifest to `sources/firefox-bookmarks-<date>.manifest.json`
+6. Write reclassification proposal to `artifacts/tacos-work/firefox-bookmark-import/reclassify-proposal.json` for user review before bulk folder moves
+7. Append one summary line to `wiki/index.md` and `wiki/log.md`
+8. Re-run on same date skips already-imported URLs (idempotent)
+9. Optional LLM reclassify: edit `artifacts/tacos-work/firefox-bookmark-import/llm-reclassify-plan.json` (or regenerate via `npx tsx scripts/kb/generate-llm-reclassify-plan.ts`), then `npm run kb:reclassify` and `npx tsx scripts/kb/sync-firefox-manifest-paths.ts`. Legacy keyword script: `npm run kb:reclassify:legacy`.
+
+Folder paths use English aliases (not Dutch `bladwijzerwerkbalk` or Russian transliterations). See `mapFolderSegment` in `scripts/kb/lib/import-firefox.ts`.
+
+After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
+
 ## Done when
 
 - Primary page(s) written with correct frontmatter

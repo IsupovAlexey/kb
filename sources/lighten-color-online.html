@@ -1,0 +1,901 @@
+<!-- Escrito en caché: Sat, 01 Aug 2026 13:09:00 (/lighten-color - dffe8220acb9badaf9fbc5b560fbe5f4) --> 
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+		<title>Lighten color online</title>
+		<meta name="description" content="Lightens a color" />		
+		<meta name="robots" content="noodp,index,follow" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://pinetools.com/files/styles.css" />
+		
+		<style>
+						#header {
+				background-color: #9f2b3a;
+				background-position: left center;
+				background-image: url('https://pinetools.com/files/header.png'), linear-gradient(45deg, #9f2b3a, #ffc601);
+			}
+		</style>
+		
+		<link rel="shortcut icon" href="https://pinetools.com/files/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="https://pinetools.com/files/favicon.ico" type="image/x-icon">
+		
+		<link rel="canonical" href="https://pinetools.com/lighten-color" />
+		<!-- open graph -->
+		<meta property="og:url" content="https://pinetools.com/lighten-color" />		
+		<!--<meta property="og:type" content="website" /> o "article"-->
+		<meta property="og:title" content="Lighten color online" />
+		<meta property="og:description" content="Lightens a color" />		<!--<meta property="og:image" content="http://www.your-domain.com/path/image.jpg" />-->
+		<meta property="og:site_name" content="PineTools" />
+
+		<meta name="twitter:site" content="@PineToolsOk" />
+		<meta property="twitter:account_id" content="729808095636037632" />
+		<meta property="fb:page_id" content="1739859106232099" />
+		<meta property="fb:admins" content="100003315561495" />
+		<!--<meta property="fb:app_id" content="..."/>-->
+		<meta property="twitter:title" content="Lighten color online" />
+		<meta property="twitter:description" content="Lightens a color" />		<!--<meta property="twitter:image:src" content="..." />-->
+		
+		<!-- Website info -->
+		<script>window.website_info = { name_dot_com: "PineTools.com" };</script>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<!-- Log errors -->
+		<script>window.onerror=function(){var a=arguments;$.post("https://pinetools.com/ajax",{logjs:JSON.stringify({url:document.location.href,message:a[0],source:a[1],pos:{l:a[2],c:a[3]},stack:a[4].stack})});};</script>
+		<!-- Masonry (acomoda elementos en la pantalla) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+		<!-- jScrollPane + otros necesarios -->
+		<script src="https://pinetools.com/files/scrolling/jquery.jscrollpane.min.js"></script>
+		<script src="https://pinetools.com/files/scrolling/jquery.mousewheel.js"></script>
+		<link type="text/css" href="https://pinetools.com/files/scrolling/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<!-- PRINCIPAL -->
+		<script src="https://pinetools.com/files/main.js"></script>
+				<!-- TWITTER -->
+		<script>window.twttr = (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0],
+			t = window.twttr || {};
+		  if (d.getElementById(id)) return t;
+		  js = d.createElement(s);
+		  js.id = id;
+		  js.src = "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+
+		  t._e = [];
+		  t.ready = function(f) {
+			t._e.push(f);
+		  };
+
+		  return t;
+		}(document, "script", "twitter-wjs"));</script>
+		<!-- LINKEDIN -->
+		<script async src="https://platform.linkedin.com/in.js"></script>
+		<!-- PINTEREST -->
+		<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+		<!-- MANUAL SOCIAL BUTTONS -->
+		<script>
+			(function(){
+				let replace_url = function(text){
+					let url = window.location.href;
+					let title = document.title;
+					let url_text = title + ': ' + url;
+					return text
+						.replace("URL_ENCODED", encodeURIComponent(url))
+						.replace("TITLE_ENCODED", encodeURIComponent(title))
+						.replace("URL_TEXT_ENCODED", encodeURIComponent(url_text));
+				};
+				$(document).ready(function(){
+					$(".social-widgets a").each(function(){
+						$(this).attr("href", replace_url($(this).attr("href")));
+					});
+				});
+			})();
+		</script>
+
+
+		<script src="https://pinetools.com/files/spectrum/spectrum.js"></script>
+<script src="https://pinetools.com/files/spectrum/myColorPicker.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://pinetools.com/files/tools/irid.js"></script>
+<link rel="stylesheet" href="https://pinetools.com/files/spectrum/spectrum.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script>window.misWidgets = new Object;</script><script></script><script>
+				function check_long(inp, minimo, maximo){
+					var error = false;
+					if( minimo !== null && inp.val().length < minimo ) error = true;
+					if( maximo !== null && inp.val().length > maximo ) error = true;
+					if(error)
+						inp.addClass("input_validation_error");
+					else
+						inp.removeClass("input_validation_error");
+				}
+				function validate_number(min, max, ancla, step, numString){ // min y/o max pueden ser null
+					// ancla: nro en el cual se basan los steps
+					numString = numString.replace(/,/g, ".");
+					var ajust_round = function(x, f_round){
+						x -= ancla;
+						x = f_round(x/step) * step;
+						x += ancla;
+						return x;
+					}
+					if(min !== null)
+						min = ajust_round(min, Math.ceil);
+					if(max !== null)
+						max = ajust_round(max, Math.floor);
+					var num = parseFloat(numString);
+					num = ajust_round(num, Math.round);
+					var mostrar = function(x){
+						x *= 100;
+						x = Math.round(x);
+						x /= 100;
+						return ""+x;
+					}
+					if(min !== null && num < min) num = min;
+					if(max !== null && num > max) num = max;
+					return mostrar(num);
+				}
+				jQuery.fn.extend({
+					inputify: function(minimo, maximo, onchange){ // minimo y maximo pueden ser null
+						return this.each(function(){
+							var elemento = $(this);
+							var rangoCont = $("#"+elemento.attr("id")+"-rangoCont");
+							if(minimo !== null || maximo !== null){
+								if(minimo !== null && maximo !== null)
+									var rangoStr = "%min - %max";
+								else {
+									if(minimo !== null)
+										var rangoStr = "Min: %min";
+									if(maximo !== null)
+										var rangoStr = "Max: %max";
+								}
+								rangoCont.text("(" + (rangoStr.replace("%min", minimo).replace("%max", maximo)) + ")");
+							}
+							var validador = function(){ check_long(elemento, minimo, maximo); }
+							elemento.change(validador);
+							validador();
+							elemento.change(onchange);
+						});
+					},
+					selectify: function(onchange){
+						return this.each(function(){
+							var elemento = $(this);
+							elemento.selectmenu({
+								change: onchange,
+								position: { collision: "flip" }
+							});
+						});
+					},
+					selectifyAutocomplete: function(onchange){
+						return this.each(function(){
+							var elemento = $(this);
+							elemento.combobox({ change: onchange });
+						});
+					},
+					radiobuttonify: function(onchange){
+						return this.each(function(){
+							var elemento = $(this);
+							elemento.buttonset();
+							elemento.change(onchange);
+						});
+					},
+					checkboxify: function(class_always, class_checked, onchange){
+						return this.each(function(){
+							var elemento = $(this);
+							var label = elemento.parent().children("label");
+							elemento.css("display", "none");
+							label.addClass(class_always);
+							var reflejar = function(){
+								if(elemento.prop("checked"))
+									label.addClass(class_checked);
+								else
+									label.removeClass(class_checked);
+							}
+							elemento.change(reflejar);
+							reflejar();
+							elemento.change(onchange);
+						});
+					},
+					slidify: function(minimo, maximo, flotante, onchange){ // (minimo, maximo y flotante) != null
+						return this.each(function(){
+							if(!flotante){
+								minimo = Math.round(minimo);
+								maximo = Math.round(maximo);
+							}
+							var paso = flotante ? 0.01 : 1;
+							var validador = function(numString){
+								return validate_number(minimo, maximo, minimo, paso, numString);
+							};
+							var inp = $(this);
+							var sliderCont = $("#"+inp.attr("id")+"-sliderCont");
+							var div = $("<div></div>");
+							div.appendTo(sliderCont);
+							var magicSlider = div.slider({
+								min: minimo,
+								max: maximo,
+								step: paso
+							});
+							magicSlider.slider("option", "slide", function(event, ui){ inp.val(ui.value); });
+							var leer_input = function(){
+								var valInpOk = validador(inp.val());
+								magicSlider.slider( "option", "value", valInpOk )
+								inp.val(valInpOk);
+							}
+							inp.change( leer_input );
+							leer_input();
+							magicSlider.slider("option", "change", onchange);
+						});
+					},
+					spinnify: function(minimo, maximo, flotante, onchange){ // minimo y/o maximo pueden ser null
+						return this.each(function(){
+							if(!flotante){
+								if(minimo !== null)
+									minimo = Math.round(minimo);
+								if(maximo !== null)
+									maximo = Math.round(maximo);
+							}
+							var paso = flotante ? 0.01 : 1;
+							var validador = function(numString){
+								var ancla = (minimo !== null) ? minimo : ((maximo !== null) ? maximo : 0);
+								return validate_number(minimo, maximo, ancla, paso, numString);
+							};
+							var inp = $(this);
+							var magicSpinner = inp.spinner({
+								min: minimo,
+								max: maximo,
+								step: paso
+							});
+							inp.unbind("mousewheel"); // la opcion de jquery ya no existe creo...
+							var fix_value = function(){
+								var valInpOk = validador(inp.val());
+								magicSpinner.spinner("option", "value", valInpOk);
+								inp.val(valInpOk);
+								onchange();
+							};
+							magicSpinner.spinner("option", "change", fix_value);
+							fix_value();
+						});
+					}
+				});
+				$.widget( "custom.combobox", {
+					_create: function() {
+						this.wrapper = $( "<span>" )
+							.addClass( "custom-combobox" )
+							.insertAfter( this.element );
+						this.element.hide();
+						this._createAutocomplete();
+						this._createShowAllButton();
+					},
+					_createAutocomplete: function() {
+						var selected = this.element.children( ":selected" ),
+						value = selected.val() ? selected.text() : "";
+						var este = this;
+						this.input = $( "<input>" )
+							.appendTo( this.wrapper )
+							.val( value )
+							.attr( "title", "" )
+							.addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+							.autocomplete({
+								delay: 0,
+								minLength: 0,
+								source: $.proxy( this, "_source" ),
+								change: function(){ este._changeChange(false); },
+								position: { collision: "flip" }
+							})
+							.tooltip({
+								tooltipClass: "ui-state-highlight"
+							});
+						this._on( this.input, {
+							autocompleteselect: function( event, ui ) {
+								ui.item.option.selected = true;
+								this._trigger( "select", event, {
+									item: ui.item.option
+								});
+								var este = this;
+								setTimeout(function(){ este.input.blur(); este._changeChange(true); }, 250);
+							},
+							autocompletechange: "_removeIfInvalid"
+						});
+					},
+					_createShowAllButton: function() {
+						var input = this.input,
+						wasOpen = false;
+						$( "<a>" )
+							.attr( "tabIndex", -1 )
+							.tooltip()
+							.appendTo( this.wrapper )
+							.button({
+								icons: {
+									primary: "ui-icon-triangle-1-s"
+								},
+								text: false
+							})
+							.removeClass( "ui-corner-all" )
+							.addClass( "custom-combobox-toggle ui-corner-right" )
+							.mousedown(function() {
+								wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+							})
+							.click(function() {
+								input.focus();
+								// Close if already visible
+								if ( wasOpen ) {
+									return;
+								}
+								// Pass empty string as value to search for, displaying all results
+								input.autocomplete( "search", "" );
+							});
+					},
+					_source: function( request, response ) {
+						var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+						response( this.element.children( "option" ).map(function() {
+							var text = $( this ).text();
+							if ( this.value && ( !request.term || matcher.test(text) ) )
+								return {
+									label: text,
+									value: text,
+									option: this
+								};
+						}) );
+					},
+					_changeChange: function(removerSiOSi) {
+						if(removerSiOSi == true){
+							this.input.removeClass("input_validation_error");
+						} else {
+							if(this.input.val() == ""){
+								if(this.input.hasClass("input_validation_error"))
+									return; // para que no ejecute el onchange
+								this.input.addClass("input_validation_error");
+							} else
+								this.input.removeClass("input_validation_error");
+						}
+						this.options.change();
+					},
+					_removeIfInvalid: function( event, ui ) {
+						// Selected an item, nothing to do
+						if ( ui.item ) {
+							return;
+						}
+						// Search for a match (case-insensitive)
+						var value = this.input.val(),
+						valueLowerCase = value.toLowerCase(),
+						valid = false;
+						this.element.children( "option" ).each(function() {
+							if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+								this.selected = valid = true;
+								return false;
+							}
+						});
+						// Found a match, nothing to do
+						if ( valid ) {
+							return;
+						}
+						// Remove invalid value
+						this.input
+							.val( "" )
+							//.attr( "title", value + " didn't match any item" )
+							.tooltip( "open" );
+						this.element.val( "" );
+						this._delay(function() {
+							this.input.tooltip( "close" ).attr( "title", "" );
+						}, 2500 );
+						this.input.autocomplete( "instance" ).term = "";
+					},
+					_destroy: function() {
+						this.wrapper.remove();
+						this.element.show();
+					}
+				});
+				function parseInt_or_string(v){ // sometimes the value is an integer, which will be compared against integers, sometimes it is a string...
+					var parsed = parseInt(v);
+					if(parsed.toString() == v.toString())
+						if(parsed >= 0)
+							return parsed;
+					return v.toString();
+				}
+				function leer_valor_settings(id_elem, tipo){
+					var elem = $("#"+id_elem);
+					if(tipo == "string")	return elem.val();
+					if(tipo == "select")	return parseInt_or_string(elem.val());
+					if(tipo == "radio")		return parseInt_or_string(elem.children("input:checked").val());
+					if(tipo == "checkbox")	return elem.prop("checked");
+					if(tipo == "entero")	return parseInt(elem.val());
+					if(tipo == "flotante")	return parseFloat(elem.val());
+					return elem;
+				}
+				function leer_valores_settings(campos){
+					salida = {};
+					for(clave in campos){
+						campo = campos[clave];
+						salida[campo.nombre] = leer_valor_settings(campo.id, campo.tipo);
+					}
+					return salida;
+				}
+				function check_mostrar_si(campo_id, value, possible_values, trigger_elem_id){
+					var mostrar = $.inArray(value, possible_values) != -1;
+					check_mostrar(campo_id, mostrar, trigger_elem_id);
+				}
+				function is_filled_settings(id){
+					return $("#"+id+" li.settings-li:visible .input_validation_error").length == 0;
+				}
+				function check_es_mostrado(campo_id){
+					var li = $("#"+campo_id).closest(".settings-li");
+					return !(li.is(":hidden"));
+				}
+				function check_mostrar(campo_id, mostrar, trigger_elem_id){
+					var li = $("#"+campo_id).closest(".settings-li");
+					var prev = check_es_mostrado(campo_id);
+					if(prev == mostrar)
+						return;
+					if(mostrar)
+						li.show();
+					else
+						li.hide();
+					window.events_handler.trigger([window.events_handler.event_visibility(trigger_elem_id)]);
+				}
+				function update_ultimo(){
+					$(".ul-settings li.settings-li").removeClass("ultimo");
+					/*$(".ul-settings li.settings-li:visible:last").addClass("ultimo");*/
+					$(".ul-settings").each( function(x,y){ $(y).children("li.settings-li:visible:last").addClass("ultimo"); } );
+				}
+				function change_settings(){
+					console.log("cambio!");
+				}
+				function in_arr(x, xs){
+					return $.inArray(x, xs) != -1;
+				}
+			</script><script></script><script> $(document).ready( function(){ ((function(){
+				window.misWidgets['6a6e1a1ce0173'] = new Object;
+				window.misWidgets['6a6e1a1ce0173'].onChange = function(){};
+				var myColPick = $((document.getElementById('6a6e1a1ce0173'))).myColorPicker({
+					valuesElement: $((document.getElementById('6a6e1a1ce0173-div-color-values'))),
+					onChange: function(){ (window.misWidgets['6a6e1a1ce0173'].onChange)('colorIn'); }
+				});
+				$('#6a6e1a1ce0173').val('#0066CC').change();
+				window.redrawMasonry();
+			})());((function(){
+				var onchangeInterno = function(nombre){
+					/*console.log("cambio en", '6a6e1a1ce018e', (leer_valores_settings([{ nombre: 'amount', tipo: 'flotante', id: '6a6e1a1ce018e-amount' },])));*/
+					
+				update_ultimo();
+			
+					window.redrawMasonry(); // NO BORRAR!
+					if(nombre != null)
+						(window.misWidgets['6a6e1a1ce018e'].onChange)(nombre);
+				};
+				window.misWidgets['6a6e1a1ce018e'] = new Object;
+				window.misWidgets['6a6e1a1ce018e'].onchangeInterno = onchangeInterno;
+				window.misWidgets['6a6e1a1ce018e'].onChange = function(){};
+			$("#"+'6a6e1a1ce018e-amount').slidify(0, 100, true, function(){ (window.misWidgets['6a6e1a1ce018e'].onchangeInterno)('opciones.amount'); });
+				onchangeInterno(null);
+			})());((function(){
+				var myColPick = $((document.getElementById('6a6e1a1ce0198'))).myColorPicker({
+					valuesElement: $((document.getElementById('6a6e1a1ce0198-div-color-values')))
+				});
+				$('#6a6e1a1ce0198').val('#0066CC').change();
+				window.redrawMasonry();
+			})()); ((function(){window.misWidgets['6a6e1a1ce0173'].onChange = function(){ window.events_handler.trigger([window.events_handler.event_value('6a6e1a1ce0173')]); };})());((function(){window.misWidgets['6a6e1a1ce018e'].onChange = function(){ window.events_handler.trigger([window.events_handler.event_value('6a6e1a1ce018e')]); };})());((function(){})()); ((function(){
+ window.apply = function(){ if((!((!((document.getElementById('hasta-42')) == null))))) ($('#6a6e1a1ce0198').val(v6a6e1a1ce0285).change());if((!((!((!((document.getElementById('desde-42')) != null))))))) v6a6e1a1ce0296 = Irid(v6a6e1a1ce0298);if((!((document.getElementById('desde-42')) != null))) v6a6e1a1ce029e = v6a6e1a1ce02a0.amount;if((!((document.getElementById('wrapper')) != null))) v6a6e1a1ce02a5 = v6a6e1a1ce02a6.toHexString();if((!(!((document.getElementsByClassName('cont-busqueda').length) != 0)))) v6a6e1a1ce02b3 = ((document.getElementById('6a6e1a1ce0173')).value);if((!((document.getElementById('wrapper')) != null))) v6a6e1a1ce02bb = Irid(v6a6e1a1ce02bc);if((!((window.location.hostname.length) == 13))) v6a6e1a1ce02c9 = v6a6e1a1ce02ca.lighten(v6a6e1a1ce02cb/100);if((!((!((!((!((!((document.domain.length) == 13))))))))))) v6a6e1a1ce02d6 = (leer_valores_settings([{ nombre: 'amount', tipo: 'flotante', id: '6a6e1a1ce018e-amount' },]));if((!(!((document.domain.length) == 13)))) v6a6e1a1ce02de = (leer_valores_settings([{ nombre: 'amount', tipo: 'flotante', id: '6a6e1a1ce018e-amount' },]));if((!((document.domain.substring(1, 2)) == 'i'))) v6a6e1a1ce02e9 = Irid(v6a6e1a1ce02ea);if((!((window.location.hostname.substring(12, 13)) == 'm'))) v6a6e1a1ce02f1 = v6a6e1a1ce02f2.lighten(v6a6e1a1ce02f4/100);if((!(!((document.getElementsByClassName('cont-o').length) != 0)))) v6a6e1a1ce02fb = v6a6e1a1ce02de.amount;if((!((!((window.location.hostname.length) != 13))))) v6a6e1a1ce0303 = v6a6e1a1ce0304.toHexString();if((!((document.domain.length) == 13))) v6a6e1a1ce030a = v6a6e1a1ce030b.lighten(v6a6e1a1ce030c/100);if((!((document.domain.substr(11, 1)) == 'o'))) v6a6e1a1ce0313 = v6a6e1a1ce0314.toHexString();if((!((!((!((document.getElementsByClassName('cont-busqueda').length) != 0))))))) v6a6e1a1ce031b = Irid(v6a6e1a1ce031c);if((!(!((!((!((!((window.location.hostname.length) != 13)))))))))) v6a6e1a1ce0325 = Irid(v6a6e1a1ce02b3);if((!((document.domain.substring(6, 7)) == 'o'))) v6a6e1a1ce032d = v6a6e1a1ce032e.amount;if((!((window.location.hostname.length) == 13))) v6a6e1a1ce0333 = ((document.getElementById('6a6e1a1ce0173')).value);if((!(!((document.getElementById('hasta-42')) != null)))) v6a6e1a1ce0325 = v6a6e1a1ce0325.lighten(v6a6e1a1ce02fb/100);if((!(!((document.domain.substring(3, 4)) == 'e')))) v6a6e1a1ce0342 = v6a6e1a1ce0325.toHexString();if((!((!((document.getElementById('wrapper')) == null))))) v6a6e1a1ce034a = v6a6e1a1ce034b.lighten(v6a6e1a1ce034c/100);if((!((document.domain.length) == 13))) v6a6e1a1ce0351 = v6a6e1a1ce0352.toHexString();if((!((document.getElementsByClassName('cont-o').length) != 0))) v6a6e1a1ce0358 = v6a6e1a1ce0359.amount;if((!(!((window.location.hostname.substr(12, 1)) == 'm')))) ($('#6a6e1a1ce0198').val(v6a6e1a1ce0342).change()); };
+((function(){window.events_handler.subscribe([window.events_handler.event_value('6a6e1a1ce0173')], function(){if((!((document.getElementsByClassName('cont-busqueda').length) != 0))) apply();if((!((window.location.hostname.length) == 13))) apply();if((!((!((!((!((document.getElementById('hasta-42')) == null))))))))) apply();if((!(!((!((document.getElementById('wrapper')) == null)))))) apply();}, [window.events_handler.unknown_id()]);})());((function(){window.events_handler.subscribe([window.events_handler.event_value('6a6e1a1ce018e')], function(){if((!((window.location.hostname.length) == 13))) apply();if((!((!((!((document.getElementsByClassName('cont-lang-select').length) != 0))))))) apply();if((!(!((!((document.getElementsByClassName('cont-busqueda').length) == 0)))))) apply();}, [window.events_handler.unknown_id()]);})());apply();})()); window.events_handler.execute_all_first_time(); }); </script><script>function execute(antes, despues){ antes(); setTimeout(function(){try { ((function(){if((!(is_filled_settings('6a6e1a1ce018e'))) && ((function(){ return $("#div-grid-elemento-6a6e1a1ce018e").is(":visible"); })())){ elemIncompleto('6a6e1a1ce018e', 'opciones'); (function(){ window.funDespues(false); })(); } else {  }})());  } catch (err) { show_js_error(err);  }}, 100); }</script><style>
+
+
+</style>
+		
+				<!-- buy sell ads buysellads -->
+				<script>
+					(function(){
+						var bsa_optimize=document.createElement('script');
+						bsa_optimize.type='text/javascript';
+						bsa_optimize.async=true;
+						bsa_optimize.src='https://cdn4.buysellads.net/pub/pinetools.js?'+(new Date()-new Date()%600000);
+						(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+					})();
+				</script>
+			
+				<script>
+					(function(){
+						$(document).ready(function(){
+							var elem = $('#never-decrease-height');
+							var getMinHeight = function(){return parseInt(elem.css('min-height')); };
+							var setMinHeight = function(n){ elem.css('min-height', n + 'px'); };
+							var getCurrentHeight = function(){return elem.height(); };
+							setInterval(function(){ setMinHeight(Math.max(getMinHeight(), getCurrentHeight())); }, 1000);
+						});
+					})();
+				</script>
+			
+				<script>
+					setInterval(function() {
+						var img_test = document.createElement('img');
+						img_test.style.display = 'none';
+						document.body.appendChild(img_test);
+						if(img_test.parentElement == null){
+							$('body>iframe').each(function(i, obj) {
+								if(obj.src.indexOf('loader.') + obj.src.indexOf('btl') != -2) obj.parentNode.removeChild(obj);
+							});
+						} else {
+							document.body.removeChild(img_test);
+						}
+					}, 500);
+				</script>
+					
+	</head>
+	<body class="lang_en">
+
+		<script>
+			(function(){
+				function read_theme(){
+					const persistedColorPreference = window.localStorage.getItem('color-scheme');
+					if(typeof persistedColorPreference === 'string')
+						return persistedColorPreference;
+					if(window.matchMedia('(prefers-color-scheme: dark)').matches)
+						return 'dark';
+					return 'light';
+				}
+				if(read_theme() == 'dark'){
+					document.body.classList.add("dark_mode");
+				}
+				window.setInterval(function(){
+					const applied_theme = document.body.classList.contains("dark_mode") ? 'dark' : 'light';
+					const selected_theme = read_theme();
+					if (applied_theme != selected_theme) {
+						document.body.classList.toggle("dark_mode");
+					}
+				}, 1000);
+				window.dark_mode = function(action){
+					switch (action) {
+					  case 'toggle':
+						document.body.classList.toggle("dark_mode"); break;
+					  case 'on':
+						document.body.classList.add("dark_mode"); break;
+					  case 'off':
+						document.body.classList.remove("dark_mode"); break;
+					}
+					const theme = document.body.classList.contains("dark_mode") ? 'dark' : 'light';
+					window.localStorage.setItem('color-scheme', theme);
+					return false;
+				}
+			})();
+		</script>
+
+	
+		<!-- FB -->
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=391924175647213&autoLogAppEvents=1" nonce="oxoGI1SA"></script>
+
+		<div id="wrapper">
+	
+			<div id="header">
+				<div id="logo">
+					<h1><a href="https://pinetools.com/" title="PineTools homepage">PineTools.com</a></h1>
+				</div>
+				<div id="boton-menu">
+					<button onclick="clickMenu();">Menu</button>
+				</div>
+				<div id="desde-42" class="desplazable"> <!-- NO IDS ACA ADENTRO -->
+					<div class="tab-tab">
+					
+<div class="cont-lang-select">
+<ul class="lang-select">
+<li>
+<span class="lang_en">EN</span>
+<ul>
+	<li><a href="https://pinetools.com/" title="PineTools (English)" class="lang_en lang_sel">English</a></li><li><a href="https://pinetools.com/es/" title="PineTools (Español)" class="lang_es ">Español</a></li></ul>
+</li>
+</ul>
+</div>
+
+<div class="cont-dark-mode-switch">
+	<label onclick="return dark_mode('on');">Dark mode</label>
+	<a href="#" title="Dark mode" class="dark-mode-switch" onclick="return dark_mode('toggle');"><span></span></a>
+	<label onclick="return dark_mode('off');">Light mode</label>
+</div>
+
+
+	
+					
+						<div class="cont-busqueda">
+							<form method="post" action="https://pinetools.com/search" onsubmit="return (this.q.value != '');">
+							<div class="busqueda">
+								<div class="busq-cell-a">
+									<input type="text" name="q" placeholder="Search for tools..."/>
+								</div>
+								<div class="busq-cell-b">
+									<input type="submit"/>
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="cont-o">
+							or						</div>
+						<div class="cont-suggest">
+							<a href="https://pinetools.com/static#suggest-tool" title="Suggest one tool">Suggest one <span>tool</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="row-main">
+			
+					<div id="left-column-main">
+					
+						<div id="menu">
+							<div id="hasta-42" class="desplazable"><!-- Acá se copia id:desde-42 --></div>
+							<div id="social-icons">
+								<a href="https://www.facebook.com/PineToolsOk" title="Become a fan of PineTools" class="botFA">Facebook</a>
+								<a href="https://twitter.com/PineToolsOk" title="Follow PineTools on Twitter" class="botTW">Twitter</a>
+								<a href="https://www.youtube.com/channel/UCeVny_pkT2s4nefGuYiqgTw" title="Visit our YouTube channel" class="botYO">YouTube</a>
+							</div>
+							<div id="categorias">
+								<ul>
+									<li ><a href="https://pinetools.com/c-mathematics/" title="Tools for common mathematical tasks">
+				Mathematics
+			</a></li><li class="cat-highlight"><a href="https://pinetools.com/c-colors/" title="Color picker, tools for modifying or generating colors">
+				Colors
+			</a><ul><li><a href="https://pinetools.com/lighten-color" title="Lightens a color" class="tool-highlight">
+						Lighten color
+					</a></li><li><a href="https://pinetools.com/darken-color" title="Darkens a color" >
+						Darken color
+					</a></li><li><a href="https://pinetools.com/change-color-saturation" title="Change the saturation of a color" >
+						Change color saturation
+					</a></li><li><a href="https://pinetools.com/greyscale-desaturate-color" title="Completely desaturates a color" >
+						Greyscale/desaturate a color
+					</a></li><li><a href="https://pinetools.com/invert-color" title="Invert a color" >
+						Invert a color
+					</a></li><li><a href="https://pinetools.com/random-color" title="Generate a random color" >
+						Random color generator
+					</a></li><li><a href="https://pinetools.com/blend-colors" title="Blend two colors" >
+						Blend colors
+					</a></li><li><a href="https://pinetools.com/gradient-generator" title="Generate the gradient using two colors" >
+						Gradient generator
+					</a></li><li><a href="https://pinetools.com/shift-hue-color" title="Modify the hue of a color" >
+						Shift hue of a color
+					</a></li><li><a href="https://pinetools.com/triad-color-scheme" title="Get the colors of the triad scheme" >
+						Triad color scheme
+					</a></li><li><a href="https://pinetools.com/tetrad-color-scheme" title="Get the colors of the tetrad scheme" >
+						Tetrad color scheme
+					</a></li><li><a href="https://pinetools.com/complementary-color" title="Get the complementary color" >
+						Complementary color
+					</a></li><li><a href="https://pinetools.com/split-complementary-colors" title="Get the split complementary colors" >
+						Split complementary colors
+					</a></li><li><a href="https://pinetools.com/analogous-color-scheme" title="Get the colors of the analogous scheme" >
+						Analogous color scheme
+					</a></li><li><a href="https://pinetools.com/monochromatic-colors-generator" title="Get monochromatic colors" >
+						Monochromatic colors generator
+					</a></li><li><a href="https://pinetools.com/square-color-scheme" title="Get the colors of the square scheme" >
+						Square color scheme
+					</a></li><li><a href="https://pinetools.com/image-color-picker" title="Pick color from image" >
+						Image color picker
+					</a></li><li><a href="https://pinetools.com/get-colors-image" title="Extract the color palette from an image" >
+						Get colors from image
+					</a></li><li><a href="https://pinetools.com/bulk-batch-get-colors-image" title="Bulk/batch tool, extract the color palette from an image" >
+						Bulk get colors from image
+					</a></li></ul></li><li ><a href="https://pinetools.com/c-text-lists/" title="Work with lists and texts, sort, randomize, reverse">
+				Text and lists
+			</a></li><li ><a href="https://pinetools.com/c-numbers/" title="Work with numbers, generate, filter, sort">
+				Numbers
+			</a></li><li ><a href="https://pinetools.com/c-date-time/" title="Measure time, calculate distance between dates, chronometers">
+				Date and time
+			</a></li><li ><a href="https://pinetools.com/c-images/" title="Resize images, crop, optimize and more">
+				Images
+			</a></li><li ><a href="https://pinetools.com/c-randomness/" title="Generate random numbers, randomize lists, common distributions">
+				Randomness
+			</a></li><li ><a href="https://pinetools.com/c-files/" title="Convert, compress, join or split">
+				Files
+			</a></li><li ><a href="https://pinetools.com/c-programming/" title="Tools for programming and web development">
+				Programming
+			</a></li><li ><a href="https://pinetools.com/c-videos/" title="Tools for creating, editing, cropping, trimming and merging videos">
+				Videos
+			</a></li>																	</ul>
+							</div>
+							<div id="links-bottom">
+								<div id="icons-footer"></div>
+								<ul>
+									<li><a href="https://pinetools.com/static#contact" title="Contact us">Contact us</a></li>
+									<li><a href="https://pinetools.com/static#suggest-tool" title="Suggest a tool">Suggest a tool</a></li>
+									<li><a href="https://pinetools.com/static#tos" title="Terms of service">Terms of service</a></li>
+									<li><a href="https://pinetools.com/static#privacy-policy" title="Privacy policy">Privacy policy</a></li>
+								</ul>
+								<div id="logo-footer"></div>
+							</div>
+						</div>
+					
+					</div>
+			
+					<div id="right-column-main">
+
+
+						<div id="main">
+
+
+
+
+
+
+
+
+		<div id="informacion-body">
+		
+			<h1>Lighten color online</h1>
+			<p class="nombre-categoria">
+				In				<a href="https://pinetools.com/c-colors/" title="Color picker, tools for modifying or generating colors">Colors</a>
+				|
+				<a class="link-keywords" href="#">Keywords</a>
+				|
+				<a class="gracias" href="#">Thanks to...</a>
+			</p>
+			<div id="info-keywords" style="display: none;">
+				<p>
+					Keywords:
+					lighten, color, white, brighten, lightness, brightness				</p>
+			</div>
+
+			
+			<div class="social-widgets">
+				<div class="facebook-like-container social-container">
+					<span class="placeholder"><span>Like</span></span>
+					<div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+				</div>
+				<div class="facebook-share-container social-container">
+					<span class="placeholder"><span>Share</span></span>
+					<div class="fb-share-button" data-layout="button"></div>
+				</div>
+				<div class="twitter-container social-container">
+					<span class="placeholder"><span>Tweet</span></span>
+					<a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+				</div>
+				<!--
+				<div class="go-plus1-container social-container">
+					<span class="placeholder"><span>Share</span></span>
+					<div class="g-plusone" data-size="tall" data-annotation="none"></div>
+				</div>
+				<div class="go-share-container social-container">
+					<span class="placeholder"><span>Share</span></span>
+					<div class="g-plus" data-action="share" data-annotation="none"></div>
+				</div>
+				-->
+				<div class="linkedin-container social-container">
+					<span class="placeholder"><span>Share</span></span>
+					<script type="IN/Share"></script>
+				</div>
+				<div class="reddit-container social-container">
+					<span class="placeholder"><span>Share</span></span>
+					<a href="https://www.reddit.com/submit?url=URL_ENCODED&title=TITLE_ENCODED" title="Share (Reddit)" target="_blank" rel="nofollow">Share</a>
+				</div>
+				<div class="whatsapp-container social-container">
+					<span class="placeholder"><span>Share</span></span>
+					<a href="https://wa.me/?text=URL_TEXT_ENCODED" title="Share (WhatsApp)" target="_blank" rel="nofollow">Share</a>
+				</div>
+				<div class="pinterest-container social-container">
+					<span class="placeholder"><span>Save</span></span>
+					<a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
+				</div>
+			</div>
+					
+			<p>Lightens a color towards white</p>			
+		</div>
+		
+		
+					<!-- PineTools_S2S_Leaderboard_ROS_Pos1 -->
+					<div id="carbon-ads-container-bg" style="padding: 10px 0;">
+					<div id="never-decrease-height">
+					<div id="bsa-zone_1613516522746-7_123456"></div>
+					</div>
+					</div>
+		<div id="grid-page-tool" class="grid">
+			<div class="grid-sizer tam12"></div>
+		
+							<div class="grid-item tam12" id="div-grid-elemento-6a6e1a1ce0173">
+					<div class="div-elemento div-elemento-input" id="div-elemento-6a6e1a1ce0173">
+						<h4>Original color</h4>
+							<br />
+							
+							<div class="tool-html">
+			<div class="rowWidgJsTools">
+				<div class="colWidgJsTools">
+				<div class="cont-col1-widg-color">
+					<input type="hidden" name="colorIn" id="6a6e1a1ce0173" />
+				</div>
+			</div>
+				<div class="colWidgJsTools">
+				<div class="cont-col2-widg-color">
+					<div id="6a6e1a1ce0173-div-color-values" ></div>
+				</div>
+			</div>
+			</div>
+		</div>					</div>
+				</div>
+							<div class="grid-item tam12" id="div-grid-elemento-6a6e1a1ce018e">
+					<div class="div-elemento div-elemento-input" id="div-elemento-6a6e1a1ce018e">
+						<h4>Options</h4>
+							<br />
+							
+							<div class="tool-html"><ul id="6a6e1a1ce018e" class="ul-settings obligatorio"><li class="settings-li settings-flotante"><div class="settings-title">Amount</div>
+							<div class="simil-table">
+								<div class="simil-table-row">
+									<div class="simil-table-cell" style="width: 135px;">
+										<input type="text" id="6a6e1a1ce018e-amount" value="50"/>
+									</div>
+									<div class="simil-table-cell">
+										<div id="6a6e1a1ce018e-amount-sliderCont"></div>
+									</div>
+								</div>
+							</div>
+						</li></ul></div>					</div>
+				</div>
+							<div class="grid-item tam12" id="div-grid-elemento-6a6e1a1ce0198">
+					<div class="div-elemento div-elemento-output" id="div-elemento-6a6e1a1ce0198">
+						<h4>Lightened color</h4>
+							<br />
+							
+							<div class="tool-html">
+			<div class="rowWidgJsTools">
+				<div class="colWidgJsTools">
+				<div class="cont-col1-widg-color">
+					<input type="hidden" name="colorOut" id="6a6e1a1ce0198" />
+				</div>
+			</div>
+				<div class="colWidgJsTools">
+				<div class="cont-col2-widg-color">
+					<div id="6a6e1a1ce0198-div-color-values" ></div>
+				</div>
+			</div>
+			</div>
+		</div>					</div>
+				</div>
+						
+
+					
+		</div>
+		
+		
+<div id="info-gracias" style="display: none;">We use and thanks for these <b>great</b> tools:<br/><ul class="lista-gracias"><li><a href="https://jquery.com/" title="jQuery" rel="nofollow" target="_blank">jQuery</a></li><li><a href="http://masonry.desandro.com/" title="Masonry" rel="nofollow" target="_blank">Masonry</a></li><li><a href="http://jscrollpane.kelvinluck.com/" title="jScrollPane" rel="nofollow" target="_blank">jScrollPane</a></li><li><a href="http://bgrins.github.io/spectrum/" title="Spectrum colorpicker" rel="nofollow" target="_blank">Spectrum colorpicker</a></li><li><a href="https://jqueryui.com/" title="jQuery UI" rel="nofollow" target="_blank">jQuery UI</a></li><li><a href="https://github.com/n3dst4/irid" title="Irid" rel="nofollow" target="_blank">Irid</a></li></ul></div>
+
+			<div id="error_message_template" style="display: none;">
+				<div class="user_error_message_alert" style="text-align: center;">
+					<div style="margin: 10px 0 20px;"><span style="background-color: #E92323; color: white; border-radius: 30px; width: 60px; height: 60px; display: inline-block; font-size: 50px; line-height: 64px; box-shadow: -3px -6px 1px 0px rgba(0, 0, 0, 0.15) inset; font-weight: bold;">!</span></div>
+					<div class="main_message" style="font-weight: bold;">Unfortunately, an error has occurred!</div>
+					<a href="#" style="color: #06C; text-decoration: underline; display: block; margin-top: 8px;">Details (available in English only)</a>
+					<div class="message" style="display: none; margin-top: 12px; font-size: 12px; font-family: monospace; background-color: #E1E1E1; max-height: 250px; overflow-y: auto;"></div>
+				</div>
+			</div>
+			
+						</div>
+					
+					</div>
+
+			</div>
+			
+		</div>
+
+	<div id="aviso_cookies">
+		<div>
+			<p>This website uses cookies to ensure you get the best experience here.</p>
+			<p>
+				<a href="#" class="a_boton_cerrar">Got it!</a>
+				<a href="https://pinetools.com/static#privacy-policy" title="Privacy policy" class="a_boton_info">More info</a>
+			</p>
+		</div>
+	</div>
+	
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ8TD2BX7E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZJ8TD2BX7E');
+</script>
+	
+<!---<script>
+window.setTimeout(function() {
+	var adblock_disabled = ($("#carbon-ads-container-bg, .adsbygoogle").height() || 0) > 45;
+	ga('send', 'event', 'Ad Setting', 'Adblock', adblock_disabled ? 'Disabled' : 'Enabled');
+}, 10*1000);
+</script>--->
+
+	<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"2856fa6ad7c24ac98a8cfea25e4cada2","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- Leído de caché: Sun, 02 Aug 2026 07:35:53 (dffe8220acb9badaf9fbc5b560fbe5f4) -->

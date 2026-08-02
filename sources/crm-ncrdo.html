@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Авторизация</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="robots" content="noindex, nofollow" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script data-skip-moving="true">(function() {const canvas = document.createElement('canvas');let gl;try{gl = canvas.getContext('webgl2') || canvas.getContext('webgl') || canvas.getContext('experimental-webgl');}catch (e){return;}if (!gl){return;}const result = {vendor: gl.getParameter(gl.VENDOR),renderer: gl.getParameter(gl.RENDERER),};const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');if (debugInfo){result.unmaskedVendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);result.unmaskedRenderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);}function isLikelyIntegratedGPU(gpuInfo){const renderer = (gpuInfo.unmaskedRenderer || gpuInfo.renderer || '').toLowerCase();const vendor = (gpuInfo.unmaskedVendor || gpuInfo.vendor || '').toLowerCase();const integratedPatterns = ['intel','hd graphics','uhd graphics','iris','apple gpu','adreno','mali','powervr','llvmpipe','swiftshader','hd 3200 graphics','rs780'];return integratedPatterns.some(pattern => renderer.includes(pattern) || vendor.includes(pattern));}const isLikelyIntegrated = isLikelyIntegratedGPU(result);if (isLikelyIntegrated){const html = document.documentElement;html.classList.add('bx-integrated-gpu', '--ui-reset-bg-blur');}})();</script>
+<script data-skip-moving="true">(function(w, d, n) {var cl = "bx-core";var ht = d.documentElement;var htc = ht ? ht.className : undefined;if (htc === undefined || htc.indexOf(cl) !== -1){return;}var ua = n.userAgent;if (/(iPad;)|(iPhone;)/i.test(ua)){cl += " bx-ios";}else if (/Windows/i.test(ua)){cl += ' bx-win';}else if (/Macintosh/i.test(ua)){cl += " bx-mac";}else if (/Linux/i.test(ua) && !/Android/i.test(ua)){cl += " bx-linux";}else if (/Android/i.test(ua)){cl += " bx-android";}cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");cl += w.devicePixelRatio && w.devicePixelRatio >= 2? " bx-retina": " bx-no-retina";if (/AppleWebKit/.test(ua)){cl += " bx-chrome";}else if (/Opera/.test(ua)){cl += " bx-opera";}else if (/Firefox/.test(ua)){cl += " bx-firefox";}ht.className = htc ? htc + " " + cl : cl;})(window, document, navigator);</script>
+
+
+<link href="/bitrix/js/intranet/intranet-common.min.css?167143647261199" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.min.css?175782783723463" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/intranet/design-tokens/bitrix24/air-design-tokens.min.css?17578299453744" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/fonts/montserrat/ui.font.montserrat.min.css?16714364542209" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.min.css?16714364542320" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/popup/dist/main.popup.bundle.min.css?175782964928056" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/login/template_styles.min.css?175782973044611" type="text/css"  data-template-style="true"  rel="stylesheet" />
+
+
+
+
+
+
+
+                
+
+                
+                        
+</head>
+<body>
+<table class="log-main-table">
+	<tr>
+		<td class="log-top-cell">
+			<a class="main-logo main-logo-ru" href="/" title="Bitrix24"></a>
+		</td>
+	</tr>
+	<tr>
+		<td class="log-main-cell">
+			<div class="log-popup-wrap " id="login-popup-wrap">
+				<div class="log-popup" id="login-popup">
+<div class="log-popup-form-wrapper">
+<div class="log-popup-form-input --show" data-role="log-popup-form-input">
+	<div class="log-popup-header">Авторизация</div>
+
+		<div class="b_line_gray"></div>
+	
+	
+	
+	<form name="form_auth" method="post" target="_top" action="/?login=yes" class="log-popup-form-area">
+		<input type="hidden" name="AUTH_FORM" value="Y" />
+		<input type="hidden" name="TYPE" value="AUTH" />
+				<input type="hidden" name="backurl" value="/" />
+				
+			<div>
+				<div class="login-wrapper">
+					<div class="login-wrapper-inputs">
+						<div class="login-item --auth">
+							<!--[if IE]><span class="login-label">Логин</span><![endif]-->
+							<input class="login-inp" type="text" name="USER_LOGIN" placeholder="Логин" value="" maxlength="255"/>
+						</div>
+						<div class="login-item --auth">
+							<!--[if IE]><span class="login-label">Пароль</span><![endif]-->
+							<input class="login-inp" type="password" name="USER_PASSWORD" placeholder="Пароль" maxlength="255" autocomplete="current-password" />
+						</div>
+					</div>
+
+					
+				</div>
+				
+			<div class="login-text login-item --user-remember">
+								<input type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y" class="login-checkbox-user-remember"/><label class="login-item-checkbox-label" for="USER_REMEMBER">Запомнить меня на этом компьютере</label>
+											</div>
+		</div>
+		<div class="log-popup-footer ">
+			<input type="submit" value="Войти" class="login-btn" onclick="BX.addClass(this, 'wait');"/>
+			<a class="login-link-forgot-pass" href="/?forgot_password=yes">Забыли свой пароль?</a>
+		</div>
+	</form>
+</div>
+
+</div>
+				</div>
+				<div class="log-popup-caption-wrap">
+					<div class="log-popup-caption">
+												&copy; &laquo;Битрикс&raquo;, 2026. Объединяем компанию с <a href="https://www.bitrix24.ru/" target="_blank">&laquo;1С-Битрикс24&raquo;</a>					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="log-bottom-cell"><span class="log-bottom-cap"></span></td>
+	</tr>
+</table>
+<script>if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script>(window.BX||top.BX).message({"JS_CORE_LOADING":"Загрузка...","JS_CORE_NO_DATA":"- Нет данных -","JS_CORE_WINDOW_CLOSE":"Закрыть","JS_CORE_WINDOW_EXPAND":"Развернуть","JS_CORE_WINDOW_NARROW":"Свернуть в окно","JS_CORE_WINDOW_SAVE":"Сохранить","JS_CORE_WINDOW_CANCEL":"Отменить","JS_CORE_WINDOW_CONTINUE":"Продолжить","JS_CORE_H":"ч","JS_CORE_M":"м","JS_CORE_S":"с","JSADM_AI_HIDE_EXTRA":"Скрыть лишние","JSADM_AI_ALL_NOTIF":"Показать все","JSADM_AUTH_REQ":"Требуется авторизация!","JS_CORE_WINDOW_AUTH":"Войти","JS_CORE_IMAGE_FULL":"Полный размер"});</script><script src="/bitrix/js/main/core/core.min.js?1757829919229643"></script><script>BX.Runtime.registerExtension({"name":"main.core","namespace":"BX","loaded":true});</script>
+<script>BX.setJSList(["\/bitrix\/js\/main\/core\/core_ajax.js","\/bitrix\/js\/main\/core\/core_promise.js","\/bitrix\/js\/main\/polyfill\/promise\/js\/promise.js","\/bitrix\/js\/main\/loadext\/loadext.js","\/bitrix\/js\/main\/loadext\/extension.js","\/bitrix\/js\/main\/polyfill\/promise\/js\/promise.js","\/bitrix\/js\/main\/polyfill\/find\/js\/find.js","\/bitrix\/js\/main\/polyfill\/includes\/js\/includes.js","\/bitrix\/js\/main\/polyfill\/matches\/js\/matches.js","\/bitrix\/js\/ui\/polyfill\/closest\/js\/closest.js","\/bitrix\/js\/main\/polyfill\/fill\/main.polyfill.fill.js","\/bitrix\/js\/main\/polyfill\/find\/js\/find.js","\/bitrix\/js\/main\/polyfill\/matches\/js\/matches.js","\/bitrix\/js\/main\/polyfill\/core\/dist\/polyfill.bundle.js","\/bitrix\/js\/main\/core\/core.js","\/bitrix\/js\/main\/polyfill\/intersectionobserver\/js\/intersectionobserver.js","\/bitrix\/js\/main\/lazyload\/dist\/lazyload.bundle.js","\/bitrix\/js\/main\/polyfill\/core\/dist\/polyfill.bundle.js","\/bitrix\/js\/main\/parambag\/dist\/parambag.bundle.js"]);
+</script>
+<script>BX.Runtime.registerExtension({"name":"ncrdo_custom_custom_im_messenger","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"pull.protobuf","namespace":"BX","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"rest.client","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"pull_server_enabled":"Y","pull_config_timestamp":1757829629,"shared_worker_allowed":"Y","pull_guest_mode":"N","pull_guest_user_id":0,"pull_worker_mtime":1757829304});(window.BX||top.BX).message({"PULL_OLD_REVISION":"Для продолжения корректной работы с сайтом необходимо перезагрузить страницу."});</script>
+<script>BX.Runtime.registerExtension({"name":"pull.client","namespace":"BX","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"pull","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"intranet.design-tokens.bitrix24","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.design-tokens","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.fonts.montserrat","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"ui.fonts.opensans","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"main.popup","namespace":"BX.Main","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"popup","namespace":"window","loaded":true});</script>
+<script>BX.Runtime.registerExtension({"name":"fx","namespace":"window","loaded":true});</script>
+<script>(window.BX||top.BX).message({"LANGUAGE_ID":"ru","FORMAT_DATE":"DD.MM.YYYY","FORMAT_DATETIME":"DD.MM.YYYY HH:MI:SS","COOKIE_PREFIX":"BITRIX_SM","SERVER_TZ_OFFSET":"10800","UTF_MODE":"Y","SITE_ID":"s1","SITE_DIR":"\/","USER_ID":"","SERVER_TIME":1785667017,"USER_TZ_OFFSET":0,"USER_TZ_AUTO":"Y","bitrix_sessid":"ea2b098cb56e8a672ef6c71373de558a"});</script><script src="/bitrix/js/pull/protobuf/protobuf.min.js?161634826876433"></script>
+<script src="/bitrix/js/pull/protobuf/model.min.js?161634826814190"></script>
+<script src="/bitrix/js/rest/client/rest.client.min.js?16163482709240"></script>
+<script src="/bitrix/js/pull/client/pull.client.min.js?175782930549849"></script>
+<script src="/bitrix/js/main/popup/dist/main.popup.bundle.min.js?175782992267261"></script>
+<script src="/bitrix/js/main/core/core_fx.min.js?16163482619768"></script>
+<script>
+            BX.ready(function () {
+                denyIncludeSystemMenuItemsInContextMenuButton();
+            })
+
+            function denyIncludeSystemMenuItemsInContextMenuButton() {
+                if (!BX.Crm || !BX.Crm.EntityEditor) {
+                    return;
+                }
+
+                var originalOnInterfaceToolbarMenuBuild = BX.Crm.EntityEditor.prototype.onInterfaceToolbarMenuBuild;
+                BX.Crm.EntityEditor.prototype.onInterfaceToolbarMenuBuild = function (sender, args) {
+                    if (BX.hasClass(sender['_menuButton'], 'ui-btn-icon-setting')) {
+                        let entityEditor = BX.Crm.EntityEditor.getDefault();
+
+                        originalOnInterfaceToolbarMenuBuild.call(entityEditor, sender, args);
+                    } else {
+                        return;
+                    }
+                }
+            }
+        </script>
+<script>
+            BX.ready(function () {
+                denyDeleteDocumentFromTimeline();
+            })
+
+            function denyDeleteDocumentFromTimeline() {
+                if (!BX.CrmHistoryItemDocument) {
+                    return;
+                }
+
+                var originaldeleteDocument = BX.CrmHistoryItemDocument.prototype.deleteDocument;
+                BX.CrmHistoryItemDocument.prototype.deleteDocument = function () {
+                    BX.UI.Notification.Center.notify({
+                        content: 'Нельзя удалять документы из CRM!'
+                    });
+                }
+            }
+        </script>
+
+<script>
+                BX.ready(function () {
+                    BX.Ncrdo.Custom.CustomImMessenger.overrideDialogStatusRedraw('#aaffbb');
+                    BX.Ncrdo.Custom.CustomImMessenger.overrideUserListRedraw('#aaffbb');
+
+                    BX.addCustomEvent('onImDrawTab', function (tabData) {
+                        BX.Ncrdo.Custom.CustomImMessenger.drawImTabHandler(tabData, '#aaffbb');
+                    });
+                });
+            </script>
+
+<script>
+					(function () {
+						"use strict";
+
+						var counter = function ()
+						{
+							var cookie = (function (name) {
+								var parts = ("; " + document.cookie).split("; " + name + "=");
+								if (parts.length == 2) {
+									try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+									catch (e) {}
+								}
+							})("BITRIX_CONVERSION_CONTEXT_s1");
+
+							if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+								return;
+
+							var request = new XMLHttpRequest();
+							request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+							request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+							request.send(
+								"SITE_ID="+encodeURIComponent("s1")+
+								"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+								"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+							);
+						};
+
+						if (window.frameRequestStart === true)
+							BX.addCustomEvent("onFrameDataReceived", counter);
+						else
+							BX.ready(counter);
+					})();
+				</script>
+
+
+
+<script src="/local/js/ncrdo.custom/custom_im_messenger.js?16329357323042"></script>
+
+<script>
+	function fireEnterKey(event)
+	{
+		event = event || window.event;
+		if (event.keyCode != 13)
+			return true;
+
+		var src = event.srcElement || event.target;
+		if (!src || (src.tagName.toLowerCase() != "textarea"))
+		{
+			var form = document.forms["form_auth"];
+			if (form)
+			{
+				var password = form.elements["USER_PASSWORD"];
+				if (!password || BX.type.isNotEmptyString(password.value))
+					form.submit();
+			}
+
+			BX.PreventDefault(event);
+		}
+
+		return true;
+	}
+
+	BX.ready(function() {
+		BX.focus(document.forms["form_auth"]["USER_LOGIN"]);
+		BX.bind(document.forms["form_auth"], "keypress", fireEnterKey);
+
+		
+	});
+</script>
+<script>
+	BX.ready(function(){
+		var lang_toggle = BX('language-box');
+		BX.bind(lang_toggle, 'click', function(){
+			BX.PopupMenu.show('feed-filter-popup', lang_toggle, [
+				{text : "Русский", className : "language-box-item ru", onclick : function() { reloadPage("ru"); }},
+				{text : "Английский", className : "language-box-item en", onclick : function() { reloadPage("en"); }},
+				{text : "Немецкий", className : "language-box-item de", onclick : function() { reloadPage("de"); }},
+				{text : "Украинский", className : "language-box-item ua", onclick : function() { reloadPage("ua"); }},
+				{text : "Испанский", className : "language-box-item la", onclick : function() { reloadPage("la"); }}
+			],
+					{   offsetTop:10,
+						offsetLeft:0,
+						angle:{offset: 33}
+					}
+			);
+		})
+	});
+	function reloadPage(lang)
+	{
+		var url = window.location.href;
+		url = url.replace(/(\?|\&)user_lang=[A-Za-z]{2}/, "");
+		url += (url.indexOf("?") == -1 ? "?" : "&") + "user_lang=" + lang;
+		window.location.href = url;
+	}
+</script>
+
+</body>
+</html>

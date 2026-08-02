@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- cchd Sun, 2 Aug 2026 06:35:54 -0400 -->
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+<link rel="canonical" href="/blog/use-jquery-firebug/" />
+
+
+
+
+<meta name="description" content="A simple bookmarklet to add jQuery to any web page. This can be extra useful if you want to use it in the Firebug javascript console." />
+
+
+
+    <meta name="author" content="Peter Coles" />
+    
+
+
+    <meta property="og:image" content="https://mrcoles.com/media/img/mrcoles-poster.png" />
+    <meta name="twitter:image" content="https://mrcoles.com/media/img/mrcoles-poster.png" />
+    
+
+
+    
+    <title>Use jQuery in Firebug or Chrome Inspector - Peter Coles</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/media/css/base/screen.css?b9439" />
+    
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/ico/favicon-16x16.png">
+    <link rel="manifest" href="/media/ico/manifest.json">
+    <link rel="mask-icon" href="/media/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="blog post_detail">
+<div id="wrapper">
+    <div id="header"><s></s><div id="header-inner">
+        <h2 id="logo"><a href="/">Mr Coles</a> <span id="sub-logo">Peter Coles’ blog</span></h2>
+
+        <button id="nav-toggle" type="button" class="btn btn-navbar" data-toggle="collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <ul id="nav">
+          <li><a id="search-link" href="/search/">Search</a></li>
+          <li><a href="/archive/">Archive</a></li>
+          <li class="last"><a href="/peter-coles/">About</a></li>
+        </ul>
+    </div></div>
+    <div id="content"><div id="content-inner">
+
+<div id="alpha">
+    <div class="post" id="post-33">
+        <div class="header">
+            <p class="date">30 September 2010</p>
+            <h1 class="full">Use jQuery in Firebug or <span class="nowrap">Chrome Inspector</span></h1>
+        </div>
+        <div class="content prose"><p>The Chrome Inspector (or, on old Firefox, Firebug) rocks! It lets you inspect HTML, change CSS, and debug javascript—<br />
+<strong>plus</strong>, it’s a great way to noodle around on a page you’re developing or some random page on the web. Now and again I find myself in the console, wishing that<br />
+<a href="http://docs.jquery.com/Main_Page"><strong>jQuery</strong></a> was at my disposal, e.g., I want to manipulate the page in some way or print out a list of page content into the console (easy manipulation of data + copy and paste).</p>
+<p>Normally you can’t do this unless the page is already using jQuery… unless you have a nifty bookmarklet that will add it to the page for you:</p>
+<p>Here’s the bookmarklet <a class="bookmarklet" href="javascript:(function(url,s){s=document.createElement(&#39;script&#39;);s.src=url;(document.getElementsByTagName(&#39;head&#39;)[0]||document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(s);})(&#39;https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&#39;)">Add jQuery</a> Install it by dragging it to your bookmarks toolbar.</p>
+<p>And here’s the code—pretty simple:</p>
+<div class="codehilite"><pre><span></span><span class="nx">javascript</span><span class="o">:</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+ <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+ <span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+ <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">})(</span><span class="s1">&#39;https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>This will work for any javascript console, and you can easily change the url at the end of the code snippet to be any script you want. Enjoy!</p>
+<p>Now if I could just get Firebug to never crash Firefox… <em>Update: years later, I’ve really just been using the Chrome web inspector.</em></p>
+<p><span class="small dim">Note: if you try to reference <code>$</code> from the Firebug console before loading jQuery onto a page, then it returns a function from within the Firebug code that’s just a wrapper around <code>document.getElementById</code>. Once you add jQuery to your page, you’ll only be able to reference it from the console as <code>jQuery</code>, since the other <code>$</code> now exists inside the scope of the console. On the other hand, if you load jQuery first, <code>$</code> should work as the jQuery object within the console.</span></p></div>
+    </div>
+
+    <div class="pagination">
+        
+        <a class="left" href="/blog/how-query-facebook-app-user-permissions/" title="How to Query Facebook App User Permissions">← How to Query Facebook App User Permissions</a>
+        
+        
+        <a class="right" href="/blog/how-use-amersands-html-encode/" title="How to use ampersands in HTML: to encode or not to encode?">How to use ampersands in HTML: to encode or not to encode? →</a>
+        
+    </div>
+
+    
+    
+    
+    <div id="comments" class="widget">
+        <div class="header">
+            <a name="comments"></a>
+            <h3 class="comments_title">Comments (2)</h3>
+        </div>
+        <div class="content">
+        
+        
+            <div class="comment odd" id="c95">
+                <h5 class="name">
+                    <strong>1. <a rel="nofollow" href="http://vanityrocksnetwork.com/" title="http://vanityrocksnetwork.com/">Dan</a></strong> wrote:
+                </h5>
+                <p>I love Firebug, pretty cool blog, I&#39;ll be back for sure.  </p>
+<p>Off topic but what development environment are you using at hunch?  Rails?</p>
+<p>I am running PHP with the CodeIgniter framework but thinking about switching.  </p>
+                <p class="date">
+                    Posted on 20 October 2010 at 6:10 PM &nbsp;|&nbsp;
+                    <a name="c95" href="/blog/use-jquery-firebug/#c95"  title="Permalink to Dan's comment" class="count">permalink</a>
+                </p>
+            </div>
+        
+        
+        
+            <div class="comment even" id="c96">
+                <h5 class="name">
+                    <strong>2. peter</strong> wrote:
+                </h5>
+                <p>Hunch is mainly Python, using Django and some other custom stuff. This blog is using Django too: http://mrcoles.com/blog/mrcolescom-launches-again/</p>
+                <p class="date">
+                    Posted on 20 October 2010 at 11:10 PM &nbsp;|&nbsp;
+                    <a name="c96" href="/blog/use-jquery-firebug/#c96"  title="Permalink to peter's comment" class="count">permalink</a>
+                </p>
+            </div>
+        
+        
+        </div>
+    </div>
+    
+
+    
+
+        <div class="crypto-banner">
+          <br />
+		  <hr />
+		  <!--
+          <br />
+		  Interested in working with me at <a href="https://www.supersetapp.com/">Superset</a> to help shape the future of virtual fitness and to empower people to launch their own businesses online? We’re hiring a mobile engineer. 💪🤓📱 <span class="nowrap"><a href="https://www.supersetapp.com/jobs/mobile-engineer">Apply online</a></span>
+          <br />
+          <br />
+		  <hr />
+          <br />
+		  -->
+          <br />
+		  Did you find this helpful or fun? <a class="sly" href="https://paypal.me/mrcoles">paypal.me/mrcoles</a>
+		  <!--
+          Did you find this helpful or fun? Please donate!<br /><br />
+          <a href="/media/img/mrcoles-crypto-banner.png">
+            <img src="/media/img/mrcoles-crypto-banner.png"
+                 alt="donate via btc or eth" />
+          </a>
+          <div class="small">
+            <br />
+            <strong>btc:</strong> 18jCzwsZDGQYcs6Kyv92pd4683cnnxm1Dd<br />
+            <strong>eth:</strong> 0xC285F21Cb271Cb4B3F70c4C47B2f7B26063AF590<br />
+            <strong>paypal:</strong> <a class="sly" href="https://paypal.me/mrcoles">paypal.me/mrcoles</a>
+          </div>
+		  -->
+        </div>
+
+    
+    <div id="disqus_thread"></div>
+    
+
+
+</div>
+
+
+
+
+<div id="beta">
+	<div class="widget">
+		<p class="profile-img"><a href="/peter-coles/"><img src="/media/img/peter-coles-mono-thumb.jpg" srcset="/media/img/peter-coles-mono-thumb.jpg 2x" width="48" height="48" alt="Peter Coles" title="Peter Coles" /></a></p>
+		<div class="pad-bot about-text">
+			<h2>Peter Coles</h2>
+			<p>
+			  is a software engineer living in NYC who is building
+			  <a href="https://www.supersetapp.com">Superset</a> 💪
+			  and also created
+			  <a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl?hl=en-US" target="_blank" rel="noopener noreferrer">GoFullPage</a> 📸
+			  <br /><a href="/peter-coles/">more &raquo;</a></p>
+		</div>
+		<p class="dot-wrap">
+		  <a href="https://github.com/mrcoles">github</a> &middot;
+		  <a href="https://soundcloud.com/mrcoles">soundcloud</a> &middot;
+		  
+		  
+		  
+		  <a href="/feeds/latest/">rss</a>
+		  
+		  <script>document.write(' &middot; <a href="'+'mai'+'l_to:pet_er_@mrc_oles.c_om'.split('_').join('')+'">contact</a>')</script>
+		</p>
+	</div>
+
+	
+
+	<div class="widget last">
+		<p class="strong">Fun:</p>
+		<ul class="activities">
+			
+			<li><a href="/space-creatures/">👾 Space Creatures</a></li>
+			<li><a href="/piano/">🎹 JavaScript Piano</a></li>
+			<li><a href="/dragondrop/">🔥 Dragon Drop <small style="font-size:8px;vertical-align:middle">(Drag&nbsp;&amp;&nbsp;Drop)</small></a></li>
+			<li><a href="/tetris/">🕹 HTML5 Tetris</a></li>
+			<li><a href="/low-res-paint/">🎨 Low Res Paint</a></li>
+			<li><a href="/favicon-creator/">🖼 Favicon Creator</a></li>
+		</ul>
+
+		<br />
+		<p class="strong">Popular posts:</p>
+		<ul class="activities">
+		    <li><a href="https://mrcoles.com/full-page-screen-capture-chrome-extension/">Full Page Screen Capture Chrome Extension</a></li>
+			<li><a href="https://mrcoles.com/demo/markdown-css/">Markdown CSS</a></li>
+			<li><a href="https://mrcoles.com/blog/css-unminify/">A CSS Unminifier</a></li>
+			<li><a href="https://mrcoles.com/bookmarklet/">Bookmarklet Creator</a></li>
+			<li><a href="https://mrcoles.com/blog/html5ify-your-existing-code-base/">HTML5ify your existing code base</a></li>
+			<li><a href="https://mrcoles.com/facebook-graph-api-explorer/">Facebook Graph API Explorer</a></li>
+
+		</ul>
+	</div>
+
+
+
+
+</div>
+
+<div style="clear:both;"><!-- --></div><form id="search-drop" action="/search/"><div><input class="text border-box" type="text" name="q"/><button class="border-box" type="submit">Search</button></div></form></div></div>
+</div>
+    <div id="footer"><div id="footer-inner"><p>mrcoles.com &copy; 2026</p></div></div>
+
+
+
+
+
+    <script src="/media/js/main.js?e887c"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BX9S3H17KC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+  gtag('config', 'UA-4202460-2');
+  gtag('config', 'G-BX9S3H17KC');
+</script>
+
+<script>(function(d,g) {
+  var s = d[g]('search-link');
+  if (s) {
+    s.onclick = function() {
+
+      var f = d[g]('search-drop'), n = f.className;
+      if (n=='show') {
+        f.className = '';
+      } else {
+        f.className = 'show';
+        f.getElementsByTagName('input')[0].focus();
+      }
+
+      return false;
+    }
+  }
+})(document,'getElementById')</script>
+<!-- cchd Sun, 2 Aug 2026 06:35:54 -0400 -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"c5f6bb2a072b4db4bd47824b13e290cf","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>

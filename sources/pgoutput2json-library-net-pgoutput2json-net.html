@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=2d5324c78e892dfa45cb4d9836a5476aee24326d">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PgOutput2Json | .NET library for building PostgreSQL CDC solutions</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="PgOutput2Json" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content=".NET library for building PostgreSQL CDC solutions" />
+<meta property="og:description" content=".NET library for building PostgreSQL CDC solutions" />
+<link rel="canonical" href="https://pgoutput2json.net/" />
+<meta property="og:url" content="https://pgoutput2json.net/" />
+<meta property="og:site_name" content="PgOutput2Json" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PgOutput2Json" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":".NET library for building PostgreSQL CDC solutions","headline":"PgOutput2Json","name":"PgOutput2Json","url":"https://pgoutput2json.net/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/PgOutput2Json/PgOutput2Json">View on GitHub</a>
+          
+
+          <h1 id="project_title">PgOutput2Json</h1>
+          <h2 id="project_tagline">.NET library for building PostgreSQL CDC solutions</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="pgoutput2json">PgOutput2Json</h1>
+
+<p><strong>PgOutput2Json</strong> is a .NET library that uses <strong>PostgreSQL logical replication</strong> to stream <strong>JSON-encoded change events</strong> from your database to a .NET application or a message broker like <strong>RabbitMQ</strong>, <strong>Kafka</strong>, or <strong>Redis</strong>.</p>
+
+<h2 id="-use-cases">🚀 Use Cases</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">PgOutput2Json</code> when you need to react to DB changes in near real-time:</p>
+
+<ul>
+  <li>🔄 Background tasks triggered by inserts/updates</li>
+  <li>⚡ Low-latency application cache updates</li>
+  <li>📝 Asynchronous logging (to file or another DB)</li>
+  <li>📊 Real-time data aggregation</li>
+  <li>🛠️ Lightweight ETL for DWH solutions</li>
+</ul>
+
+<p>All with <strong>minimal latency</strong> — events are dispatched shortly after a transaction is committed, though large transactions may introduce additional delay due to processing and transmission overhead.</p>
+
+<h2 id="-supported-outputs">🔌 Supported Outputs</h2>
+
+<ul>
+  <li>✅ <strong>.NET application</strong> via a simple delegate handler</li>
+  <li>✅ <strong>Kafka</strong></li>
+  <li>✅ <strong>RabbitMQ</strong> (Streams + Classic Queues)</li>
+  <li>✅ <strong>Redis</strong> (Streams + Pub/Sub Channels)</li>
+  <li>✅ <strong>SQLite</strong> (used by <a href="https://github.com/PgOutput2Json/PgFreshCache">PgFreshCache</a>)</li>
+  <li>✅ <strong>MongoDB</strong></li>
+  <li>✅ <strong>Amazon Kinesis</strong></li>
+  <li>✅ <strong>Amazon DynamoDB</strong></li>
+  <li>✅ <strong>Azure Event Hubs</strong></li>
+</ul>
+
+<p>Plug-and-play adapters handle the heavy lifting — or handle messages directly in your app for maximum control.</p>
+
+<h2 id="-how-it-works">🧠 How It Works</h2>
+
+<p>PostgreSQL 10+ ships with a built-in logical decoding plugin called <code class="language-plaintext highlighter-rouge">pgoutput</code>, which emits row-level changes (INSERT/UPDATE/DELETE) over a replication slot.</p>
+
+<p><code class="language-plaintext highlighter-rouge">PgOutput2Json</code>:</p>
+
+<ol>
+  <li>Connects to a replication slot via <code class="language-plaintext highlighter-rouge">pgoutput</code></li>
+  <li>Converts change events into clean JSON</li>
+  <li>Sends them to your application or a supported message broker</li>
+</ol>
+
+<p>No extra plugins needed — <code class="language-plaintext highlighter-rouge">pgoutput</code> comes with PostgreSQL by default.</p>
+
+<p>The change events JSON format:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "c": "U",             // Change type: I (insert), U (update), D (delete)
+  "w": 2485645760,      // Deduplication key (based on XLogData WAL Start)
+  "t": "schema.table",  // Table name (if enabled in JSON options)
+  "k": { ... },         // Key values — included for deletes, and for updates if the key changed,
+                        // or old row values, if the table uses REPLICA IDENTITY FULL
+  "r": { ... }          // New row values (not present for deletes)
+}
+</code></pre></div></div>
+
+<h2 id="️-development-status">⚠️ Development Status</h2>
+
+<p><strong>Still early days</strong> — the library is under active development, but it’s <strong>fully usable for testing and early integration</strong>.</p>
+
+<h2 id="1-quick-start">1. Quick Start</h2>
+
+<h3 id="11-configure-postgresqlconf">1.1 Configure <code class="language-plaintext highlighter-rouge">postgresql.conf</code></h3>
+
+<p>To enable logical replication, add the following setting in your <code class="language-plaintext highlighter-rouge">postgresql.conf</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wal_level = logical
+</code></pre></div></div>
+
+<p>Other necessary settings usually have appropriate default values for a basic setup.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> PostgreSQL must be <strong>restarted</strong> after modifying this setting.</p>
+</blockquote>
+
+<h3 id="12-create-a-replication-user">1.2 Create a Replication User</h3>
+
+<p>Next, create a user in PostgreSQL that will be used for replication. Run the following SQL command:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">USER</span> <span class="n">pgoutput2json</span> <span class="k">WITH</span>  
+    <span class="n">PASSWORD</span> <span class="s1">'_your_password_here_'</span>  
+    <span class="n">REPLICATION</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>If you are connecting from a remote machine, don’t forget to modify <code class="language-plaintext highlighter-rouge">pg_hba.conf</code> to allow non-local connections for this user. After modifying <code class="language-plaintext highlighter-rouge">pg_hba.conf</code>, apply the changes by either:</p>
+
+<ul>
+  <li>Sending a <strong>SIGHUP</strong> to the PostgreSQL process</li>
+  <li>Running <code class="language-plaintext highlighter-rouge">pg_ctl reload</code></li>
+  <li>Or executing: <code class="language-plaintext highlighter-rouge">SELECT pg_reload_conf();</code></li>
+</ul>
+
+<h3 id="13-create-a-publication">1.3 Create a Publication</h3>
+
+<p>Now, connect to the target database and create a publication to specify which tables and actions should be replicated:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="n">PUBLICATION</span> <span class="n">my_publication</span>  
+    <span class="k">FOR</span> <span class="k">TABLE</span> <span class="n">my_table1</span><span class="p">,</span> <span class="n">my_table2</span>  
+    <span class="k">WITH</span> <span class="p">(</span><span class="n">publish</span> <span class="o">=</span> <span class="s1">'insert, update, delete'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>In the example code below, we’ll assume the database name is <code class="language-plaintext highlighter-rouge">my_database</code>.</p>
+
+<h3 id="14-create-a-net-worker-service">1.4 Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the <code class="language-plaintext highlighter-rouge">PgOutput2Json</code> package:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, add the following:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithMessageHandler</span><span class="p">((</span><span class="n">json</span><span class="p">,</span> <span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">partition</span><span class="p">)</span> <span class="p">=&gt;</span>  
+            <span class="p">{</span>  
+                <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"</span><span class="p">{</span><span class="n">table</span><span class="p">}</span><span class="s">: </span><span class="p">{</span><span class="n">json</span><span class="p">}</span><span class="s">"</span><span class="p">);</span>
+                <span class="k">return</span> <span class="n">Task</span><span class="p">.</span><span class="nf">FromResult</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+            <span class="p">})</span>  
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> This example uses a <strong>temporary replication slot</strong>, meaning it won’t capture changes made while the worker was stopped.</p>
+</blockquote>
+
+<h2 id="2-working-with-permanent-replication-slots">2. Working with Permanent Replication Slots</h2>
+
+<p>If you want to capture changes made while the worker is stopped, you need a permanent replication slot.</p>
+
+<p>In the context of logical replication, a slot represents a stream of changes that can be replayed to a client in the order they were made on the origin server. 
+Each slot streams a sequence of changes from a single database.</p>
+
+<p>To create a replication slot, call the <code class="language-plaintext highlighter-rouge">pg_create_logical_replication_slot</code> function in the same database that holds the tables being tracked:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">pg_create_logical_replication_slot</span><span class="p">(</span><span class="s1">'my_slot'</span><span class="p">,</span> <span class="s1">'pgoutput'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The first parameter is the name of the slot, <strong>that must be unique across all databases in a PostgreSQL cluster</strong>. Make sure you specify <code class="language-plaintext highlighter-rouge">pgoutput</code> as the second parameter - that specifies the correct logical decoding plugin.</p>
+
+<p>The current position of each slot is persisted only at checkpoint, so in the case of a crash, the slot may return to an earlier log sequence number (LSN), which will then cause recent changes to be sent again when the server restarts.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> It is the responsibility of the receiving client to avoid the ill effects from handling the same message more than once.</p>
+</blockquote>
+
+<p>⚠️ <strong>Important:</strong> Replication slots persist across crashes and know nothing about the state of their consumer(s). They will prevent removal of required resources even when there is no connection using them. This consumes storage because neither required WAL nor required rows from the system catalogs can be removed by VACUUM as long as they are required by a replication slot.</p>
+
+<p><strong>In extreme cases, this could cause the database to shut down to prevent transaction ID wraparound.</strong></p>
+
+<p><strong>So, if a slot is no longer required, it should be dropped.</strong> To drop a replication slot, use:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">pg_drop_replication_slot</span><span class="p">(</span><span class="s1">'my_slot'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Once the replication slot is created, to use it, simply specify the name of the slot in the <code class="language-plaintext highlighter-rouge">PgOutput2JsonBuilder</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ...</span>
+<span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>
+    <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>
+    <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nf">WithPgReplicationSlot</span><span class="p">(</span><span class="s">"my_slot"</span><span class="p">)</span>      <span class="c1">// &lt;-- slot specified here</span>
+<span class="c1">//...</span>
+</code></pre></div></div>
+
+<h2 id="3-using-rabbitmq-classic">3. Using RabbitMQ (Classic)</h2>
+
+<p>This document assumes you have a running RabbitMQ instance working on the default port, with the default <code class="language-plaintext highlighter-rouge">guest</code>/<code class="language-plaintext highlighter-rouge">guest</code> user allowed from the localhost.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> First, set up the database, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="31-create-topic-exchange">3.1 Create Topic Exchange</h3>
+
+<p>In RabbitMQ, create a <code class="language-plaintext highlighter-rouge">durable</code> <code class="language-plaintext highlighter-rouge">topic</code> type <code class="language-plaintext highlighter-rouge">exchange</code> where PgOutput2Json will be pushing JSON messages. We will assume the name of the exchange is <code class="language-plaintext highlighter-rouge">my_exchange</code> in the <code class="language-plaintext highlighter-rouge">/</code> virtual host.</p>
+
+<h3 id="32-create-and-bind-a-queue-to-hold-the-json-messages">3.2 Create and Bind a Queue to Hold the JSON Messages</h3>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">durable</code> queue named <code class="language-plaintext highlighter-rouge">my_queue</code> and bind it to the exchange created in the previous step. Use <code class="language-plaintext highlighter-rouge">public.#</code> as the routing key. This ensures that it will receive JSON messages for all tables in the <code class="language-plaintext highlighter-rouge">public</code> schema.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Use a different schema name if your tables are in a different schema.</p>
+</blockquote>
+
+<h3 id="33-create-a-net-worker-service">3.3 Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.RabbitMq
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, add the following code:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">PgOutput2Json.RabbitMq</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL and RabbitMQ are on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">UseRabbitMq</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>  
+            <span class="p">{</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">HostNames</span> <span class="p">=</span> <span class="p">[</span> <span class="s">"localhost"</span> <span class="p">];</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">Username</span> <span class="p">=</span> <span class="s">"guest"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">Password</span> <span class="p">=</span> <span class="s">"guest"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">VirtualHost</span> <span class="p">=</span> <span class="s">"/"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">ExchangeName</span> <span class="p">=</span> <span class="s">"my_exchange"</span><span class="p">;</span>
+
+                <span class="c1">// set to true for persistent messages</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">UsePersistentMessagesByDefault</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span> 
+            <span class="p">})</span>  
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Run the code, and with a little luck, you should see JSON messages being pushed into the <code class="language-plaintext highlighter-rouge">my_queue</code> in RabbitMQ when you make a change in the tables specified in <code class="language-plaintext highlighter-rouge">my_publication</code>. 
+The routing key will be in the form: <code class="language-plaintext highlighter-rouge">schema.table.key_partition</code>. Since we did not configure anything specific in the PgOutput2Json, the <code class="language-plaintext highlighter-rouge">key_partition</code> will always be <code class="language-plaintext highlighter-rouge">0</code>.</p>
+
+<h2 id="4-using-rabbitmq-streams">4. Using RabbitMQ (Streams)</h2>
+
+<p>Using RabbitMQ Streams is similar to the standard RabbitMQ setup, but instead of creating an exchange and binding queues, you need to create a stream, and configure the stream protocol in RabbitMQ.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> First, set up the database, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="41-set-up-rabbitmq-streams">4.1 Set Up RabbitMQ Streams</h3>
+
+<p>Before using RabbitMQ Streams, ensure that the RabbitMQ Streams plugin is enabled. The stream protocol must be active for the stream to work.</p>
+
+<p>Create a stream in RabbitMQ, for example, a stream named <code class="language-plaintext highlighter-rouge">my_stream</code>. You can do this from the RabbitMQ management interface or through the appropriate RabbitMQ commands.</p>
+
+<h3 id="42-create-net-worker-service">4.2 Create .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.RabbitMqStreams
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, add the following code to use RabbitMQ Streams:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">PgOutput2Json.RabbitMqStreams</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL and RabbitMQ are on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">UseRabbitMqStreams</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>  
+            <span class="p">{</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamName</span> <span class="p">=</span> <span class="s">"my_stream"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamSystemConfig</span><span class="p">.</span><span class="n">UserName</span> <span class="p">=</span> <span class="s">"guest"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamSystemConfig</span><span class="p">.</span><span class="n">Password</span> <span class="p">=</span> <span class="s">"guest"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamSystemConfig</span><span class="p">.</span><span class="n">VirtualHost</span> <span class="p">=</span> <span class="s">"/"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamSystemConfig</span><span class="p">.</span><span class="n">Endpoints</span> <span class="p">=</span>  
+                <span class="p">[</span>  
+                    <span class="k">new</span> <span class="nf">IPEndPoint</span><span class="p">(</span><span class="n">IPAddress</span><span class="p">.</span><span class="n">Loopback</span><span class="p">,</span> <span class="m">5552</span><span class="p">)</span>  
+                <span class="p">];</span>  
+            <span class="p">})</span>  
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Once the stream is configured in RabbitMQ and the .NET service is running, changes to the PostgreSQL tables specified in <code class="language-plaintext highlighter-rouge">my_publication</code> will be pushed to the <code class="language-plaintext highlighter-rouge">my_stream</code> stream in RabbitMQ. 
+No need to manage exchanges or queues — everything will flow directly through the stream.</p>
+
+<h2 id="5-using-kafka">5. Using Kafka</h2>
+
+<p>Kafka is supported out of the box and works similarly to the RabbitMQ integrations. PgOutput2Json will publish JSON messages directly to a Kafka topic.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> First, set up the database, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="51-set-up-kafka">5.1 Set Up Kafka</h3>
+
+<p>Ensure you have a running Kafka broker accessible to your .NET application. This example assumes Kafka is running locally on the default port <code class="language-plaintext highlighter-rouge">9092</code>.</p>
+
+<p>Create a topic in Kafka named <code class="language-plaintext highlighter-rouge">my_topic</code>. You can do this using Kafka’s command-line tools or through a Kafka UI.</p>
+
+<h3 id="52-create-net-worker-service">5.2 Create .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.Kafka
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to publish changes to Kafka:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">PgOutput2Json.Kafka</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL and Kafka are on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">UseKafka</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>  
+            <span class="p">{</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">ProducerConfig</span><span class="p">.</span><span class="n">BootstrapServers</span> <span class="p">=</span> <span class="s">"localhost:9092"</span><span class="p">;</span>  
+                <span class="n">options</span><span class="p">.</span><span class="n">Topic</span> <span class="p">=</span> <span class="s">"my_topic"</span><span class="p">;</span>  
+            <span class="p">})</span>  
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Once the service is running, any changes made to the tables listed in <code class="language-plaintext highlighter-rouge">my_publication</code> will be published to the <code class="language-plaintext highlighter-rouge">my_topic</code> topic in Kafka as JSON messages.</p>
+
+<h2 id="6-using-redis">6. Using Redis</h2>
+
+<p>PgOutput2Json supports publishing JSON messages to Redis streams (default) or Pub/Sub channels.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> First, set up the database, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="61-set-up-redis">6.1 Set Up Redis</h3>
+
+<p>Make sure you have a Redis instance running and accessible to your .NET application. This example assumes Redis is running locally on the default port <code class="language-plaintext highlighter-rouge">6379</code>.</p>
+
+<h3 id="62-create-net-worker-service">6.2 Create .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.Redis
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to publish change events to Redis:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">PgOutput2Json.Redis</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL and Redis are on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">UseRedis</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>  
+            <span class="p">{</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamName</span> <span class="p">=</span> <span class="s">"my_stream"</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">PublishMode</span> <span class="p">=</span> <span class="n">PublishMode</span><span class="p">.</span><span class="n">Stream</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamNameSuffix</span> <span class="p">=</span> <span class="n">StreamNameSuffix</span><span class="p">.</span><span class="n">None</span><span class="p">;</span> <span class="c1">// or TableName, or TableNameAndPartition</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">Redis</span><span class="p">.</span><span class="n">EndPoints</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"localhost:6379"</span><span class="p">);</span>  
+            <span class="p">})</span>  
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>JSON messages will be published to the specified Redis stream. If a stream name suffix is specified, the stream or channel name becomes dynamic, using the format: <code class="language-plaintext highlighter-rouge">stream_name:schema.table:partition</code>.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> The table name is always qualified with the schema using the <code class="language-plaintext highlighter-rouge">.</code> character.</p>
+</blockquote>
+
+<h2 id="7-using-sqlite">7. Using SQLite</h2>
+
+<p>PgOutput2Json supports copying modified PostgreSQL rows to SQLite. My default, rows are copied only when they change, using logical replication and compact JSON messages. 
+Optionally, initial data copy can be enabled with <code class="language-plaintext highlighter-rouge">WithInitialDataCopy(true)</code> when configuring the builder.</p>
+
+<p>The PgOutput2Json library will create the SQLite database if it does not already exist, along with any table included in logical replication. A table is created the first time a row belonging to that table is changed. If a table already exists, it is not modified, but new columns will be created automatically, if a new column is added to the source PostgreSQL table.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> Be sure to set up the PostgreSQL database first, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="71-create-a-net-worker-service">7.1 Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.Sqlite
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to configure change propagation to SQLite:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">PgOutput2Json.SQLite</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL is running on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">UseSqlite</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">ConnectionStringBuilder</span><span class="p">.</span><span class="n">DataSource</span> <span class="p">=</span> <span class="s">"my_database.s3db"</span><span class="p">;</span>
+            <span class="p">})</span> 
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="8-using-mongodb">8. Using MongoDB</h2>
+
+<p>PgOutput2Json supports copying modified PostgreSQL rows to MongoDB collections. By default, rows are copied only when they change, using logical replication and compact JSON messages.
+Optionally, initial data copy can be enabled with <code class="language-plaintext highlighter-rouge">WithInitialDataCopy(true)</code> when configuring the builder.</p>
+
+<p>The PgOutput2Json library will create the MongoDB database if it does not already exist, along with one collection for each table included in logical replication. Collections are created the first time a row belonging to the respective table is changed. Additionally, one unique index is created for each collection, covering the fields that are a part of the primary key.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> Be sure to set up the PostgreSQL database first, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="81-create-a-net-worker-service">8.1 Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.MongoDb
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to configure change propagation to MongoDB:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">MongoDB.Driver</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">MongoDB.Driver.Core.Configuration</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL is running on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">UseMongoDb</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">DatabaseName</span> <span class="p">=</span> <span class="s">"my_mongo_database"</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">ClientSettings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MongoClientSettings</span>
+                <span class="p">{</span>
+                    <span class="n">Server</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MongoServerAddress</span><span class="p">(</span><span class="s">"localhost"</span><span class="p">,</span> <span class="m">27017</span><span class="p">),</span>
+                    <span class="n">Scheme</span> <span class="p">=</span> <span class="n">ConnectionStringScheme</span><span class="p">.</span><span class="n">MongoDB</span><span class="p">,</span>
+                    <span class="n">Credential</span> <span class="p">=</span> <span class="n">MongoCredential</span><span class="p">.</span><span class="nf">CreateCredential</span><span class="p">(</span><span class="s">"admin"</span><span class="p">,</span> <span class="s">"admin"</span><span class="p">,</span> <span class="s">"__your_mongo_password_here__"</span><span class="p">),</span>
+                <span class="p">};</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="9-using-amazon-kinesis">9. Using Amazon Kinesis</h2>
+
+<p>PgOutput2Json supports pushing row changes as JSON mesages to Amazon Kinesis.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> Be sure to set up the PostgreSQL database first, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="91-create-a-net-worker-service">9.1 Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.Kinesis
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to configure change propagation to Amazon Kinesis:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Amazon.Runtime</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Amazon.Runtime.CredentialManagement</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL is running on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">UseKinesis</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="c1">// assumes LocalStack, with test_stream created in eu-central-1</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">StreamName</span> <span class="p">=</span> <span class="s">"test_stream"</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">KinesisConfig</span><span class="p">.</span><span class="n">ServiceURL</span> <span class="p">=</span> <span class="s">"http://localhost:4566"</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">KinesisConfig</span><span class="p">.</span><span class="n">UseHttp</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">KinesisConfig</span><span class="p">.</span><span class="n">DefaultAWSCredentials</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BasicAWSCredentials</span><span class="p">(</span><span class="s">"dummy"</span><span class="p">,</span> <span class="s">"dummy"</span><span class="p">);</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">KinesisConfig</span><span class="p">.</span><span class="n">AuthenticationRegion</span> <span class="p">=</span> <span class="s">"eu-central-1"</span><span class="p">;</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="10-using-amazon-dynamodb">10. Using Amazon DynamoDB</h2>
+
+<p>PgOutput2Json supports copying modified PostgreSQL rows to Amazon DynamoDB tables. By default, rows are copied only when they change, using logical replication and compact JSON messages.
+Optionally, initial data copy can be enabled with <code class="language-plaintext highlighter-rouge">WithInitialDataCopy(true)</code> when configuring the builder.</p>
+
+<p>The PgOutput2Json library will create DynamoDB tables for each table included in logical replication.</p>
+
+<p>Tables are created the first time a row belonging to the respective table is changed. 
+The first PK column is used as partition key, and the rest of PK columns are joined in a string, for the sort key.</p>
+
+<blockquote>
+  <p>⚠️ <strong>Important:</strong> Be sure to set up the PostgreSQL database first, as described in the <strong>QuickStart</strong> section above.</p>
+</blockquote>
+
+<h3 id="101-create-a-net-worker-service">10.1. Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.DynamoDb
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to configure change propagation to Amazon DynamoDB:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">Amazon</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Amazon.DynamoDBv2</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Amazon.Runtime</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Amazon.Runtime.CredentialManagement</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL is running on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">UseDynamoDb</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">ClientConfig</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AmazonDynamoDBConfig</span>
+                <span class="p">{</span>
+                    <span class="n">ServiceURL</span> <span class="p">=</span> <span class="s">"http://localhost:8000"</span><span class="p">,</span>                              <span class="c1">// for local DynamoDB, change/remove for AWS</span>
+                    <span class="n">UseHttp</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>                                                    <span class="c1">// for local DynamoDb, remove for AWS</span>
+                    <span class="n">DefaultAWSCredentials</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">BasicAWSCredentials</span><span class="p">(</span><span class="s">"dummy"</span><span class="p">,</span> <span class="s">"dummy"</span><span class="p">),</span> <span class="c1">// for local DynamoDB, remove for AWS</span>
+                    <span class="n">MaxErrorRetry</span> <span class="p">=</span> <span class="m">3</span><span class="p">,</span>                                                 <span class="c1">// retry failed requests up to 3 times</span>
+                <span class="p">};</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="11-using-azure-event-hubs">11. Using Azure Event Hubs</h2>
+
+<h3 id="connection-string">Connection String</h3>
+
+<p>You can obtain the Event Hubs connection string from the Azure portal:</p>
+
+<ol>
+  <li>Navigate to your Event Hubs namespace</li>
+  <li>Go to “Shared access policies”</li>
+  <li>Select or create a policy with “Send” permissions</li>
+  <li>Copy the connection string</li>
+</ol>
+
+<h3 id="event-hub-creation">Event Hub Creation</h3>
+
+<p>Make sure to create the Event Hub in your namespace before running the application. You can do this through:</p>
+
+<ul>
+  <li>Azure portal</li>
+  <li>Azure CLI: <code class="language-plaintext highlighter-rouge">az eventhubs eventhub create --resource-group myResourceGroup --namespace-name myNamespace --name my-eventhub</code></li>
+  <li>ARM templates</li>
+  <li>Terraform</li>
+</ul>
+
+<h3 id="partitioning-strategy">Partitioning Strategy</h3>
+
+<p>Event Hubs uses the partition key (derived from table name) to distribute messages across partitions. This ensures:</p>
+
+<ul>
+  <li>Messages from the same table are processed in order</li>
+  <li>Load is distributed across multiple partitions for better throughput</li>
+  <li>Parallel processing capabilities for consumers</li>
+</ul>
+
+<h3 id="create-a-net-worker-service">Create a .NET Worker Service</h3>
+
+<p>Set up a new <strong>.NET Worker Service</strong> and add the following package reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dotnet add package PgOutput2Json.AzureEventHubs
+</code></pre></div></div>
+
+<p>In your <code class="language-plaintext highlighter-rouge">Worker.cs</code>, use the following code to configure change propagation to Azure Event Hubs:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">PgOutput2Json</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Worker</span> <span class="p">:</span> <span class="n">BackgroundService</span>  
+<span class="p">{</span>  
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILoggerFactory</span> <span class="n">_loggerFactory</span><span class="p">;</span>  
+
+    <span class="k">public</span> <span class="nf">Worker</span><span class="p">(</span><span class="n">ILoggerFactory</span> <span class="n">loggerFactory</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="n">_loggerFactory</span> <span class="p">=</span> <span class="n">loggerFactory</span><span class="p">;</span>  
+    <span class="p">}</span>  
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">async</span> <span class="n">Task</span> <span class="nf">ExecuteAsync</span><span class="p">(</span><span class="n">CancellationToken</span> <span class="n">stoppingToken</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// This code assumes PostgreSQL is running on localhost  </span>
+        <span class="k">using</span> <span class="nn">var</span> <span class="n">pgOutput2Json</span> <span class="p">=</span> <span class="n">PgOutput2JsonBuilder</span><span class="p">.</span><span class="nf">Create</span><span class="p">()</span>  
+            <span class="p">.</span><span class="nf">WithLoggerFactory</span><span class="p">(</span><span class="n">_loggerFactory</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgConnectionString</span><span class="p">(</span><span class="s">"server=localhost;database=my_database;username=pgoutput2json;password=_your_password_here_"</span><span class="p">)</span>  
+            <span class="p">.</span><span class="nf">WithPgPublications</span><span class="p">(</span><span class="s">"my_publication"</span><span class="p">)</span>
+            <span class="p">.</span><span class="nf">UseEventHubs</span><span class="p">(</span><span class="n">options</span> <span class="p">=&gt;</span>
+            <span class="p">{</span>
+                <span class="c1">// Connection string format: Endpoint=sb://[namespace].servicebus.windows.net/;SharedAccessKeyName=[key-name];SharedAccessKey=[key-value]</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">ConnectionString</span> <span class="p">=</span> <span class="s">"Endpoint=sb://my-eventhub-namespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=your-access-key-here"</span><span class="p">;</span>
+                <span class="n">options</span><span class="p">.</span><span class="n">EventHubName</span> <span class="p">=</span> <span class="s">"my-eventhub"</span><span class="p">;</span>
+                
+                <span class="c1">// Optional: Configure client options</span>
+                <span class="c1">// options.ClientOptions = new EventHubProducerClientOptions</span>
+                <span class="c1">// {</span>
+                <span class="c1">//     ConnectionOptions = new EventHubConnectionOptions</span>
+                <span class="c1">//     {</span>
+                <span class="c1">//         TransportType = EventHubsTransportType.AmqpWebSockets</span>
+                <span class="c1">//     }</span>
+                <span class="c1">// };</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="nf">Build</span><span class="p">();</span>  
+
+        <span class="k">await</span> <span class="n">pgOutput2Json</span><span class="p">.</span><span class="nf">StartAsync</span><span class="p">(</span><span class="n">stoppingToken</span><span class="p">);</span>  
+    <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> This example uses a <strong>temporary replication slot</strong>, meaning it won’t capture changes made while the worker was stopped.</p>
+</blockquote>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">PgOutput2Json maintained by <a href="https://github.com/PgOutput2Json">PgOutput2Json</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

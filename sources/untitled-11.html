@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="header_title">Armenia — Utility Outages</title>
+  <meta name="description" content="Հայաստանի էլեկտրականառական, ջրամատակարարման և գազամատակարարման անջատումների քարտեզ — ENA, Veolia, Գազպրոմ" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://outages.plhk.dev/" />
+  <link rel="alternate" type="application/rss+xml" title="Armenia Utility Outages (HY)" href="/rss?lang=hy" />
+  <link rel="alternate" type="application/rss+xml" title="Armenia Utility Outages (RU)" href="/rss?lang=ru" />
+  <link rel="alternate" type="application/rss+xml" title="Armenia Utility Outages (EN)" href="/rss?lang=en" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Հայաստան — Ծառայությունների Ընդհատումներ" />
+  <meta property="og:description" content="Հայաստանի էլեկտրականառական, ջրամատակարարման և գազամատակարարման անջատումների քարտեզ — ENA, Veolia, Գազպրոմ" />
+  <meta property="og:url" content="https://outages.plhk.dev/" />
+  <meta property="og:locale" content="hy_AM" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Now", "item": "https://outages.plhk.dev/#now" },
+      { "@type": "ListItem", "position": 2, "name": "Today", "item": "https://outages.plhk.dev/#today" },
+      { "@type": "ListItem", "position": 3, "name": "All", "item": "https://outages.plhk.dev/#all" },
+      { "@type": "ListItem", "position": 4, "name": "Map", "item": "https://outages.plhk.dev/#map" },
+      { "@type": "ListItem", "position": 5, "name": "Stats", "item": "https://outages.plhk.dev/#stats" }
+    ]
+  }
+  </script>
+
+  <!-- Chart.js 4 -->
+  <script src="/static/js/chart-4.umd.min.js"></script>
+  <script src="/static/js/chartjs-adapter-date-fns-3.bundle.min.js"></script>
+  <!-- Leaflet 1.9.4 -->
+  <link rel="stylesheet" href="/static/css/leaflet-1.9.4.css" />
+  <script src="/static/js/leaflet-1.9.4.js"></script>
+  <!-- Leaflet MarkerCluster 1.5.3 -->
+  <link rel="stylesheet" href="/static/css/MarkerCluster-1.5.3.css" />
+  <link rel="stylesheet" href="/static/css/MarkerCluster.Default-1.5.3.css" />
+  <script src="/static/js/leaflet.markercluster-1.5.3.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --accent: #4f8ef7;
+      --yellow: #f6c90e;
+      --blue: #4f8ef7;
+      --orange: #f97316;
+      --green: #22c55e;
+      --red: #ef4444;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .lang-switcher button {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.15s;
+    }
+
+    .lang-switcher button.active,
+    .lang-switcher button:hover {
+      color: var(--text);
+      border-color: var(--accent);
+      background: rgba(79,142,247,0.1);
+    }
+
+    .status-bar {
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .status-bar span { display: flex; align-items: center; gap: 4px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
+    .status-dot.error { background: var(--red); }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      padding: 0 20px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--muted);
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+
+    nav button.active, nav button:hover {
+      color: var(--text);
+      border-bottom-color: var(--accent);
+    }
+
+    .view { display: none; padding: 20px; }
+    .view.active { display: block; flex: 1; }
+
+    /* Location bar */
+    .location-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .location-bar label { color: var(--muted); font-size: 0.85rem; }
+
+    .location-bar select, .location-bar input {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .toggle-location {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      transition: all 0.15s;
+    }
+
+    .toggle-location.mine {
+      background: rgba(79,142,247,0.15);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Cards */
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .outage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .outage-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--muted);
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+
+    .outage-card:hover { border-left-color: var(--accent); }
+    .outage-card.electricity { border-left-color: var(--yellow); }
+    .outage-card.water { border-left-color: var(--blue); }
+    .outage-card.gas { border-left-color: var(--orange); }
+
+    .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .card-icon { font-size: 1.2rem; }
+    .card-source { font-size: 0.72rem; color: var(--muted); margin-left: auto; }
+
+    .card-area {
+      font-size: 0.88rem;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .raw-text-details { margin: 8px 0 4px; font-size: 0.82rem; }
+    .raw-text-details summary { color: var(--muted); cursor: pointer; }
+    .raw-text { white-space: pre-wrap; word-break: break-word; font-size: 0.8rem; margin: 4px 0 0; color: var(--muted); font-family: inherit; }
+
+    .card-time {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .card-time .until { color: var(--orange); font-weight: 600; }
+
+    .empty-state {
+      text-align: center;
+      color: var(--muted);
+      padding: 60px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Table view */
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .filters select, .filters input {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: 0.83rem;
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 14px 0;
+      font-size: 0.84rem;
+    }
+    .pagination button {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .pagination button:hover:not(:disabled) { background: var(--border); }
+    .pagination button:disabled { opacity: 0.35; cursor: default; }
+    .pagination button.active {
+      background: var(--accent, #4f8ef7);
+      color: #fff;
+      border-color: var(--accent, #4f8ef7);
+    }
+    .pagination .page-info { color: var(--muted); font-size: 0.78rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--surface);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    th:hover { color: var(--text); }
+
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    tr.highlighted td { background: rgba(79,142,247,0.08); }
+
+    .type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .type-badge.electricity { background: rgba(246,201,14,0.15); color: var(--yellow); }
+    .type-badge.water { background: rgba(79,142,247,0.15); color: var(--blue); }
+    .type-badge.gas { background: rgba(249,115,22,0.15); color: var(--orange); }
+
+    .content-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.68rem;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-emergency { background: rgba(239,68,68,0.15); color: var(--red); }
+    .badge-scheduled { background: rgba(79,142,247,0.15); color: var(--accent); }
+
+    /* Info tooltip */
+    .info-tip {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 4px;
+      cursor: help;
+      color: var(--muted);
+      font-size: 0.78em;
+    }
+    .info-tip .info-tip-text {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      white-space: nowrap;
+      z-index: 1000;
+      pointer-events: none;
+      transition: opacity 0.15s;
+    }
+    .info-tip:hover .info-tip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Map */
+    #map {
+      height: calc(100vh - 180px);
+      min-height: 400px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .marker-cluster-small { background-color: rgba(239,68,68,0.25); }
+    .marker-cluster-medium { background-color: rgba(239,68,68,0.35); }
+    .marker-cluster-large { background-color: rgba(239,68,68,0.45); }
+    .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+      background-color: rgba(220,38,38,0.85);
+      color: #fff;
+      font-weight: 600;
+    }
+
+
+    /* Settlement group headers */
+    .settlement-group {
+      margin-bottom: 24px;
+    }
+
+    .settlement-header {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      padding: 8px 0 4px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 10px;
+    }
+
+    .settlement-count {
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Address list in cards */
+    .addr-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .addr-list li {
+      padding: 2px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+    .addr-list li:last-child { border-bottom: none; }
+    .addr-toggle {
+      background: none; border: none; color: var(--accent); cursor: pointer;
+      font-size: 0.82rem; padding: 4px 0; margin-top: 2px;
+    }
+    .card-title-link { font-weight: 600; color: var(--text); text-decoration: none; }
+    .card-title-link:hover { text-decoration: underline; color: var(--accent); }
+    .addr-clickable { cursor: pointer; }
+    .addr-clickable:hover { color: var(--accent); }
+    .addr-toggle:hover { text-decoration: underline; }
+
+    /* Footer */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 16px 20px;
+      margin-top: 32px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .site-footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 2px;
+    }
+    .site-footer a:hover { color: var(--text); }
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      justify-content: center;
+      text-align: center;
+    }
+    .footer-row + .footer-row { margin-top: 6px; }
+
+    /* Stats */
+    .stats-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .stats-period-btns {
+      display: flex;
+      gap: 6px;
+    }
+    .stats-period-btns button {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.15s;
+    }
+    .stats-period-btns button.active,
+    .stats-period-btns button:hover {
+      background: rgba(79,142,247,0.15);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .stats-summary {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .stats-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .stats-card-wide {
+      grid-column: 1 / -1;
+    }
+    .stats-card-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    /* Heatmap */
+    .heatmap-wrap {
+      overflow-x: auto;
+    }
+    .heatmap-container {
+      display: inline-flex;
+      gap: 2px;
+    }
+    .heatmap-day-labels {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-right: 4px;
+      flex-shrink: 0;
+    }
+    .heatmap-day-labels span {
+      height: 14px;
+      font-size: 10px;
+      line-height: 14px;
+      color: var(--muted);
+      text-align: right;
+      min-width: 28px;
+    }
+    .heatmap-weeks {
+      display: flex;
+      gap: 2px;
+    }
+    .heatmap-week {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .heatmap-cell {
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      background: var(--border);
+    }
+    .heatmap-cell[data-count]:hover {
+      outline: 1px solid var(--muted);
+      outline-offset: -1px;
+    }
+    .heatmap-months {
+      position: relative;
+      height: 16px;
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 4px;
+      margin-left: 32px;
+    }
+    .heatmap-months span {
+      position: absolute;
+      white-space: nowrap;
+    }
+    .heatmap-legend {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .heatmap-legend .heatmap-cell {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* Timeline view */
+    .today-view-toggle {
+      display: flex;
+      gap: 4px;
+      margin-left: auto;
+    }
+    .today-view-toggle button {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      transition: all 0.15s;
+    }
+    .today-view-toggle button.active {
+      color: var(--text);
+      border-color: var(--accent);
+      background: rgba(79,142,247,0.1);
+    }
+
+    .timeline-wrap {
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .timeline-container {
+      position: relative;
+      min-width: 100%;
+    }
+    .timeline-header {
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-hour-label {
+      flex: 0 0 calc(100% / 24);
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+      padding: 4px 0;
+      border-right: 1px solid var(--border);
+    }
+    .timeline-hour-label.now {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .timeline-rows {
+      position: relative;
+    }
+    .timeline-now-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent);
+      z-index: 3;
+      opacity: 0.7;
+    }
+    .timeline-row {
+      display: flex;
+      align-items: center;
+      position: relative;
+      min-height: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-row-label {
+      position: sticky;
+      left: 0;
+      z-index: 1;
+      background: var(--bg);
+      min-width: 140px;
+      max-width: 140px;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-right: 1px solid var(--border);
+    }
+    .timeline-row-bars {
+      flex: 1;
+      position: relative;
+      height: 28px;
+    }
+    .timeline-bar {
+      position: absolute;
+      top: 4px;
+      height: 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.68rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      min-width: 4px;
+      transition: opacity 0.15s;
+    }
+    .timeline-bar:hover { opacity: 0.85; }
+    .timeline-bar.electricity { background: var(--yellow); color: #000; }
+    .timeline-bar.water { background: var(--blue); }
+    .timeline-bar.gas { background: var(--orange); }
+
+    .timeline-hour-group {
+      margin-bottom: 4px;
+    }
+    .timeline-hour-heading {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--accent);
+      padding: 10px 0 6px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 1;
+    }
+    .timeline-hour-heading.now-hour {
+      color: var(--green);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav button { padding: 10px 12px; font-size: 0.8rem; }
+      .outage-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .timeline-row-label { min-width: 100px; max-width: 100px; font-size: 0.68rem; }
+    }
+  </style>
+</head>
+<body>
+
+<noscript>
+  <div style="background:#1a1d27;color:#e2e8f0;padding:32px 20px;text-align:center;font-family:sans-serif;line-height:1.8;min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+    <p style="font-size:1.1rem;margin-bottom:8px;">This site requires JavaScript to function.</p>
+    <p style="font-size:1.1rem;margin-bottom:8px;">Այս կայքի աշխատանքի համար անհրաժեշտ է JavaScript-ը։</p>
+    <p style="font-size:1.1rem;">Для работы сайта необходим JavaScript.</p>
+  </div>
+</noscript>
+
+<header>
+  <h1><span data-i18n="header_title">Armenia — Utility Outages</span> <span style="font-size:0.45em;color:#f97316;font-weight:600;vertical-align:super;letter-spacing:0.05em">BETA</span></h1>
+  <div class="status-bar" id="statusBar">Loading...</div>
+  <div class="lang-switcher">
+    <button onclick="setLang('hy')" data-lang="hy">ՀՅ</button>
+    <button onclick="setLang('ru')" data-lang="ru">RU</button>
+    <button onclick="setLang('en')" data-lang="en">EN</button>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="switchView('now')" data-i18n="nav_now" data-view="now">Now</button>
+  <button onclick="switchView('today')" data-i18n="nav_today" data-view="today">Today</button>
+  <button onclick="switchView('all')" data-i18n="nav_all" data-view="all">All</button>
+  <button onclick="switchView('map')" data-i18n="nav_map" data-view="map">Map</button>
+  <button onclick="switchView('stats')" data-i18n="nav_stats" data-view="stats">Stats</button>
+</nav>
+
+<!-- NOW VIEW -->
+<div id="view-now" class="view active">
+  <div class="location-bar">
+    <label data-i18n="location_label">My location:</label>
+    <select id="locationSelect" onchange="onLocationChange()"></select>
+    <button class="toggle-location" id="toggleLocation" onclick="toggleLocationFilter()" data-i18n="all_areas">All areas</button>
+    <button onclick="saveLocation()" style="background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.82rem;" data-i18n="btn_save_location">Save</button>
+  </div>
+  <div id="nowContent"></div>
+</div>
+
+<!-- TODAY VIEW -->
+<div id="view-today" class="view">
+  <div class="filters">
+    <input type="text" id="todaySearch" oninput="filterToday()" data-i18n="search_area" placeholder="Find address..." />
+    <div class="today-view-toggle">
+      <button onclick="setTodayMode('timeline')" id="btnTimeline" data-i18n="today_timeline">Timeline</button>
+      <button class="active" onclick="setTodayMode('cards')" id="btnCards" data-i18n="today_cards">Cards</button>
+    </div>
+  </div>
+  <div id="todayContent"></div>
+</div>
+
+<!-- ALL VIEW -->
+<div id="view-all" class="view">
+  <div class="filters">
+    <select id="filterType" onchange="resetPage()">
+      <option value="" data-i18n="all_types">All types</option>
+      <option value="electricity" data-i18n="type_electricity">Electricity</option>
+      <option value="water" data-i18n="type_water">Water</option>
+      <option value="gas" data-i18n="type_gas">Gas</option>
+    </select>
+    <select id="filterRegion" onchange="resetPage()">
+      <option value="" data-i18n="all_regions">All regions</option>
+    </select>
+    <input type="date" id="filterFrom" onchange="resetPage()" placeholder="From" />
+    <input type="date" id="filterTo" onchange="resetPage()" placeholder="To" />
+  </div>
+  <div class="table-wrap">
+    <table id="allTable">
+      <thead>
+        <tr>
+          <th data-i18n="col_type">Type</th>
+          <th data-i18n="col_status">Status</th>
+          <th data-i18n="col_region">Region</th>
+          <th data-i18n="col_area">Area</th>
+          <th data-i18n="col_start">Start</th>
+          <th data-i18n="col_end">End</th>
+          <th data-i18n="col_source">Source</th>
+        </tr>
+      </thead>
+      <tbody id="allTableBody"></tbody>
+    </table>
+  </div>
+  <div id="pagination" class="pagination"></div>
+</div>
+
+<!-- MAP VIEW -->
+<div id="view-map" class="view">
+  <div class="map-controls" style="margin-bottom:12px;display:flex;gap:8px;align-items:center;">
+    <button id="mapBtnYesterday" onclick="loadMapPeriod('yesterday')" data-i18n="map_yesterday" style="background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.85rem;">Yesterday</button>
+    <button id="mapBtnToday" onclick="loadMapPeriod('today')" data-i18n="map_today" style="background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.85rem;">Today</button>
+    <button id="mapBtnNow" class="active" onclick="loadMapPeriod('now')" data-i18n="map_now" style="background:rgba(79,142,247,0.15);border:1px solid var(--accent);color:var(--accent);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:0.85rem;">Now</button>
+  </div>
+  <div id="map"></div>
+</div>
+
+<!-- STATS VIEW -->
+<div id="view-stats" class="view">
+  <div class="stats-toolbar">
+    <div class="stats-period-btns">
+      <button onclick="loadStats(7)" data-stats-days="7" data-i18n="stats_7d">7 days</button>
+      <button onclick="loadStats(30)" data-stats-days="30" class="active" data-i18n="stats_30d">30 days</button>
+      <button onclick="loadStats(90)" data-stats-days="90" data-i18n="stats_90d">90 days</button>
+    </div>
+    <select id="statsMarz" onchange="onStatsMarzChange()" style="background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:0.85rem;">
+      <option value="" data-i18n="stats_all_marzes">All marzes</option>
+    </select>
+    <select id="statsDistrict" onchange="onStatsDistrictChange()" style="display:none;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:6px;font-size:0.85rem;">
+      <option value="" data-i18n="stats_all_districts">All districts</option>
+    </select>
+    <div class="stats-summary" id="statsSummary"></div>
+  </div>
+  <div class="stats-card stats-card-wide" style="margin-bottom:16px">
+    <div class="stats-card-title" data-i18n="stats_calendar">Calendar heatmap</div>
+    <div class="heatmap-wrap" id="heatmapWrap"></div>
+  </div>
+  <div class="stats-grid">
+    <div class="stats-card">
+      <div class="stats-card-title" data-i18n="stats_daily_trend">Daily trend</div>
+      <canvas id="chartDaily"></canvas>
+    </div>
+    <div class="stats-card">
+      <div class="stats-card-title" data-i18n="stats_by_type">By type</div>
+      <div style="max-width:280px;margin:0 auto"><canvas id="chartType"></canvas></div>
+    </div>
+    <div class="stats-card" id="settlementsChartCard">
+      <div class="stats-card-title" data-i18n="stats_top_settlements">Top settlements</div>
+      <canvas id="chartSettlements"></canvas>
+    </div>
+    <div class="stats-card">
+      <div class="stats-card-title" data-i18n="stats_top_addresses">Top addresses</div>
+      <canvas id="chartAddresses"></canvas>
+    </div>
+    <div class="stats-card" id="marzChartCard">
+      <div class="stats-card-title" data-i18n="stats_by_marz">By marz</div>
+      <canvas id="chartMarz"></canvas>
+    </div>
+    <div class="stats-card" id="districtChartCard" style="display:none">
+      <div class="stats-card-title" data-i18n="stats_by_district">By district</div>
+      <canvas id="chartDistrict"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- OUTAGE DETAIL VIEW -->
+<div id="view-outage" class="view">
+  <div style="margin-bottom:12px">
+    <a href="/" style="color:var(--accent);text-decoration:none;font-size:0.85rem">&larr; <span data-i18n="back_to_list">Back to list</span></a>
+  </div>
+  <div id="outageDetail"></div>
+  <div id="outageMap" style="display:none;height:400px;border-radius:8px;border:1px solid var(--border);margin-top:16px;"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-row">
+    <span><span data-i18n="footer_data_source">Data sourced from</span> <a href="https://www.ena.am" target="_blank" rel="noopener">ENA</a>, <a href="https://www.vjur.am" target="_blank" rel="noopener">Veolia</a>, <a href="https://armenia-am.gazprom.com" target="_blank" rel="noopener">Gazprom Armenia</a></span>
+  </div>
+  <div class="footer-row">
+    <span data-i18n="footer_disclaimer">Outage times and locations are approximate</span>
+    <span>&middot;</span>
+    <span><span data-i18n="footer_osm_attribution">Map data &copy;</span> <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span>
+  </div>
+</footer>
+
+<script src="/static/app.js?v=81"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"12cc4e1a91a140a8a99805511a1242a2","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
