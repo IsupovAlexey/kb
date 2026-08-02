@@ -15,3 +15,5 @@ Chronological activity log. The `/kb` skill appends one dated line here after ea
 - 2026-08-02 — telegram-import: 54 imported, 0 skipped
 
 - 2026-08-02 — kb: add note assisen-de-balletmoord (telegram post)
+
+- 2026-08-02 — kb: enrich bookmark tailscale (existing firefox import)

@@ -15,3 +15,5 @@ Catalog of wiki pages. The `/kb` skill adds or updates entries here after each s
 - 2026-08-02 — Telegram import (Кино и сериалы на нидерландском): 54 notes imported → see `wiki/notes/dutch-film-reviews/`
 
 - 2026-08-02 — Assisen: De Balletmoord review → `wiki/notes/dutch-film-reviews/assisen-de-balletmoord.md`
+
+- 2026-08-02 — Tailscale (Zero Trust mesh VPN) → `wiki/bookmarks/programming/devops/tailscale-secure-connectivity-ai-iot-multi-cloud.md`
