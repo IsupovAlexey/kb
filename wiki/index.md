@@ -11,3 +11,7 @@ Catalog of wiki pages. The `/kb` skill adds or updates entries here after each s
 - 2026-08-02 — Firefox tab import: 54 tabs imported, 16 dead, 15 work-pinned skipped → see `wiki/bookmarks/`
 
 - 2026-08-02 — Google Keep import: 67 pages imported, 0 dead links excluded → see `wiki/notes/` and `wiki/bookmarks/`
+
+- 2026-08-02 — Telegram import (Кино и сериалы на нидерландском): 54 notes imported → see `wiki/notes/dutch-film-reviews/`
+
+- 2026-08-02 — Assisen: De Balletmoord review → `wiki/notes/dutch-film-reviews/assisen-de-balletmoord.md`

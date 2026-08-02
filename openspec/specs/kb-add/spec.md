@@ -171,3 +171,37 @@ The repository SHALL provide a TypeScript CLI to import Google Keep Takeout zip 
 
 - **WHEN** the user passes `--dry-run` to the Keep import CLI
 - **THEN** a manifest is written under `artifacts/kb-import/` and no wiki files are created
+
+### Requirement: Bulk Telegram channel import
+
+The repository SHALL provide a TypeScript CLI to import Telegram Desktop HTML chat exports into the wiki as note pages with text-only import (no URL fetch), forward attribution, and idempotent re-run.
+
+#### Scenario: Telegram HTML export import
+
+- **WHEN** the user runs the Telegram import CLI against a Telegram Desktop export directory containing `messages.html`
+- **THEN** the tool creates wiki note pages under `wiki/notes/dutch-film-reviews/` with full message text and inline URLs in the body, and appends batch summary lines to `wiki/index.md` and `wiki/log.md`
+
+#### Scenario: Telegram all-notes classification
+
+- **WHEN** a Telegram message contains URLs
+- **THEN** it is imported as `type: note` (not `type: bookmark`) with URLs preserved inline in the body
+
+#### Scenario: Telegram no-fetch import
+
+- **WHEN** the Telegram import CLI runs
+- **THEN** no HTTP requests are made to fetch or health-check URLs and no `## Summary` section is generated
+
+#### Scenario: Telegram forward attribution
+
+- **WHEN** a Telegram message is a forward with attribution metadata in the HTML export
+- **THEN** the wiki page frontmatter includes `forwarded_from` and optional `forwarded_date`, and the body includes a forward preamble
+
+#### Scenario: Telegram idempotent re-import
+
+- **WHEN** the Telegram import CLI is run again for the same export date and messages were already imported
+- **THEN** existing imported message ids are skipped without creating duplicate wiki pages
+
+#### Scenario: Telegram dry-run
+
+- **WHEN** the user passes `--dry-run` to the Telegram import CLI
+- **THEN** no wiki files are created and no manifest is written

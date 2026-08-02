@@ -157,6 +157,29 @@ Behavior:
 
 After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
 
+## Bulk Telegram channel import
+
+For Telegram Desktop HTML chat exports (Settings → Advanced → Export Telegram data):
+
+```bash
+npm run kb:import-telegram -- "path/to/ChatExport_YYYY-MM-DD"
+npm run kb:import-telegram -- "path/to/ChatExport_YYYY-MM-DD" --dry-run
+```
+
+Behavior:
+
+1. Parse `messages.html` from the export directory; skip service messages and media-only posts without text
+2. **All posts as notes** — every message is `type: note` under `wiki/notes/dutch-film-reviews/` (not bookmarks), even when URLs are present
+3. **Text-only import** — no URL health check, fetch, or `## Summary` generation; URLs stay inline in the body
+4. Preserve `telegram_message_id`, message date, and `forwarded_from` / `forwarded_date` when present
+5. Write manifest to `artifacts/kb-import/telegram-<date>.manifest.json`
+6. Append one summary line to `wiki/index.md` and `wiki/log.md`
+7. Re-run on same date skips already-imported message ids (idempotent)
+
+`--dry-run` previews counts only — no wiki files and no manifest.
+
+After import: run `npm run kb:lint`, `npm run format:check` (or `format:write`), and `qmd update` when available.
+
 ## Done when
 
 - Primary page(s) written with correct frontmatter

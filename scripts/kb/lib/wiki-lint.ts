@@ -121,15 +121,16 @@ function collectBrokenWikilinks(wikiRoot: string, files: string[]): WikiLintIssu
   return issues;
 }
 
-function isFirefoxImportPage(wikiRoot: string, file: string): boolean {
+function isBatchImportPage(wikiRoot: string, file: string): boolean {
   const content = readFile(wikiRoot, file);
-  return /tags:\s*\[[^\]]*["']import["']/.test(content);
+  return /tags:\s*\[[^\]]*\bimport\b/.test(content);
 }
 
 function hasBatchImportIndexLine(wikiRoot: string): boolean {
   const indexPath = path.join(wikiRoot, "index.md");
   if (!fs.existsSync(indexPath)) return false;
-  return readFile(wikiRoot, "index.md").includes("Firefox import:");
+  const content = readFile(wikiRoot, "index.md");
+  return /(?:Firefox|Google Keep|Telegram) import:/i.test(content);
 }
 
 function collectOrphans(
@@ -144,7 +145,7 @@ function collectOrphans(
     const base = path.basename(file).toLowerCase();
     if (NAV_FILES.has(base)) continue;
     if (file.startsWith("assets/")) continue;
-    if (batchImport && isFirefoxImportPage(wikiRoot, file)) continue;
+    if (batchImport && isBatchImportPage(wikiRoot, file)) continue;
     const refs = inbound.get(file);
     if (!refs || refs.size === 0) {
       issues.push({
@@ -172,13 +173,13 @@ function collectIndexGaps(wikiRoot: string, files: string[]): WikiLintIssue[] {
   }
 
   const indexContent = readFile(wikiRoot, "index.md").toLowerCase();
-  const batchImport = indexContent.includes("firefox import:");
+  const batchImport = /(?:firefox|google keep|telegram) import:/i.test(indexContent);
 
   for (const file of files) {
     const base = path.basename(file).toLowerCase();
     if (NAV_FILES.has(base)) continue;
     if (file.startsWith("assets/")) continue;
-    if (batchImport && isFirefoxImportPage(wikiRoot, file)) continue;
+    if (batchImport && isBatchImportPage(wikiRoot, file)) continue;
 
     const stem = path.basename(file, ".md");
     const relLower = file.toLowerCase();
